@@ -501,6 +501,7 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
       <div class="nav-tab" onclick="showPage('map',this)">Mapa</div>
       <div class="nav-tab" onclick="showPage('diary',this)">Diário de Campo</div>
       <div class="nav-tab" onclick="showPage('requisition',this)">Requisição</div>
+      <div class="nav-tab" onclick="showPage('glossary',this)">Codex de Lore</div>
     </nav>
     <div class="topbar-right">
       <div class="agent-tag">Grupo 47-B · Vínculo Ativo</div>
@@ -508,7 +509,25 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
       <button class="topbar-btn" onclick="logout()">Encerrar</button>
     </div>
   </div>
+<div class="page" id="page-glossary">
+  <div class="page-inner">
+    <div class="classif-banner restricted">Acervo de Conhecimento — Sínodo do Quinto Véu</div>
+    <div class="page-header">
+      <div class="page-header-left">
+        <h2>Codex de Lore</h2>
+        <p>Terminologias, eventos e segredos arquivados</p>
+      </div>
+      <div class="page-badge">Arquivo SQV-COD-104</div>
+    </div>
 
+    <div class="bestiary-controls" style="margin-bottom: 30px;">
+      <input class="bestiary-search" type="text" placeholder="Pesquisar termo no códice..." oninput="filterGlossary(this.value)">
+    </div>
+
+    <div class="docs-grid" id="glossary-grid">
+      </div>
+  </div>
+</div>
   <div id="content-area">
 
     <!-- HOME -->
@@ -1625,6 +1644,132 @@ function toggleFS(){
   if(!doc.fullscreenElement&&!doc.mozFullScreenElement&&!doc.webkitFullscreenElement){req.call(docEl);btn.textContent='Sair da Tela Cheia';}
   else{exit.call(doc);btn.textContent='Tela Cheia';}
 }
+// ══════════════════════════════════════════
+// DADOS DO GLOSSÁRIO (LORE)
+// ══════════════════════════════════════════
+const GLOSSARY = [
+  {
+    id: 'lore01',
+    term: 'O Quinto Véu',
+    category: 'Dimensão',
+    desc: 'A camada da realidade adjacente ao plano físico. É de onde a magia emana e onde o Tratado de Vhal\'Torin mantém vigilância constante.',
+    restricted: false
+  },
+  {
+    id: 'lore02',
+    term: 'Tratado de Vhal\'Torin',
+    category: 'História',
+    desc: 'O acordo global que encerrou a Guerra do Véu, proibindo o uso livre da magia e estabelecendo o Sínodo como órgão regulador.',
+    restricted: false
+  },
+  {
+    id: 'lore03',
+    term: 'Resina Etérea',
+    category: 'Substância',
+    desc: 'Líquido roxo pulsante que amplia a percepção dimensional em não-treinados. Altamente viciante e perigoso.',
+    restricted: false
+  },
+  {
+    id: 'lore04',
+    term: 'A Cicatriz de Vhal\'Zarak',
+    category: 'Localização',
+    desc: 'Ponto onde a realidade foi permanentemente rasgada durante o colapso dimensional. É considerada uma Zona de Realidade Instável sob vigilância da Muralha Norte.',
+    restricted: true,
+    password: 'cicatrizaberta'
+  },
+  {
+    id: 'lore05',
+    term: 'Investigador de Véu',
+    category: 'Patente',
+    desc: 'Nível avançado de autoridade conferido a Agentes de Vínculo que demonstraram lealdade e capacidade. Utilizam insígnias de bronze com o ponto central de 7 raios.',
+    restricted: true,
+    password: 'bronze7'
+  }
+];
+
+// ══════════════════════════════════════════
+// FUNÇÕES DO GLOSSÁRIO
+// ══════════════════════════════════════════
+function renderGlossary(filter = '') {
+  const grid = document.getElementById('glossary-grid');
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  GLOSSARY.filter(item => 
+    item.term.toLowerCase().includes(filter.toLowerCase()) || 
+    item.desc.toLowerCase().includes(filter.toLowerCase())
+  ).forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'doc-card';
+    
+    const content = item.restricted 
+      ? `<div class="doc-locked-bar">
+          <span class="doc-lock-icon">🔒</span>
+          <span class="doc-lock-hint">Acesso Restrito - Nível IV</span>
+          <button class="doc-access-btn" onclick="openGlossaryPwd('${item.id}')">Acessar</button>
+         </div>`
+      : `<p class="doc-desc">${item.desc}</p>`;
+
+    card.innerHTML = `
+      <div class="doc-card-header">
+        <div class="doc-classif-tag ${item.restricted ? 'confidencial' : 'uso-interno'}">
+          ${item.category}
+        </div>
+        <div class="doc-title">${item.term}</div>
+      </div>
+      <div class="doc-card-body">
+        ${content}
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function openGlossaryPwd(id) {
+  const item = GLOSSARY.find(g => g.id === id);
+  currentDocId = id; 
+  document.getElementById('pwd-modal-doc').textContent = "Codex: " + item.term;
+  document.getElementById('pwd-input').value = '';
+  document.getElementById('pwd-modal-err').textContent = '';
+  document.getElementById('pwd-overlay').classList.add('open');
+  
+  // Reutiliza o sistema de senha original do seu site
+  window.confirmPwd = function() {
+    const val = document.getElementById('pwd-input').value.trim().toLowerCase();
+    if(val === item.password) {
+      closePwdModal();
+      showSecretLore(item);
+    } else {
+      document.getElementById('pwd-modal-err').textContent = 'Código de acesso inválido.';
+    }
+  };
+}
+
+function showSecretLore(item) {
+  const reader = document.getElementById('doc-reader');
+  reader.innerHTML = `
+    <div class="doc-reader-header">
+      <div>
+        <div class="doc-reader-classif confidencial">ARQUIVO DE LORE — NÍVEL IV</div>
+        <div class="doc-reader-title">${item.term}</div>
+      </div>
+      <button class="doc-reader-close" onclick="closeReader()">✕ Fechar</button>
+    </div>
+    <div class="doc-reader-body">
+      <div class="doc-watermark">CONFIDENCIAL</div>
+      <div class="doc-seal-line">Sínodo do Quinto Véu · Acervo Histórico</div>
+      <p class="doc-body-text" style="font-size: 1.15rem;">${item.desc}</p>
+      <div class="doc-divider">· · ✦ · ·</div>
+    </div>`;
+  document.getElementById('reader-overlay').classList.add('open');
+}
+
+function filterGlossary(v) { renderGlossary(v); }
+
+// Carrega o glossário quando a aba for clicada
+document.addEventListener('DOMContentLoaded', () => { 
+    if(document.getElementById('glossary-grid')) renderGlossary(); 
+});
 </script>
 </body>
 </html>
