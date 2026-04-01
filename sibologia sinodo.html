@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sínodo do Quinto Véu — Logo</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:#0a0806;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  font-family:'Cinzel',serif;
+  padding:40px 20px;
+  gap:60px;
+}
+
+.section-title{
+  color:rgba(197,163,85,0.5);
+  font-size:.75rem;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+/* ── LOGO VARIANTS ROW ── */
+.logos-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:60px;
+  justify-content:center;
+  align-items:center;
+}
+
+.logo-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+}
+.logo-label{
+  color:rgba(197,163,85,0.45);
+  font-size:.65rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+/* ── DOWNLOAD BUTTONS ── */
+.dl-btn{
+  font-family:'Cinzel',serif;
+  font-size:.62rem;
+  letter-spacing:2px;
+  padding:6px 14px;
+  border:1px solid rgba(197,163,85,0.35);
+  background:rgba(197,163,85,0.06);
+  color:rgba(197,163,85,0.7);
+  cursor:pointer;
+  border-radius:2px;
+  transition:all .2s;
+  text-transform:uppercase;
+}
+.dl-btn:hover{
+  background:rgba(197,163,85,0.14);
+  border-color:rgba(197,163,85,.6);
+  color:#e8c96a;
+}
+
+/* ── DIVIDER ── */
+.divider{
+  width:400px;
+  max-width:90vw;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(197,163,85,.3),transparent);
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════
+     VERSÃO PRINCIPAL — COMPLETA
+════════════════════════════════════ -->
+<div class="logos-row">
+
+  <!-- LOGO PRINCIPAL GRANDE -->
+  <div class="logo-item">
+    <p class="section-title">Versão Principal</p>
+    <svg id="logo-main" width="380" height="420" viewBox="0 0 380 420" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="bg-grad" cx="50%" cy="45%" r="55%">
+          <stop offset="0%" style="stop-color:#1e1608;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#080604;stop-opacity:1"/>
+        </radialGradient>
+        <radialGradient id="glow-center" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" style="stop-color:rgba(197,163,85,0.18)"/>
+          <stop offset="100%" style="stop-color:rgba(0,0,0,0)"/>
+        </radialGradient>
+        <radialGradient id="eye-iris" cx="50%" cy="40%" r="60%">
+          <stop offset="0%" style="stop-color:#d4a840"/>
+          <stop offset="60%" style="stop-color:#c9a030"/>
+          <stop offset="100%" style="stop-color:#8b6a18"/>
+        </radialGradient>
+        <filter id="glow-gold">
+          <feGaussianBlur stdDeviation="2.5" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="glow-soft">
+          <feGaussianBlur stdDeviation="1.5" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="glow-strong">
+          <feGaussianBlur stdDeviation="5" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <!-- Text on circle path -->
+        <path id="circle-top" d="M 190,190 m -130,0 a 130,130 0 1,1 260,0"/>
+        <path id="circle-bottom" d="M 190,190 m -110,0 a 110,110 0 0,0 220,0"/>
+      </defs>
+
+      <!-- Background -->
+      <rect width="380" height="420" fill="url(#bg-grad)"/>
+
+      <!-- Outer glow halo -->
+      <ellipse cx="190" cy="192" rx="165" ry="165" fill="url(#glow-center)"/>
+
+      <!-- ── RINGS ── -->
+      <!-- Outer decorative ring -->
+      <circle cx="190" cy="192" r="162" fill="none" stroke="rgba(197,163,85,0.18)" stroke-width="1"/>
+
+      <!-- Main outer ring -->
+      <circle cx="190" cy="192" r="150" fill="none" stroke="rgba(197,163,85,0.55)" stroke-width="1.5"/>
+
+      <!-- Dashed ring -->
+      <circle cx="190" cy="192" r="140" fill="none" stroke="rgba(197,163,85,0.28)" stroke-width="1" stroke-dasharray="5,4"/>
+
+      <!-- ── CIRCUMSCRIBED TEXT TOP ── -->
+      <text font-family="Cinzel,serif" font-size="10.5" fill="rgba(197,163,85,0.8)" letter-spacing="3.5" font-weight="600">
+        <textPath href="#circle-top" startOffset="4%">SÍNODO DO QUINTO VÉU · PORTO VARION ·</textPath>
+      </text>
+
+      <!-- ── SEVEN DIMENSIONAL RAYS ── -->
+      <!-- Background glow rays -->
+      <g transform="translate(190,192)" filter="url(#glow-strong)" opacity="0.35">
+        <line x1="0" y1="-125" x2="0" y2="125" stroke="#c9a030" stroke-width="1.5"/>
+        <line x1="0" y1="-125" x2="0" y2="125" stroke="#c9a030" stroke-width="1.5" transform="rotate(51.43)"/>
+        <line x1="0" y1="-125" x2="0" y2="125" stroke="#c9a030" stroke-width="1.5" transform="rotate(102.86)"/>
+        <line x1="0" y1="-125" x2="0" y2="125" stroke="#c9a030" stroke-width="1.5" transform="rotate(154.29)"/>
+        <line x1="0" y1="-125" x2="0" y2="125" stroke="#c9a030" stroke-width="1.5" transform="rotate(205.71)"/>
+        <line x1="0" y1="-125" x2="0" y2="125" stroke="#c9a030" stroke-width="1.5" transform="rotate(257.14)"/>
+        <line x1="0" y1="-125" x2="0" y2="125" stroke="#c9a030" stroke-width="1.5" transform="rotate(308.57)"/>
+      </g>
+
+      <!-- Actual rays with endpoints -->
+      <g transform="translate(190,192)" filter="url(#glow-soft)">
+        <!-- Ray 1 — top (7th dimension / divine) -->
+        <line x1="0" y1="-118" x2="0" y2="118" stroke="rgba(197,163,85,0.35)" stroke-width="0.8"/>
+        <!-- Ray 2 -->
+        <line x1="0" y1="-118" x2="0" y2="118" stroke="rgba(197,163,85,0.35)" stroke-width="0.8" transform="rotate(51.43)"/>
+        <!-- Ray 3 -->
+        <line x1="0" y1="-118" x2="0" y2="118" stroke="rgba(197,163,85,0.35)" stroke-width="0.8" transform="rotate(102.86)"/>
+        <!-- Ray 4 -->
+        <line x1="0" y1="-118" x2="0" y2="118" stroke="rgba(197,163,85,0.35)" stroke-width="0.8" transform="rotate(154.29)"/>
+        <!-- Ray 5 -->
+        <line x1="0" y1="-118" x2="0" y2="118" stroke="rgba(197,163,85,0.35)" stroke-width="0.8" transform="rotate(205.71)"/>
+        <!-- Ray 6 -->
+        <line x1="0" y1="-118" x2="0" y2="118" stroke="rgba(197,163,85,0.35)" stroke-width="0.8" transform="rotate(257.14)"/>
+        <!-- Ray 7 -->
+        <line x1="0" y1="-118" x2="0" y2="118" stroke="rgba(197,163,85,0.35)" stroke-width="0.8" transform="rotate(308.57)"/>
+      </g>
+
+      <!-- Ray tip diamonds (where rays hit outer ring) -->
+      <g transform="translate(190,192)" fill="rgba(197,163,85,0.7)" filter="url(#glow-soft)">
+        <polygon points="0,-118 -3,-111 0,-104 3,-111" transform="rotate(0)"/>
+        <polygon points="0,-118 -3,-111 0,-104 3,-111" transform="rotate(51.43)"/>
+        <polygon points="0,-118 -3,-111 0,-104 3,-111" transform="rotate(102.86)"/>
+        <polygon points="0,-118 -3,-111 0,-104 3,-111" transform="rotate(154.29)"/>
+        <polygon points="0,-118 -3,-111 0,-104 3,-111" transform="rotate(205.71)"/>
+        <polygon points="0,-118 -3,-111 0,-104 3,-111" transform="rotate(257.14)"/>
+        <polygon points="0,-118 -3,-111 0,-104 3,-111" transform="rotate(308.57)"/>
+      </g>
+
+      <!-- ── INNER RINGS ── -->
+      <circle cx="190" cy="192" r="82" fill="rgba(10,8,4,0.6)" stroke="rgba(197,163,85,0.5)" stroke-width="1.8"/>
+      <circle cx="190" cy="192" r="74" fill="none" stroke="rgba(197,163,85,0.18)" stroke-width="0.8" stroke-dasharray="3,3"/>
+      <circle cx="190" cy="192" r="56" fill="rgba(8,6,3,0.7)" stroke="rgba(197,163,85,0.4)" stroke-width="1.5"/>
+
+      <!-- ── HEPTAGRAM (7-pointed star) ── -->
+      <!-- Inner star connecting 7 points -->
+      <g transform="translate(190,192)" fill="none" stroke="rgba(197,163,85,0.3)" stroke-width="1">
+        <!-- Star lines: connect every point to 2 others non-adjacent -->
+        <polygon points="
+          0,-68
+          64.7,-21
+          40,-55.5
+          -40,-55.5
+          -64.7,-21
+          -40,55.5
+          40,55.5
+        " fill="none" stroke="rgba(197,163,85,0.15)" stroke-width="0.8"/>
+      </g>
+
+      <!-- ── EYE OF THE FIFTH VEU ── -->
+      <!-- Eye shadow/glow -->
+      <ellipse cx="190" cy="192" rx="38" ry="26" fill="rgba(197,163,85,0.06)" filter="url(#glow-strong)"/>
+
+      <!-- Eye whites / outer eye shape -->
+      <path d="M 152 192 Q 190 156 228 192 Q 190 228 152 192 Z"
+            fill="#12100a" stroke="rgba(197,163,85,0.7)" stroke-width="1.8"/>
+
+      <!-- Eye iris -->
+      <circle cx="190" cy="192" r="20" fill="url(#eye-iris)" filter="url(#glow-soft)"/>
+
+      <!-- Iris detail rings -->
+      <circle cx="190" cy="192" r="17" fill="none" stroke="rgba(180,130,20,0.4)" stroke-width="0.8"/>
+      <circle cx="190" cy="192" r="13" fill="none" stroke="rgba(180,130,20,0.3)" stroke-width="0.6"/>
+
+      <!-- Iris rays -->
+      <g transform="translate(190,192)" stroke="rgba(150,110,15,0.35)" stroke-width="0.6">
+        <line x1="0" y1="-20" x2="0" y2="20"/>
+        <line x1="-20" y1="0" x2="20" y2="0"/>
+        <line x1="-14" y1="-14" x2="14" y2="14"/>
+        <line x1="14" y1="-14" x2="-14" y2="14"/>
+        <line x1="-8" y1="-18" x2="8" y2="18"/>
+        <line x1="8" y1="-18" x2="-8" y2="18"/>
+        <line x1="-18" y1="-8" x2="18" y2="8"/>
+        <line x1="18" y1="-8" x2="-18" y2="8"/>
+        <line x1="-19" y1="4" x2="19" y2="-4"/>
+        <line x1="-4" y1="-19" x2="4" y2="19"/>
+      </g>
+
+      <!-- Pupil -->
+      <circle cx="190" cy="192" r="7" fill="#050403"/>
+      <circle cx="190" cy="192" r="6.5" fill="none" stroke="rgba(60,30,5,0.8)" stroke-width="0.5"/>
+
+      <!-- Pupil glow -->
+      <circle cx="190" cy="192" r="6" fill="rgba(20,12,4,0.95)"/>
+
+      <!-- Eye highlight -->
+      <ellipse cx="185" cy="188" rx="3.5" ry="2.5" fill="rgba(255,240,180,0.35)" transform="rotate(-20,185,188)"/>
+
+      <!-- Eye lashes / brow lines -->
+      <g stroke="rgba(197,163,85,0.5)" stroke-width="1.2" stroke-linecap="round" fill="none">
+        <!-- Top lash lines -->
+        <line x1="162" y1="180" x2="159" y2="173"/>
+        <line x1="172" y1="174" x2="171" y2="167"/>
+        <line x1="183" y1="171" x2="183" y2="164"/>
+        <line x1="194" y1="171" x2="195" y2="164"/>
+        <line x1="205" y1="173" x2="207" y2="166"/>
+        <line x1="215" y1="178" x2="219" y2="172"/>
+        <!-- Bottom lash lines -->
+        <line x1="163" y1="200" x2="160" y2="207"/>
+        <line x1="176" y1="207" x2="175" y2="214"/>
+        <line x1="190" y1="209" x2="190" y2="216"/>
+        <line x1="205" y1="207" x2="207" y2="214"/>
+        <line x1="217" y1="200" x2="221" y2="207"/>
+      </g>
+
+      <!-- ── ROMAN NUMERAL V (QUINTO) ── -->
+      <text x="190" y="249" text-anchor="middle"
+            font-family="Cinzel,serif" font-size="11" fill="rgba(197,163,85,0.55)"
+            letter-spacing="6" font-weight="400">· V · V É U ·</text>
+
+      <!-- ── INNER ORNAMENTAL DETAILS ── -->
+      <!-- Corner runes (tiny dimensional symbols) -->
+      <g transform="translate(190,192)" fill="rgba(197,163,85,0.45)" font-family="Cinzel,serif" font-size="8">
+        <text x="0" y="-88" text-anchor="middle">I</text>
+        <text x="83.7" y="-27.2" text-anchor="middle" transform="rotate(51.43,83.7,-27.2)">II</text>
+        <text x="51.7" y="71.7" text-anchor="middle" transform="rotate(102.86,51.7,71.7)">III</text>
+        <text x="-51.7" y="71.7" text-anchor="middle" transform="rotate(154.29,-51.7,71.7)">IV</text>
+        <text x="-83.7" y="-27.2" text-anchor="middle" transform="rotate(205.71,-83.7,-27.2)">V</text>
+        <text x="-30" y="-82" text-anchor="middle" transform="rotate(257.14,-30,-82)">VI</text>
+        <text x="30" y="-82" text-anchor="middle" transform="rotate(308.57,30,-82)">VII</text>
+      </g>
+
+      <!-- ── BOTTOM TEXT ── -->
+      <!-- Organization text band -->
+      <rect x="40" y="356" width="300" height="48" rx="2"
+            fill="rgba(8,6,3,0.85)" stroke="rgba(197,163,85,0.3)" stroke-width="1"/>
+      <line x1="40" y2="365" y1="365" x2="340" stroke="rgba(197,163,85,0.15)" stroke-width="0.5"/>
+      <line x1="40" y2="396" y1="396" x2="340" stroke="rgba(197,163,85,0.15)" stroke-width="0.5"/>
+
+      <text x="190" y="373" text-anchor="middle"
+            font-family="Cinzel,serif" font-size="12" fill="rgba(197,163,85,0.9)"
+            letter-spacing="4" font-weight="700">SÍNODO</text>
+      <text x="190" y="389" text-anchor="middle"
+            font-family="Cinzel,serif" font-size="9" fill="rgba(197,163,85,0.55)"
+            letter-spacing="5">DO QUINTO VÉU</text>
+
+      <!-- Corner ornaments on text box -->
+      <g fill="rgba(197,163,85,0.4)">
+        <polygon points="40,356 48,356 40,364"/>
+        <polygon points="340,356 332,356 340,364"/>
+        <polygon points="40,404 48,404 40,396"/>
+        <polygon points="340,404 332,404 340,396"/>
+      </g>
+
+      <!-- ── OUTER FRAME CORNERS ── -->
+      <g stroke="rgba(197,163,85,0.3)" stroke-width="1.2" fill="none">
+        <path d="M 10,10 L 40,10 L 10,40"/>
+        <path d="M 370,10 L 340,10 L 370,40"/>
+        <path d="M 10,410 L 40,410 L 10,380"/>
+        <path d="M 370,410 L 340,410 L 370,380"/>
+      </g>
+
+      <!-- Subtle outer glow border -->
+      <rect x="2" y="2" width="376" height="416" fill="none"
+            stroke="rgba(197,163,85,0.08)" stroke-width="3"/>
+    </svg>
+    <button class="dl-btn" onclick="downloadSVG('logo-main','sinodo-logo-principal')">⬇ Baixar SVG</button>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════
+     VARIAÇÕES COMPACTAS
+════════════════════════════════════ -->
+<div class="logos-row">
+
+  <!-- ÍCONE CIRCULAR -->
+  <div class="logo-item">
+    <p class="logo-label">Ícone Circular</p>
+    <svg id="logo-icon" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="icon-bg" cx="50%" cy="45%" r="60%">
+          <stop offset="0%" style="stop-color:#1e1608"/>
+          <stop offset="100%" style="stop-color:#060503"/>
+        </radialGradient>
+        <radialGradient id="icon-iris" cx="50%" cy="40%" r="60%">
+          <stop offset="0%" style="stop-color:#d4a840"/>
+          <stop offset="100%" style="stop-color:#8b6a18"/>
+        </radialGradient>
+        <filter id="icon-glow">
+          <feGaussianBlur stdDeviation="2" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- Bg circle -->
+      <circle cx="100" cy="100" r="98" fill="url(#icon-bg)"/>
+
+      <!-- Rings -->
+      <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(197,163,85,0.6)" stroke-width="2"/>
+      <circle cx="100" cy="100" r="86" fill="none" stroke="rgba(197,163,85,0.2)" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+      <!-- 7 rays -->
+      <g transform="translate(100,100)" filter="url(#icon-glow)">
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(197,163,85,0.3)" stroke-width="1"/>
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(197,163,85,0.3)" stroke-width="1" transform="rotate(51.43)"/>
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(197,163,85,0.3)" stroke-width="1" transform="rotate(102.86)"/>
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(197,163,85,0.3)" stroke-width="1" transform="rotate(154.29)"/>
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(197,163,85,0.3)" stroke-width="1" transform="rotate(205.71)"/>
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(197,163,85,0.3)" stroke-width="1" transform="rotate(257.14)"/>
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(197,163,85,0.3)" stroke-width="1" transform="rotate(308.57)"/>
+      </g>
+
+      <!-- Ray tips -->
+      <g transform="translate(100,100)" fill="rgba(197,163,85,0.75)" filter="url(#icon-glow)">
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(0)"/>
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(51.43)"/>
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(102.86)"/>
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(154.29)"/>
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(205.71)"/>
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(257.14)"/>
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(308.57)"/>
+      </g>
+
+      <!-- Inner rings -->
+      <circle cx="100" cy="100" r="52" fill="rgba(8,6,3,0.7)" stroke="rgba(197,163,85,0.45)" stroke-width="1.5"/>
+      <circle cx="100" cy="100" r="45" fill="none" stroke="rgba(197,163,85,0.15)" stroke-width="0.7" stroke-dasharray="3,3"/>
+
+      <!-- Eye -->
+      <path d="M 68 100 Q 100 70 132 100 Q 100 130 68 100 Z"
+            fill="#0c0a07" stroke="rgba(197,163,85,0.65)" stroke-width="1.6"/>
+      <circle cx="100" cy="100" r="14" fill="url(#icon-iris)"/>
+      <circle cx="100" cy="100" r="10" fill="none" stroke="rgba(180,130,20,0.35)" stroke-width="0.7"/>
+      <circle cx="100" cy="100" r="5.5" fill="#040302"/>
+      <ellipse cx="97" cy="97" rx="2.5" ry="1.8" fill="rgba(255,240,180,0.3)" transform="rotate(-20,97,97)"/>
+
+      <!-- Text -->
+      <text x="100" y="157" text-anchor="middle" font-family="Cinzel,serif" font-size="8.5" fill="rgba(197,163,85,0.85)" letter-spacing="3" font-weight="700">SÍNODO</text>
+      <text x="100" y="168" text-anchor="middle" font-family="Cinzel,serif" font-size="6.5" fill="rgba(197,163,85,0.5)" letter-spacing="2.5">DO QUINTO VÉU</text>
+
+      <!-- Dimension numbers small -->
+      <g transform="translate(100,100)" fill="rgba(197,163,85,0.35)" font-family="Cinzel,serif" font-size="5.5">
+        <text x="0" y="-59" text-anchor="middle">VII</text>
+        <text x="56.2" y="-18.3" text-anchor="middle">I</text>
+        <text x="34.7" y="47.7" text-anchor="middle">II</text>
+        <text x="-34.7" y="47.7" text-anchor="middle">III</text>
+        <text x="-56.2" y="-18.3" text-anchor="middle">IV</text>
+        <text x="-20" y="-55" text-anchor="middle">V</text>
+        <text x="20" y="-55" text-anchor="middle">VI</text>
+      </g>
+    </svg>
+    <button class="dl-btn" onclick="downloadSVG('logo-icon','sinodo-logo-icone')">⬇ Baixar SVG</button>
+  </div>
+
+  <!-- VERSÃO HORIZONTAL -->
+  <div class="logo-item">
+    <p class="logo-label">Versão Horizontal</p>
+    <svg id="logo-horiz" width="380" height="110" viewBox="0 0 380 110" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="h-iris" cx="50%" cy="40%" r="60%">
+          <stop offset="0%" style="stop-color:#d4a840"/>
+          <stop offset="100%" style="stop-color:#8b6a18"/>
+        </radialGradient>
+        <filter id="h-glow">
+          <feGaussianBlur stdDeviation="1.8" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- Bg -->
+      <rect width="380" height="110" rx="3" fill="#080604"/>
+      <rect x="1" y="1" width="378" height="108" rx="2" fill="none" stroke="rgba(197,163,85,0.25)" stroke-width="1"/>
+
+      <!-- Icon part (left) -->
+      <g transform="translate(55,55)">
+        <!-- Rings -->
+        <circle r="46" fill="rgba(12,10,6,0.8)" stroke="rgba(197,163,85,0.5)" stroke-width="1.5"/>
+        <circle r="38" fill="none" stroke="rgba(197,163,85,0.15)" stroke-width="0.8" stroke-dasharray="3,2"/>
+
+        <!-- 7 rays -->
+        <g filter="url(#h-glow)">
+          <line x1="0" y1="-34" x2="0" y2="34" stroke="rgba(197,163,85,0.28)" stroke-width="0.9"/>
+          <line x1="0" y1="-34" x2="0" y2="34" stroke="rgba(197,163,85,0.28)" stroke-width="0.9" transform="rotate(51.43)"/>
+          <line x1="0" y1="-34" x2="0" y2="34" stroke="rgba(197,163,85,0.28)" stroke-width="0.9" transform="rotate(102.86)"/>
+          <line x1="0" y1="-34" x2="0" y2="34" stroke="rgba(197,163,85,0.28)" stroke-width="0.9" transform="rotate(154.29)"/>
+          <line x1="0" y1="-34" x2="0" y2="34" stroke="rgba(197,163,85,0.28)" stroke-width="0.9" transform="rotate(205.71)"/>
+          <line x1="0" y1="-34" x2="0" y2="34" stroke="rgba(197,163,85,0.28)" stroke-width="0.9" transform="rotate(257.14)"/>
+          <line x1="0" y1="-34" x2="0" y2="34" stroke="rgba(197,163,85,0.28)" stroke-width="0.9" transform="rotate(308.57)"/>
+        </g>
+
+        <!-- Inner circle -->
+        <circle r="22" fill="rgba(6,4,2,0.8)" stroke="rgba(197,163,85,0.4)" stroke-width="1.2"/>
+
+        <!-- Eye -->
+        <path d="M -18 0 Q 0 -14 18 0 Q 0 14 -18 0 Z" fill="#0c0a07" stroke="rgba(197,163,85,0.6)" stroke-width="1.4"/>
+        <circle r="8" fill="url(#h-iris)"/>
+        <circle r="4" fill="#050402"/>
+        <ellipse cx="-2" cy="-2" rx="2" ry="1.3" fill="rgba(255,240,180,0.3)" transform="rotate(-20,-2,-2)"/>
+      </g>
+
+      <!-- Vertical separator -->
+      <line x1="112" y1="18" x2="112" y2="92" stroke="rgba(197,163,85,0.25)" stroke-width="1"/>
+
+      <!-- Text part (right) -->
+      <g transform="translate(130,0)">
+        <!-- Main title -->
+        <text x="0" y="42" font-family="Cinzel,serif" font-size="22" fill="rgba(197,163,85,0.95)"
+              font-weight="900" letter-spacing="3">SÍNODO</text>
+
+        <!-- Thin line under title -->
+        <line x1="0" y1="50" x2="235" y2="50" stroke="rgba(197,163,85,0.3)" stroke-width="0.8"/>
+
+        <!-- Subtitle -->
+        <text x="0" y="64" font-family="Cinzel,serif" font-size="11" fill="rgba(197,163,85,0.65)"
+              font-weight="600" letter-spacing="5">DO QUINTO VÉU</text>
+
+        <!-- Sub-subtitle -->
+        <text x="0" y="80" font-family="Crimson Text,serif" font-size="10" fill="rgba(197,163,85,0.4)"
+              font-style="italic" letter-spacing="2">Porto Varion · Divisão Operacional</text>
+
+        <!-- Ornament dots -->
+        <g fill="rgba(197,163,85,0.4)">
+          <circle cx="0" cy="92" r="2"/>
+          <circle cx="10" cy="92" r="1.5"/>
+          <circle cx="19" cy="92" r="1.5"/>
+          <circle cx="28" cy="92" r="1.5"/>
+        </g>
+      </g>
+
+      <!-- Corner ornaments -->
+      <g stroke="rgba(197,163,85,0.25)" stroke-width="1" fill="none">
+        <path d="M 6,6 L 22,6 L 6,22"/>
+        <path d="M 374,6 L 358,6 L 374,22"/>
+        <path d="M 6,104 L 22,104 L 6,88"/>
+        <path d="M 374,104 L 358,104 L 374,88"/>
+      </g>
+    </svg>
+    <button class="dl-btn" onclick="downloadSVG('logo-horiz','sinodo-logo-horizontal')">⬇ Baixar SVG</button>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════
+     VARIAÇÕES DE FUNDO
+════════════════════════════════════ -->
+<div class="logos-row">
+
+  <!-- VERSÃO CLARA (para pergaminho) -->
+  <div class="logo-item">
+    <p class="logo-label">Versão Clara (pergaminho)</p>
+    <svg id="logo-light" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="light-bg" cx="50%" cy="45%" r="60%">
+          <stop offset="0%" style="stop-color:#f0e6c8"/>
+          <stop offset="100%" style="stop-color:#d4c49a"/>
+        </radialGradient>
+        <radialGradient id="light-iris" cx="50%" cy="40%" r="60%">
+          <stop offset="0%" style="stop-color:#8b5e10"/>
+          <stop offset="100%" style="stop-color:#5a3c08"/>
+        </radialGradient>
+        <filter id="light-glow">
+          <feGaussianBlur stdDeviation="1.5" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <circle cx="100" cy="100" r="98" fill="url(#light-bg)"/>
+      <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(90,60,10,0.5)" stroke-width="2"/>
+      <circle cx="100" cy="100" r="86" fill="none" stroke="rgba(90,60,10,0.2)" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+      <g transform="translate(100,100)" filter="url(#light-glow)">
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(90,60,10,0.25)" stroke-width="1"/>
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(90,60,10,0.25)" stroke-width="1" transform="rotate(51.43)"/>
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(90,60,10,0.25)" stroke-width="1" transform="rotate(102.86)"/>
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(90,60,10,0.25)" stroke-width="1" transform="rotate(154.29)"/>
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(90,60,10,0.25)" stroke-width="1" transform="rotate(205.71)"/>
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(90,60,10,0.25)" stroke-width="1" transform="rotate(257.14)"/>
+        <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(90,60,10,0.25)" stroke-width="1" transform="rotate(308.57)"/>
+      </g>
+
+      <g transform="translate(100,100)" fill="rgba(90,60,10,0.65)">
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(0)"/>
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(51.43)"/>
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(102.86)"/>
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(154.29)"/>
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(205.71)"/>
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(257.14)"/>
+        <polygon points="0,-80 -2.5,-74 0,-68 2.5,-74" transform="rotate(308.57)"/>
+      </g>
+
+      <circle cx="100" cy="100" r="52" fill="rgba(200,180,130,0.4)" stroke="rgba(90,60,10,0.4)" stroke-width="1.5"/>
+      <circle cx="100" cy="100" r="45" fill="none" stroke="rgba(90,60,10,0.12)" stroke-width="0.7" stroke-dasharray="3,3"/>
+
+      <path d="M 68 100 Q 100 70 132 100 Q 100 130 68 100 Z"
+            fill="rgba(220,195,140,0.6)" stroke="rgba(90,60,10,0.55)" stroke-width="1.6"/>
+      <circle cx="100" cy="100" r="14" fill="url(#light-iris)"/>
+      <circle cx="100" cy="100" r="10" fill="none" stroke="rgba(60,35,5,0.3)" stroke-width="0.7"/>
+      <circle cx="100" cy="100" r="5.5" fill="rgba(20,12,4,0.9)"/>
+      <ellipse cx="97" cy="97" rx="2.5" ry="1.8" fill="rgba(255,240,200,0.35)" transform="rotate(-20,97,97)"/>
+
+      <text x="100" y="157" text-anchor="middle" font-family="Cinzel,serif" font-size="8.5" fill="rgba(90,60,10,0.8)" letter-spacing="3" font-weight="700">SÍNODO</text>
+      <text x="100" y="168" text-anchor="middle" font-family="Cinzel,serif" font-size="6.5" fill="rgba(90,60,10,0.55)" letter-spacing="2.5">DO QUINTO VÉU</text>
+
+      <g transform="translate(100,100)" fill="rgba(90,60,10,0.3)" font-family="Cinzel,serif" font-size="5.5">
+        <text x="0" y="-59" text-anchor="middle">VII</text>
+        <text x="56.2" y="-18.3" text-anchor="middle">I</text>
+        <text x="34.7" y="47.7" text-anchor="middle">II</text>
+        <text x="-34.7" y="47.7" text-anchor="middle">III</text>
+        <text x="-56.2" y="-18.3" text-anchor="middle">IV</text>
+        <text x="-20" y="-55" text-anchor="middle">V</text>
+        <text x="20" y="-55" text-anchor="middle">VI</text>
+      </g>
+    </svg>
+    <button class="dl-btn" onclick="downloadSVG('logo-light','sinodo-logo-claro')">⬇ Baixar SVG</button>
+  </div>
+
+  <!-- VERSÃO MÍNIMA / STAMP -->
+  <div class="logo-item">
+    <p class="logo-label">Versão Stamp / Selo</p>
+    <svg id="logo-stamp" width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="stamp-glow">
+          <feGaussianBlur stdDeviation="1.5" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <radialGradient id="stamp-iris" cx="50%" cy="40%" r="60%">
+          <stop offset="0%" style="stop-color:#c9a030"/>
+          <stop offset="100%" style="stop-color:#7a5518"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Outer serrated ring (stamp effect) -->
+      <g transform="translate(90,90)">
+        <!-- Outer dashes as stamp serration -->
+        <g stroke="rgba(197,163,85,0.7)" stroke-width="3" stroke-linecap="round">
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(0)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(12)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(24)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(36)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(48)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(60)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(72)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(84)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(96)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(108)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(120)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(132)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(144)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(156)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(168)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(180)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(192)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(204)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(216)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(228)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(240)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(252)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(264)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(276)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(288)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(300)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(312)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(324)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(336)"/>
+          <line x1="0" y1="-82" x2="0" y2="-75" transform="rotate(348)"/>
+        </g>
+      </g>
+
+      <circle cx="90" cy="90" r="72" fill="#080604" stroke="rgba(197,163,85,0.7)" stroke-width="2"/>
+      <circle cx="90" cy="90" r="64" fill="none" stroke="rgba(197,163,85,0.25)" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+      <!-- 7 rays -->
+      <g transform="translate(90,90)" filter="url(#stamp-glow)">
+        <line x1="0" y1="-57" x2="0" y2="57" stroke="rgba(197,163,85,0.3)" stroke-width="1"/>
+        <line x1="0" y1="-57" x2="0" y2="57" stroke="rgba(197,163,85,0.3)" stroke-width="1" transform="rotate(51.43)"/>
+        <line x1="0" y1="-57" x2="0" y2="57" stroke="rgba(197,163,85,0.3)" stroke-width="1" transform="rotate(102.86)"/>
+        <line x1="0" y1="-57" x2="0" y2="57" stroke="rgba(197,163,85,0.3)" stroke-width="1" transform="rotate(154.29)"/>
+        <line x1="0" y1="-57" x2="0" y2="57" stroke="rgba(197,163,85,0.3)" stroke-width="1" transform="rotate(205.71)"/>
+        <line x1="0" y1="-57" x2="0" y2="57" stroke="rgba(197,163,85,0.3)" stroke-width="1" transform="rotate(257.14)"/>
+        <line x1="0" y1="-57" x2="0" y2="57" stroke="rgba(197,163,85,0.3)" stroke-width="1" transform="rotate(308.57)"/>
+      </g>
+
+      <circle cx="90" cy="90" r="38" fill="rgba(6,4,2,0.8)" stroke="rgba(197,163,85,0.45)" stroke-width="1.5"/>
+
+      <path d="M 61 90 Q 90 65 119 90 Q 90 115 61 90 Z"
+            fill="#0c0a07" stroke="rgba(197,163,85,0.65)" stroke-width="1.5"/>
+      <circle cx="90" cy="90" r="13" fill="url(#stamp-iris)"/>
+      <circle cx="90" cy="90" r="6" fill="#060402"/>
+      <ellipse cx="87" cy="87" rx="2.5" ry="1.8" fill="rgba(255,240,180,0.3)" transform="rotate(-20,87,87)"/>
+
+      <!-- SQV monogram -->
+      <text x="90" y="143" text-anchor="middle" font-family="Cinzel,serif" font-size="9" fill="rgba(197,163,85,0.8)" letter-spacing="4" font-weight="700">S · Q · V</text>
+      <text x="90" y="154" text-anchor="middle" font-family="Cinzel,serif" font-size="6" fill="rgba(197,163,85,0.4)" letter-spacing="2">ANNO MCXLIV P.V.</text>
+    </svg>
+    <button class="dl-btn" onclick="downloadSVG('logo-stamp','sinodo-logo-stamp')">⬇ Baixar SVG</button>
+  </div>
+
+  <!-- FAVICON / MICRO -->
+  <div class="logo-item">
+    <p class="logo-label">Favicon / Micro (64×64)</p>
+    <svg id="logo-favicon" width="128" height="128" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="fav-iris" cx="50%" cy="40%" r="60%">
+          <stop offset="0%" style="stop-color:#c9a030"/>
+          <stop offset="100%" style="stop-color:#6a4810"/>
+        </radialGradient>
+      </defs>
+      <circle cx="32" cy="32" r="31" fill="#0a0806"/>
+      <circle cx="32" cy="32" r="29.5" fill="none" stroke="rgba(197,163,85,0.6)" stroke-width="1.5"/>
+      <circle cx="32" cy="32" r="22" fill="none" stroke="rgba(197,163,85,0.18)" stroke-width="0.6" stroke-dasharray="3,2"/>
+      <g transform="translate(32,32)" stroke="rgba(197,163,85,0.28)" stroke-width="0.7">
+        <line x1="0" y1="-28" x2="0" y2="28"/>
+        <line x1="0" y1="-28" x2="0" y2="28" transform="rotate(51.43)"/>
+        <line x1="0" y1="-28" x2="0" y2="28" transform="rotate(102.86)"/>
+        <line x1="0" y1="-28" x2="0" y2="28" transform="rotate(154.29)"/>
+        <line x1="0" y1="-28" x2="0" y2="28" transform="rotate(205.71)"/>
+        <line x1="0" y1="-28" x2="0" y2="28" transform="rotate(257.14)"/>
+        <line x1="0" y1="-28" x2="0" y2="28" transform="rotate(308.57)"/>
+      </g>
+      <circle cx="32" cy="32" r="17" fill="rgba(6,4,2,0.85)" stroke="rgba(197,163,85,0.4)" stroke-width="1.2"/>
+      <path d="M 17 32 Q 32 20 47 32 Q 32 44 17 32 Z" fill="#0c0a07" stroke="rgba(197,163,85,0.6)" stroke-width="1.2"/>
+      <circle cx="32" cy="32" r="9" fill="url(#fav-iris)"/>
+      <circle cx="32" cy="32" r="4.5" fill="#050302"/>
+      <ellipse cx="30" cy="30" rx="2" ry="1.4" fill="rgba(255,240,180,0.3)" transform="rotate(-20,30,30)"/>
+    </svg>
+    <button class="dl-btn" onclick="downloadSVG('logo-favicon','sinodo-favicon')">⬇ Baixar SVG</button>
+  </div>
+
+</div>
+
+<script>
+function downloadSVG(svgId, filename) {
+  const svg = document.getElementById(svgId);
+  const serializer = new XMLSerializer();
+  let svgStr = serializer.serializeToString(svg);
+
+  // Add XML declaration and namespace
+  if (!svgStr.includes('xmlns="http://www.w3.org/2000/svg"')) {
+    svgStr = svgStr.replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
+  }
+  svgStr = '<?xml version="1.0" encoding="UTF-8"?>\n' + svgStr;
+
+  const blob = new Blob([svgStr], { type: 'image/svg+xml;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename + '.svg';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+</script>
+
+</body>
+</html>
