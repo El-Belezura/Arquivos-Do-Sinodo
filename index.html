@@ -1572,190 +1572,137 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
     </div>
   </div>
 
-  <div class="lore-section" id="sec-igreja">
-    <div class="sec-header">
-      <div class="sec-eyebrow">Religião e Fé</div>
-      <h2 class="sec-title">A Igreja da Sétima Ascensão</h2>
-      <p class="sec-sub">A fé que moldou o mundo — e quer mudar o que existe além dele.</p>
-    </div>
+<main class="lore-main">
+  <div class="lore-section active" id="sec-home">
     <div class="lore-article">
-      <div class="art-label">Doutrina Central</div>
-      <div class="art-title">O Que a Igreja Acredita</div>
+      <div class="art-label">Diretivas Externas</div>
+      <div class="art-title">Documentação de Base</div>
       <div class="art-body">
-        <p>A Igreja da Sétima Ascensão ensina que existe um único Deus verdadeiro — o criador de todas as dimensões. Ele não habita o mundo físico, mas reside na <strong>7ª Dimensão</strong>, de onde criou tudo que existe.</p>
-        <p>Após a morte, os justos ascendem à 7ª Dimensão. Os que praticaram o mal ficam presos na <strong>6ª Dimensão</strong> — a prisão, onde também está o Servo Caído, o ser que tentou roubar as dimensões para si e causou a perturbação original da magia no mundo.</p>
-        <p>A magia, portanto, não é uma habilidade humana natural. É um vazamento causado pela ruptura que o Servo Caído provocou. Usá-la é tocar numa ferida aberta.</p>
+        <p>Para consulta rápida dos fundamentos legais e religiosos, utilize os arquivos externos oficiais:</p>
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+          <a href="https://docs.google.com/document/d/1bRumBGBy_4b4qaUeQ84C6k4GAwg6P2Yb/edit" target="_blank" class="action-btn">📜 Ler Tratado de Vhal'Torin</a>
+          <a href="https://docs.google.com/document/d/1M7uBpBceAy-bdpQTjBkQhKqkxKyqDwzk/edit" target="_blank" class="action-btn">⛪ Ler Doutrina da Igreja</a>
+        </div>
       </div>
+    </div>
+    <div class="art-body">
+      <p>Esta biblioteca reúne o conhecimento aprovado pelo <strong>Sínodo do Quinto Véu</strong> para consulta de agentes, estudiosos e representantes de reinos signatários. Alguns trechos permanecem censurados — protegidos por códigos de acesso conferidos a quem obteve autorização formal.</p>
     </div>
     <div class="lore-quote">
-      <p>"Virá aquele que, nascido sob o signo do Sétimo Véu, selará a passagem entre o mundo dos vivos e a dimensão proibida."</p>
-      <cite>— A Profecia do Selador, Texto Canônico da Igreja</cite>
+      <p>"O conhecimento é uma faca. Pode alimentar. Pode matar. A diferença não está na faca — está em quem a segura."</p>
+      <cite>— Magistratus Eldren Soval, Primeiro Diretor do Observatório do Véu</cite>
     </div>
-    <div class="lore-article">
-      <div class="art-label">Hierarquia</div>
-      <div class="art-title">Estrutura da Igreja</div>
-      <div class="art-body">
-        <p>No topo está o <strong>Sumo Ascendente</strong> — líder espiritual e político do Domínio de Lux Aeterna. Abaixo dele, os <strong>Altos Prelados</strong> definem doutrina. Os <strong>Sacerdotes</strong> servem as congregações. Os <strong>Legados da Chama</strong> comandam a Inquisição no campo.</p>
-        <p>Os <strong>Custódios da Purificação</strong> — a Inquisição — operam como braço executivo em todos os reinos onde a Igreja tem presença, independente da jurisdição do Sínodo.</p>
+
+    <div class="lore-grid">
+      <div class="lore-card" onclick="showSection('cosmologia',null)">
+        <div class="lc-icon">🌌</div>
+        <div class="lc-title">Cosmologia</div>
+        <div class="lc-desc">As sete dimensões, a natureza do mundo e o que existe além da realidade visível.</div>
+      </div>
+      <div class="lore-card" onclick="showSection('magia',null)">
+        <div class="lc-icon">✨</div>
+        <div class="lc-title">A Magia</div>
+        <div class="lc-desc">O que é, como funciona, por que é proibida e o que acontece com quem a usa.</div>
+      </div>
+      <div class="lore-card" onclick="showSection('historia',null)">
+        <div class="lc-icon">📜</div>
+        <div class="lc-title">História</div>
+        <div class="lc-desc">A Grande Guerra, o Tratado de Vhal'Torin e mil anos de ordem frágil.</div>
+      </div>
+      <div class="lore-card" onclick="showSection('reinos',null)">
+        <div class="lc-icon">🏰</div>
+        <div class="lc-title">Os Reinos</div>
+        <div class="lc-desc">As grandes potências, suas culturas e suas relações com a magia.</div>
+      </div>
+      <div class="lore-card" onclick="showSection('faccoes',null)">
+        <div class="lc-icon">⚔️</div>
+        <div class="lc-title">Facções</div>
+        <div class="lc-desc">O Sínodo, a Igreja, os Custódios e as forças que moldam o mundo.</div>
+      </div>
+      <div class="lore-card" onclick="showSection('locais',null)">
+        <div class="lc-icon">🗺</div>
+        <div class="lc-title">Locais</div>
+        <div class="lc-desc">De Porto Varion às ruínas de Aethryon e além da Grande Muralha.</div>
       </div>
     </div>
+
+    <div class="lore-warn">
+      <div class="lore-warn-title">⚠ Aviso ao Leitor</div>
+      <p>Alguns trechos desta biblioteca foram classificados pelo Conclave. Suas ausências são intencionais. Se você acredita ter direito a um acesso específico, contate seu Supervisor de Vínculo com justificativa formal.</p>
+    </div>
+  </div> <div class="lore-section" id="sec-cosmologia">
+    <div class="sec-header">
+      <div class="sec-eyebrow">Fundamentos · Cosmologia</div>
+      <h2 class="sec-title">As Sete Dimensões</h2>
+      <p class="sec-sub">A estrutura da realidade segundo a doutrina do Sínodo e a fé da Igreja.</p>
+    </div>
     <div class="lore-article">
-      <div class="art-label">Paradoxo Central</div>
-      <div class="art-title">A Igreja Estuda o Que Condena</div>
       <div class="art-body">
-        <p>Há uma tensão doutrinária nunca completamente resolvida: a Igreja condena o uso da magia como violação divina, mas <strong>estuda a magia ativamente</strong> — para entender como selá-la, para reconhecer seus efeitos, para caçar os que a usam.</p>
-        <p>Internamente, há dois campos: os <strong>Tradicionalistas</strong>, que querem eliminar toda magia imediatamente, e os <strong>Reformistas</strong>, que argumentam que magia poderia ser uma ferramenta divina se usada corretamente. Esse debate existe há séculos. Não está próximo de resolução.</p>
+        <p>Tanto a ciência do Sínodo quanto a teologia da Igreja convergem: existem <strong>sete dimensões</strong> distintas.</p>
       </div>
     </div>
-    <div class="censored-block" id="cens-profecia-igreja">
-      <div class="art-label">Análise Teológica — Confidencial</div>
-      <div class="art-title">As Quatro Versões da Profecia do Selador</div>
-      <div class="censored-text">O texto canônico é apenas uma de quatro versões conhecidas. A Versão II, do Manuscrito de Lux Aeterna, acrescenta: "...selará a passagem — não pelo poder, mas pela ausência dele. E o fechamento não será vitória. Será luto." A Versão III, fragmento de Aethryon: "...virá de fora das casas de saber... não reconhecido pelos guardiões..." A Versão IV, suprimida pela hierarquia: "O Selador não fechará o Quinto Véu porque é justo. Fechará porque não terá escolha. E quando o véu se fechar, aquilo que está do outro lado ficará conosco — porque já terá cruzado." A Igreja suprimiu a Versão IV. O Sínodo arquivou a análise comparativa como Confidencial.</div>
-      <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Documento IG-019 — Análise Teológica — Código necessário</span><button class="cens-btn" onclick="unlockCensored('cens-profecia-igreja','selador7','As Versões da Profecia')">Inserir Código</button></div>
+    <table class="dim-table">
+      <thead>
+        <tr><th>Dimensão</th><th>Nome</th><th>Natureza</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1ª – 3ª</td><td>Mundo Físico</td><td>Matéria e existência</td></tr>
+        <tr><td>4ª</td><td>O Tempo</td><td>Fluxo de causa e consequência</td></tr>
+        <tr><td>5ª</td><td>O Véu / A Magia</td><td>Plasticidade da realidade</td></tr>
+        <tr><td>6ª</td><td>A Prisão</td><td>Confinamento do mal</td></tr>
+        <tr><td>7ª</td><td>O Plano Divino</td><td>Reino da Sétima Ascensão</td></tr>
+      </tbody>
+    </table>
+    <div class="censored-block" id="cens-cosmol-1">
+      <div class="art-label">Pesquisa Avançada — Observatório do Véu</div>
+      <div class="art-title">A Consciência da 5ª Dimensão</div>
+      <div class="censored-text">Há evidências crescentes de que a 5ª Dimensão responde à interação humana com intenção. Alguns membros do Conclave acreditam que ela é consciente e está esperando algo.</div>
+      <div class="censored-unlock">
+        <span class="cens-icon">🔒</span>
+        <button class="cens-btn" onclick="unlockCensored('cens-cosmol-1','observatorio','Consciência Dimensional')">Inserir Código</button>
+      </div>
     </div>
   </div>
 
-  <div class="lore-section" id="sec-monstros">
+  <div class="lore-section" id="sec-historia">
     <div class="sec-header">
-      <div class="sec-eyebrow">Ameaças Dimensionais</div>
-      <h2 class="sec-title">Monstros e Criaturas do Véu</h2>
-      <p class="sec-sub">De onde vêm, o que são e como reconhecê-los.</p>
+      <div class="sec-eyebrow">Acervo Histórico</div>
+      <h2 class="sec-title">História do Mundo</h2>
+      <p class="sec-sub">Da Grande Guerra aos dias atuais.</p>
     </div>
-    <div class="lore-article">
-      <div class="art-label">Origem</div>
-      <div class="art-title">Por Que Existem Monstros</div>
-      <div class="art-body">
-        <p>Monstros não evoluíram no mundo físico. Eles <strong>atravessaram</strong> para cá. São criaturas nativas da 5ª Dimensão que chegaram ao plano físico através de fissuras abertas por uso excessivo ou ilegal de magia.</p>
-        <p>Uma vez no mundo físico, algumas criaturas se adaptam e reproduzem. Outras mantêm características impossíveis — comportamentos que violam leis naturais, capacidades que não deveriam existir.</p>
-        <p>Nas regiões controladas, são raros — caçados, afugentados, mantidos afastados. Nas regiões onde magia ilegal circula, proliferam. Em Vhal'Zarak, são a norma.</p>
-      </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">~1000 A.V.</div><div class="tl-dot" style="background:var(--red-seal);"></div><div class="tl-content"><div class="tl-title">A Grande Guerra do Véu</div><div class="tl-text">Uso deliberado da 5ª Dimensão como arma, destruindo civilizações inteiras.</div></div></div>
+      <div class="tl-item"><div class="tl-date">~997 A.V.</div><div class="tl-dot" style="background:var(--red-seal);"></div><div class="tl-content"><div class="tl-title">A Queda de Aethryon</div><div class="tl-text">Ruptura dimensional extrema que congelou a cidade em um estado de ruína viva.</div></div></div>
+      <div class="tl-item"><div class="tl-date">Ano 0</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">O Tratado de Vhal'Torin</div><div class="tl-text">Criação do Sínodo e marco zero do calendário atual.</div></div></div>
+      <div class="tl-item"><div class="tl-date">Ano 150</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Muralha de Duran-Khal</div><div class="tl-text">Finalização da barreira para conter as aberrações de Vhal'Zarak.</div></div></div>
+      <div class="tl-item"><div class="tl-date">Ano 812</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Ascensão da Liga Mercante</div><div class="tl-text">Financiamento da reconstrução portuária e logística global.</div></div></div>
+      <div class="tl-item"><div class="tl-date">Ano 1041</div><div class="tl-dot" style="background:#7a3a9a;"></div><div class="tl-content"><div class="tl-title">Operação Véu Costurado</div><div class="tl-text">Desarticulação do Culto do Olho Aberto em Porto Varion.</div></div></div>
+      <div class="tl-item"><div class="tl-date">Ano 1044</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">Os Dias Atuais</div><div class="tl-text">Instabilidade na Muralha e ressurgimento de cultos proibidos.</div></div></div>
     </div>
-    <div class="lore-article">
-      <div class="art-label">Senciência</div>
-      <div class="art-title">Nem Todo Monstro é uma Besta</div>
-      <div class="art-body">
-        <p>Este é o ponto mais delicado da doutrina dimensional: <strong>algumas criaturas da 5ª Dimensão são sencientes</strong>. Pensam. Comunicam. Têm objetivos.</p>
-        <p>A Igreja as protege — todo ser senciente é criação de Deus. O Sínodo as estuda. Khar-Duran as mata sem distinção, por necessidade. Isso cria conflitos permanentes entre as três instituições.</p>
-        <p>As criaturas que a população chama de "deuses menores" ou "espíritos" são entidades sencientes de alta capacidade dimensional — <em>não são deuses</em>. São poderosas, antigas, e frequentemente mentem sobre o que são.</p>
-      </div>
-    </div>
-    <div class="lore-warn">
-      <div class="lore-warn-title">⚠ Aviso Operacional</div>
-      <p>Se uma criatura dimensional afirmar ser um deus, oferecer poder ou conhecimento em troca de algo, ou clamar ter mensagens divinas — trate como Entidade Classe III ou superior. Não negocie. Documente. Reporte ao Observatório do Véu.</p>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">Criaturas Notáveis</div>
-      <div class="art-title">O Que Já Foi Documentado</div>
-      <div class="art-body">
-        <p>O <strong>Sussurrante</strong> — humanoide sem rosto que ataca cognitivamente, não fisicamente. Causa memórias falsas. Possivelmente senciente.</p>
-        <p>O <strong>Recordador</strong> — parece exatamente uma pessoa conhecida pelo observador. Extremamente difícil de identificar. Não projeta sombra corretamente. Não lembra de eventos do dia anterior.</p>
-        <p>O <strong>Eco de Aethryon</strong> — formado por loop temporal residual da cidade destruída. Repete eternamente os últimos momentos de uma vida. Pode ter surgido de um sobrevivente em colapso perceptual total.</p>
-        <p>O <strong>Fragmento de Vardhal</strong> — o mais perigoso documentado. Um fragmento da entidade selada no Observatório do Véu. Lê memórias pelo contato visual. Altamente inteligente. Não tente comunicação.</p>
-      </div>
+  </div>
+
+  <div class="lore-section" id="sec-magia">
+    <div class="sec-header"><h2>A Magia e o Véu</h2></div>
+    <p>Magia é uma capacidade cognitiva de interpretar a 5ª Dimensão. O uso sem treino causa aberturas que não se fecham.</p>
+  </div>
+
+  <div class="lore-section" id="sec-reinos">
+    <div class="sec-header"><h2 class="sec-title">Acesso Bloqueado</h2></div>
+    <div class="lore-warn">🔒 ACESSO NEGADO. Requer autorização de Supervisor Nível II.</div>
+  </div>
+
+  <div class="lore-section" id="sec-faccoes">
+    <div class="faction-cards">
+      <div class="fcard"><div class="fcard-header">Sínodo do Quinto Véu</div></div>
+      <div class="fcard"><div class="fcard-header" style="background:#1a0d2e;">Tecelões do Vazio</div></div>
     </div>
   </div>
 
   <div class="lore-section" id="sec-locais">
-    <div class="sec-header">
-      <div class="sec-eyebrow">Geografia e Locais</div>
-      <h2 class="sec-title">Locais Notáveis do Mundo</h2>
-      <p class="sec-sub">Os lugares que definem a história — e alguns que a desfizeram.</p>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">A Cidade do Sínodo</div>
-      <div class="art-title">Porto Varion</div>
-      <div class="art-body">
-        <p>Cidade-estado independente, sede do Sínodo do Quinto Véu. Construída no local onde o Tratado de Vhal'Torin foi assinado há mil anos. Território neutro — nenhum reino pode exercer força militar dentro de seus limites.</p>
-        <p>Porto Varion é o maior nó político e intelectual do mundo. Todo mundo precisa dela. Ninguém confia nela. Seus distritos vão do majestoso Alto Sínodo à sombria Baixa Varion, passando pelo misterioso <strong>Bairro do Véu</strong> — onde a realidade é levemente mais... flexível.</p>
-        <p>Há um detalhe que poucos conhecem: Porto Varion foi construída sobre um <strong>ponto de fragilidade dimensional</strong>. Isso torna as pesquisas mais eficazes. Também as torna mais perigosas.</p>
-      </div>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">A Ruína</div>
-      <div class="art-title">Aethryon — A Pompeia da Magia</div>
-      <div class="art-body">
-        <p>Há mil anos, Aethryon era uma das maiores cidades do mundo. Hoje é uma advertência.</p>
-        <p>Durante a Grande Guerra, magos no alto de sua torre maior romperam os limites da 5ª Dimensão de forma irrecuperável. A realidade colapsou. O tempo distorceu. A cidade foi <strong>congelada em ruína viva</strong> — não destruída, mas capturada em um estado impossível.</p>
-        <p>Hoje, coberta de natureza, Aethryon ainda existe — e ainda acontece. Há áreas onde loops temporais repetem os momentos da batalha em ciclo eterno. Há criaturas que foram pessoas. Há lugares onde a gravidade mudou de opinião e nunca voltou atrás.</p>
-      </div>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">Além da Muralha</div>
-      <div class="art-title">Vhal'Zarak — A Cicatriz do Mundo</div>
-      <div class="art-body">
-        <p>Quando a Grande Guerra terminou, ficou uma ferida. Vhal'Zarak é o território além da Grande Muralha de Duran-Khal — o que restou do reino que tentou dominar completamente a 5ª Dimensão.</p>
-        <p>Ali, duas realidades coexistem em conflito permanente. As leis físicas não são confiáveis. O tempo é desonesto. Os monstros são a norma. E no centro de tudo, no <strong>Nexus Umbral</strong> — onde a ruptura começou — há algo que nenhuma expedição foi capaz de descrever adequadamente.</p>
-        <p>A única expedição que chegou ao Nexus e retornou (de oito membros, três sobreviveram) produziu o documento mais perturbador dos arquivos do Sínodo.</p>
-      </div>
-    </div>
-    <div class="censored-block" id="cens-nexus">
-      <div class="art-label">Expedição ao Nexus Umbral — Máximo Sigilo</div>
-      <div class="art-title">O Que Há no Centro de Vhal'Zarak</div>
-      <div class="censored-text">Magister Aldric Yuno, sobrevivente: "No centro, havia algo. Não vou chamar de criatura porque isso implica forma, e forma implica limite. Havia... presença. Ela sabia que estávamos lá há muito tempo antes de chegarmos. E estava esperando. Não com paciência. Com certeza." Os cinco que não voltaram não foram atacados. Caminharam em direção ao centro. Um por um. Como se tivessem lembrado de um compromisso esquecido. A recomendação do relatório é clara: "O perigo não é a morte. É a incorporação." O Conclave arquivou como Máximo Sigilo. Nenhuma expedição adicional foi autorizada. Isso não impediu tentativas não-oficiais.</div>
-      <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Relatório VZ-003 — Máximo Sigilo — Código necessário</span><button class="cens-btn" onclick="unlockCensored('cens-nexus','nexusumbral','O Nexus Umbral')">Inserir Código</button></div>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">A Barreira</div>
-      <div class="art-title">A Grande Muralha de Duran-Khal</div>
-      <div class="art-body">
-        <p>847 quilômetros de pedra, aço e determinação humano-anã. A Muralha de Duran-Khal é a única razão pela qual o mundo civilizado não está sob influência direta de Vhal'Zarak.</p>
-        <p>31% das seções apresentam comprometimento estrutural. 8% apresentam comprometimento <em>dimensional</em> — paredes onde a 5ª Dimensão começa a sangrar para o lado de cá. Aurethia atrasou pagamentos pelo quinto ano consecutivo. A Igreja enviou orações.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="lore-section" id="sec-profecia">
-    <div class="sec-header">
-      <div class="sec-eyebrow">Restrito · Teologia e Profecia</div>
-      <h2 class="sec-title">Profecias e Textos Sagrados</h2>
-      <p class="sec-sub">O que foi prometido — e o que isso pode significar.</p>
-    </div>
-    <div class="lore-warn">
-      <div class="lore-warn-title">⚠ Aviso de Classificação</div>
-      <p>Esta seção contém análises de textos proféticos classificados. Trechos de maior sensibilidade permanecem protegidos por código de acesso. A interpretação não-autorizada de profecias religiosas constitui violação do Acordo de Cooperação entre o Sínodo e a Igreja.</p>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">A Profecia Central</div>
-      <div class="art-title">O Selador do Quinto Véu</div>
-      <div class="art-body">
-        <p>A profecia mais importante da Igreja — e a mais debatida — fala de um indivíduo que virá selar a 5ª Dimensão, encerrando o vazamento que causa monstros, instabilidade e magia descontrolada.</p>
-        <p>Para a Igreja, isso seria a redenção do mundo — o cumprimento da promessa de Deus. Para parte do Sínodo, seria o fim da magia como a conhecemos — e o fim do próprio Sínodo.</p>
-        <p>O texto canônico diz: <em>"Virá aquele que, nascido sob o signo do Sétimo Véu, selará a passagem entre o mundo dos vivos e a dimensão proibida."</em></p>
-      </div>
-    </div>
-    <div class="censored-block" id="cens-profecia-full">
-      <div class="art-label">Análise Comparativa — Documento IG-019</div>
-      <div class="art-title">As Versões Suprimidas da Profecia</div>
-      <div class="censored-text">Versão II — Manuscrito de Lux Aeterna: "...selará a passagem — não pelo poder, mas pela ausência dele. E o fechamento não será vitória. Será luto." // Versão III — Fragmento de Aethryon: "...virá de fora das casas de saber... [ilegível] ... não reconhecido pelos guardiões..." // Versão IV — Suprimida pela Igreja: "O Selador não fechará o Quinto Véu porque é justo. Fechará porque não terá escolha. E quando o véu se fechar, aquilo que está do outro lado ficará conosco — porque já terá cruzado."</div>
-      <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Análise IG-019 — Confidencial — Código necessário</span><button class="cens-btn" onclick="unlockCensored('cens-profecia-full','selador7','As Versões Suprimidas')">Inserir Código</button></div>
-    </div>
-  </div>
-
-  <div class="lore-section" id="sec-segredos">
-    <div class="sec-header">
-      <div class="sec-eyebrow">Máximo Sigilo · Acervo Interno</div>
-      <h2 class="sec-title">Segredos do Sínodo</h2>
-      <p class="sec-sub">O que o Conclave sabe e não diz.</p>
-    </div>
-    <div class="lore-warn">
-      <div class="lore-warn-title">⚠ Classificação Máxima</div>
-      <p>Esta seção é composta integralmente de trechos classificados. Todos os blocos abaixo requerem código de acesso individual.</p>
-    </div>
-    <div class="censored-block" id="cens-seg-1">
-      <div class="art-label">Conclave — Sessão Fechada 1044</div>
-      <div class="art-title">A Decisão Sobre Aurethia</div>
-      <div class="censored-text">Por sete votos a dois, o Conclave decidiu não confrontar Aurethia sobre as Câmaras Brancas. Os experimentos continuam. Os agentes de campo não serão informados. A justificativa: confrontar Aurethia agora poderia desestabilizar o Tratado de Vhal'Torin inteiro. A justificativa real: três dos sete que votaram a favor têm conexões financeiras com nobres de Aurethia documentadas pelo Departamento de Inteligência.</div>
-      <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Ata CE-002 — Máximo Sigilo</span><button class="cens-btn" onclick="unlockCensored('cens-seg-1','conclave1044','A Decisão Sobre Aurethia')">Inserir Código</button></div>
-    </div>
-    <div class="censored-block" id="cens-seg-2">
-      <div class="art-label">Observatório do Véu — Arquivo Interno</div>
-      <div class="art-title">Vardhal — O Que Está Selado Abaixo</div>
-      <div class="censored-text">A entidade Vardhal, o Vidente Eterno, foi capturada durante a Operação Véu Costurado (1041-1043). Está selada em contenção de Nível 3 no subsolo do Observatório do Véu. Não tente comunicação. Não tente negociação. Não informe sua localização a membros da Igreja. Vardhal não é mais perigosa do que quando estava livre — mas está em melhor posição.</div>
-      <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Arquivo RI-014 — Confidencial</span><button class="cens-btn" onclick="unlockCensored('cens-seg-2','olhoaberto','Vardhal — O Vidente Eterno')">Inserir Código</button></div>
-    </div>
+    <div class="lore-article"><div class="art-title">Porto Varion</div><p>Sede do Sínodo e território neutro.</p></div>
+    <div class="lore-article"><div class="art-title">Vhal'Zarak</div><p>A cicatriz dimensional além da muralha.</p></div>
   </div>
 </main>
-
 // ══════════════════════════════════════════
 // AUTH & GLOBAIS
 // ══════════════════════════════════════════
