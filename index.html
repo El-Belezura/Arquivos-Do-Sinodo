@@ -467,7 +467,7 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
 .dim-table tr:nth-child(even) td { background: rgba(197,163,85,.04); }
 .dim-table td:first-child { font-family: 'Cinzel', serif; font-size: 11px; color: var(--gold-dim); font-weight: 700; }
 
-. { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin: 16px 0; }
+.faction-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin: 16px 0; }
 .fcard { background: #fff; border: 1px solid var(--parch-dark); overflow: hidden; }
 .fcard-header { padding: 14px 16px 10px; background: var(--ink); }
 .fcard-name { font-family: 'Cinzel', serif; font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 2px; }
@@ -2387,5 +2387,35 @@ function showSecretLore(item) {
 document.addEventListener('DOMContentLoaded', () => { 
   if(document.getElementById('glossary-grid')) renderGlossary(); 
 });
+
+
+// Inicialização unificada ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    // Renderiza os dados iniciais
+    if(typeof renderBeasts === 'function') renderBeasts('all');
+    if(typeof renderGlossary === 'function') renderGlossary();
+    
+    // Garante que a primeira seção da biblioteca apareça
+    const primeiraSecao = document.getElementById('sec-home');
+    if(primeiraSecao) primeiraSecao.classList.add('active');
+});
+
+// Correção na função showPage para garantir renderização
+function showPage(id, tab) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    
+    const targetPage = document.getElementById('page-' + id);
+    if(targetPage) {
+        targetPage.classList.add('active');
+    }
+    
+    if(tab) tab.classList.add('active');
+    
+    // Gatilhos específicos por aba
+    if(id === 'map') initMap();
+    if(id === 'bestiary') renderBeasts(currentBeastFilter);
+    if(id === 'glossary') renderGlossary();
+}
   
 </script>
