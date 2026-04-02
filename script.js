@@ -1,6 +1,4 @@
-// ══════════════════════════════════════════
 // AUTH & GLOBAIS
-// ══════════════════════════════════════════
 const PU='agente', PP='sinodo47b';
 let currentDocId = null;
 let pendingBlockId = null;
@@ -20,6 +18,7 @@ function tryLogin(){
     setTimeout(()=>e.textContent='',3000);
   }
 }
+
 function logout(){
   document.getElementById('app').classList.remove('visible');
   const ls=document.getElementById('login-screen');
@@ -37,9 +36,7 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape' && document.getElementById('pwd-overlay').classList.contains('open')) closePwdModal();
 });
 
-// ══════════════════════════════════════════
-// NAVEGAÇÃO GERAL E LORE
-// ══════════════════════════════════════════
+// NAVEGAÇÃO
 function showPage(id,tab){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
@@ -47,10 +44,12 @@ function showPage(id,tab){
   if(tab) tab.classList.add('active');
   if(id==='map') initMap();
 }
+
 function gotoTab(idx){
   const tabs=document.querySelectorAll('.nav-tab');
   if(tabs[idx]) tabs[idx].click();
 }
+
 function showOpTab(id,btn){
   const sec=document.getElementById('op-'+id);
   if(!sec) return;
@@ -62,16 +61,15 @@ function showOpTab(id,btn){
   sec.classList.add('active');
   if(btn) btn.classList.add('active');
 }
+
 function showSection(id, linkEl) {
   document.querySelectorAll('.lore-section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.sidebar-link, .tb-link').forEach(l => l.classList.remove('active'));
+  document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
   const sec = document.getElementById('sec-' + id);
   if (sec) sec.classList.add('active');
+  
   if (linkEl) {
     linkEl.classList.add('active');
-    document.querySelectorAll('.sidebar-link').forEach(l => {
-      if ((l.getAttribute('onclick') || '').includes("'" + id + "'")) l.classList.add('active');
-    });
   } else {
     document.querySelectorAll('.sidebar-link').forEach(l => {
       if ((l.getAttribute('onclick') || '').includes("'" + id + "'")) l.classList.add('active');
@@ -80,10 +78,13 @@ function showSection(id, linkEl) {
   document.querySelector('.lore-main').scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ══════════════════════════════════════════
 // UTILS & PDF
-// ══════════════════════════════════════════
-function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500);}
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3500);
+}
+
 function clearDoc(id){
   const el=document.getElementById(id);if(!el)return;
   el.querySelectorAll('input[type=text],input[type=number],textarea').forEach(e=>e.value='');
@@ -92,20 +93,15 @@ function clearDoc(id){
   el.querySelectorAll('.rbox').forEach(e=>e.classList.remove('filled'));
   showToast('Formulário limpo.');
 }
-function rateBox(box){
-  const row=box.closest('.rboxes');
-  const boxes=row.querySelectorAll('.rbox');
-  const idx=Array.from(boxes).indexOf(box);
-  boxes.forEach((b,i)=>i<=idx?b.classList.add('filled'):b.classList.remove('filled'));
-}
+
 function toggleFS(){
-  const docEl=document.documentElement,doc=window.document;const btn=document.getElementById('btn-fs');
-  const req=docEl.requestFullscreen||docEl.mozRequestFullScreen||docEl.webkitRequestFullScreen||docEl.msRequestFullscreen;
-  const exit=doc.exitFullscreen||doc.mozCancelFullScreen||doc.webkitExitFullscreen||doc.msExitFullscreen;
+  const docEl=document.documentElement, doc=window.document, btn=document.getElementById('btn-fs');
+  const req=docEl.requestFullscreen||docEl.mozRequestFullScreen||docEl.webkitRequestFullScreen;
+  const exit=doc.exitFullscreen||doc.mozCancelFullScreen||doc.webkitExitFullscreen;
   if(!doc.fullscreenElement&&!doc.mozFullScreenElement&&!doc.webkitFullscreenElement){req.call(docEl);btn.textContent='Sair da Tela Cheia';}
   else{exit.call(doc);btn.textContent='Tela Cheia';}
 }
-function selectClassify(el){document.querySelectorAll('.classify-opt').forEach(o=>o.classList.remove('selected'));el.classList.add('selected');}
+
 function submitRequisition(){showToast('✦  Requisição enviada ao Supervisor Varik para análise  ✦');}
 
 async function exportPDF(docId, filename){
@@ -113,23 +109,28 @@ async function exportPDF(docId, filename){
   if(!el){ showToast('Formulário não encontrado.'); return; }
   const overlay=document.getElementById('pdf-overlay');
   overlay.classList.add('show');
+  
   const btns=el.querySelectorAll('button,input[type=button]');
   btns.forEach(b=>b.style.visibility='hidden');
   const stamps=el.querySelectorAll('.stamp');
   stamps.forEach(s=>s.style.opacity='0.4');
+  
   const originalWidth=el.style.width, originalMaxWidth=el.style.maxWidth, originalMargin=el.style.margin, originalBorderRadius=el.style.borderRadius;
   el.style.width='820px'; el.style.maxWidth='820px'; el.style.margin='0'; el.style.borderRadius='0';
   await new Promise(r=>setTimeout(r,120));
+  
   try {
-    const canvas=await html2canvas(el,{ scale:2, useCORS:true, logging:false, backgroundColor:'#f0e6c0', width:820, windowWidth:900, onclone:(clonedDoc)=>{ clonedDoc.querySelectorAll('.stamp').forEach(s=>s.style.opacity='0.3'); } });
+    const canvas=await html2canvas(el,{ scale:2, useCORS:true, logging:false, backgroundColor:'#f0e6c0', width:820, windowWidth:900 });
     const { jsPDF }=window.jspdf;
     const imgData=canvas.toDataURL('image/jpeg',0.95);
     const pdfW=210; const ratio=canvas.height/canvas.width; const pdfH=pdfW*ratio;
     const pageHeightPx=297*(canvas.width/pdfW); 
     const totalPages=Math.ceil(canvas.height/pageHeightPx);
     const pdf=new jsPDF({ orientation: 'portrait', unit:'mm', format:'a4' });
-    if(totalPages<=1){ pdf.addImage(imgData,'JPEG',0,0,pdfW,Math.min(pdfH,297),undefined,'FAST'); } 
-    else {
+    
+    if(totalPages<=1){ 
+      pdf.addImage(imgData,'JPEG',0,0,pdfW,Math.min(pdfH,297),undefined,'FAST'); 
+    } else {
       for(let page=0;page<totalPages;page++){
         if(page>0) pdf.addPage();
         const srcY=page*pageHeightPx; const srcH=Math.min(pageHeightPx, canvas.height-srcY);
@@ -144,19 +145,18 @@ async function exportPDF(docId, filename){
   } catch(err){
     console.error(err); showToast('Erro ao gerar PDF. Tente novamente.');
   }
+  
   el.style.width=originalWidth; el.style.maxWidth=originalMaxWidth; el.style.margin=originalMargin; el.style.borderRadius=originalBorderRadius;
   btns.forEach(b=>b.style.visibility=''); stamps.forEach(s=>s.style.opacity=''); overlay.classList.remove('show');
 }
 
-// ══════════════════════════════════════════
 // INICIALIZAÇÃO DE DADOS
-// ══════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => { 
   if(document.getElementById('docs-grid')){
-    const grid=document.getElementById('docs-grid');grid.innerHTML='';
+    const grid=document.getElementById('docs-grid'); grid.innerHTML='';
     DOCS.forEach(doc=>{
       const card=document.createElement('div');card.className='doc-card';
-      card.innerHTML=`<div class="doc-card-header"><div class="doc-classif-tag ${doc.classif}">${doc.classifLabel}</div><div class="doc-number">${doc.number}</div><div class="doc-title">${doc.title}</div><div class="doc-subtitle">${doc.subtitle}</div></div><div class="doc-card-body"><p class="doc-desc">${doc.desc}</p><div class="doc-meta-row"><div class="doc-meta">Origem: <span>${doc.origin}</span></div><div class="doc-meta">Data: <span>${doc.date}</span></div></div><div class="doc-locked-bar"><span class="doc-lock-icon">🔒</span><span class="doc-lock-hint">Acesso protegido por código</span><button class="doc-access-btn" onclick="openDocPwd('${doc.id}')">Acessar</button></div></div>`;
+      card.innerHTML=`<div class="doc-card-header"><div class="doc-classif-tag ${doc.classif}">${doc.classifLabel}</div><div class="doc-number">${doc.number}</div><div class="doc-title">${doc.title}</div><div class="doc-subtitle">${doc.subtitle}</div></div><div class="doc-card-body"><p class="doc-desc">${doc.desc}</p><div class="doc-meta-row"><div class="doc-meta">Origem: <span>${doc.origin}</span></div><div class="doc-meta">Data: <span>${doc.date}</span></div></div><div class="doc-locked-bar"><span class="doc-lock-icon">🔒</span><span class="doc-lock-hint">Protegido por código</span><button class="doc-access-btn" onclick="openDocPwd('${doc.id}')">Acessar</button></div></div>`;
       grid.appendChild(card);
     });
   }
@@ -172,9 +172,7 @@ function handlePwdSubmit() {
   }
 }
 
-// ══════════════════════════════════════════
-// SENHAS DOCUMENTOS
-// ══════════════════════════════════════════
+// SENHAS DOCUMENTOS CLASSIFICADOS
 function openDocPwd(id){
   const doc=DOCS.find(d=>d.id===id); currentDocId=id; pendingBlockId=null; window.isGlossaryPwd = false;
   document.getElementById('pwd-modal-doc').textContent=doc.title;
@@ -195,6 +193,7 @@ function openDocReader(doc){
   document.getElementById('reader-overlay').classList.add('open');
   reader.scrollTop=0;
 }
+
 function closePwdModal(){
   document.getElementById('pwd-overlay').classList.remove('open');
   currentDocId=null; pendingBlockId=null; pendingPassword=null;
@@ -202,9 +201,7 @@ function closePwdModal(){
 function closeReader(){document.getElementById('reader-overlay').classList.remove('open');}
 function closeReaderOnBg(e){if(e.target===document.getElementById('reader-overlay'))closeReader();}
 
-// ══════════════════════════════════════════
 // SENHAS LORE CENSURADA
-// ══════════════════════════════════════════
 function unlockCensored(blockId, password, title) {
   pendingBlockId = blockId; pendingPassword = password; currentDocId = null; window.isGlossaryPwd = false;
   document.getElementById('pwd-modal-doc').textContent = title;
@@ -213,6 +210,7 @@ function unlockCensored(blockId, password, title) {
   document.getElementById('pwd-overlay').classList.add('open');
   setTimeout(() => document.getElementById('pwd-input').focus(), 100);
 }
+
 function confirmUnlock() {
   const val = document.getElementById('pwd-input').value.trim().toLowerCase();
   if (val === pendingPassword) {
@@ -226,9 +224,7 @@ function confirmUnlock() {
   }
 }
 
-// ══════════════════════════════════════════
-// BESTIÁRIO
-// ══════════════════════════════════════════
+// RENDER BESTIÁRIO
 let currentBeastFilter='all';
 function renderBeasts(filter='all',search=''){
   const grid=document.getElementById('bestiary-grid'); if(!grid) return;
@@ -249,17 +245,14 @@ function setBeastFilter(f,btn){
 }
 function filterBeasts(v){renderBeasts(currentBeastFilter,v);}
 
-// ══════════════════════════════════════════
-// GLOSSÁRIO
-// ══════════════════════════════════════════
+// RENDER GLOSSÁRIO
 function renderGlossary(filter = '') {
-  const grid = document.getElementById('glossary-grid');
-  if (!grid) return;
+  const grid = document.getElementById('glossary-grid'); if (!grid) return;
   grid.innerHTML = '';
   GLOSSARY.filter(item => item.term.toLowerCase().includes(filter.toLowerCase()) || item.desc.toLowerCase().includes(filter.toLowerCase())).forEach(item => {
     const card = document.createElement('div'); card.className = 'doc-card';
     const content = item.restricted 
-      ? `<div class="doc-locked-bar"><span class="doc-lock-icon">🔒</span><span class="doc-lock-hint">Acesso Restrito - Nível IV</span><button class="doc-access-btn" onclick="openGlossaryPwd('${item.id}')">Acessar</button></div>`
+      ? `<div class="doc-locked-bar"><span class="doc-lock-icon">🔒</span><span class="doc-lock-hint">Nível IV</span><button class="doc-access-btn" onclick="openGlossaryPwd('${item.id}')">Acessar</button></div>`
       : `<p class="doc-desc">${item.desc}</p>`;
     card.innerHTML = `<div class="doc-card-header"><div class="doc-classif-tag ${item.restricted ? 'confidencial' : 'uso-interno'}">${item.category}</div><div class="doc-title">${item.term}</div></div><div class="doc-card-body">${content}</div>`;
     grid.appendChild(card);
@@ -280,20 +273,18 @@ function openGlossaryPwd(id) {
     if(val === item.password) {
       closePwdModal(); showSecretLore(item); window.isGlossaryPwd = false;
     } else {
-      document.getElementById('pwd-modal-err').textContent = 'Código de acesso inválido.';
+      document.getElementById('pwd-modal-err').textContent = 'Código inválido.';
     }
   };
 }
 
 function showSecretLore(item) {
   const reader = document.getElementById('doc-reader');
-  reader.innerHTML = `<div class="doc-reader-header"><div><div class="doc-reader-classif confidencial">ARQUIVO DE LORE — NÍVEL IV</div><div class="doc-reader-title">${item.term}</div></div><button class="doc-reader-close" onclick="closeReader()">✕ Fechar</button></div><div class="doc-reader-body"><div class="doc-watermark">CONFIDENCIAL</div><div class="doc-seal-line">Sínodo do Quinto Véu · Acervo Histórico</div><p class="doc-body-text" style="font-size: 1.15rem;">${item.desc}</p><div class="doc-divider">· · ✦ · ·</div></div>`;
+  reader.innerHTML = `<div class="doc-reader-header"><div><div class="doc-reader-classif confidencial">LORE — NÍVEL IV</div><div class="doc-reader-title">${item.term}</div></div><button class="doc-reader-close" onclick="closeReader()">✕ Fechar</button></div><div class="doc-reader-body"><div class="doc-watermark">CONFIDENCIAL</div><p class="doc-body-text" style="font-size: 1.15rem;">${item.desc}</p></div>`;
   document.getElementById('reader-overlay').classList.add('open');
 }
 
-// ══════════════════════════════════════════
 // MAPA IMAGEM (PAN E ZOOM)
-// ══════════════════════════════════════════
 let mapImgScale=1, mapImgOffX=0, mapImgOffY=0, mapImgDragging=false, mapImgLastX=0, mapImgLastY=0, mapInited=false;
 
 function initMap(){
