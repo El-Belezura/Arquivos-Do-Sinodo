@@ -1275,31 +1275,89 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
       </div>
     </div>
 
-    <div class="page" id="page-biblioteca">
-      <div class="lore-wrapper">
-<aside class="lore-sidebar">
-  <div class="sidebar-section">
-    <span class="sidebar-cat">Fundamentos</span>
-    <a class="sidebar-link active" onclick="showSection('home', this)"><span class="sl-icon">🏛</span> Introdução</a>
-    <a class="sidebar-link" onclick="showSection('cosmologia', this)"><span class="sl-icon">🌌</span> Cosmologia</a>
-    <a class="sidebar-link" onclick="showSection('magia', this)"><span class="sl-icon">✨</span> A Magia</a>
+  <div class="page" id="page-biblioteca">
+  <div class="lore-wrapper">
+    <aside class="lore-sidebar">
+      <div class="sidebar-section">
+        <span class="sidebar-cat">Fundamentos</span>
+        <a class="sidebar-link active" onclick="showSection('home', this)"><span class="sl-icon">🏛</span> Introdução</a>
+        <a class="sidebar-link" onclick="showSection('cosmologia', this)"><span class="sl-icon">🌌</span> Cosmologia</a>
+        <a class="sidebar-link" onclick="showSection('magia', this)"><span class="sl-icon">✨</span> A Magia</a>
+      </div>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section">
+        <span class="sidebar-cat">História</span>
+        <a class="sidebar-link" onclick="showSection('historia', this)"><span class="sl-icon">📜</span> Linha do Tempo</a>
+        <a class="sidebar-link" onclick="showSection('tratado', this)"><span class="sl-icon">⚖️</span> Tratado de Vhal'Torin</a>
+      </div>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section">
+        <span class="sidebar-cat">O Mundo</span>
+        <a class="sidebar-link" onclick="showSection('reinos', this)"><span class="sl-icon">🏰</span> Os Reinos</a>
+        <a class="sidebar-link" onclick="showSection('faccoes', this)"><span class="sl-icon">⚔️</span> Facções</a>
+        <a class="sidebar-link" onclick="showSection('igreja', this)"><span class="sl-icon">⛪</span> A Igreja</a>
+        <a class="sidebar-link" onclick="showSection('monstros', this)"><span class="sl-icon">🐉</span> Monstros & Ameaças</a>
+        <a class="sidebar-link" onclick="showSection('locais', this)"><span class="sl-icon">🗺</span> Locais Notáveis</a>
+      </div>
+    </aside>
+
+    <main class="lore-main">
+      <div class="lore-section active" id="sec-home">
+        <div class="sec-header">
+          <div class="sec-eyebrow">Acervo Central</div>
+          <h2 class="sec-title">Biblioteca de Porto Varion</h2>
+          <p class="sec-sub">Conhecimento autorizado pelo Sínodo do Quinto Véu.</p>
+        </div>
+        <div class="lore-article">
+          <div class="art-label">Diretivas Externas</div>
+          <div class="art-title">Documentação de Base</div>
+          <div class="art-body">
+            <p>Para consulta rápida dos fundamentos legais e religiosos, utilize os arquivos externos oficiais:</p>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+              <a href="https://docs.google.com/document/d/1bRumBGBy_4b4qaUeQ84C6k4GAwg6P2Yb/edit" target="_blank" class="action-btn">📜 Ler Tratado de Vhal'Torin</a>
+              <a href="https://docs.google.com/document/d/1M7uBpBceAy-bdpQTjBkQhKqkxKyqDwzk/edit" target="_blank" class="action-btn">⛪ Ler Doutrina da Igreja</a>
+            </div>
+          </div>
+        </div>
+        <div class="lore-grid">
+          <div class="lore-card" onclick="showSection('cosmologia', null)">
+            <div class="lc-icon">🌌</div>
+            <div class="lc-title">Cosmologia</div>
+            <div class="lc-desc">As sete dimensões e a natureza da realidade.</div>
+          </div>
+          <div class="lore-card" onclick="showSection('magia', null)">
+            <div class="lc-icon">✨</div>
+            <div class="lc-title">A Magia</div>
+            <div class="lc-desc">Fundamentos do uso do Véu e seus riscos.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lore-section" id="sec-cosmologia">
+        <div class="sec-header">
+          <div class="sec-eyebrow">Fundamentos · Cosmologia</div>
+          <h2 class="sec-title">As Sete Dimensões</h2>
+          <p class="sec-sub">A estrutura da realidade segundo a doutrina do Sínodo.</p>
+        </div>
+        </div>
+
+      <div class="lore-section" id="sec-magia">
+        <div class="sec-header">
+          <h2 class="sec-title">A Magia</h2>
+        </div>
+        </div>
+
+      <div class="lore-section" id="sec-historia"> </div>
+      <div class="lore-section" id="sec-tratado"> </div>
+      <div class="lore-section" id="sec-reinos"> </div>
+      <div class="lore-section" id="sec-faccoes"> </div>
+      <div class="lore-section" id="sec-igreja"> </div>
+      <div class="lore-section" id="sec-monstros"> </div>
+      <div class="lore-section" id="sec-locais"> </div>
+
+    </main>
   </div>
-  <div class="sidebar-divider"></div>
-  <div class="sidebar-section">
-    <span class="sidebar-cat">História</span>
-    <a class="sidebar-link" onclick="showSection('historia', this)"><span class="sl-icon">📜</span> Linha do Tempo</a>
-    <a class="sidebar-link" onclick="showSection('tratado', this)"><span class="sl-icon">⚖️</span> Tratado de Vhal'Torin</a>
-  </div>
-  <div class="sidebar-divider"></div>
-  <div class="sidebar-section">
-    <span class="sidebar-cat">O Mundo</span>
-    <a class="sidebar-link" onclick="showSection('reinos', this)"><span class="sl-icon">🏰</span> Os Reinos</a>
-    <a class="sidebar-link" onclick="showSection('faccoes', this)"><span class="sl-icon">⚔️</span> Facções</a>
-    <a class="sidebar-link" onclick="showSection('igreja', this)"><span class="sl-icon">⛪</span> A Igreja</a>
-    <a class="sidebar-link" onclick="showSection('monstros', this)"><span class="sl-icon">🐉</span> Monstros & Ameaças</a>
-    <a class="sidebar-link" onclick="showSection('locais', this)"><span class="sl-icon">🗺</span> Locais Notáveis</a>
-  </div>
-</aside>
+</div>
 
             
 <main class="lore-main">
@@ -1871,35 +1929,40 @@ function showOpTab(id,btn){
   if(btn) btn.classList.add('active');
 }
 function showSection(id, linkEl) {
-  // 1. Esconde todas as seções de conteúdo da biblioteca
+  // 1. Seleciona todas as seções e links
   const sections = document.querySelectorAll('.lore-section');
-  sections.forEach(s => s.classList.remove('active'));
-
-  // 2. Remove o estado ativo de todos os links do menu lateral
   const links = document.querySelectorAll('.sidebar-link');
+
+  // 2. Esconde todas as seções
+  sections.forEach(s => {
+    s.style.display = 'none';
+    s.classList.remove('active');
+  });
+
+  // 3. Desativa todos os links do menu lateral
   links.forEach(l => l.classList.remove('active'));
 
-  // 3. Mostra a seção solicitada
-  const targetSection = document.getElementById('sec-' + id);
-  if (targetSection) {
-    targetSection.classList.add('active');
+  // 4. Mostra a seção correta
+  const target = document.getElementById('sec-' + id);
+  if (target) {
+    target.style.display = 'block';
+    target.classList.add('active');
   }
 
-  // 4. Ativa visualmente o link clicado ou correspondente
+  // 5. Ativa o link no menu
   if (linkEl) {
     linkEl.classList.add('active');
   } else {
-    // Caso a navegação venha de um card na home, procura o link lateral equivalente
+    // Se clicou num card, ativa o link correspondente no menu lateral
     links.forEach(l => {
-      if (l.getAttribute('onclick').includes(`'${id}'`)) {
+      if (l.getAttribute('onclick') && l.getAttribute('onclick').includes(`'${id}'`)) {
         l.classList.add('active');
       }
     });
   }
 
-  // 5. Retorna o scroll para o topo da área de leitura
-  const mainArea = document.querySelector('.lore-main');
-  if (mainArea) mainArea.scrollTo({ top: 0, behavior: 'smooth' });
+  // 6. Reseta o scroll para o topo
+  document.querySelector('.lore-main').scrollTop = 0;
 }
 // ══════════════════════════════════════════
 // UTILS & PDF
