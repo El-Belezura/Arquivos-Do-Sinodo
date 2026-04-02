@@ -1357,48 +1357,107 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
         </div>
       </div>
 
-      <div class="lore-section" id="sec-procurados">
-        <div class="sec-header"><h2 class="sec-title">Mural de Recompensas</h2><p class="sec-sub">Alvos Ativos sob a Jurisdição do Sínodo.</p></div>
-        <div class="wanted-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 15px;">
-          <div class="wanted-poster" style="background:#e8dec0; border:2px solid #5a3a22; padding:10px; box-shadow: 5px 5px 15px rgba(0,0,0,0.3);">
-            <div style="border: 1px solid #5a3a22; padding: 10px; background: #f4ecd8; text-align:center;">
-              <div style="font-family:'Cinzel'; font-weight:bold; color:#8b1a1a; font-size:1.4rem; border-bottom:2px solid #8b1a1a; margin-bottom:10px;">PROCURADO</div>
-              <div style="width:100%; height:180px; background:#bbb; border:1px solid #5a3a22; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-family:'Special Elite';">RETRATO</div>
-              <div style="font-family:'Special Elite'; text-align:left; font-size:0.85rem;">
-                <p><strong>NOME:</strong> Vaelen, o Ruptura</p>
-                <p><strong>CRIME:</strong> Colapso deliberado do Véu.</p>
-                <p><strong>PERIGO:</strong> <span style="background:#8b1a1a; color:white; padding:0 5px;">MÁXIMO</span></p>
-                <div style="margin-top:10px; font-weight:bold; border:1px dashed #8b1a1a; text-align:center; font-size:1rem;">15.000 G</div>
-              </div>
-            </div>
-          </div>
-          </div>
-      </div>
+<div class="wanted-poster" style="background:#e8dec0; border:2px solid #5a3a22; padding:10px; box-shadow: 5px 5px 15px rgba(0,0,0,0.3);">
+  <div style="border: 1px solid #5a3a22; padding: 10px; background: #f4ecd8; text-align:center;">
+    <div style="font-family:'Cinzel'; font-weight:bold; color:#8b1a1a; font-size:1.4rem; border-bottom:2px solid #8b1a1a; margin-bottom:10px;">PROCURADO</div>
+    
+    <div style="width:100%; height:180px; background:#bbb; border:1px solid #5a3a22; margin-bottom:10px; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+      <img src="imagens/gardir.jpg" alt="Retrato de Gardir Lin" style="width:100%; height:100%; object-fit:cover; filter: sepia(0.4) contrast(1.1) grayscale(0.2);">
+    </div>
 
-      <div class="lore-section" id="sec-faccoes">
-        <div class="sec-header"><h2 class="sec-title">Facções do Mundo</h2></div>
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; padding:15px;">
-          <div style="background:rgba(197,163,85,0.1); border-left:4px solid var(--gold); padding:12px;">
-            <h4 style="font-family:'Cinzel';">1. Sínodo do Quinto Véu</h4>
-            <p style="font-size:0.85rem;">Autoridade máxima e reguladora do Tratado de Vhal'Torin.</p>
+    <div style="font-family:'Special Elite'; text-align:left; font-size:0.85rem;">
+      <p><strong>NOME:</strong> Gardir Lin</p>
+      <p><strong>CRIME:</strong> Contrabandista de Itens Mágicos.</p>
+      <p><strong>PERIGO:</strong> <span style="background:#8b1a1a; color:white; padding:0 5px;">MÁXIMO</span></p>
+      <div style="margin-top:10px; font-weight:bold; border:2px dashed #8b1a1a; text-align:center; font-size:1rem;">15.000 G</div>
+    </div>
+  </div>
+</div>
+
+<div class="lore-section" id="sec-faccoes">
+        <div class="sec-header">
+          <div class="sec-eyebrow">Relatório de Inteligência</div>
+          <h2 class="sec-title">Organizações de Influência</h2>
+          <p class="sec-sub">Análise de risco e alianças sob o Tratado de Vhal'Torin.</p>
+        </div>
+        
+        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap:20px; padding:15px;">
+          
+          <div class="faction-card" style="background:rgba(197,163,85,0.08); border-left:5px solid var(--gold); padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(197,163,85,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:var(--gold); margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">1. Sínodo do Quinto Véu</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Autoridade máxima e reguladora. Composto pelo Conclave dos Sete, gerencia os Agentes de Vínculo e garante que a magia permaneça sob selo restrito.</p>
           </div>
-          <div style="background:rgba(139,26,26,0.1); border-left:4px solid #8b1a1a; padding:12px;">
-            <h4 style="font-family:'Cinzel';">2. Tecelões do Vazio</h4>
-            <p style="font-size:0.85rem;">Culto radical que busca o colapso das dimensões.</p>
+
+          <div class="faction-card" style="background:rgba(139,26,26,0.08); border-left:5px solid #8b1a1a; padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(139,26,26,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:#8b1a1a; margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">2. Tecelões do Vazio</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Culto niilista que acredita que o mundo físico é uma ilusão. Buscam o colapso total do Véu para "libertar" a essência da humanidade.</p>
           </div>
-          <div class="fcard"><strong>3. Liga Mercante de Ferro:</strong> Monopólio portuário.</div>
-          <div class="fcard"><strong>4. Observatório do Véu:</strong> Cientistas da 5ª dimensão.</div>
-          <div class="fcard"><strong>5. Custódios de Duran-Khal:</strong> Guardiões da Muralha.</div>
-          <div class="fcard"><strong>6. Inquisição Imperial:</strong> Caçadores de heréticos mágicos.</div>
-          <div class="fcard"><strong>7. Sindicato da Resina:</strong> Cartel do tráfico etéreo.</div>
-          <div class="fcard"><strong>8. Filhos de Vhal'Zarak:</strong> Mutantes das terras do caos.</div>
-          <div class="fcard"><strong>9. Ordem dos Bibliotecários:</strong> Protetores de tomos proibidos.</div>
-          <div class="fcard"><strong>10. Olhos de Orin:</strong> Rede de espionagem do Conclave.</div>
-          <div class="fcard"><strong>11. Academia de Aurethia:</strong> Nobres de supremacia mágica.</div>
-          <div class="fcard"><strong>12. Irmandade do Aço Frio:</strong> Mercenários anti-magia.</div>
-          <div class="fcard"><strong>13. Saqueadores de Ruínas:</strong> Exploradores de cidades mortas.</div>
-          <div class="fcard"><strong>14. Conselho dos Sete:</strong> Líderes políticos anônimos.</div>
-          <div class="fcard"><strong>15. Os Anarquistas de Rivian:</strong> Grupo de liberação mágica.</div>
+
+          <div class="faction-card" style="background:rgba(85,120,197,0.08); border-left:5px solid #4a90e2; padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(85,120,197,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:#4a90e2; margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">3. Liga Mercante de Ferro</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">O poder econômico por trás de Porto Varion. Controlam as frotas comerciais e a distribuição de recursos entre as nações signatárias.</p>
+          </div>
+
+          <div class="faction-card" style="background:rgba(122,58,154,0.08); border-left:5px solid #7a3a9a; padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(122,58,154,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:#7a3a9a; margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">4. Observatório do Véu</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Cientistas e teóricos dedicados ao estudo técnico das flutuações dimensionais e à manutenção dos selos de contenção.</p>
+          </div>
+
+          <div class="faction-card" style="background:rgba(42,32,16,0.08); border-left:5px solid #2a2010; padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(42,32,16,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:#2a2010; margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">5. Os Olhos de Orin</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Serviço de espionagem e inteligência do Sínodo. Infiltrados em todas as cortes reais para monitorar o surgimento de habilidades mágicas ilegais.</p>
+          </div>
+
+          <div class="faction-card" style="background:rgba(197,163,85,0.08); border-left:5px solid var(--gold); padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(197,163,85,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:var(--gold); margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">6. Ordem dos Bibliotecários</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Protetores dos tomos originais e do Códex de Nasquer. Garantem que segredos perigosos não saiam do Acervo Central de Porto Varion.</p>
+          </div>
+
+          <div class="faction-card" style="background:rgba(139,26,26,0.08); border-left:5px solid #8b1a1a; padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(139,26,26,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:#8b1a1a; margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">7. Sindicato da Resina</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Cartel criminoso que trafica Resina Etérea. Atuam nas sombras de Varion, explorando o vício daqueles que buscam poder arcano rápido.</p>
+          </div>
+
+          <div class="faction-card" style="background:rgba(42,32,16,0.08); border-left:5px solid #2a2010; padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(42,32,16,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:#2a2010; margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">8. Catadores de Aethryon</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Saqueadores e exploradores que arriscam a vida nas ruínas amaldiçoadas do antigo reino para recuperar artefatos pré-Tratado.</p>
+          </div>
+
+          <div class="faction-card" style="background:rgba(197,163,85,0.08); border-left:5px solid var(--gold); padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(197,163,85,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:var(--gold); margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">9. Guarda Imperial de Aurethia</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Força militar de elite do Império do Sol Eterno. Mantêm a ordem nas províncias e protegem a linhagem sagrada dos imperadores.</p>
+          </div>
+
+          <div class="faction-card" style="background:rgba(139,26,26,0.08); border-left:5px solid #8b1a1a; padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(139,26,26,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:#8b1a1a; margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">10. Filhos de Vhal'Zarak</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Sobreviventes mutados pela exposição direta ao Véu além da muralha. São vistos como aberrações, mas possuem resistência física sobrenatural.</p>
+          </div>
+
+          <div class="faction-card" style="background:rgba(85,120,197,0.08); border-left:5px solid #4a90e2; padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(85,120,197,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:#4a90e2; margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">11. Conselho Portuário</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">A aristocracia administrativa de Varion. Nobres que não servem ao Sínodo diretamente, mas lucram com a estabilidade do Tratado.</p>
+          </div>
+
+          <div class="faction-card" style="background:rgba(139,26,26,0.08); border-left:5px solid #8b1a1a; padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(139,26,26,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:#8b1a1a; margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">12. Os Quebradores de Selos</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Anarquistas que defendem o "Direito Arcano" para todos. Sabotam instalações do Sínodo e libertam prisioneiros condenados por heresia mágica.</p>
+          </div>
+
+          <div class="faction-card" style="background:rgba(42,32,16,0.08); border-left:5px solid #2a2010; padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(42,32,16,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:#2a2010; margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">13. Inquisição de Lux</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Braço radical da fé oficial. Acreditam que até mesmo o Sínodo é "brando demais" e buscam a erradicação total de qualquer vestígio da 5ª dimensão.</p>
+          </div>
+
+          <div class="faction-card" style="background:rgba(197,163,85,0.08); border-left:5px solid var(--gold); padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(197,163,85,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:var(--gold); margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">14. Academia de Aurethia</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Instituição de ensino para a alta nobreza. Embora ensinem teoria mágica, focam no controle e na "superioridade intelectual" dos graduados.</p>
+          </div>
+
+          <div class="faction-card" style="background:rgba(122,58,154,0.08); border-left:5px solid #7a3a9a; padding:18px; border-radius:0 12px 12px 0; border:1px solid rgba(122,58,154,0.2); border-left-width:5px;">
+            <h4 style="font-family:'Cinzel'; color:#7a3a9a; margin-bottom:10px; font-size:1.1rem; letter-spacing:1px;">15. Os Anarquistas de Rivian</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim); line-height:1.5;">Grupo clandestino inspirado nos escritos proibidos de Rivian Nasquer. Buscam democratizar o conhecimento das dimensões sem o controle do Conclave.</p>
+          </div>
+
         </div>
       </div>
 
