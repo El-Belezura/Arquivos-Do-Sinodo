@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sínodo do Quinto Véu — Portal Interno</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=IM+Fell+English:ital@0;1&family=Special+Elite&display=swap" rel="stylesheet">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
@@ -12,13 +14,43 @@
 </head>
 <body>
 
-<div id="pdf-overlay"><div class="pdf-spinner"></div><p>Gerando PDF...</p></div>
+<div id="pdf-overlay">
+  <div class="pdf-spinner"></div>
+  <p style="font-family:'Cinzel',serif;font-size:13px;color:#C5A355;letter-spacing:3px;">Gerando PDF...</p>
+</div>
 
 <div id="login-screen">
-  <div class="login-bg"><svg viewBox="0 0 800 800"><g transform="translate(400,400)" stroke="#C5A355" fill="none" stroke-width="0.5"><circle r="60"/><circle r="120"/><circle r="180"/><circle r="240"/><circle r="300"/><circle r="360"/><line x1="0" y1="-380" x2="0" y2="380"/><line x1="0" y1="-380" x2="0" y2="380" transform="rotate(51.4)"/><line x1="0" y1="-380" x2="0" y2="380" transform="rotate(102.8)"/><line x1="0" y1="-380" x2="0" y2="380" transform="rotate(154.2)"/><line x1="0" y1="-380" x2="0" y2="380" transform="rotate(205.7)"/><line x1="0" y1="-380" x2="0" y2="380" transform="rotate(257.1)"/><line x1="0" y1="-380" x2="0" y2="380" transform="rotate(308.5)"/></g></svg></div>
+  <div class="login-bg">
+    <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(400,400)" stroke="#C5A355" fill="none" stroke-width="0.5">
+        <circle r="60"/><circle r="120"/><circle r="180"/><circle r="240"/><circle r="300"/><circle r="360"/>
+        <line x1="0" y1="-380" x2="0" y2="380"/>
+        <line x1="0" y1="-380" x2="0" y2="380" transform="rotate(51.4)"/>
+        <line x1="0" y1="-380" x2="0" y2="380" transform="rotate(102.8)"/>
+        <line x1="0" y1="-380" x2="0" y2="380" transform="rotate(154.2)"/>
+        <line x1="0" y1="-380" x2="0" y2="380" transform="rotate(205.7)"/>
+        <line x1="0" y1="-380" x2="0" y2="380" transform="rotate(257.1)"/>
+        <line x1="0" y1="-380" x2="0" y2="380" transform="rotate(308.5)"/>
+      </g>
+    </svg>
+  </div>
   <div class="login-box">
     <div class="login-emblem">
-      <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="38" fill="none" stroke="#8B7355" stroke-width="1"/><circle cx="40" cy="40" r="30" fill="none" stroke="#8B7355" stroke-width="0.5" stroke-dasharray="3 2"/><g transform="translate(40,40)" stroke="#C5A355" stroke-width="2.5" stroke-linecap="round"><line x1="0" y1="-28" x2="0" y2="-22"/><line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(51.4)"/><line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(102.8)"/><line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(154.2)"/><line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(205.7)"/><line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(257.1)"/><line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(308.5)"/></g><circle cx="40" cy="40" r="13" fill="#14142a" stroke="#C5A355" stroke-width="1"/><text x="40" y="45" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#C5A355" font-weight="bold">V</text></svg>
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="38" fill="none" stroke="#8B7355" stroke-width="1"/>
+        <circle cx="40" cy="40" r="30" fill="none" stroke="#8B7355" stroke-width="0.5" stroke-dasharray="3 2"/>
+        <g transform="translate(40,40)" stroke="#C5A355" stroke-width="2.5" stroke-linecap="round">
+          <line x1="0" y1="-28" x2="0" y2="-22"/>
+          <line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(51.4)"/>
+          <line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(102.8)"/>
+          <line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(154.2)"/>
+          <line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(205.7)"/>
+          <line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(257.1)"/>
+          <line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(308.5)"/>
+        </g>
+        <circle cx="40" cy="40" r="13" fill="#14142a" stroke="#C5A355" stroke-width="1"/>
+        <text x="40" y="45" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#C5A355" font-weight="bold">V</text>
+      </svg>
       <h1>Sínodo do<br>Quinto Véu</h1>
       <p>Portal Interno — Acesso Restrito</p>
     </div>
@@ -27,13 +59,28 @@
     <div class="login-field"><label>Senha de Acesso</label><input type="password" id="login-pass" placeholder="••••••" autocomplete="off"></div>
     <div class="login-error" id="login-error"></div>
     <button class="login-btn" onclick="tryLogin()">Acessar o Portal</button>
+    <p class="login-hint">Sob o Tratado de Vhal'Torin, o Véu permanece fechado.</p>
   </div>
 </div>
 
 <div id="app">
   <div id="topbar">
-    <div class="topbar-logo"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#8B7355" stroke-width="0.8"/><g transform="translate(14,14)" stroke="#C5A355" stroke-width="1.7" stroke-linecap="round"><line x1="0" y1="-11" x2="0" y2="-8"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(51.4)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(102.8)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(154.2)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(205.7)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(257.1)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(308.5)"/></g><circle cx="14" cy="14" r="5" fill="#1A1A2E" stroke="#C5A355" stroke-width="0.65"/><text x="14" y="17.5" text-anchor="middle" font-family="Georgia,serif" font-size="5.5" fill="#C5A355" font-weight="bold">V</text></svg>
-      <div><div class="topbar-logo-text">Sínodo do Quinto Véu</div><div class="topbar-logo-sub">Porto Varion — Acervo Interno</div></div>
+    <div class="topbar-logo">
+      <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="13" fill="none" stroke="#8B7355" stroke-width="0.8"/>
+        <g transform="translate(14,14)" stroke="#C5A355" stroke-width="1.7" stroke-linecap="round">
+          <line x1="0" y1="-11" x2="0" y2="-8"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(51.4)"/>
+          <line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(102.8)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(154.2)"/>
+          <line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(205.7)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(257.1)"/>
+          <line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(308.5)"/>
+        </g>
+        <circle cx="14" cy="14" r="5" fill="#1A1A2E" stroke="#C5A355" stroke-width="0.65"/>
+        <text x="14" y="17.5" text-anchor="middle" font-family="Georgia,serif" font-size="5.5" fill="#C5A355" font-weight="bold">V</text>
+      </svg>
+      <div>
+        <div class="topbar-logo-text">Sínodo do Quinto Véu</div>
+        <div class="topbar-logo-sub">Porto Varion — Acervo Interno</div>
+      </div>
     </div>
     <div class="topbar-div"></div>
     <nav class="nav-tabs">
@@ -58,9 +105,10 @@
   </div>
 
   <div id="content-area">
+
     <div class="page active" id="page-home">
       <div class="home-hero">
-        <div class="home-hero-bg"><svg viewBox="0 0 500 500"><g transform="translate(250,250)" stroke="#C5A355" fill="none"><circle r="60"/><circle r="110"/><circle r="160"/><circle r="210"/><g stroke-width="0.5"><line x1="0" y1="-230" x2="0" y2="230"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(51.4)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(102.8)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(154.2)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(205.7)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(257.1)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(308.5)"/></g></g></svg></div>
+        <div class="home-hero-bg"><svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><g transform="translate(250,250)" stroke="#C5A355" fill="none"><circle r="60"/><circle r="110"/><circle r="160"/><circle r="210"/><g stroke-width="0.5"><line x1="0" y1="-230" x2="0" y2="230"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(51.4)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(102.8)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(154.2)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(205.7)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(257.1)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(308.5)"/></g></g></svg></div>
         <div class="home-hero-lines"></div>
         <div class="home-hero-content">
           <div class="hero-eyebrow">Portal Interno — Classificado</div>
@@ -71,14 +119,18 @@
       </div>
       <div class="home-body">
         <div class="home-grid">
-          <div class="info-card" onclick="gotoTab(1)"><span class="info-card-icon">📋</span><div class="info-card-title">Formulários Oficiais</div></div>
-          <div class="info-card" onclick="gotoTab(2)"><span class="info-card-icon">⚔️</span><div class="info-card-title">Procedimentos Operacionais</div></div>
-          <div class="info-card" onclick="gotoTab(3)"><span class="info-card-icon">📖</span><div class="info-card-title">Manuais de Campo</div></div>
-          <div class="info-card" onclick="gotoTab(4)"><span class="info-card-icon">🧥</span><div class="info-card-title">Uniformes e Insígnias</div></div>
-          <div class="info-card" onclick="gotoTab(6)"><span class="info-card-icon">🔒</span><div class="info-card-title">Arquivos Classificados</div></div>
-          <div class="info-card" onclick="gotoTab(7)"><span class="info-card-icon">🐉</span><div class="info-card-title">Bestiário do Sínodo</div></div>
-          <div class="info-card" onclick="gotoTab(8)"><span class="info-card-icon">🗺</span><div class="info-card-title">Mapa do Mundo</div></div>
-          <div class="info-card" onclick="gotoTab(10)"><span class="info-card-icon">📚</span><div class="info-card-title">Biblioteca de Lore</div></div>
+          <div class="info-card" onclick="gotoTab(1)"><span class="info-card-icon">📋</span><div class="info-card-title">Formulários Oficiais</div><p class="info-card-text">Ordens de missão, relatórios pós-operação, fichas de suspeito e registros de artefatos arcanos.</p></div>
+          <div class="info-card" onclick="gotoTab(2)"><span class="info-card-icon">⚔️</span><div class="info-card-title">Procedimentos Operacionais</div><p class="info-card-text">Protocolos Alfa, Beta, Gama e Delta. Índice completo de condutas em campo.</p></div>
+          <div class="info-card" onclick="gotoTab(3)"><span class="info-card-icon">📖</span><div class="info-card-title">Manuais de Campo</div><p class="info-card-text">Manual do agente e guia arcano de identificação de ameaças.</p></div>
+          <div class="info-card" onclick="gotoTab(4)"><span class="info-card-icon">🧥</span><div class="info-card-title">Uniformes e Insígnias</div><p class="info-card-text">Padrões de vestimenta oficial e especificações de equipamento para agentes do Sínodo.</p></div>
+          <div class="info-card" onclick="gotoTab(6)"><span class="info-card-icon">🔒</span><div class="info-card-title">Arquivos Classificados</div><p class="info-card-text">Documentos de acesso restrito protegidos por código individual de segurança.</p></div>
+          <div class="info-card" onclick="gotoTab(7)"><span class="info-card-icon">🐉</span><div class="info-card-title">Bestiário do Sínodo</div><p class="info-card-text">Criaturas catalogadas incluindo espécies raras ligadas à 5ª Dimensão. Consulta obrigatória.</p></div>
+          <div class="info-card" onclick="gotoTab(8)"><span class="info-card-icon">🗺</span><div class="info-card-title">Mapa do Mundo</div><p class="info-card-text">Mapa geral interativo com distritos, pontos estratégicos e zonas de risco dimensional.</p></div>
+          <div class="info-card" onclick="gotoTab(10)"><span class="info-card-icon">📚</span><div class="info-card-title">Biblioteca de Lore</div><p class="info-card-text">História do mundo, cosmologia, reinos, facções e profecias censuradas pelo Conclave.</p></div>
+        </div>
+        <div class="home-decree">
+          <p>"Vocês não estão aqui por escolha. Estão aqui porque o mundo exige controle. A magia quase destruiu tudo — e aqueles que vieram antes de vocês falharam. Vocês servirão como Agentes de Vínculo. Dois anos. Sem exceções."</p>
+          <cite>— Supervisor Leth Varik, Cerimônia de Designação, Porto Varion</cite>
         </div>
       </div>
     </div>
@@ -86,14 +138,16 @@
     <div class="page" id="page-forms">
       <div class="page-inner">
         <div class="classif-banner restricted">Classificação: Uso Interno — Agentes Autorizados</div>
-        <div class="page-header"><div class="page-header-left"><h2>Formulários Oficiais</h2><p>Modelos padronizados do Departamento de Conformidade Civil</p></div></div>
+        <div class="page-header"><div class="page-header-left"><h2>Formulários Oficiais</h2><p>Modelos padronizados do Departamento de Conformidade Civil</p></div><div class="page-badge">Grupo 47-B</div></div>
         <div class="op-tabs">
           <button class="op-tab-btn active" onclick="showOpTab('form-om',this)">📄 Ordem de Missão</button>
           <button class="op-tab-btn" onclick="showOpTab('form-rpm',this)">📝 Relatório Pós-Missão</button>
           <button class="op-tab-btn" onclick="showOpTab('form-oca',this)">⚠️ Ocorrência Arcana</button>
           <button class="op-tab-btn" onclick="showOpTab('form-sus',this)">👤 Ficha de Suspeito</button>
           <button class="op-tab-btn" onclick="showOpTab('form-art',this)">🔮 Registro de Artefato</button>
+          <button class="op-tab-btn" onclick="showOpTab('form-drive',this)">☁️ Drive</button>
         </div>
+
         <div class="op-section active" id="op-form-om">
           <div class="doc-actions"><button class="action-btn pdf-btn" onclick="exportPDF('doc-om','Ordem_de_Missao')">⬇ Exportar PDF</button><button class="action-btn" onclick="clearDoc('doc-om')">↺ Limpar</button></div>
           <div class="document-container" id="doc-om">
@@ -119,36 +173,84 @@
           <div class="doc-actions"><button class="action-btn pdf-btn" onclick="exportPDF('doc-art','Registro_de_Artefato')">⬇ Exportar PDF</button><button class="action-btn" onclick="clearDoc('doc-art')">↺ Limpar</button></div>
           <div class="document-container" id="doc-art"><div class="doc-hdr"><div class="doc-ttl">REGISTRO DE ARTEFATO DIMENSIONAL</div></div></div>
         </div>
+        <div class="op-section" id="op-form-drive">
+          <div class="file-list">
+            <div class="file-item"><div class="file-icon"><span>DOCX</span></div><div class="file-info"><div class="file-name">Formulário Básico de Missão</div><div class="file-meta">Acesso Direto · Google Drive</div></div><div class="file-actions"><button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1GabkJS9PCB5n5VPOCFDvl2KmH4OQ-3il/edit?usp=drive_link','_blank')">Abrir no Drive</button></div></div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="page" id="page-procedimentos">
       <div class="page-inner">
         <div class="classif-banner restricted">Classificação: Uso Interno — Protocolos Operacionais</div>
-        <div class="page-header"><div class="page-header-left"><h2>Procedimentos Operacionais</h2></div></div>
+        <div class="page-header"><div class="page-header-left"><h2>Procedimentos Operacionais</h2><p>Índice de documentação e protocolos de resposta arcana</p></div><div class="page-badge">SQV-MAN-002</div></div>
         <div class="op-tabs">
           <button class="op-tab-btn active" onclick="showOpTab('proc-alfa',this)">🔴 Protocolo Alfa</button>
           <button class="op-tab-btn" onclick="showOpTab('proc-beta',this)">🟠 Protocolo Beta</button>
           <button class="op-tab-btn" onclick="showOpTab('proc-gama',this)">🟡 Protocolo Gama</button>
           <button class="op-tab-btn" onclick="showOpTab('proc-delta',this)">🟢 Protocolo Delta</button>
         </div>
-        <div class="op-section active" id="op-proc-alfa"><div class="manual-container"><div class="man-title">PROTOCOLO ALFA</div><div class="chap-body">Magia Ilegal Ativa</div></div></div>
-        <div class="op-section" id="op-proc-beta"><div class="manual-container"><div class="man-title">PROTOCOLO BETA</div><div class="chap-body">Anomalia Dimensional Detectada</div></div></div>
-        <div class="op-section" id="op-proc-gama"><div class="manual-container"><div class="man-title">PROTOCOLO GAMA</div><div class="chap-body">Criatura Dimensional Presente</div></div></div>
-        <div class="op-section" id="op-proc-delta"><div class="manual-container"><div class="man-title">PROTOCOLO DELTA</div><div class="chap-body">Agente Contaminado</div></div></div>
+        <div class="op-section active" id="op-proc-alfa">
+          <div class="manual-container">
+            <div class="man-hdr"><div><div class="man-title">PROTOCOLO ALFA</div><div class="man-sub">Magia Ilegal em Uso Ativo</div></div><div class="man-meta"><span>URGÊNCIA: ALTA</span></div></div>
+            <ol class="step-list">
+              <li class="step-item"><span class="step-num">1</span><div class="step-content"><div class="step-title">NÃO SE APROXIME IMEDIATAMENTE</div><div class="step-text">Mantenha distância segura. Magia ativa é imprevisível. Observe antes de agir.</div></div></li>
+              <li class="step-item"><span class="step-num">2</span><div class="step-content"><div class="step-title">ESVAZIE A ÁREA</div><div class="step-text">Afaste civis silenciosamente. Não cause pânico.</div></div></li>
+            </ol>
+            <div class="man-danger"><div class="man-danger-title">NÃO FAÇA</div><div class="man-danger-body">Não tente copiar ou absorver o efeito mágico. Não use artefatos coletados para contra-atacar.</div></div>
+          </div>
+        </div>
+        <div class="op-section" id="op-proc-beta">
+          <div class="manual-container">
+            <div class="man-hdr"><div><div class="man-title">PROTOCOLO BETA</div><div class="man-sub">Anomalia Dimensional Detectada</div></div></div>
+            <ol class="step-list">
+              <li class="step-item"><span class="step-num">1</span><div class="step-content"><div class="step-title">SAIA DA ZONA IMEDIATAMENTE</div><div class="step-text">Recue para além de 50 metros da origem estimada. Anomalias se expandem.</div></div></li>
+              <li class="step-item"><span class="step-num">2</span><div class="step-content"><div class="step-title">ISOLE A ÁREA</div><div class="step-text">Use cordas, barricadas, presença física. Ninguém entra. Custodie o perímetro.</div></div></li>
+            </ol>
+          </div>
+        </div>
+        <div class="op-section" id="op-proc-gama">
+          <div class="manual-container">
+            <div class="man-hdr"><div><div class="man-title">PROTOCOLO GAMA</div><div class="man-sub">Criatura Dimensional Presente</div></div></div>
+            <ol class="step-list">
+              <li class="step-item"><span class="step-num">1</span><div class="step-content"><div class="step-title">CLASSIFIQUE A CRIATURA</div><div class="step-text">Senciente (comunica, raciocina) ou não-senciente (age por instinto)? Isso muda o protocolo.</div></div></li>
+              <li class="step-item"><span class="step-num">2</span><div class="step-content"><div class="step-title">NÃO ATAQUE SENCIENTES SEM AVALIAÇÃO</div><div class="step-text">Criaturas sencientes têm proteção doutrinária da Igreja.</div></div></li>
+            </ol>
+          </div>
+        </div>
+        <div class="op-section" id="op-proc-delta">
+          <div class="manual-container">
+            <div class="man-hdr"><div><div class="man-title">PROTOCOLO DELTA</div><div class="man-sub">Agente Contaminado / Ferido por Magia</div></div></div>
+            <ol class="step-list">
+              <li class="step-item"><span class="step-num">1</span><div class="step-content"><div class="step-title">SEPARE O AGENTE DA FONTE</div><div class="step-text">Remova da área de exposição. Contaminação dimensional não se transmite por contato físico.</div></div></li>
+              <li class="step-item"><span class="step-num">2</span><div class="step-content"><div class="step-title">TRANSPORTE AO ARQUIVO MÉDICO</div><div class="step-text">Qualquer exposição direta a magia ativa exige avaliação antes do retorno ao serviço.</div></div></li>
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="page" id="page-manuais">
       <div class="page-inner">
         <div class="classif-banner restricted">Classificação: Uso Interno — Manuais de Campo</div>
-        <div class="page-header"><div class="page-header-left"><h2>Manuais de Campo</h2></div></div>
+        <div class="page-header"><div class="page-header-left"><h2>Manuais de Campo</h2><p>Guias operacionais, manual arcano e bestiário dimensional</p></div><div class="page-badge">SQV-MAN-001/003</div></div>
         <div class="op-tabs">
           <button class="op-tab-btn active" onclick="showOpTab('man-campo',this)">⚔️ Manual do Agente</button>
           <button class="op-tab-btn" onclick="showOpTab('man-arcano',this)">✨ Manual Arcano</button>
         </div>
-        <div class="op-section active" id="op-man-campo"><div class="manual-container"><div class="man-title">MANUAL DO AGENTE</div><div class="chap-body">Instruções em campo...</div></div></div>
-        <div class="op-section" id="op-man-arcano"><div class="manual-container"><div class="man-title">NOÇÕES DA 5ª DIMENSÃO</div><div class="chap-body">Instruções arcanas...</div></div></div>
+        <div class="op-section active" id="op-man-campo">
+          <div class="manual-container">
+            <div class="man-hdr"><div><div class="man-title">MANUAL DO AGENTE DE VÍNCULO</div><div class="man-sub">Edição Padrão — Nível III</div></div></div>
+            <div class="chap"><div class="chap-title"><span class="chap-num">CAP. 1</span>QUEM VOCÊ É E O QUE VOCÊ REPRESENTA</div><div class="chap-body"><p>Como Agente de Vínculo, você representa o <strong>Sínodo do Quinto Véu</strong> em campo. Você <strong>não é um soldado</strong>. Não é um inquisidor. Não é um juiz. Você é um investigador com autoridade limitada.</p></div></div>
+          </div>
+        </div>
+        <div class="op-section" id="op-man-arcano">
+          <div class="manual-container">
+            <div class="man-hdr"><div><div class="man-title">NOÇÕES FUNDAMENTAIS DA 5ª DIMENSÃO</div><div class="man-sub">Para agentes sem capacidade arcana</div></div></div>
+            <div class="chap"><div class="chap-title"><span class="chap-num">CAP. 1</span>O QUE É A 5ª DIMENSÃO</div><div class="chap-body"><p>O mundo tem três dimensões físicas e uma quarta — o tempo. Além disso, existe uma <strong>quinta</strong> — a dimensão da qual a magia é derivada.</p></div></div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -156,7 +258,11 @@
       <div class="page-inner">
         <div class="classif-banner restricted">Classificação: Uso Interno — Departamento de Intendência</div>
         <div class="page-header">
-          <div class="page-header-left"><h2>Equipamento e Insígnias</h2><p>Padrão oficial de vestimenta para Agentes de Vínculo e Investigadores do Véu.</p></div>
+          <div class="page-header-left">
+            <h2>Equipamento e Insígnias</h2>
+            <p>Padrão oficial de vestimenta para Agentes de Vínculo e Investigadores do Véu.</p>
+          </div>
+          <div class="page-badge">Ref. INT-04</div>
         </div>
         <div class="uniform-container">
           <img src="insignias_uniforme_sinodo.svg" alt="Diagrama de Uniformes e Insígnias do Sínodo do Quinto Véu">
@@ -208,7 +314,11 @@
       <div class="page-inner">
         <div class="classif-banner confidential">Restrito</div>
         <div class="page-header"><div class="page-header-left"><h2>Requisição de Arquivos</h2></div></div>
-        <div class="req-form"><div class="form-row"><label class="form-label">Justificativa</label><textarea class="form-textarea"></textarea></div></div>
+        <div class="req-form">
+          <div class="form-row"><label class="form-label">Documento Requisitado</label><input class="form-input" type="text"></div>
+          <div class="form-row"><label class="form-label">Justificativa</label><textarea class="form-textarea"></textarea></div>
+          <div style="margin-top:7px;"><button class="submit-btn" onclick="submitRequisition()">Enviar Requisição</button></div>
+        </div>
       </div>
     </div>
 
@@ -242,38 +352,52 @@
         </aside>
 
         <main class="lore-main">
-          <div class="lore-section active" id="sec-home"><div class="sec-header"><h2 class="sec-title">Bem-vindo à Biblioteca do Quinto Véu</h2></div><div class="art-body"><p>Esta biblioteca reúne o conhecimento aprovado pelo Sínodo.</p></div></div>
-          <div class="lore-section" id="sec-cosmologia"><div class="sec-header"><h2 class="sec-title">As Sete Dimensões</h2></div><div class="art-body"><p>O mundo não é feito apenas do que os olhos veem.</p></div>
-            <div class="censored-block" id="cens-cosmol-1"><div class="art-label">Pesquisa Avançada</div><div class="art-title">A Consciência da 5ª Dimensão</div><div class="censored-text">A 5ª Dimensão pode não ser um fenómeno passivo.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-cosmol-1','observatorio','A Consciência da 5ª Dimensão')">Inserir Código</button></div></div>
+          <div class="lore-section active" id="sec-home">
+            <div class="sec-header"><h2 class="sec-title">Bem-vindo à Biblioteca do Quinto Véu</h2></div>
+            <div class="art-body"><p>Esta biblioteca reúne o conhecimento aprovado pelo Sínodo.</p></div>
           </div>
-          <div class="lore-section" id="sec-magia"><div class="sec-header"><h2 class="sec-title">A Magia e o Véu</h2></div><div class="art-body"><p>A magia é uma capacidade cognitiva.</p></div>
-            <div class="censored-block" id="cens-magia-1"><div class="art-label">Pesquisa Interna</div><div class="art-title">O Declínio dos Praticantes</div><div class="censored-text">O número de praticantes caiu 47% ao ano.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-magia-1','conclave1044','O Declínio dos Praticantes')">Inserir Código</button></div></div>
+          <div class="lore-section" id="sec-cosmologia">
+            <div class="sec-header"><h2 class="sec-title">As Sete Dimensões</h2></div>
+            <div class="art-body"><p>O mundo não é feito apenas do que os olhos veem.</p></div>
+            <div class="censored-block" id="cens-cosmol-1"><div class="art-label">Pesquisa Avançada</div><div class="art-title">A Consciência da 5ª Dimensão</div><div class="censored-text">A 5ª Dimensão pode não ser um fenómeno passivo. Há evidências de que responde à interação.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-cosmol-1','observatorio','A Consciência da 5ª Dimensão')">Inserir Código</button></div></div>
           </div>
-          <div class="lore-section" id="sec-historia"><div class="sec-header"><h2 class="sec-title">História do Mundo</h2></div>
-            <div class="censored-block" id="cens-hist-1"><div class="art-label">Arquivo Confidencial</div><div class="art-title">Os Sobreviventes de Aethryon</div><div class="censored-text">Não foi uma explosão. Foi um desdobramento.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-hist-1','aethryon','Testemunhos de Aethryon')">Inserir Código</button></div></div>
+          <div class="lore-section" id="sec-magia">
+            <div class="sec-header"><h2 class="sec-title">A Magia e o Véu</h2></div>
+            <div class="art-body"><p>A magia é uma capacidade cognitiva.</p></div>
+            <div class="censored-block" id="cens-magia-1"><div class="art-label">Pesquisa Interna</div><div class="art-title">O Declínio dos Praticantes</div><div class="censored-text">O número de praticantes caiu 47% ao ano. Se for verdade, o Sínodo entrará em colapso operacional em menos de três décadas.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-magia-1','conclave1044','O Declínio dos Praticantes')">Inserir Código</button></div></div>
+          </div>
+          <div class="lore-section" id="sec-historia">
+            <div class="sec-header"><h2 class="sec-title">História do Mundo</h2></div>
+            <div class="censored-block" id="cens-hist-1"><div class="art-label">Arquivo Confidencial</div><div class="art-title">Os Sobreviventes de Aethryon</div><div class="censored-text">Não foi uma explosão. Foi um desdobramento. O ar abriu-se como um tecido rasgado de dentro para fora. O Sínodo não publicou estes registos por razões de "estabilidade social".</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-hist-1','aethryon','Testemunhos de Aethryon')">Inserir Código</button></div></div>
           </div>
           <div class="lore-section" id="sec-tratado"><div class="sec-header"><h2 class="sec-title">O Tratado de Vhal'Torin</h2></div></div>
-          <div class="lore-section" id="sec-reinos"><div class="sec-header"><h2 class="sec-title">Os Reinos do Mundo</h2></div>
-            <div class="censored-block" id="cens-aurethia"><div class="art-label">Inteligência Interna</div><div class="art-title">Câmaras Brancas</div><div class="censored-text">Instalações subterrâneas em Aurethia.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-aurethia','aurethia43','As Câmaras Brancas')">Inserir Código</button></div></div>
-            <div class="censored-block" id="cens-elfo"><div class="art-label">Relatório Diplomático</div><div class="art-title">O Declínio Élfico</div><div class="censored-text">A implicação para praticantes humanos é óbvia.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-elfo','thalmyrion','Palavras de Arkhavel')">Inserir Código</button></div></div>
+          <div class="lore-section" id="sec-reinos">
+            <div class="sec-header"><h2 class="sec-title">Os Reinos do Mundo</h2></div>
+            <div class="censored-block" id="cens-aurethia"><div class="art-label">Inteligência Interna</div><div class="art-title">Câmaras Brancas</div><div class="censored-text">Em pelo menos três propriedades nobres de Aurethia, existem instalações subterrâneas onde a elite conduz pesquisa arcana não autorizada em humanos com potencial dimensional não desenvolvido. Por sete votos a dois: não confrontar Aurethia neste momento.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-aurethia','aurethia43','As Câmaras Brancas')">Inserir Código</button></div></div>
+            <div class="censored-block" id="cens-elfo"><div class="art-label">Relatório Diplomático</div><div class="art-title">O Declínio Élfico</div><div class="censored-text">Thal'Myrion está a morrer. A implicação para praticantes humanos é óbvia. O Conclave não respondeu ao relatório.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-elfo','thalmyrion','Palavras de Arkhavel')">Inserir Código</button></div></div>
           </div>
-          <div class="lore-section" id="sec-faccoes"><div class="sec-header"><h2 class="sec-title">As Forças que Movem o Mundo</h2></div>
-            <div class="censored-block" id="cens-sinodo-secreto"><div class="art-label">Conclave Interno</div><div class="art-title">O Que o Sínodo Esconde</div><div class="censored-text">O Sínodo debate o declínio demográfico e experiências ilegais.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-sinodo-secreto','conclave1044','Segredos do Conclave')">Inserir Código</button></div></div>
+          <div class="lore-section" id="sec-faccoes">
+            <div class="sec-header"><h2 class="sec-title">As Forças que Movem o Mundo</h2></div>
+            <div class="censored-block" id="cens-sinodo-secreto"><div class="art-label">Conclave Interno</div><div class="art-title">O Que o Sínodo Esconde</div><div class="censored-text">O Sínodo debate o declínio demográfico e experiências ilegais às escondidas. Os Agentes de Vínculo são informados de que o declínio é "flutuação demográfica natural".</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-sinodo-secreto','conclave1044','Segredos do Conclave')">Inserir Código</button></div></div>
           </div>
-          <div class="lore-section" id="sec-igreja"><div class="sec-header"><h2 class="sec-title">A Igreja da Sétima Ascensão</h2></div>
-            <div class="censored-block" id="cens-profecia-igreja"><div class="art-label">Análise Teológica</div><div class="art-title">A Profecia do Selador</div><div class="censored-text">A Igreja suprimiu a Versão IV da profecia.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-profecia-igreja','selador7','As Versões da Profecia')">Inserir Código</button></div></div>
+          <div class="lore-section" id="sec-igreja">
+            <div class="sec-header"><h2 class="sec-title">A Igreja da Sétima Ascensão</h2></div>
+            <div class="censored-block" id="cens-profecia-igreja"><div class="art-label">Análise Teológica</div><div class="art-title">A Profecia do Selador</div><div class="censored-text">A Igreja suprimiu a Versão IV da profecia: "O Selador não fechará o Quinto Véu porque é justo. Fechará porque não terá escolha. E quando o véu se fechar, aquilo que está do outro lado ficará connosco."</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-profecia-igreja','selador7','As Versões da Profecia')">Inserir Código</button></div></div>
           </div>
           <div class="lore-section" id="sec-monstros"><div class="sec-header"><h2 class="sec-title">Monstros e Criaturas do Véu</h2></div></div>
-          <div class="lore-section" id="sec-locais"><div class="sec-header"><h2 class="sec-title">Locais Notáveis</h2></div>
-            <div class="censored-block" id="cens-nexus"><div class="art-label">Expedição</div><div class="art-title">O Nexus Umbral</div><div class="censored-text">No centro de Vhal'Zarak há uma presença consciente.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-nexus','nexusumbral','O Nexus Umbral')">Inserir Código</button></div></div>
+          <div class="lore-section" id="sec-locais">
+            <div class="sec-header"><h2 class="sec-title">Locais Notáveis</h2></div>
+            <div class="censored-block" id="cens-nexus"><div class="art-label">Expedição</div><div class="art-title">O Nexus Umbral</div><div class="censored-text">No centro de Vhal'Zarak há uma presença consciente. A recomendação do relatório é clara: "O perigo não é a morte. É a incorporação."</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-nexus','nexusumbral','O Nexus Umbral')">Inserir Código</button></div></div>
           </div>
-          <div class="lore-section" id="sec-profecia"><div class="sec-header"><h2 class="sec-title">Profecias e Textos Sagrados</h2></div>
-            <div class="censored-block" id="cens-profecia-full"><div class="art-label">Análise Comparativa</div><div class="art-title">As Versões Suprimidas</div><div class="censored-text">O Selador não é um herói. É um instrumento.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-profecia-full','selador7','Versões Suprimidas')">Inserir Código</button></div></div>
+          <div class="lore-section" id="sec-profecia">
+            <div class="sec-header"><h2 class="sec-title">Profecias e Textos Sagrados</h2></div>
+            <div class="censored-block" id="cens-profecia-full"><div class="art-label">Análise Comparativa</div><div class="art-title">As Versões Suprimidas</div><div class="censored-text">O Selador não é um herói. É um instrumento. E instrumentos não escolhem os seus fins.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-profecia-full','selador7','Versões Suprimidas')">Inserir Código</button></div></div>
           </div>
-          <div class="lore-section" id="sec-segredos"><div class="sec-header"><h2 class="sec-title">Segredos do Sínodo</h2></div>
-            <div class="censored-block" id="cens-seg-1"><div class="art-label">Conclave</div><div class="art-title">A Decisão Sobre Aurethia</div><div class="censored-text">Por sete votos a dois, os experimentos continuam.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-seg-1','conclave1044','Decisão Aurethia')">Inserir Código</button></div></div>
-            <div class="censored-block" id="cens-seg-2"><div class="art-label">Observatório do Véu</div><div class="art-title">Vardhal</div><div class="censored-text">O Vidente Eterno está selado no Nível 3.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-seg-2','olhoaberto','Vardhal')">Inserir Código</button></div></div>
-            <div class="censored-block" id="cens-seg-3"><div class="art-label">Khar-Duran</div><div class="art-title">A Muralha</div><div class="censored-text">Estimativa de vida útil: 15 a 40 anos.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-seg-3','muralha44','O Prazo da Muralha')">Inserir Código</button></div></div>
+          <div class="lore-section" id="sec-segredos">
+            <div class="sec-header"><h2 class="sec-title">Segredos do Sínodo</h2></div>
+            <div class="censored-block" id="cens-seg-1"><div class="art-label">Conclave</div><div class="art-title">A Decisão Sobre Aurethia</div><div class="censored-text">Por sete votos a dois, as experiências continuam. Três dos sete que votaram a favor têm conexões financeiras com nobres de Aurethia.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-seg-1','conclave1044','Decisão Aurethia')">Inserir Código</button></div></div>
+            <div class="censored-block" id="cens-seg-2"><div class="art-label">Observatório do Véu</div><div class="art-title">Vardhal</div><div class="censored-text">O Vidente Eterno está selado no Nível 3. O terceiro Guardião do Véu do subsolo não responde há 40 anos. Ninguém foi verificar.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-seg-2','olhoaberto','Vardhal')">Inserir Código</button></div></div>
+            <div class="censored-block" id="cens-seg-3"><div class="art-label">Khar-Duran</div><div class="art-title">A Muralha</div><div class="censored-text">Estimativa de vida útil: 15 a 40 anos. Quando cair, Porto Varion será classificada como Zona de Realidade Instável em cinco anos.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-seg-3','muralha44','Prazo da Muralha')">Inserir Código</button></div></div>
           </div>
         </main>
       </div>
@@ -283,7 +407,7 @@
       <div class="page-inner">
         <div class="classif-banner restricted">Acervo de Conhecimento</div>
         <div class="page-header"><div class="page-header-left"><h2>Codex de Lore</h2></div></div>
-        <div class="bestiary-controls"><input class="bestiary-search" type="text" placeholder="Pesquisar termo no códice..." oninput="filterGlossary(this.value)"></div>
+        <div class="bestiary-controls"><input class="bestiary-search" type="text" placeholder="Pesquisar termo..." oninput="filterGlossary(this.value)"></div>
         <div class="docs-grid" id="glossary-grid"></div>
       </div>
     </div>
@@ -300,7 +424,7 @@
       <input type="password" id="pwd-input" placeholder="••••••••" autocomplete="off">
       <div class="pwd-modal-err" id="pwd-modal-err"></div>
     </div>
-    <div class="pwd-modal-actions">
+    <div class="pwd-actions">
       <button class="pwd-confirm-btn" onclick="handlePwdSubmit()">Confirmar Acesso</button>
       <button class="pwd-cancel-btn" onclick="closePwdModal()">Cancelar</button>
     </div>
