@@ -1849,7 +1849,6 @@ function showPage(id,tab){
   document.getElementById('page-'+id).classList.add('active');
   if(tab) tab.classList.add('active');
   if(id==='map') initMap();
-  if(id==='diary') renderDiaryList();
 }
 function gotoTab(idx){
   const tabs=document.querySelectorAll('.nav-tab');
@@ -1953,7 +1952,7 @@ async function exportPDF(docId, filename){
 }
 
 // ══════════════════════════════════════════
-// ARQUIVOS CLASSIFICADOS (DOCS) E SENHAS
+// ARQUIVOS CLASSIFICADOS E SENHAS
 // ══════════════════════════════════════════
 const DOCS=[
   {id:'doc01',number:'RD-001 · Observatório do Véu',classif:'restrito',classifLabel:'Restrito',title:'A Natureza da Quinta Dimensão',subtitle:'Relatório Introdutório de Pesquisa Arcana',desc:'Compilação dos primeiros estudos formais do Sínodo sobre a estrutura e comportamento da 5ª Dimensão.',origin:'Observatório do Véu',date:'Ano 112 P.V.',password:'veuberto',content:`<div class="doc-seal-line">Observatório do Véu · Porto Varion · Uso Interno</div><div class="doc-section-title">Prefácio do Magistratus</div><p class="doc-body-text">O presente relatório consolida as observações e hipóteses dos primeiros doze anos de pesquisa formal do Sínodo do Quinto Véu. Não é um documento definitivo — a natureza da 5ª Dimensão resiste, por essência, a definições absolutas.</p><div class="doc-section-title">I. Definição Operacional</div><p class="doc-body-text">A <strong>5ª Dimensão</strong> é a camada da realidade imediatamente adjacente à dimensão física (1ª–3ª) e temporal (4ª), caracterizada pela plasticidade estrutural — a capacidade de ser <em>lida, interpretada e, em casos extremos, reescrita</em> por consciências de desenvolvimento cognitivo suficientemente avançado.</p><div class="doc-callout"><div class="doc-callout-label">Nota Técnica</div><p>A "magia" não é invocação de energia. É a capacidade de interpretar as estruturas da 5ª Dimensão e aplicá-las ao plano físico.</p></div><div class="doc-section-title">II. Riscos Identificados</div><ul class="doc-list"><li><strong>Distorção cognitiva progressiva</strong> — em praticantes sem treinamento formal.</li><li><strong>Vazamento dimensional localizado</strong> — fissuras que permitem passagem de entidades.</li><li><strong>Erosão da realidade estável</strong> — em regiões de uso intenso e não regulado.</li></ul><div class="doc-warning"><div class="doc-warning-label">⚠ Aviso do Conclave</div><p>Qualquer percepção dimensional não catalogada em indivíduos fora do Sínodo deve ser reportada imediatamente. A não comunicação constitui violação grave do Tratado de Vhal'Torin.</p></div><div class="doc-divider">· · ✦ · ·</div><div class="doc-signature-block"><div><div class="doc-sig">Redigido por</div><div class="doc-sig-name">Magistratus Eldren Soval</div><div class="doc-sig-title">Primeiro Diretor do Observatório do Véu</div></div><div><div class="doc-sig">Ano 112 P.V. · Porto Varion</div></div></div><div class="doc-classified-footer">RD-001 · Restrito · Sínodo do Quinto Véu</div>`},
@@ -1980,13 +1979,13 @@ if(document.getElementById('docs-grid')){
 function handlePwdSubmit() {
   if (pendingBlockId) confirmUnlock();
   else if (currentDocId) {
-    if (currentDocId.startsWith('lore')) window.confirmPwd(); // Glossary logic
-    else confirmDocPwd(); // Regular Classified Docs logic
+    if (window.isGlossaryPwd) window.confirmPwd(); 
+    else confirmDocPwd();
   }
 }
 
 function openDocPwd(id){
-  const doc=DOCS.find(d=>d.id===id); currentDocId=id; pendingBlockId=null;
+  const doc=DOCS.find(d=>d.id===id); currentDocId=id; pendingBlockId=null; window.isGlossaryPwd = false;
   document.getElementById('pwd-modal-doc').textContent=doc.title;
   document.getElementById('pwd-input').value='';
   document.getElementById('pwd-modal-err').textContent='';
@@ -2015,7 +2014,9 @@ function closePwdModal(){
 function closeReader(){document.getElementById('reader-overlay').classList.remove('open');}
 function closeReaderOnBg(e){if(e.target===document.getElementById('reader-overlay'))closeReader();}
 
-// FUNÇÕES DE LORE CENSURADA
+// ══════════════════════════════════════════
+// LORE CENSURADA
+// ══════════════════════════════════════════
 function unlockCensored(blockId, password, title) {
   pendingBlockId = blockId; pendingPassword = password; currentDocId = null;
   document.getElementById('pwd-modal-doc').textContent = title;
@@ -2086,10 +2087,7 @@ function setBeastFilter(f,btn){
 function filterBeasts(v){renderBeasts(currentBeastFilter,v);}
 
 // ══════════════════════════════════════════
-// 
-// ══════════════════════════════════════════
-// ══════════════════════════════════════════
-// MAPA IMAGEM (PAN & ZOOM)
+// MAPA IMAGEM (PAN E ZOOM)
 // ══════════════════════════════════════════
 let mapImgScale=1, mapImgOffX=0, mapImgOffY=0, mapImgDragging=false, mapImgLastX=0, mapImgLastY=0, mapInited=false;
 
@@ -2118,18 +2116,6 @@ function initMap(){
   }, {passive: false});
 }
 
-function applyMapImgTransform() {
-  const mapImg = document.getElementById('map-image');
-  if(mapImg) mapImg.style.transform = `scale(${mapImgScale}) translate(${mapImgOffX}px, ${mapImgOffY}px)`;
-}
-function mapImgZoom(f) {
-  mapImgScale = Math.min(5, Math.max(0.2, mapImgScale * f));
-  applyMapImgTransform();
-}
-function mapImgReset() {
-  mapImgScale = 1; mapImgOffX = 0; mapImgOffY = 0;
-  applyMapImgTransform();
-}
 function applyMapImgTransform() {
   const mapImg = document.getElementById('map-image');
   if(mapImg) mapImg.style.transform = `scale(${mapImgScale}) translate(${mapImgOffX}px, ${mapImgOffY}px)`;
@@ -2197,9 +2183,3 @@ document.addEventListener('DOMContentLoaded', () => {
   if(document.getElementById('glossary-grid')) renderGlossary(); 
 });
 </script>
-</body>
-</html>
-            <div class="censored-block" id="cens-seg-2">
-              <div class="art-label">Observatório do Véu — Arquivo Interno</div>
-              <div class="art-title">Vardhal — O Que Está Selado Abaixo</div>
-              <div class="censored-text">A entidade Vardhal, o Vidente Eterno, foi capturada durante a Operação Véu Costurado (1041-1043). Está selada em contenção de Nível 3
