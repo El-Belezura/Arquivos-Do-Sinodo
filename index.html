@@ -245,25 +245,34 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
 .beast-lore{font-family:'IM Fell English',serif;font-size:12px;color:var(--text-dim);font-style:italic;border-top:1px solid var(--parch-dim);margin-top:7px;padding-top:6px;line-height:1.6;}
 
 /* ─── MAPA ─── */
-#page-map{background:#f0e8d0;}
-.map-wrap{position:relative;width:100%;height:100%;}
-#map-svg-container{width:100%;height:100%;overflow:hidden;background:#c8e8f5;cursor:grab;user-select:none;}
-#map-svg-container:active{cursor:grabbing;}
-.map-sidebar{position:absolute;top:14px;right:14px;width:230px;background:rgba(245,237,216,.97);border:1px solid var(--parch-dark);padding:14px;max-height:calc(100% - 28px);overflow-y:auto;z-index:10;}
-.map-sidebar::-webkit-scrollbar{width:4px;}
-.map-sidebar::-webkit-scrollbar-thumb{background:var(--gold-dim);}
-.map-sidebar-title{font-family:'Cinzel',serif;font-size:10px;font-weight:700;color:var(--ink);letter-spacing:2px;text-transform:uppercase;margin-bottom:11px;padding-bottom:7px;border-bottom:1px solid var(--parch-dark);}
-.map-legend{display:flex;flex-direction:column;gap:6px;margin-bottom:13px;}
-.map-legend-item{display:flex;align-items:center;gap:7px;font-family:'Crimson Text',serif;font-size:12px;color:var(--text-dim);}
-.map-legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-.map-loc-name{font-family:'Cinzel',serif;font-size:10px;font-weight:700;color:var(--ink);margin-bottom:3px;}
-.map-loc-desc{font-family:'Crimson Text',serif;font-size:12px;color:var(--text-dim);font-style:italic;line-height:1.5;}
-.map-controls{position:absolute;bottom:14px;left:14px;display:flex;gap:5px;z-index:10;}
-.map-ctrl-btn{font-family:'Cinzel',serif;font-size:12px;width:32px;height:32px;background:rgba(245,237,216,.95);border:1px solid var(--parch-dark);cursor:pointer;color:var(--text-body);transition:all .2s;display:flex;align-items:center;justify-content:center;}
-.map-ctrl-btn:hover{border-color:var(--gold-dim);color:var(--gold-dim);}
-.map-tooltip{position:absolute;background:rgba(26,26,46,.95);border:1px solid var(--gold-dim);padding:6px 10px;pointer-events:none;z-index:20;display:none;max-width:190px;}
-.map-tooltip-name{font-family:'Cinzel',serif;font-size:8.5px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:2px;}
-.map-tooltip-desc{font-family:'Crimson Text',serif;font-size:12px;color:var(--gold-pale);font-style:italic;}
+<div class="page" id="page-map">
+      <div class="map-wrap">
+        <div id="map-image-wrapper">
+          <img id="map-image" src="SEU_MAPA_AQUI.jpg" alt="Mapa do Mundo" draggable="false">
+        </div>
+        <div class="map-controls">
+          <button class="map-ctrl-btn" onclick="mapImgZoom(1.2)">+</button>
+          <button class="map-ctrl-btn" onclick="mapImgZoom(0.8)">−</button>
+          <button class="map-ctrl-btn" onclick="mapImgReset()">↺</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" id="page-uniformes">
+      <div class="page-inner">
+        <div class="classif-banner restricted">Classificação: Uso Interno — Departamento de Intendência</div>
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>Equipamento e Insígnias</h2>
+            <p>Padrão oficial de vestimenta para Agentes de Vínculo e Investigadores do Véu.</p>
+          </div>
+          <div class="page-badge">Ref. INT-04</div>
+        </div>
+        <div class="uniform-container">
+          <img src="insignias_uniforme_sinodo.svg" alt="Diagrama de Uniformes e Insígnias">
+        </div>
+      </div>
+    </div>
 
 /* ─── DIÁRIO ─── */
 .diary-layout{display:grid;grid-template-columns:250px 1fr;gap:18px;height:calc(100vh - 195px);}
@@ -525,6 +534,13 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
   .lore-sidebar { display: none; }
   .lore-main { padding: 20px 16px; }
 }
+  /* ─── MAPA IMAGEM E UNIFORMES ─── */
+#page-map { background: #1A1A2E; }
+#map-image-wrapper { width: 100%; height: 100%; overflow: hidden; background: #1A1A2E; display: flex; align-items: center; justify-content: center; cursor: grab; }
+#map-image-wrapper:active { cursor: grabbing; }
+#map-image { max-width: none; max-height: 100%; transition: transform 0.1s ease-out; transform-origin: center center; pointer-events: none; }
+.uniform-container { text-align: center; padding: 30px; background: var(--parchment); border: 1px solid var(--parch-dark); max-width: 900px; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,.2); }
+.uniform-container img { max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 2px; }
 </style>
 </head>
 <body>
@@ -604,9 +620,10 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
       <div class="nav-tab" onclick="showPage('classified',this)">Arquivos Classificados</div>
       <div class="nav-tab" onclick="showPage('bestiary',this)">Bestiário</div>
       <div class="nav-tab" onclick="showPage('map',this)">Mapa</div>
+      <div class="nav-tab" onclick="showPage('uniformes',this)">Uniformes</div>
       <div class="nav-tab" onclick="showPage('diary',this)">Diário de Campo</div>
       <div class="nav-tab" onclick="showPage('requisition',this)">Requisição</div>
-      <div class="nav-tab" onclick="showPage('biblioteca',this)">📚 Biblioteca</div>
+      <div class="nav-tab" onclick="showPage('biblioteca',this)">Biblioteca</div>
       <div class="nav-tab" onclick="showPage('glossary',this)">Codex de Lore</div>
     </nav>
     <div class="topbar-right">
@@ -2126,70 +2143,48 @@ function filterBeasts(v){renderBeasts(currentBeastFilter,v);}
 // ══════════════════════════════════════════
 // MAPA
 // ══════════════════════════════════════════
-const MAP_LOCATIONS=[
-  {id:'porto',x:340,y:520,r:22,color:'#2a5a8a',label:'Cais das Nações',desc:'O maior porto do mundo conhecido. Navios de todos os reinos. Centro de comércio, espionagem e chegada dos Agentes de Vínculo.'},
-  {id:'sinodo',x:310,y:310,r:20,color:'#1A1A2E',label:'Alto Sínodo',desc:'Sede do Sínodo do Quinto Véu. Câmaras do Conclave, Observatório do Véu e os Arquivos Dimensionais subterrâneos.'},
-  {id:'observatorio',x:260,y:260,r:14,color:'#4a2a6a',label:'Observatório do Véu',desc:'Centro de pesquisa arcana. Vardhal está selado três andares abaixo. Dois Guardiões do Véu protegem a entrada sul.'},
-  {id:'academico',x:200,y:360,r:16,color:'#3a5a3a',label:'Distrito Acadêmico',desc:'Bibliotecas, laboratórios e salas de estudo. Um basilisco vive nos esgotos abaixo. Ninguém foi removê-lo ainda.'},
-  {id:'veu',x:420,y:300,r:18,color:'#6a1a1a',label:'Bairro do Véu',desc:'Área de anomalias dimensionais. Névoa persistente. Sombras Dimensionais avistadas. Solo instável.'},
-  {id:'mercado',x:380,y:400,r:16,color:'#7a6040',label:'Mercado Livre',desc:'Comércio intenso. Influência da Liga Mercante. Mercado negro operando nos subsolos.'},
-  {id:'baixa',x:450,y:420,r:15,color:'#4a3a2a',label:'Baixa Varion',desc:'Submundo ativo. Criminosos, contrabandistas e ex-agentes. Sede dos Véus Rasgados.'},
-  {id:'meioGladio',x:280,y:430,r:13,color:'#5a7a4a',label:'Bairro Meio Gládio',desc:'Residencial simples. Local das primeiras missões do Grupo 47-B. Registros 17-C.'},
-  {id:'muralha',x:180,y:200,r:12,color:'#555',label:'Muralha Norte',desc:'Defesa terrestre de Porto Varion. Acesso controlado às estradas do interior continental.'},
-  {id:'estaleiro',x:480,y:510,r:14,color:'#3a5a7a',label:'Estaleiro Velho',desc:'Construção naval e reparos. Três harpias nidificam nas chaminés.'},
-  {id:'templo',x:230,y:310,r:13,color:'#7a6a2a',label:'Templo da Sétima Ascensão',desc:'Representação da Igreja em Porto Varion. Tensão constante com o Sínodo.'},
-  {id:'alfandega',x:370,y:490,r:12,color:'#555',label:'Alfândega',desc:'Controle de entrada e saída. O guarda que anota algo existe de fato.'},
-  {id:'dormitorio',x:320,y:370,r:11,color:'#5a4a7a',label:'Ala de Vínculo',desc:'Dormitório C-7. Quartel dos Agentes de Vínculo. Frio, impessoal, funcional.'},
-  {id:'porto_norte',x:280,y:530,r:10,color:'#2a5a8a',label:'Porto Norte',desc:'Docas de carga pesada. O carregamento com o símbolo nobre de Aurethia passou por aqui.'}
-];
-let mapScale=1,mapOffX=0,mapOffY=0,mapDragging=false,mapLastX=0,mapLastY=0,mapInited=false;
-function initMap(){
-  if(mapInited)return;mapInited=true;
-  const container=document.getElementById('map-svg-container'); if(!container) return;
-  const W=900,H=680;
-  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
-  svg.setAttribute('id','map-main-svg');svg.setAttribute('width','100%');svg.setAttribute('height','100%');svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
-  const sea=document.createElementNS('http://www.w3.org/2000/svg','rect');sea.setAttribute('width',W);sea.setAttribute('height',H);sea.setAttribute('fill','#b8d8ee');svg.appendChild(sea);
-  for(let i=0;i<H;i+=18){const l=document.createElementNS('http://www.w3.org/2000/svg','line');l.setAttribute('x1',0);l.setAttribute('y1',i);l.setAttribute('x2',W);l.setAttribute('y2',i);l.setAttribute('stroke','#a8c8de');l.setAttribute('stroke-width','0.4');svg.appendChild(l);}
-  const land=document.createElementNS('http://www.w3.org/2000/svg','path');land.setAttribute('d','M 80 150 C 100 80, 200 40, 320 30 C 440 20, 560 60, 620 100 C 680 140, 700 220, 680 300 C 660 380, 620 440, 580 480 C 540 520, 480 560, 420 580 C 360 600, 300 600, 250 580 C 200 560, 150 520, 120 480 C 90 440, 60 400, 60 350 C 60 300, 70 200, 80 150 Z');land.setAttribute('fill','#d4c89a');land.setAttribute('stroke','#b0a070');land.setAttribute('stroke-width','2');svg.appendChild(land);
-  const dock=document.createElementNS('http://www.w3.org/2000/svg','path');dock.setAttribute('d','M 280 560 C 300 580, 340 610, 400 620 C 450 630, 500 610, 520 590 C 540 570, 540 540, 510 520 C 480 500, 440 510, 410 530 C 380 545, 340 555, 300 555 Z');dock.setAttribute('fill','#c0b07a');dock.setAttribute('stroke','#a09060');dock.setAttribute('stroke-width','1.5');svg.appendChild(dock);
-  const districts=[{x:250,y:240,w:160,h:130,color:'rgba(26,26,46,0.25)'},{x:160,y:320,w:120,h:100,color:'rgba(58,90,58,0.2)'},{x:370,y:260,w:130,h:110,color:'rgba(106,26,26,0.2)'},{x:340,y:370,w:130,h:100,color:'rgba(122,96,64,0.2)'},{x:420,y:380,w:100,h:90,color:'rgba(60,40,30,0.25)'},{x:240,y:390,w:100,h:80,color:'rgba(90,120,74,0.2)'}];
-  districts.forEach(d=>{const r=document.createElementNS('http://www.w3.org/2000/svg','rect');r.setAttribute('x',d.x);r.setAttribute('y',d.y);r.setAttribute('width',d.w);r.setAttribute('height',d.h);r.setAttribute('rx','8');r.setAttribute('fill',d.color);svg.appendChild(r);});
-  const streets=[[140,200,580,200],[140,280,580,280],[140,360,580,360],[140,440,580,440],[200,140,200,560],[300,100,300,580],[400,120,400,580],[500,140,500,560]];
-  streets.forEach(([x1,y1,x2,y2])=>{const l=document.createElementNS('http://www.w3.org/2000/svg','line');l.setAttribute('x1',x1);l.setAttribute('y1',y1);l.setAttribute('x2',x2);l.setAttribute('y2',y2);l.setAttribute('stroke','#c8b880');l.setAttribute('stroke-width','3');l.setAttribute('opacity','0.5');svg.appendChild(l);});
-  const wall=document.createElementNS('http://www.w3.org/2000/svg','path');wall.setAttribute('d','M 80 150 C 100 80, 200 40, 320 30 C 440 20, 560 60, 620 100');wall.setAttribute('fill','none');wall.setAttribute('stroke','#666');wall.setAttribute('stroke-width','6');wall.setAttribute('stroke-dasharray','10 4');svg.appendChild(wall);
-  for(let i=0;i<5;i++){const pier=document.createElementNS('http://www.w3.org/2000/svg','rect');pier.setAttribute('x',280+i*46);pier.setAttribute('y',560);pier.setAttribute('width','12');pier.setAttribute('height','50');pier.setAttribute('fill','#8a7040');pier.setAttribute('rx','2');svg.appendChild(pier);}
-  MAP_LOCATIONS.forEach(loc=>{
-    const g=document.createElementNS('http://www.w3.org/2000/svg','g');g.style.cursor='pointer';
-    const oc=document.createElementNS('http://www.w3.org/2000/svg','circle');oc.setAttribute('cx',loc.x);oc.setAttribute('cy',loc.y);oc.setAttribute('r',loc.r+4);oc.setAttribute('fill',loc.color);oc.setAttribute('opacity','0.2');g.appendChild(oc);
-    const circle=document.createElementNS('http://www.w3.org/2000/svg','circle');circle.setAttribute('cx',loc.x);circle.setAttribute('cy',loc.y);circle.setAttribute('r',loc.r);circle.setAttribute('fill',loc.color);circle.setAttribute('stroke','#C5A355');circle.setAttribute('stroke-width','1.5');g.appendChild(circle);
-    const text=document.createElementNS('http://www.w3.org/2000/svg','text');text.setAttribute('x',loc.x);text.setAttribute('y',loc.y+loc.r+13);text.setAttribute('text-anchor','middle');text.setAttribute('font-family','Cinzel,serif');text.setAttribute('font-size','8.5');text.setAttribute('fill','#2A2010');text.setAttribute('font-weight','600');text.textContent=loc.label;g.appendChild(text);
-    g.addEventListener('mouseenter',(e)=>{circle.setAttribute('stroke-width','2.5');const tt=document.getElementById('map-tooltip');document.getElementById('tt-name').textContent=loc.label;document.getElementById('tt-desc').textContent=loc.desc;tt.style.display='block';const r=container.getBoundingClientRect();tt.style.left=(e.clientX-r.left+12)+'px';tt.style.top=(e.clientY-r.top-10)+'px';});
-    g.addEventListener('mouseleave',()=>{circle.setAttribute('stroke-width','1.5');document.getElementById('map-tooltip').style.display='none';});
-    g.addEventListener('click',()=>{const panel=document.getElementById('map-info-panel');panel.innerHTML=`<div class="map-loc-name">${loc.label}</div><div class="map-loc-desc" style="margin-top:7px;">${loc.desc}</div>`;});
-    svg.appendChild(g);
-  });
-  // Compass
-  const cg=document.createElementNS('http://www.w3.org/2000/svg','g');cg.setAttribute('transform','translate(810,100)');
-  const cb=document.createElementNS('http://www.w3.org/2000/svg','circle');cb.setAttribute('r','34');cb.setAttribute('fill','rgba(245,237,216,0.9)');cb.setAttribute('stroke','#C5A355');cb.setAttribute('stroke-width','1');cg.appendChild(cb);
-  [['N',0,-26,'14','#8B1A1A'],['S',0,32,'11','#2A2010'],['L',32,4,'11','#2A2010'],['O',-32,4,'11','#2A2010']].forEach(([l,dx,dy,fs,fc])=>{const t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',dx);t.setAttribute('y',dy);t.setAttribute('text-anchor','middle');t.setAttribute('font-family','Cinzel,serif');t.setAttribute('font-size',fs);t.setAttribute('fill',fc);t.setAttribute('font-weight',l==='N'?'700':'400');t.textContent=l;cg.appendChild(t);});
-  svg.appendChild(cg);
-  // Title
-  const tg=document.createElementNS('http://www.w3.org/2000/svg','g');
-  const tbg=document.createElementNS('http://www.w3.org/2000/svg','rect');tbg.setAttribute('x','60');tbg.setAttribute('y','595');tbg.setAttribute('width','252');tbg.setAttribute('height','56');tbg.setAttribute('fill','rgba(245,237,216,0.92)');tbg.setAttribute('stroke','#C5A355');tbg.setAttribute('stroke-width','1');tg.appendChild(tbg);
-  const tt=document.createElementNS('http://www.w3.org/2000/svg','text');tt.setAttribute('x','186');tt.setAttribute('y','617');tt.setAttribute('text-anchor','middle');tt.setAttribute('font-family','Cinzel,serif');tt.setAttribute('font-size','13');tt.setAttribute('fill','#1A1A2E');tt.setAttribute('font-weight','700');tt.textContent='Porto Varion';tg.appendChild(tt);
-  const ts=document.createElementNS('http://www.w3.org/2000/svg','text');ts.setAttribute('x','186');ts.setAttribute('y','637');ts.setAttribute('text-anchor','middle');ts.setAttribute('font-family','Crimson Text,serif');ts.setAttribute('font-size','10');ts.setAttribute('fill','#8B7355');ts.setAttribute('font-style','italic');ts.textContent='Cidade-Estado do Sínodo';tg.appendChild(ts);
-  svg.appendChild(tg);
-  container.appendChild(svg);
-  container.addEventListener('mousedown',e=>{mapDragging=true;mapLastX=e.clientX;mapLastY=e.clientY;});
-  window.addEventListener('mousemove',e=>{if(!mapDragging)return;mapOffX+=(e.clientX-mapLastX)/mapScale;mapOffY+=(e.clientY-mapLastY)/mapScale;mapLastX=e.clientX;mapLastY=e.clientY;applyMapTransform();});
-  window.addEventListener('mouseup',()=>mapDragging=false);
-  container.addEventListener('wheel',e=>{e.preventDefault();mapZoom(e.deltaY<0?1.1:0.9);},{passive:false});
-}
-function applyMapTransform(){const svg=document.getElementById('map-main-svg');if(!svg)return;svg.style.transform=`scale(${mapScale}) translate(${mapOffX}px,${mapOffY}px)`;svg.style.transformOrigin='center center';}
-function mapZoom(f){mapScale=Math.min(4,Math.max(0.5,mapScale*f));applyMapTransform();}
-function mapReset(){mapScale=1;mapOffX=0;mapOffY=0;applyMapTransform();}
+// ══════════════════════════════════════════
+// MAPA IMAGEM (PAN & ZOOM)
+// ══════════════════════════════════════════
+let mapImgScale=1, mapImgOffX=0, mapImgOffY=0, mapImgDragging=false, mapImgLastX=0, mapImgLastY=0, mapInited=false;
 
+function initMap(){
+  if(mapInited) return; mapInited=true;
+  const mapWrapper = document.getElementById('map-image-wrapper');
+  const mapImg = document.getElementById('map-image');
+  if(!mapWrapper || !mapImg) return;
+
+  mapWrapper.addEventListener('mousedown', e => {
+    mapImgDragging = true; mapImgLastX = e.clientX; mapImgLastY = e.clientY;
+  });
+  window.addEventListener('mousemove', e => {
+    if(!mapImgDragging) return;
+    mapImgOffX += (e.clientX - mapImgLastX) / mapImgScale;
+    mapImgOffY += (e.clientY - mapImgLastY) / mapImgScale;
+    mapImgLastX = e.clientX; mapImgLastY = e.clientY;
+    applyMapImgTransform();
+  });
+  window.addEventListener('mouseup', () => mapImgDragging = false);
+  window.addEventListener('mouseleave', () => mapImgDragging = false);
+  
+  mapWrapper.addEventListener('wheel', e => {
+    e.preventDefault();
+    mapImgZoom(e.deltaY < 0 ? 1.1 : 0.9);
+  }, {passive: false});
+}
+
+function applyMapImgTransform() {
+  const mapImg = document.getElementById('map-image');
+  if(mapImg) mapImg.style.transform = `scale(${mapImgScale}) translate(${mapImgOffX}px, ${mapImgOffY}px)`;
+}
+function mapImgZoom(f) {
+  mapImgScale = Math.min(5, Math.max(0.2, mapImgScale * f));
+  applyMapImgTransform();
+}
+function mapImgReset() {
+  mapImgScale = 1; mapImgOffX = 0; mapImgOffY = 0;
+  applyMapImgTransform();
+}
 // ══════════════════════════════════════════
 // DIÁRIO
 // ══════════════════════════════════════════
