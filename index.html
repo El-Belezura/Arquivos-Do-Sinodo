@@ -1301,26 +1301,28 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
   </div>
 </aside>
 
-        <main class="lore-main">
-          
-<div class="lore-article">
-  <div class="art-label">Diretivas Externas</div>
-  <div class="art-title">Documentação de Base</div>
-  <div class="art-body">
-    <p>Para consulta rápida dos fundamentos legais e religiosos, utilize os arquivos externos oficiais:</p>
-    <div style="display: flex; gap: 10px; margin-top: 15px;">
-        <a href="https://docs.google.com/document/d/1bRumBGBy_4b4qaUeQ84C6k4GAwg6P2Yb/edit" target="_blank" class="action-btn">📜 Ler Tratado de Vhal'Torin</a>
-        <a href="https://docs.google.com/document/d/1M7uBpBceAy-bdpQTjBkQhKqkxKyqDwzk/edit" target="_blank" class="action-btn">⛪ Ler Doutrina da Igreja</a>
+            
+<main class="lore-main">
+  <div class="lore-section active" id="sec-home">
+    <div class="lore-article">
+      <div class="art-label">Diretivas Externas</div>
+      <div class="art-title">Documentação de Base</div>
+      <div class="art-body">
+        <p>Para consulta rápida dos fundamentos legais e religiosos, utilize os arquivos externos oficiais:</p>
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+            <a href="https://docs.google.com/document/d/1bRumBGBy_4b4qaUeQ84C6k4GAwg6P2Yb/edit" target="_blank" class="action-btn">📜 Ler Tratado de Vhal'Torin</a>
+            <a href="https://docs.google.com/document/d/1M7uBpBceAy-bdpQTjBkQhKqkxKyqDwzk/edit" target="_blank" class="action-btn">⛪ Ler Doutrina da Igreja</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-            <div class="art-body">
-              <p>Esta biblioteca reúne o conhecimento aprovado pelo <strong>Sínodo do Quinto Véu</strong> para consulta de agentes, estudiosos e representantes de reinos signatários. Alguns trechos permanecem censurados — protegidos por códigos de acesso conferidos a quem obteve autorização formal.</p>
-            </div>
-            <div class="lore-quote">
-              <p>"O conhecimento é uma faca. Pode alimentar. Pode matar. A diferença não está na faca — está em quem a segura."</p>
-              <cite>— Magistratus Eldren Soval, Primeiro Diretor do Observatório do Véu</cite>
-            </div>
+    <div class="art-body">
+      <p>Esta biblioteca reúne o conhecimento aprovado pelo <strong>Sínodo do Quinto Véu</strong> para consulta de agentes, estudiosos e representantes de reinos signatários. Alguns trechos permanecem censurados — protegidos por códigos de acesso conferidos a quem obteve autorização formal.</p>
+    </div>
+    <div class="lore-quote">
+      <p>"O conhecimento é uma faca. Pode alimentar. Pode matar. A diferença não está na faca — está em quem a segura."</p>
+      <cite>— Magistratus Eldren Soval, Primeiro Diretor do Observatório do Véu</cite>
+    </div>
+    </div>
             <div class="lore-grid">
               <div class="lore-card" onclick="showSection('cosmologia',null)">
                 <div class="lc-icon">🌌</div>
@@ -1869,23 +1871,36 @@ function showOpTab(id,btn){
   if(btn) btn.classList.add('active');
 }
 function showSection(id, linkEl) {
-  document.querySelectorAll('.lore-section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.sidebar-link, .tb-link').forEach(l => l.classList.remove('active'));
-  const sec = document.getElementById('sec-' + id);
-  if (sec) sec.classList.add('active');
+  // 1. Esconde todas as seções de conteúdo da biblioteca
+  const sections = document.querySelectorAll('.lore-section');
+  sections.forEach(s => s.classList.remove('active'));
+
+  // 2. Remove o estado ativo de todos os links do menu lateral
+  const links = document.querySelectorAll('.sidebar-link');
+  links.forEach(l => l.classList.remove('active'));
+
+  // 3. Mostra a seção solicitada
+  const targetSection = document.getElementById('sec-' + id);
+  if (targetSection) {
+    targetSection.classList.add('active');
+  }
+
+  // 4. Ativa visualmente o link clicado ou correspondente
   if (linkEl) {
     linkEl.classList.add('active');
-    document.querySelectorAll('.sidebar-link').forEach(l => {
-      if ((l.getAttribute('onclick') || '').includes("'" + id + "'")) l.classList.add('active');
-    });
   } else {
-    document.querySelectorAll('.sidebar-link').forEach(l => {
-      if ((l.getAttribute('onclick') || '').includes("'" + id + "'")) l.classList.add('active');
+    // Caso a navegação venha de um card na home, procura o link lateral equivalente
+    links.forEach(l => {
+      if (l.getAttribute('onclick').includes(`'${id}'`)) {
+        l.classList.add('active');
+      }
     });
   }
-  document.querySelector('.lore-main').scrollTo({ top: 0, behavior: 'smooth' });
-}
 
+  // 5. Retorna o scroll para o topo da área de leitura
+  const mainArea = document.querySelector('.lore-main');
+  if (mainArea) mainArea.scrollTo({ top: 0, behavior: 'smooth' });
+}
 // ══════════════════════════════════════════
 // UTILS & PDF
 // ══════════════════════════════════════════
