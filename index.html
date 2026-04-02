@@ -616,23 +616,15 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
       </div>
       <div class="home-body">
         <div class="home-grid">
-         <div class="home-grid">
-          <div class="info-card" onclick="showPage('forms', document.querySelectorAll('.nav-tab')[1])"><span class="info-card-icon">📋</span><div class="info-card-title">Formulários Oficiais</div><p class="info-card-text">Ordens de missão e relatórios com exportação PDF.</p></div>
-  
-           <div class="info-card" onclick="showPage('procedimentos', document.querySelectorAll('.nav-tab')[2])"><span class="info-card-icon">⚔️</span><div class="info-card-title">Procedimentos Operacionais</div><p class="info-card-text">Protocolos Alfa, Beta, Gama e Delta.</p></div>
-  
-          <div class="info-card" onclick="showPage('manuais', document.querySelectorAll('.nav-tab')[3])"><span class="info-card-icon">📖</span><div class="info-card-title">Manuais de Campo</div><p class="info-card-text">Guia arcano e bestiário operacional.</p></div>
-  
-           <div class="info-card" onclick="showPage('classified', document.querySelectorAll('.nav-tab')[6])"><span class="info-card-icon">🔒</span><div class="info-card-title">Arquivos Classificados</div><p class="info-card-text">Documentos protegidos por código individual.</p></div>
-  
-           <div class="info-card" onclick="showPage('bestiary', document.querySelectorAll('.nav-tab')[7])"><span class="info-card-icon">🐉</span><div class="info-card-title">Bestiário do Sínodo</div><p class="info-card-text">Consulta de criaturas dimensionais.</p></div>
-  
-           <div class="info-card" onclick="showPage('map', document.querySelectorAll('.nav-tab')[8])"><span class="info-card-icon">🗺</span><div class="info-card-title">Mapa de Porto Varion</div><p class="info-card-text">Mapa interativo de zonas de risco.</p></div>
-  
-           <div class="info-card" onclick="showPage('biblioteca', document.querySelectorAll('.nav-tab')[10])"><span class="info-card-icon">📚</span><div class="info-card-title">Biblioteca de Lore</div><p class="info-card-text">História e fundamentos do mundo.</p></div>
-  
-           <div class="info-card" onclick="showPage('requisition', document.querySelectorAll('.nav-tab')[9])"><span class="info-card-icon">🗃</span><div class="info-card-title">Requisição de Arquivos</div><p class="info-card-text">Solicite acesso a documentos restritos.</p></div>
-</div>
+          <div class="info-card" onclick="gotoTab(1)"><span class="info-card-icon">📋</span><div class="info-card-title">Formulários Oficiais</div><p class="info-card-text">Ordens de missão, relatórios pós-operação, fichas de suspeito e registros de artefatos arcanos — com exportação PDF individual.</p></div>
+          <div class="info-card" onclick="gotoTab(2)"><span class="info-card-icon">⚔️</span><div class="info-card-title">Procedimentos Operacionais</div><p class="info-card-text">Protocolos Alfa, Beta, Gama e Delta. Índice completo de documentação e condutas em campo.</p></div>
+          <div class="info-card" onclick="gotoTab(3)"><span class="info-card-icon">📖</span><div class="info-card-title">Manuais de Campo</div><p class="info-card-text">Manual do agente, guia arcano de identificação de ameaças e bestiário operacional dimensional.</p></div>
+          <div class="info-card" onclick="gotoTab(5)"><span class="info-card-icon">🔒</span><div class="info-card-title">Arquivos Classificados</div><p class="info-card-text">Dez documentos de acesso restrito, cada um protegido por código individual de segurança.</p></div>
+          <div class="info-card" onclick="gotoTab(6)"><span class="info-card-icon">🐉</span><div class="info-card-title">Bestiário do Sínodo</div><p class="info-card-text">20 criaturas catalogadas incluindo espécies raras ligadas à 5ª Dimensão. Consulta obrigatória.</p></div>
+          <div class="info-card" onclick="gotoTab(7)"><span class="info-card-icon">🗺</span><div class="info-card-title"> de Porto Varion</div><p class="info-card-text"> interativo com distritos, pontos estratégicos e zonas de risco dimensional da cidade.</p></div>
+          <div class="info-card" onclick="gotoTab(8)"><span class="info-card-icon">📓</span><div class="info-card-title">Diário de Campo</div><p class="info-card-text">Registre observações, pistas e notas de missão. Salvo localmente neste terminal.</p></div>
+          <div class="info-card" onclick="gotoTab(9)"><span class="info-card-icon">🗃</span><div class="info-card-title">Requisição de Arquivos</div><p class="info-card-text">Solicite acesso a documentos restritos dos Arquivos Dimensionais mediante justificativa.</p></div>
+        </div>
         <div class="home-decree">
           <p>"Vocês não estão aqui por escolha. Estão aqui porque o mundo exige controle. A magia quase destruiu tudo — e aqueles que vieram antes de vocês falharam. Vocês servirão como Agentes de Vínculo. Dois anos. Sem exceções."</p>
           <cite>— Supervisor Leth Varik, Cerimônia de Designação, Porto Varion</cite>
