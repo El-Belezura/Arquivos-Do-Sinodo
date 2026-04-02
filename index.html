@@ -1292,11 +1292,130 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
       </div>
       <div class="sidebar-divider"></div>
       <div class="sidebar-section">
-        <span class="sidebar-cat">O Mundo</span>
+        <span class="sidebar-cat">Registros</span>
         <a class="sidebar-link" onclick="showSection('historia', this)"><span class="sl-icon">📜</span> Linha do Tempo</a>
-        <a class="sidebar-link" onclick="showSection('reinos', this)"><span class="sl-icon">🏰</span> Os Reinos</a>
-        <a class="sidebar-link" onclick="showSection('locais', this)"><span class="sl-icon">🗺</span> Locais Notáveis</a>
+        <a class="sidebar-link" onclick="showSection('bibliografia', this)"><span class="sl-icon">📚</span> Bibliografia</a>
       </div>
+    </aside>
+
+    <main class="lore-main">
+      <div class="lore-section active" id="sec-home">
+        <div class="sec-header">
+          <div class="sec-eyebrow">Acesso Nível III</div>
+          <h2 class="sec-title">Acervo de Porto Varion</h2>
+          <p class="sec-sub">Terminal de consulta para Agentes de Vínculo e Inquisidores.</p>
+        </div>
+        <div class="lore-grid">
+          <div class="lore-card" onclick="showSection('procurados', null)">
+            <div class="lc-icon">⚖️</div><div class="lc-title">Mural de Recompensas</div><div class="lc-desc">Alvos prioritários para estabilidade dimensional.</div>
+          </div>
+          <div class="lore-card" onclick="showSection('bibliografia', null)">
+            <div class="lc-icon">📚</div><div class="lc-title">Bibliografia</div><div class="lc-desc">Tratados e grimórios autorizados para estudo.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lore-section" id="sec-cosmologia">
+        <div class="sec-header"><h2 class="sec-title">As Sete Dimensões</h2></div>
+        <table class="dim-table">
+          <thead><tr><th>Plano</th><th>Nome</th><th>Natureza</th></tr></thead>
+          <tbody>
+            <tr><td>1-3</td><td>Físico</td><td>Matéria e existência biológica.</td></tr>
+            <tr><td>4ª</td><td>Tempo</td><td>Fluxo linear de eventos.</td></tr>
+            <tr><td>5ª</td><td>Véu</td><td>Fonte da Magia e plasticidade.</td></tr>
+            <tr><td>6ª</td><td>Prisão</td><td>Confinamento do Servo Caído.</td></tr>
+            <tr><td>7ª</td><td>Divino</td><td>Reino da Sétima Ascensão.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="lore-section" id="sec-procurados">
+        <div class="sec-header">
+          <h2 class="sec-title">Mural de Recompensas</h2>
+          <p class="sec-sub">Ordens de Captura Ativas — Vivos ou Mortos.</p>
+        </div>
+        <div class="wanted-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; padding: 15px;">
+          
+          <div class="wanted-poster" style="background:#e8dec0; border:2px solid #5a3a22; padding:10px; box-shadow: 5px 5px 15px rgba(0,0,0,0.5); transform: rotate(-1deg);">
+            <div style="border: 1px solid #5a3a22; padding: 10px; background: #f4ecd8;">
+              <div style="text-align:center; font-family:'Cinzel'; font-weight:bold; color:#8b1a1a; font-size:1.4rem; border-bottom:2px solid #8b1a1a; margin-bottom:10px;">PROCURADO</div>
+              <div style="width:100%; height:200px; background:#bbb; border:1px solid #5a3a22; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-family:'Special Elite'; color:#444;">FOTO DO ALVO</div>
+              <div style="font-family:'Special Elite'; color:#2a2010; line-height:1.4;">
+                <p><strong>NOME:</strong> Vaelen, o Ruptura</p>
+                <p><strong>IDADE:</strong> 34 Anos</p>
+                <p><strong>CRIME:</strong> Colapso deliberado do Véu em Zona Civil.</p>
+                <p><strong>PERIGO:</strong> <span style="background:#8b1a1a; color:white; padding:2px 5px;">MÁXIMO</span></p>
+                <div style="text-align:center; margin-top:15px; font-size:1.2rem; font-weight:bold; border:2px dashed #8b1a1a; padding:5px;">RECOMPENSA: 15.000G</div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+      </div>
+
+      <div class="lore-section" id="sec-faccoes">
+        <div class="sec-header"><h2 class="sec-title">Organizações de Influência</h2></div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; padding:15px;">
+          
+          <div class="faction-box" style="background:rgba(197,163,85,0.05); border-left:5px solid var(--gold); padding:15px; border-radius:0 10px 10px 0;">
+            <h4 style="font-family:'Cinzel'; color:var(--gold); margin-bottom:8px;">1. Sínodo do Quinto Véu</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim);">A autoridade máxima global. Regulam a magia e garantem o cumprimento do Tratado de Vhal'Torin.</p>
+          </div>
+
+          <div class="faction-box" style="background:rgba(139,26,26,0.05); border-left:5px solid #8b1a1a; padding:15px; border-radius:0 10px 10px 0;">
+            <h4 style="font-family:'Cinzel'; color:#8b1a1a; margin-bottom:8px;">2. Tecelões do Vazio</h4>
+            <p style="font-size:0.9rem; color:var(--text-dim);">Culto extremista que acredita que o mundo físico é uma prisão que deve ser destruída para libertar a essência.</p>
+          </div>
+
+          </div>
+      </div>
+
+      <div class="lore-section" id="sec-historia">
+        <div class="sec-header"><h2 class="sec-title">Cronologia de Vhal'Torin</h2></div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-date">~1000 A.V.</div><div class="tl-dot" style="background:#8b1a1a;"></div><div class="tl-content"><div class="tl-title">A Grande Guerra</div><div class="tl-text">Uso de magia como arma de cerco destrói o Reino de Aethryon.</div></div></div>
+          <div class="tl-item"><div class="tl-date">Ano 0</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">O Tratado</div><div class="tl-text">O Sínodo é fundado em Porto Varion. Proibição universal da magia livre.</div></div></div>
+          <div class="tl-item"><div class="tl-date">Ano 150</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">A Muralha de Duran-Khal</div><div class="tl-text">Finalizada a barreira contra as aberrações do Norte.</div></div></div>
+          <div class="tl-item"><div class="tl-date">Ano 412</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">O Cisma das Cinzas</div><div class="tl-text">Ruptura teológica entre os primeiros Inquisidores e o Sínodo.</div></div></div>
+          <div class="tl-item"><div class="tl-date">Ano 812</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">A Liga Mercante de Ferro</div><div class="tl-text">Fundação do sindicato que hoje controla 90% do comércio marítimo.</div></div></div>
+          <div class="tl-item"><div class="tl-date">Ano 1038</div><div class="tl-dot" style="background:#7a3a9a;"></div><div class="tl-content"><div class="tl-title">Descoberta da Resina Etérea</div><div class="tl-text">Primeiros casos de dependência química de essência mágica em Porto Varion.</div></div></div>
+          <div class="tl-item"><div class="tl-date">Ano 1041</div><div class="tl-dot" style="background:#8b1a1a;"></div><div class="tl-content"><div class="tl-title">Operação Véu Costurado</div><div class="tl-text">Expurgo massivo contra o Culto do Olho Aberto.</div></div></div>
+          <div class="tl-item"><div class="tl-date">Ano 1044</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">Os Dias Atuais</div><div class="tl-text">O Véu apresenta instabilidade recorde. Rumores de um novo "Selador".</div></div></div>
+        </div>
+      </div>
+
+      <div class="lore-section" id="sec-bibliografia">
+        <div class="sec-header">
+          <h2 class="sec-title">Bibliografia Recomendada</h2>
+          <p class="sec-sub">Obras clássicas e tratados científicos autorizados pelo Conclave.</p>
+        </div>
+        <div class="lore-article">
+          <div class="art-body">
+            <ul style="list-style:none; padding:0;">
+              <li style="margin-bottom:20px; border-bottom:1px solid var(--border); padding-bottom:10px;">
+                <strong style="color:var(--gold);">"O Tecido Invisível"</strong> — <em>Magistratus Orin Vel</em><br>
+                <small>Estudo fundamental sobre a percepção da 5ª dimensão por não-praticantes.</small>
+              </li>
+              <li style="margin-bottom:20px; border-bottom:1px solid var(--border); padding-bottom:10px;">
+                <strong style="color:var(--gold);">"Cicatrizes de Vhal'Torin"</strong> — <em>Historiador Eldric</em><br>
+                <small>Crônica detalhada sobre os erros táticos que levaram ao colapso de Aethryon.</small>
+              </li>
+              <li style="margin-bottom:20px; border-bottom:1px solid var(--border); padding-bottom:10px;">
+                <strong style="color:var(--gold);">"Codex de Rivian Nasquer"</strong> — <em>Anônimo</em><br>
+                <small>Obra controversa que discute a "ciência da alma" e a 7ª dimensão. (Acesso Restrito).</small>
+              </li>
+              <li style="margin-bottom:20px; border-bottom:1px solid var(--border); padding-bottom:10px;">
+                <strong style="color:var(--gold);">"Doutrina da Sétima Ascensão"</strong> — <em>Arquivos da Igreja</em><br>
+                <small>Base teológica sobre a prisão do Servo Caído na 6ª dimensão.</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
     </aside>
 
     <main class="lore-main">
