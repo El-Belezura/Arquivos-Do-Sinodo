@@ -9,44 +9,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
 <div id="pdf-overlay"><div class="pdf-spinner"></div><p>Gerando PDF...</p></div>
 
 <div id="login-screen">
-  <div class="login-bg">
-    <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(400,400)" stroke="#C5A355" fill="none" stroke-width="0.5">
-        <circle r="60"/><circle r="120"/><circle r="180"/><circle r="240"/><circle r="300"/><circle r="360"/>
-        <line x1="0" y1="-380" x2="0" y2="380"/>
-        <line x1="0" y1="-380" x2="0" y2="380" transform="rotate(51.4)"/>
-        <line x1="0" y1="-380" x2="0" y2="380" transform="rotate(102.8)"/>
-        <line x1="0" y1="-380" x2="0" y2="380" transform="rotate(154.2)"/>
-        <line x1="0" y1="-380" x2="0" y2="380" transform="rotate(205.7)"/>
-        <line x1="0" y1="-380" x2="0" y2="380" transform="rotate(257.1)"/>
-        <line x1="0" y1="-380" x2="0" y2="380" transform="rotate(308.5)"/>
-      </g>
-    </svg>
-  </div>
+  <div class="login-bg"><svg viewBox="0 0 800 800"><g transform="translate(400,400)" stroke="#C5A355" fill="none" stroke-width="0.5"><circle r="60"/><circle r="120"/><circle r="180"/><circle r="240"/><circle r="300"/><circle r="360"/><line x1="0" y1="-380" x2="0" y2="380"/><line x1="0" y1="-380" x2="0" y2="380" transform="rotate(51.4)"/><line x1="0" y1="-380" x2="0" y2="380" transform="rotate(102.8)"/><line x1="0" y1="-380" x2="0" y2="380" transform="rotate(154.2)"/><line x1="0" y1="-380" x2="0" y2="380" transform="rotate(205.7)"/><line x1="0" y1="-380" x2="0" y2="380" transform="rotate(257.1)"/><line x1="0" y1="-380" x2="0" y2="380" transform="rotate(308.5)"/></g></svg></div>
   <div class="login-box">
     <div class="login-emblem">
-      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="40" cy="40" r="38" fill="none" stroke="#8B7355" stroke-width="1"/>
-        <circle cx="40" cy="40" r="30" fill="none" stroke="#8B7355" stroke-width="0.5" stroke-dasharray="3 2"/>
-        <g transform="translate(40,40)" stroke="#C5A355" stroke-width="2.5" stroke-linecap="round">
-          <line x1="0" y1="-28" x2="0" y2="-22"/>
-          <line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(51.4)"/>
-          <line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(102.8)"/>
-          <line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(154.2)"/>
-          <line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(205.7)"/>
-          <line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(257.1)"/>
-          <line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(308.5)"/>
-        </g>
-        <circle cx="40" cy="40" r="13" fill="#14142a" stroke="#C5A355" stroke-width="1"/>
-        <text x="40" y="45" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#C5A355" font-weight="bold">V</text>
-      </svg>
+      <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="38" fill="none" stroke="#8B7355" stroke-width="1"/><circle cx="40" cy="40" r="30" fill="none" stroke="#8B7355" stroke-width="0.5" stroke-dasharray="3 2"/><g transform="translate(40,40)" stroke="#C5A355" stroke-width="2.5" stroke-linecap="round"><line x1="0" y1="-28" x2="0" y2="-22"/><line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(51.4)"/><line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(102.8)"/><line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(154.2)"/><line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(205.7)"/><line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(257.1)"/><line x1="0" y1="-28" x2="0" y2="-22" transform="rotate(308.5)"/></g><circle cx="40" cy="40" r="13" fill="#14142a" stroke="#C5A355" stroke-width="1"/><text x="40" y="45" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#C5A355" font-weight="bold">V</text></svg>
       <h1>Sínodo do<br>Quinto Véu</h1>
       <p>Portal Interno — Acesso Restrito</p>
     </div>
@@ -55,28 +27,13 @@
     <div class="login-field"><label>Senha de Acesso</label><input type="password" id="login-pass" placeholder="••••••" autocomplete="off"></div>
     <div class="login-error" id="login-error"></div>
     <button class="login-btn" onclick="tryLogin()">Acessar o Portal</button>
-    <p class="login-hint">Sob o Tratado de Vhal'Torin, o Véu permanece fechado.</p>
   </div>
 </div>
 
 <div id="app">
   <div id="topbar">
-    <div class="topbar-logo">
-      <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="14" cy="14" r="13" fill="none" stroke="#8B7355" stroke-width="0.8"/>
-        <g transform="translate(14,14)" stroke="#C5A355" stroke-width="1.7" stroke-linecap="round">
-          <line x1="0" y1="-11" x2="0" y2="-8"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(51.4)"/>
-          <line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(102.8)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(154.2)"/>
-          <line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(205.7)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(257.1)"/>
-          <line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(308.5)"/>
-        </g>
-        <circle cx="14" cy="14" r="5" fill="#1A1A2E" stroke="#C5A355" stroke-width="0.65"/>
-        <text x="14" y="17.5" text-anchor="middle" font-family="Georgia,serif" font-size="5.5" fill="#C5A355" font-weight="bold">V</text>
-      </svg>
-      <div>
-        <div class="topbar-logo-text">Sínodo do Quinto Véu</div>
-        <div class="topbar-logo-sub">Porto Varion — Acervo Interno</div>
-      </div>
+    <div class="topbar-logo"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#8B7355" stroke-width="0.8"/><g transform="translate(14,14)" stroke="#C5A355" stroke-width="1.7" stroke-linecap="round"><line x1="0" y1="-11" x2="0" y2="-8"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(51.4)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(102.8)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(154.2)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(205.7)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(257.1)"/><line x1="0" y1="-11" x2="0" y2="-8" transform="rotate(308.5)"/></g><circle cx="14" cy="14" r="5" fill="#1A1A2E" stroke="#C5A355" stroke-width="0.65"/><text x="14" y="17.5" text-anchor="middle" font-family="Georgia,serif" font-size="5.5" fill="#C5A355" font-weight="bold">V</text></svg>
+      <div><div class="topbar-logo-text">Sínodo do Quinto Véu</div><div class="topbar-logo-sub">Porto Varion — Acervo Interno</div></div>
     </div>
     <div class="topbar-div"></div>
     <nav class="nav-tabs">
@@ -101,33 +58,27 @@
   </div>
 
   <div id="content-area">
-
     <div class="page active" id="page-home">
       <div class="home-hero">
-        <div class="home-hero-bg"><svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><g transform="translate(250,250)" stroke="#C5A355" fill="none"><circle r="60"/><circle r="110"/><circle r="160"/><circle r="210"/><g stroke-width="0.5"><line x1="0" y1="-230" x2="0" y2="230"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(51.4)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(102.8)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(154.2)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(205.7)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(257.1)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(308.5)"/></g></g></svg></div>
+        <div class="home-hero-bg"><svg viewBox="0 0 500 500"><g transform="translate(250,250)" stroke="#C5A355" fill="none"><circle r="60"/><circle r="110"/><circle r="160"/><circle r="210"/><g stroke-width="0.5"><line x1="0" y1="-230" x2="0" y2="230"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(51.4)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(102.8)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(154.2)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(205.7)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(257.1)"/><line x1="0" y1="-230" x2="0" y2="230" transform="rotate(308.5)"/></g></g></svg></div>
         <div class="home-hero-lines"></div>
         <div class="home-hero-content">
           <div class="hero-eyebrow">Portal Interno — Classificado</div>
           <h1 class="hero-title">Sínodo do<br>Quinto Véu</h1>
           <div class="hero-subtitle">Departamento de Conformidade Civil · Porto Varion</div>
-          <p class="hero-desc">Bem-vindo ao Acervo Interno. Portal de uso exclusivo de Agentes de Vínculo autorizados. Formulários, protocolos, manuais, arquivos classificados, bestiário e mapa.</p>
+          <p class="hero-desc">Bem-vindo ao Acervo Interno. Portal de uso exclusivo de Agentes de Vínculo autorizados. Formulários, protocolos, manuais, arquivos classificados, bestiário e mapa interativo.</p>
         </div>
-        <div class="hero-seal"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="95" fill="none" stroke="#C5A355" stroke-width="1.5"/><circle cx="100" cy="100" r="80" fill="none" stroke="#C5A355" stroke-width="0.5" stroke-dasharray="4 3"/><circle cx="100" cy="100" r="60" fill="none" stroke="#C5A355" stroke-width="0.8"/><g transform="translate(100,100)" stroke="#C5A355" stroke-width="3" stroke-linecap="round"><line x1="0" y1="-54" x2="0" y2="-40"/><line x1="0" y1="-54" x2="0" y2="-40" transform="rotate(51.4)"/><line x1="0" y1="-54" x2="0" y2="-40" transform="rotate(102.8)"/><line x1="0" y1="-54" x2="0" y2="-40" transform="rotate(154.2)"/><line x1="0" y1="-54" x2="0" y2="-40" transform="rotate(205.7)"/><line x1="0" y1="-54" x2="0" y2="-40" transform="rotate(257.1)"/><line x1="0" y1="-54" x2="0" y2="-40" transform="rotate(308.5)"/></g><circle cx="100" cy="100" r="24" fill="none" stroke="#C5A355" stroke-width="1"/><text x="100" y="108" text-anchor="middle" font-family="Georgia,serif" font-size="20" fill="#C5A355" font-weight="bold">V</text></svg></div>
       </div>
       <div class="home-body">
         <div class="home-grid">
-          <div class="info-card" onclick="gotoTab(1)"><span class="info-card-icon">📋</span><div class="info-card-title">Formulários Oficiais</div><p class="info-card-text">Ordens de missão, relatórios pós-operação, fichas de suspeito e registros de artefatos arcanos.</p></div>
-          <div class="info-card" onclick="gotoTab(2)"><span class="info-card-icon">⚔️</span><div class="info-card-title">Procedimentos Operacionais</div><p class="info-card-text">Protocolos Alfa, Beta, Gama e Delta. Índice completo de condutas em campo.</p></div>
-          <div class="info-card" onclick="gotoTab(3)"><span class="info-card-icon">📖</span><div class="info-card-title">Manuais de Campo</div><p class="info-card-text">Manual do agente e guia arcano de identificação de ameaças.</p></div>
-          <div class="info-card" onclick="gotoTab(4)"><span class="info-card-icon">🧥</span><div class="info-card-title">Uniformes e Insígnias</div><p class="info-card-text">Padrões de vestimenta oficial e especificações de equipamento para agentes do Sínodo.</p></div>
-          <div class="info-card" onclick="gotoTab(6)"><span class="info-card-icon">🔒</span><div class="info-card-title">Arquivos Classificados</div><p class="info-card-text">Documentos de acesso restrito, cada um protegido por código individual de segurança.</p></div>
-          <div class="info-card" onclick="gotoTab(7)"><span class="info-card-icon">🐉</span><div class="info-card-title">Bestiário do Sínodo</div><p class="info-card-text">Criaturas catalogadas incluindo espécies raras ligadas à 5ª Dimensão. Consulta obrigatória.</p></div>
-          <div class="info-card" onclick="gotoTab(8)"><span class="info-card-icon">🗺</span><div class="info-card-title">Mapa do Mundo</div><p class="info-card-text">Mapa geral interativo com distritos, pontos estratégicos e zonas de risco dimensional.</p></div>
-          <div class="info-card" onclick="gotoTab(10)"><span class="info-card-icon">📚</span><div class="info-card-title">Biblioteca de Lore</div><p class="info-card-text">História do mundo, cosmologia, reinos, facções e profecias censuradas pelo Conclave.</p></div>
-        </div>
-        <div class="home-decree">
-          <p>"Vocês não estão aqui por escolha. Estão aqui porque o mundo exige controle. A magia quase destruiu tudo — e aqueles que vieram antes de vocês falharam. Vocês servirão como Agentes de Vínculo. Dois anos. Sem exceções."</p>
-          <cite>— Supervisor Leth Varik, Cerimônia de Designação, Porto Varion</cite>
+          <div class="info-card" onclick="gotoTab(1)"><span class="info-card-icon">📋</span><div class="info-card-title">Formulários Oficiais</div></div>
+          <div class="info-card" onclick="gotoTab(2)"><span class="info-card-icon">⚔️</span><div class="info-card-title">Procedimentos Operacionais</div></div>
+          <div class="info-card" onclick="gotoTab(3)"><span class="info-card-icon">📖</span><div class="info-card-title">Manuais de Campo</div></div>
+          <div class="info-card" onclick="gotoTab(4)"><span class="info-card-icon">🧥</span><div class="info-card-title">Uniformes e Insígnias</div></div>
+          <div class="info-card" onclick="gotoTab(6)"><span class="info-card-icon">🔒</span><div class="info-card-title">Arquivos Classificados</div></div>
+          <div class="info-card" onclick="gotoTab(7)"><span class="info-card-icon">🐉</span><div class="info-card-title">Bestiário do Sínodo</div></div>
+          <div class="info-card" onclick="gotoTab(8)"><span class="info-card-icon">🗺</span><div class="info-card-title">Mapa do Mundo</div></div>
+          <div class="info-card" onclick="gotoTab(10)"><span class="info-card-icon">📚</span><div class="info-card-title">Biblioteca de Lore</div></div>
         </div>
       </div>
     </div>
@@ -135,398 +86,38 @@
     <div class="page" id="page-forms">
       <div class="page-inner">
         <div class="classif-banner restricted">Classificação: Uso Interno — Agentes Autorizados</div>
-        <div class="page-header"><div class="page-header-left"><h2>Formulários Oficiais</h2><p>Modelos padronizados do Departamento de Conformidade Civil</p></div><div class="page-badge">Grupo 47-B</div></div>
+        <div class="page-header"><div class="page-header-left"><h2>Formulários Oficiais</h2><p>Modelos padronizados do Departamento de Conformidade Civil</p></div></div>
         <div class="op-tabs">
           <button class="op-tab-btn active" onclick="showOpTab('form-om',this)">📄 Ordem de Missão</button>
           <button class="op-tab-btn" onclick="showOpTab('form-rpm',this)">📝 Relatório Pós-Missão</button>
           <button class="op-tab-btn" onclick="showOpTab('form-oca',this)">⚠️ Ocorrência Arcana</button>
           <button class="op-tab-btn" onclick="showOpTab('form-sus',this)">👤 Ficha de Suspeito</button>
           <button class="op-tab-btn" onclick="showOpTab('form-art',this)">🔮 Registro de Artefato</button>
-          <button class="op-tab-btn" onclick="showOpTab('form-drive',this)">☁️ Drive</button>
         </div>
-
         <div class="op-section active" id="op-form-om">
-          <div class="doc-actions">
-            <button class="action-btn pdf-btn" onclick="exportPDF('doc-om','Ordem_de_Missao')">⬇ Exportar PDF</button>
-            <button class="action-btn" onclick="clearDoc('doc-om')">↺ Limpar</button>
-          </div>
+          <div class="doc-actions"><button class="action-btn pdf-btn" onclick="exportPDF('doc-om','Ordem_de_Missao')">⬇ Exportar PDF</button><button class="action-btn" onclick="clearDoc('doc-om')">↺ Limpar</button></div>
           <div class="document-container" id="doc-om">
             <div class="stamp stamp-pend">PENDENTE</div>
-            <div class="doc-hdr">
-              <div class="doc-org">Sínodo do Quinto Véu — Divisão Operacional</div>
-              <div class="doc-ttl">ORDEM DE MISSÃO OPERACIONAL</div>
-              <div class="doc-sttl">Formulário SQV-FORM-001 · Uso Restrito — Nível III</div>
-              <div class="doc-num">Nº ___ / ___</div>
-            </div>
-            <div class="doc-warn-box"><strong>ATENÇÃO:</strong> Este documento confere autoridade operacional limitada ao grupo designado. Qualquer ação fora do escopo descrito constitui excesso de autoridade sujeita a julgamento pelo Tribunal Arcano.</div>
-            <div class="fsec">
-              <div class="fsec-title">I. Identificação do Grupo</div>
-              <div class="frow">
-                <div class="ffield"><label>Código do Grupo</label><input type="text" placeholder="Ex: VÍNCULO 47-B"></div>
-                <div class="ffield"><label>Data de Emissão</label><input type="text" placeholder=" /  / ____"></div>
-                <div class="ffield"><label>Nível de Autorização</label><input type="text" value="NÍVEL III"></div>
-              </div>
-              <div class="frow">
-                <div class="ffield"><label>Supervisor Responsável</label><input type="text" placeholder="Nome e cargo"></div>
-                <div class="ffield"><label>Cidade de Operação</label><input type="text" placeholder="Ex: Porto Varion"></div>
-              </div>
-              <div class="fsec-title" style="margin-top:11px;">Composição do Grupo</div>
-              <table class="dtbl">
-                <thead><tr><th>Nome do Agente</th><th>Reino de Origem</th><th>Especialidade</th><th>Insígnia Nº</th></tr></thead>
-                <tbody>
-                  <tr><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td></tr>
-                  <tr><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td></tr>
-                  <tr><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td></tr>
-                  <tr><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">II. Descrição da Missão</div>
-              <div class="frow"><div class="ffield full"><label>Título da Missão</label><input type="text" placeholder="Designação oficial da operação"></div></div>
-              <div class="frow">
-                <div class="ffield"><label>Local Primário</label><input type="text" placeholder="Bairro, rua, distrito"></div>
-                <div class="ffield"><label>Prazo de Conclusão</label><input type="text" placeholder=" /  / ____"></div>
-              </div>
-              <div class="frow"><div class="ffield full"><label>Objetivo Principal</label><textarea placeholder="Descreva o objetivo central em detalhes precisos..."></textarea></div></div>
-              <div class="frow">
-                <div class="ffield"><label>Objetivo Secundário</label><textarea placeholder="Objetivos opcionais..."></textarea></div>
-                <div class="ffield"><label>Condições de Falha</label><textarea placeholder="O que determina fracasso total..."></textarea></div>
-              </div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">III. Classificação e Autorizações</div>
-              <div class="frow">
-                <div class="ffield"><label>Tipo de Missão</label>
-                  <select><option>— Selecionar —</option><option>Investigação e Reconhecimento</option><option>Contenção de Ameaça Arcana</option><option>Captura de Suspeito</option><option>Recuperação de Artefato</option><option>Vigilância de Área</option><option>Escolta e Proteção</option><option>Infiltração</option><option>Assistência a Inquisidor</option><option>Outras</option></select>
-                </div>
-                <div class="ffield"><label>Nível de Ameaça</label>
-                  <select><option>— Selecionar —</option><option>Baixo — sem confronto esperado</option><option>Moderado — possibilidade de confronto</option><option>Alto — ameaça dimensional confirmada</option><option>Crítico — risco de vida provável</option><option>Desconhecido</option></select>
-                </div>
-              </div>
-              <label style="font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:1.5px;color:rgba(26,18,8,.58);text-transform:uppercase;display:block;margin-bottom:4px;">Autorizações Concedidas</label>
-              <div class="cb-grid">
-                <label class="cb-item"><input type="checkbox"><span>Interrogatório de civis</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Acesso a registros do Sínodo</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Detenção temporária (até 24h)</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Entrada em propriedade privada</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Uso de força moderada</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Porte de equipamento arcano</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Contato com Inquisidores</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Execução (requer Nível I)</span></label>
-              </div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">IV. Contexto e Recursos</div>
-              <div class="frow"><div class="ffield full"><label>Contexto e Informações Disponíveis</label><textarea style="min-height:70px;" placeholder="Tudo que o grupo precisa saber antes de iniciar..."></textarea></div></div>
-              <div class="frow">
-                <div class="ffield"><label>Contatos Locais</label><textarea placeholder="Nome, localização e natureza do contato..."></textarea></div>
-                <div class="ffield"><label>Advertências e Riscos Conhecidos</label><textarea placeholder="Informações que podem colocar o grupo em perigo..."></textarea></div>
-              </div>
-              <div class="frow">
-                <div class="ffield"><label>Protocolo de Emergência</label><input type="text" placeholder="O que fazer se a missão sair do controle..."></div>
-                <div class="ffield"><label>Verbas Operacionais (Véustas)</label><input type="text" placeholder="0"></div>
-              </div>
-              <div class="frow"><div class="ffield full"><label>Observações do Supervisor</label><textarea placeholder="Notas adicionais, contexto político, avisos informais..."></textarea></div></div>
-            </div>
-            <div class="doc-ibox"><strong>Nota Legal:</strong> A posse deste documento não garante autoridade além do especificado. Em caso de dúvida, interrompa a ação e contate o Supervisor.</div>
-            <div class="sig-area">
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Supervisor de Vínculo</div></div>
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Oficial Administrativo</div></div>
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Líder do Grupo — Ciência</div></div>
-            </div>
+            <div class="doc-hdr"><div class="doc-org">Sínodo do Quinto Véu</div><div class="doc-ttl">ORDEM DE MISSÃO OPERACIONAL</div><div class="doc-sttl">Nível III</div></div>
+            <div class="fsec"><div class="frow"><div class="ffield full"><label>Título da Missão</label><input type="text"></div></div></div>
+            <div class="sig-area"><div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Supervisor de Vínculo</div></div></div>
           </div>
         </div>
-
         <div class="op-section" id="op-form-rpm">
-          <div class="doc-actions">
-            <button class="action-btn pdf-btn" onclick="exportPDF('doc-rpm','Relatorio_Pos_Missao')">⬇ Exportar PDF</button>
-            <button class="action-btn" onclick="clearDoc('doc-rpm')">↺ Limpar</button>
-          </div>
-          <div class="document-container" id="doc-rpm">
-            <div class="stamp stamp-pend">AGUARDANDO</div>
-            <div class="doc-hdr">
-              <div class="doc-org">Sínodo do Quinto Véu — Divisão Operacional</div>
-              <div class="doc-ttl">RELATÓRIO PÓS-MISSÃO</div>
-              <div class="doc-sttl">Formulário SQV-FORM-002 · Prazo: 24h após término da operação</div>
-              <div class="doc-num">Ref. Missão: ___</div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">I. Identificação</div>
-              <div class="frow">
-                <div class="ffield"><label>Código do Grupo</label><input type="text" placeholder="VÍNCULO _-_"></div>
-                <div class="ffield"><label>Número da Ordem de Missão</label><input type="text" placeholder="SQV-FORM-001 / Nº ___"></div>
-                <div class="ffield"><label>Data de Conclusão</label><input type="text" placeholder=" /  / ____"></div>
-              </div>
-              <div class="frow">
-                <div class="ffield"><label>Agentes Participantes</label><textarea placeholder="Nome de cada agente..."></textarea></div>
-                <div class="ffield"><label>Agentes Ausentes / Incapacitados</label><textarea placeholder="Nome e motivo..."></textarea></div>
-              </div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">II. Resultado</div>
-              <div class="frow">
-                <div class="ffield"><label>Status Final</label>
-                  <select><option>— Selecionar —</option><option>✓ Concluída com Sucesso Total</option><option>◑ Concluída Parcialmente</option><option>✗ Fracassada</option><option>⚠ Abortada por Circunstâncias</option><option>? Indeterminado</option></select>
-                </div>
-                <div class="ffield"><label>Objetivo Principal Atingido?</label>
-                  <select><option>— Selecionar —</option><option>Sim, completamente</option><option>Sim, parcialmente</option><option>Não atingido</option><option>Não aplicável</option></select>
-                </div>
-              </div>
-              <div class="frow"><div class="ffield full"><label>Resumo Narrativo (ordem cronológica)</label><textarea style="min-height:90px;" placeholder="Descreva em ordem cronológica os acontecimentos principais..."></textarea></div></div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">III. Ocorrências Relevantes</div>
-              <div class="cb-grid">
-                <label class="cb-item"><input type="checkbox"><span>Uso de magia ilegal detectado</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Anomalia dimensional encontrada</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Confronto físico com suspeito</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Criatura dimensional presente</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Artefato arcano encontrado</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Suspeito detido</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Suspeito fugiu</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Agente ferido</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Resina Etérea encontrada</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Rede criminosa identificada</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Envolvimento político suspeito</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Informação de maior escala descoberta</span></label>
-              </div>
-              <div class="frow" style="margin-top:9px;"><div class="ffield full"><label>Detalhamento das Ocorrências</label><textarea style="min-height:70px;" placeholder="Para cada item marcado, forneça detalhes específicos..."></textarea></div></div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">IV. Suspeitos e Envolvidos</div>
-              <table class="dtbl">
-                <thead><tr><th>Nome / Descrição</th><th>Envolvimento</th><th>Status</th><th>Localização</th></tr></thead>
-                <tbody>
-                  <tr><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td><td><select><option>Livre</option><option>Detido</option><option>Fugitivo</option><option>Morto</option><option>Desconhecido</option></select></td><td><input type="text" placeholder="—"></td></tr>
-                  <tr><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td><td><select><option>Livre</option><option>Detido</option><option>Fugitivo</option><option>Morto</option><option>Desconhecido</option></select></td><td><input type="text" placeholder="—"></td></tr>
-                  <tr><td><input type="text" placeholder="—"></td><td><input type="text" placeholder="—"></td><td><select><option>Livre</option><option>Detido</option><option>Fugitivo</option><option>Morto</option><option>Desconhecido</option></select></td><td><input type="text" placeholder="—"></td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">V. Avaliação do Grupo</div>
-              <div class="rating-row"><span class="rating-label">Cumprimento de ordens</span><div class="rboxes"><div class="rbox" onclick="rateBox(this)">1</div><div class="rbox" onclick="rateBox(this)">2</div><div class="rbox" onclick="rateBox(this)">3</div><div class="rbox" onclick="rateBox(this)">4</div><div class="rbox" onclick="rateBox(this)">5</div></div></div>
-              <div class="rating-row"><span class="rating-label">Discrição operacional</span><div class="rboxes"><div class="rbox" onclick="rateBox(this)">1</div><div class="rbox" onclick="rateBox(this)">2</div><div class="rbox" onclick="rateBox(this)">3</div><div class="rbox" onclick="rateBox(this)">4</div><div class="rbox" onclick="rateBox(this)">5</div></div></div>
-              <div class="rating-row"><span class="rating-label">Gestão de recursos</span><div class="rboxes"><div class="rbox" onclick="rateBox(this)">1</div><div class="rbox" onclick="rateBox(this)">2</div><div class="rbox" onclick="rateBox(this)">3</div><div class="rbox" onclick="rateBox(this)">4</div><div class="rbox" onclick="rateBox(this)">5</div></div></div>
-              <div class="rating-row"><span class="rating-label">Comunicação com supervisor</span><div class="rboxes"><div class="rbox" onclick="rateBox(this)">1</div><div class="rbox" onclick="rateBox(this)">2</div><div class="rbox" onclick="rateBox(this)">3</div><div class="rbox" onclick="rateBox(this)">4</div><div class="rbox" onclick="rateBox(this)">5</div></div></div>
-              <div class="rating-row"><span class="rating-label">Integridade do protocolo</span><div class="rboxes"><div class="rbox" onclick="rateBox(this)">1</div><div class="rbox" onclick="rateBox(this)">2</div><div class="rbox" onclick="rateBox(this)">3</div><div class="rbox" onclick="rateBox(this)">4</div><div class="rbox" onclick="rateBox(this)">5</div></div></div>
-              <div class="frow" style="margin-top:9px;"><div class="ffield full"><label>Observações do Supervisor</label><textarea placeholder="Comentários, elogios, advertências..."></textarea></div></div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">VI. Pistas e Próximos Passos</div>
-              <div class="frow">
-                <div class="ffield"><label>Evidências Coletadas</label><textarea placeholder="Liste todos os itens coletados..."></textarea></div>
-                <div class="ffield"><label>Pistas Que Demandam Investigação</label><textarea placeholder="O que ficou sem resposta?..."></textarea></div>
-              </div>
-              <div class="frow"><div class="ffield full"><label>Recomendação para Próxima Ação</label><textarea placeholder="O que o grupo acredita que deve acontecer a seguir..."></textarea></div></div>
-            </div>
-            <div class="sig-area">
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Autor do Relatório</div></div>
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Líder do Grupo</div></div>
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Supervisor — Recebido: ___</div></div>
-            </div>
-          </div>
+          <div class="doc-actions"><button class="action-btn pdf-btn" onclick="exportPDF('doc-rpm','Relatorio_Pos_Missao')">⬇ Exportar PDF</button><button class="action-btn" onclick="clearDoc('doc-rpm')">↺ Limpar</button></div>
+          <div class="document-container" id="doc-rpm"><div class="doc-hdr"><div class="doc-ttl">RELATÓRIO PÓS-MISSÃO</div></div></div>
         </div>
-
         <div class="op-section" id="op-form-oca">
-          <div class="doc-actions">
-            <button class="action-btn pdf-btn" onclick="exportPDF('doc-oca','Ocorrencia_Arcana')">⬇ Exportar PDF</button>
-            <button class="action-btn" onclick="clearDoc('doc-oca')">↺ Limpar</button>
-          </div>
-          <div class="document-container" id="doc-oca">
-            <div class="stamp stamp-urg">URGENTE</div>
-            <div class="doc-hdr">
-              <div class="doc-org">Sínodo do Quinto Véu — Divisão de Resposta Arcana</div>
-              <div class="doc-ttl">REGISTRO DE OCORRÊNCIA ARCANA</div>
-              <div class="doc-sttl">Formulário SQV-FORM-003 · Preencher imediatamente no local</div>
-            </div>
-            <div class="doc-warn-box"><strong>PROTOCOLO DE URGÊNCIA:</strong> Este formulário deve ser iniciado no momento da ocorrência e entregue ao Supervisor em até 2 horas.</div>
-            <div class="fsec">
-              <div class="fsec-title">I. Dados da Ocorrência</div>
-              <div class="frow">
-                <div class="ffield"><label>Data e Hora</label><input type="text" placeholder=" /  / ____ — __:__"></div>
-                <div class="ffield"><label>Local Exato</label><input type="text" placeholder="Rua, bairro, ponto de referência"></div>
-                <div class="ffield"><label>Agente Reportando</label><input type="text" placeholder="Nome e insígnia"></div>
-              </div>
-              <label style="font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:1.5px;color:rgba(26,18,8,.58);text-transform:uppercase;display:block;margin-bottom:4px;">Tipo de Ocorrência</label>
-              <div class="cb-grid">
-                <label class="cb-item"><input type="checkbox"><span>Uso ativo de magia ilegal</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Resíduos de magia detectados</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Anomalia dimensional menor</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Anomalia dimensional maior</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Criatura dimensional</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Distorção da realidade</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Contrabando arcano</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Presença de Resina Etérea</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Culto ou ritual proibido</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Outro — descrever abaixo</span></label>
-              </div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">II. Descrição do Evento</div>
-              <div class="frow"><div class="ffield full"><label>O Que Foi Observado (seja preciso)</label><textarea style="min-height:90px;" placeholder="Descreva cronologicamente o que ocorreu, sem interpretações..."></textarea></div></div>
-              <div class="frow">
-                <div class="ffield"><label>Duração Estimada</label><input type="text" placeholder="Ex: ~10 minutos"></div>
-                <div class="ffield"><label>Área de Efeito Estimada</label><input type="text" placeholder="Ex: Raio de 20 metros"></div>
-              </div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">III. Vítimas, Testemunhas e Ações</div>
-              <div class="frow">
-                <div class="ffield"><label>Civis Afetados (estimativa)</label><input type="text" placeholder="0"></div>
-                <div class="ffield"><label>Agentes Afetados</label><input type="text" placeholder="Nenhum / listar nomes"></div>
-              </div>
-              <div class="frow"><div class="ffield full"><label>Testemunhas Identificadas</label><textarea placeholder="Nome, descrição, localização atual..."></textarea></div></div>
-              <div class="cb-grid" style="margin-top:7px;">
-                <label class="cb-item"><input type="checkbox"><span>Área isolada</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Civis evacuados</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Suspeito contido</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Artefato apreendido</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Supervisor notificado</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Inquisidor solicitado</span></label>
-              </div>
-              <div class="frow" style="margin-top:9px;"><div class="ffield full"><label>Situação no Momento do Preenchimento</label><select><option>Ameaça neutralizada</option><option>Situação estável, investigação em andamento</option><option>Ameaça ativa — reforços necessários</option><option>Agentes em perigo</option></select></div></div>
-            </div>
-            <div class="sig-area">
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Agente Reportando — Hora: ___</div></div>
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Supervisor — Recebido em: ___</div></div>
-            </div>
-          </div>
+          <div class="doc-actions"><button class="action-btn pdf-btn" onclick="exportPDF('doc-oca','Ocorrencia_Arcana')">⬇ Exportar PDF</button><button class="action-btn" onclick="clearDoc('doc-oca')">↺ Limpar</button></div>
+          <div class="document-container" id="doc-oca"><div class="doc-hdr"><div class="doc-ttl">REGISTRO DE OCORRÊNCIA ARCANA</div></div></div>
         </div>
-
         <div class="op-section" id="op-form-sus">
-          <div class="doc-actions">
-            <button class="action-btn pdf-btn" onclick="exportPDF('doc-sus','Ficha_de_Suspeito')">⬇ Exportar PDF</button>
-            <button class="action-btn" onclick="clearDoc('doc-sus')">↺ Limpar</button>
-          </div>
-          <div class="document-container" id="doc-sus">
-            <div class="stamp stamp-arc">SENSÍVEL</div>
-            <div class="doc-hdr">
-              <div class="doc-org">Sínodo do Quinto Véu — Divisão de Investigação</div>
-              <div class="doc-ttl">FICHA DE IDENTIFICAÇÃO DE SUSPEITO</div>
-              <div class="doc-sttl">Formulário SQV-FORM-004 · Acesso restrito ao grupo e supervisor</div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">I. Dados de Identificação</div>
-              <div class="frow">
-                <div class="ffield"><label>Nome Completo ou Apelido</label><input type="text" placeholder="Nome / Desconhecido"></div>
-                <div class="ffield"><label>Outros Aliases</label><input type="text" placeholder="Nenhum / listar"></div>
-              </div>
-              <div class="frow">
-                <div class="ffield"><label>Raça / Espécie</label><input type="text" placeholder="Humano, anão..."></div>
-                <div class="ffield"><label>Gênero Aparente</label><input type="text" placeholder="—"></div>
-                <div class="ffield"><label>Idade Estimada</label><input type="text" placeholder="~__ anos"></div>
-              </div>
-              <div class="frow"><div class="ffield full"><label>Descrição Física Detalhada</label><textarea placeholder="Altura, cabelo, olhos, marcas notáveis, roupas típicas..."></textarea></div></div>
-              <div class="frow">
-                <div class="ffield"><label>Reino ou Local de Origem</label><input type="text" placeholder="Desconhecido"></div>
-                <div class="ffield"><label>Última Localização Conhecida</label><input type="text" placeholder="Endereço ou área geral"></div>
-              </div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">II. Envolvimento Suspeito</div>
-              <div class="frow">
-                <div class="ffield"><label>Tipo de Atividade Suspeita</label>
-                  <select><option>— Selecionar —</option><option>Uso ilegal de magia</option><option>Tráfico de Resina Etérea</option><option>Participação em culto proibido</option><option>Pesquisa dimensional não autorizada</option><option>Contrabando de artefatos</option><option>Envolvimento em anomalia</option><option>Múltiplas categorias</option></select>
-                </div>
-                <div class="ffield"><label>Nível de Envolvimento</label>
-                  <select><option>— Selecionar —</option><option>Periférico — pode ser vítima</option><option>Participante — envolvido mas não líder</option><option>Organizador</option><option>Líder</option><option>Indeterminado</option></select>
-                </div>
-              </div>
-              <div class="frow"><div class="ffield full"><label>Descrição das Atividades Suspeitas</label><textarea style="min-height:70px;" placeholder="O que foi observado? Quando? Por quem?..."></textarea></div></div>
-              <div class="frow">
-                <div class="ffield"><label>Capacidade Arcana Aparente</label><select><option>Não detectada</option><option>Baixa — uso amador</option><option>Moderada — treinamento básico</option><option>Alta — uso refinado</option><option>Excepcional</option><option>Desconhecida</option></select></div>
-                <div class="ffield"><label>Periculosidade Estimada</label><select><option>Baixa</option><option>Moderada</option><option>Alta</option><option>Crítica</option><option>Desconhecida</option></select></div>
-              </div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">III. Conexões e Status</div>
-              <div class="frow">
-                <div class="ffield"><label>Associados Identificados</label><textarea placeholder="Nomes ou descrições de pessoas ligadas ao suspeito..."></textarea></div>
-                <div class="ffield"><label>Organizações Suspeitas</label><textarea placeholder="Rede dos Véus, Culto da Fissura, outros..."></textarea></div>
-              </div>
-              <div class="frow">
-                <div class="ffield"><label>Status Atual</label><select><option>Em liberdade — monitorando</option><option>Detido pelo grupo</option><option>Detido pelo Sínodo</option><option>Foragido</option><option>Morto</option><option>Localização desconhecida</option></select></div>
-                <div class="ffield"><label>Recomendação do Agente</label><select><option>— Selecionar —</option><option>Liberar — sem evidências</option><option>Vigilância continuada</option><option>Interrogatório formal</option><option>Transferência para Custódios</option><option>Julgamento pelo Tribunal Arcano</option></select></div>
-              </div>
-              <div class="frow"><div class="ffield full"><label>Observações Adicionais</label><textarea placeholder="Qualquer informação que não se encaixe nos campos acima..."></textarea></div></div>
-            </div>
-            <div class="sig-area">
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Agente Responsável</div></div>
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Supervisor — Aprovação</div></div>
-            </div>
-          </div>
+          <div class="doc-actions"><button class="action-btn pdf-btn" onclick="exportPDF('doc-sus','Ficha_de_Suspeito')">⬇ Exportar PDF</button><button class="action-btn" onclick="clearDoc('doc-sus')">↺ Limpar</button></div>
+          <div class="document-container" id="doc-sus"><div class="doc-hdr"><div class="doc-ttl">FICHA DE IDENTIFICAÇÃO DE SUSPEITO</div></div></div>
         </div>
-
         <div class="op-section" id="op-form-art">
-          <div class="doc-actions">
-            <button class="action-btn pdf-btn" onclick="exportPDF('doc-art','Registro_de_Artefato')">⬇ Exportar PDF</button>
-            <button class="action-btn" onclick="clearDoc('doc-art')">↺ Limpar</button>
-          </div>
-          <div class="document-container" id="doc-art">
-            <div class="stamp stamp-arc">ARCANO</div>
-            <div class="doc-hdr">
-              <div class="doc-org">Sínodo do Quinto Véu — Divisão de Catalogação Arcana</div>
-              <div class="doc-ttl">REGISTRO DE ARTEFATO DIMENSIONAL</div>
-              <div class="doc-sttl">Formulário SQV-FORM-005 · Artefatos devem ser entregues em até 48h</div>
-            </div>
-            <div class="doc-warn-box"><strong>PROTOCOLO DE SEGURANÇA:</strong> Não manipule artefatos sem equipamento de proteção. Não teste efeitos sem supervisão de Nível II. Em caso de comportamento anômalo, isole e notifique o Observatório do Véu.</div>
-            <div class="fsec">
-              <div class="fsec-title">I. Identificação</div>
-              <div class="frow">
-                <div class="ffield"><label>Código de Registro Provisório</label><input type="text" placeholder="ARF-___-___"></div>
-                <div class="ffield"><label>Data e Local de Encontro</label><input type="text" placeholder=" /  / ____ — ___"></div>
-              </div>
-              <div class="frow"><div class="ffield full"><label>Descrição Física Completa</label><textarea placeholder="Forma, material, cor, tamanho, peso, inscrições, condição..."></textarea></div></div>
-              <div class="frow">
-                <div class="ffield"><label>Tipo de Objeto</label>
-                  <select><option>— Selecionar —</option><option>Ampola / Recipiente</option><option>Arma com propriedades arcanas</option><option>Joia ou adorno</option><option>Livro / Manuscrito</option><option>Símbolo ou talismã</option><option>Componente ritual</option><option>Aparato mecânico-arcano</option><option>Substância / Líquido</option><option>Não classificado</option></select>
-                </div>
-                <div class="ffield"><label>Origem Suspeita</label>
-                  <select><option>— Selecionar —</option><option>Fabricação recente — uso ilegal</option><option>Fabricação antiga — pré-Tratado</option><option>Origem dimensional</option><option>Origem institucional — Sínodo</option><option>Origem institucional — Igreja</option><option>Desconhecida</option></select>
-                </div>
-              </div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">II. Propriedades Observadas</div>
-              <div class="cb-grid">
-                <label class="cb-item"><input type="checkbox"><span>Brilho ou luminosidade própria</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Temperatura anormal</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Reação a presenças vivas</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Emissão de sons</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Distorção visual ao redor</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Efeito sobre memória / mente</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Reação violenta ao toque</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Efeito sobre o tempo percebido</span></label>
-                <label class="cb-item"><input type="checkbox"><span>Nenhum efeito observado ainda</span></label>
-              </div>
-              <div class="frow" style="margin-top:9px;">
-                <div class="ffield"><label>Nível de Periculosidade Imediata</label><select><option>Inerte</option><option>Baixo</option><option>Moderado</option><option>Alto</option><option>Crítico — isolar imediatamente</option><option>Indeterminado</option></select></div>
-                <div class="ffield"><label>Método de Contenção Atual</label><input type="text" placeholder="Ex: Caixa de chumbo, pano arcano..."></div>
-              </div>
-              <div class="frow"><div class="ffield full"><label>Descrição Detalhada dos Efeitos</label><textarea placeholder="Como o artefato se comportou? Houve vítimas?..."></textarea></div></div>
-            </div>
-            <div class="fsec">
-              <div class="fsec-title">III. Contexto de Descoberta</div>
-              <div class="frow">
-                <div class="ffield"><label>Em posse de quem foi encontrado?</label><input type="text" placeholder="Nome / Descrição / Abandonado"></div>
-                <div class="ffield"><label>Como estava armazenado?</label><input type="text" placeholder="Escondido, exposto, em ritual..."></div>
-              </div>
-              <div class="frow"><div class="ffield full"><label>Contexto Completo do Achado</label><textarea placeholder="Onde exatamente, o que havia ao redor, o que estava acontecendo..."></textarea></div></div>
-            </div>
-            <div class="sig-area">
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Agente — Descoberta</div></div>
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Supervisor — Recebido</div></div>
-              <div class="sig-block"><div class="sig-line"></div><div class="sig-lbl">Arquivista — Catalogação</div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="op-section" id="op-form-drive">
-          <div class="file-list">
-            <div class="file-item"><div class="file-icon"><span>DOCX</span></div><div class="file-info"><div class="file-name">Formulário Básico de Missão</div><div class="file-meta">Acesso Direto · Google Drive</div></div><div class="file-actions"><button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1GabkJS9PCB5n5VPOCFDvl2KmH4OQ-3il/edit?usp=drive_link','_blank')">Abrir no Drive</button></div></div>
-          </div>
+          <div class="doc-actions"><button class="action-btn pdf-btn" onclick="exportPDF('doc-art','Registro_de_Artefato')">⬇ Exportar PDF</button><button class="action-btn" onclick="clearDoc('doc-art')">↺ Limpar</button></div>
+          <div class="document-container" id="doc-art"><div class="doc-hdr"><div class="doc-ttl">REGISTRO DE ARTEFATO DIMENSIONAL</div></div></div>
         </div>
       </div>
     </div>
@@ -534,113 +125,30 @@
     <div class="page" id="page-procedimentos">
       <div class="page-inner">
         <div class="classif-banner restricted">Classificação: Uso Interno — Protocolos Operacionais</div>
-        <div class="page-header"><div class="page-header-left"><h2>Procedimentos Operacionais</h2><p>Índice de documentação e protocolos de resposta arcana</p></div><div class="page-badge">SQV-MAN-002</div></div>
+        <div class="page-header"><div class="page-header-left"><h2>Procedimentos Operacionais</h2></div></div>
         <div class="op-tabs">
-          <button class="op-tab-btn active" onclick="showOpTab('proc-index',this)">📋 Índice</button>
-          <button class="op-tab-btn" onclick="showOpTab('proc-alfa',this)">🔴 Protocolo Alfa</button>
+          <button class="op-tab-btn active" onclick="showOpTab('proc-alfa',this)">🔴 Protocolo Alfa</button>
           <button class="op-tab-btn" onclick="showOpTab('proc-beta',this)">🟠 Protocolo Beta</button>
           <button class="op-tab-btn" onclick="showOpTab('proc-gama',this)">🟡 Protocolo Gama</button>
           <button class="op-tab-btn" onclick="showOpTab('proc-delta',this)">🟢 Protocolo Delta</button>
         </div>
-        <div class="op-section active" id="op-proc-index">
-          <h4 style="font-family:'Cinzel',serif;font-size:.72rem;color:var(--gold-dim);letter-spacing:3px;margin-bottom:11px;">FORMULÁRIOS OFICIAIS</h4>
-          <div class="codex-grid">
-            <div class="ccard" onclick="gotoTab(1);setTimeout(()=>showOpTab('form-om',null),50)"><div class="ccard-code">SQV-FORM-001</div><div class="ccard-title">ORDEM DE MISSÃO</div><div class="ccard-desc">Autorização formal para missões de campo.</div><div class="ccard-tags"><span class="ctag">Nível III</span></div></div>
-            <div class="ccard" onclick="gotoTab(1);setTimeout(()=>showOpTab('form-rpm',null),50)"><div class="ccard-code">SQV-FORM-002</div><div class="ccard-title">RELATÓRIO PÓS-MISSÃO</div><div class="ccard-desc">Documentação obrigatória — prazo 24h.</div><div class="ccard-tags"><span class="ctag r">Obrigatório</span></div></div>
-            <div class="ccard" onclick="gotoTab(1);setTimeout(()=>showOpTab('form-oca',null),50)"><div class="ccard-code">SQV-FORM-003</div><div class="ccard-title">OCORRÊNCIA ARCANA</div><div class="ccard-desc">Para eventos com magia ilegal ou anomalias.</div><div class="ccard-tags"><span class="ctag r">Urgente</span></div></div>
-            <div class="ccard" onclick="gotoTab(1);setTimeout(()=>showOpTab('form-sus',null),50)"><div class="ccard-code">SQV-FORM-004</div><div class="ccard-title">FICHA DE SUSPEITO</div><div class="ccard-desc">Coleta de dados sobre suspeitos.</div><div class="ccard-tags"><span class="ctag r">Sensível</span></div></div>
-            <div class="ccard" onclick="gotoTab(1);setTimeout(()=>showOpTab('form-art',null),50)"><div class="ccard-code">SQV-FORM-005</div><div class="ccard-title">REGISTRO DE ARTEFATO</div><div class="ccard-desc">Catalogação de objetos arcanos.</div><div class="ccard-tags"><span class="ctag p">Dimensional</span></div></div>
-          </div>
-          <h4 style="font-family:'Cinzel',serif;font-size:.72rem;color:var(--gold-dim);letter-spacing:3px;margin:20px 0 11px;">PROTOCOLOS DE RESPOSTA</h4>
-          <div class="codex-grid">
-            <div class="ccard" onclick="showOpTab('proc-alfa',null);document.querySelectorAll('#page-procedimentos .op-tab-btn')[1].classList.add('active');document.querySelectorAll('#page-procedimentos .op-tab-btn')[0].classList.remove('active')"><div class="ccard-code">PROTOCOLO ALFA</div><div class="ccard-title">MAGIA ILEGAL ATIVA</div><div class="ccard-desc">Procedimento ao encontrar uso de magia ilegal.</div><div class="ccard-tags"><span class="ctag r">Urgência Alta</span></div></div>
-            <div class="ccard" onclick="showOpTab('proc-beta',null);document.querySelectorAll('#page-procedimentos .op-tab-btn')[2].classList.add('active');[0,1,3,4].forEach(i=>document.querySelectorAll('#page-procedimentos .op-tab-btn')[i].classList.remove('active'))"><div class="ccard-code">PROTOCOLO BETA</div><div class="ccard-title">ANOMALIA DIMENSIONAL</div><div class="ccard-desc">O que fazer ao detectar distorção dimensional.</div><div class="ccard-tags"><span class="ctag r">Urgência Crítica</span></div></div>
-            <div class="ccard" onclick="showOpTab('proc-gama',null);document.querySelectorAll('#page-procedimentos .op-tab-btn')[3].classList.add('active');[0,1,2,4].forEach(i=>document.querySelectorAll('#page-procedimentos .op-tab-btn')[i].classList.remove('active'))"><div class="ccard-code">PROTOCOLO GAMA</div><div class="ccard-title">CRIATURA DIMENSIONAL</div><div class="ccard-desc">Contenção ou retirada de criaturas.</div><div class="ccard-tags"><span class="ctag r">Urgência Máxima</span></div></div>
-            <div class="ccard" onclick="showOpTab('proc-delta',null);document.querySelectorAll('#page-procedimentos .op-tab-btn')[4].classList.add('active');[0,1,2,3].forEach(i=>document.querySelectorAll('#page-procedimentos .op-tab-btn')[i].classList.remove('active'))"><div class="ccard-code">PROTOCOLO DELTA</div><div class="ccard-title">AGENTE CONTAMINADO</div><div class="ccard-desc">Cuidados com agente afetado por magia.</div><div class="ccard-tags"><span class="ctag r">Urgência Crítica</span></div></div>
-          </div>
-          <div style="margin-top:22px;padding:14px;background:rgba(197,163,85,.04);border:1px solid rgba(197,163,85,.14);border-radius:3px;">
-            <p style="font-family:'Cinzel',serif;font-size:.66rem;color:rgba(197,163,85,.52);letter-spacing:2px;margin-bottom:5px;">AVISO AOS AGENTES DE VÍNCULO</p>
-            <p style="font-size:.86rem;color:var(--text-dim);line-height:1.7;"><strong style="color:var(--text-body);">O não preenchimento do Relatório Pós-Missão constitui infração disciplinar de Grau 2</strong> e pode resultar em suspensão temporária de autorização operacional.</p>
-          </div>
-        </div>
-        <div class="op-section" id="op-proc-alfa">
-          <div class="manual-container">
-            <div class="man-hdr"><div><div class="man-title">PROTOCOLO ALFA</div><div class="man-sub">Magia Ilegal em Uso Ativo</div></div><div class="man-meta"><span>URGÊNCIA: ALTA</span><span>SQV-MAN-002-A</span></div></div>
-            <ol class="step-list">
-              <li class="step-item"><span class="step-num">1</span><div class="step-content"><div class="step-title">NÃO SE APROXIME IMEDIATAMENTE</div><div class="step-text">Mantenha distância segura. Magia ativa é imprevisível. Observe antes de agir.</div></div></li>
-              <li class="step-item"><span class="step-num">2</span><div class="step-content"><div class="step-title">ESVAZIE A ÁREA</div><div class="step-text">Afaste civis silenciosamente. Não cause pânico — pânico piora anomalias ativas.</div></div></li>
-              <li class="step-item"><span class="step-num">3</span><div class="step-content"><div class="step-title">NOTIFIQUE O SUPERVISOR</div><div class="step-text">Envie mensageiro ou use o protocolo de sinal acordado. Não improvise sozinho.</div></div></li>
-              <li class="step-item"><span class="step-num">4</span><div class="step-content"><div class="step-title">CONTENHA SE POSSÍVEL</div><div class="step-text">Se o usuário for não combativo, tente detenção física. Se combativo, aguarde reforços.</div></div></li>
-              <li class="step-item"><span class="step-num">5</span><div class="step-content"><div class="step-title">DOCUMENTE TUDO</div><div class="step-text">O que foi visto, a hora, o efeito, quantas pessoas. Preencha SQV-FORM-003 no local.</div></div></li>
-            </ol>
-            <div class="man-danger"><div class="man-danger-title">NÃO FAÇA</div><div class="man-danger-body">Não tente copiar ou absorver o efeito mágico. Não use artefatos coletados para contra-atacar. Não prometa imunidade ao usuário sem autorização do supervisor.</div></div>
-          </div>
-        </div>
-        <div class="op-section" id="op-proc-beta">
-          <div class="manual-container">
-            <div class="man-hdr"><div><div class="man-title">PROTOCOLO BETA</div><div class="man-sub">Anomalia Dimensional Detectada</div></div><div class="man-meta"><span>URGÊNCIA: CRÍTICA</span><span>SQV-MAN-002-B</span></div></div>
-            <ol class="step-list">
-              <li class="step-item"><span class="step-num">1</span><div class="step-content"><div class="step-title">IDENTIFIQUE OS SINTOMAS</div><div class="step-text">Distorção visual, sons deslocados, gravidade errática, sombras sem dono. Dois ou mais = anomalia confirmada.</div></div></li>
-              <li class="step-item"><span class="step-num">2</span><div class="step-content"><div class="step-title">SAIA DA ZONA IMEDIATAMENTE</div><div class="step-text">Recue para além de 50 metros da origem estimada. Anomalias se expandem.</div></div></li>
-              <li class="step-item"><span class="step-num">3</span><div class="step-content"><div class="step-title">ISOLE A ÁREA</div><div class="step-text">Use cordas, barricadas, presença física. Ninguém entra. Custodie o perímetro.</div></div></li>
-              <li class="step-item"><span class="step-num">4</span><div class="step-content"><div class="step-title">NOTIFIQUE O OBSERVATÓRIO DO VÉU</div><div class="step-text">Código de urgência: três batidas rápidas + pausa + duas longas.</div></div></li>
-              <li class="step-item"><span class="step-num">5</span><div class="step-content"><div class="step-title">REGISTRE E AGUARDE</div><div class="step-text">Documente do perímetro seguro. Não entre até pessoal especializado chegar.</div></div></li>
-            </ol>
-            <div class="man-tip"><div class="man-tip-title">CASO ESPECIAL — PESSOA PRESA NA ANOMALIA</div><div class="man-tip-body">Se houver civis dentro da zona ativa: documente a posição, relate ao Observatório e aguarde. Entrar em anomalia para resgatar sem equipamento resulta em duas vítimas em vez de uma.</div></div>
-          </div>
-        </div>
-        <div class="op-section" id="op-proc-gama">
-          <div class="manual-container">
-            <div class="man-hdr"><div><div class="man-title">PROTOCOLO GAMA</div><div class="man-sub">Criatura Dimensional Presente</div></div><div class="man-meta"><span>URGÊNCIA: MÁXIMA</span><span>SQV-MAN-002-C</span></div></div>
-            <ol class="step-list">
-              <li class="step-item"><span class="step-num">1</span><div class="step-content"><div class="step-title">CLASSIFIQUE A CRIATURA</div><div class="step-text">Senciente (comunica, raciocina) ou não-senciente (age por instinto)? Isso muda o protocolo.</div></div></li>
-              <li class="step-item"><span class="step-num">2</span><div class="step-content"><div class="step-title">NÃO ATAQUE SENCIENTES SEM AVALIAÇÃO</div><div class="step-text">Criaturas sencientes têm proteção doutrinária da Igreja. Ataque pode criar incidente diplomático.</div></div></li>
-              <li class="step-item"><span class="step-num">3</span><div class="step-content"><div class="step-title">CONTENHA NÃO-SENCIENTES SE POSSÍVEL</div><div class="step-text">Use métodos físicos. Eliminação autorizada apenas como última instância.</div></div></li>
-              <li class="step-item"><span class="step-num">4</span><div class="step-content"><div class="step-title">DOCUMENTE A CRIATURA</div><div class="step-text">Aparência, comportamento, origem provável, efeitos causados. Consulte o Bestiário Operacional.</div></div></li>
-            </ol>
-            <div class="man-danger"><div class="man-danger-title">⚠ ATENÇÃO ESPECIAL</div><div class="man-danger-body">Criaturas da 5ª dimensão frequentemente causam efeitos cognitivos — medo irracional, atração, confusão. Se um agente parecer "fascinado", retire-o da área imediatamente.</div></div>
-          </div>
-        </div>
-        <div class="op-section" id="op-proc-delta">
-          <div class="manual-container">
-            <div class="man-hdr"><div><div class="man-title">PROTOCOLO DELTA</div><div class="man-sub">Agente Contaminado / Ferido por Magia</div></div><div class="man-meta"><span>URGÊNCIA: CRÍTICA</span><span>SQV-MAN-002-D</span></div></div>
-            <ol class="step-list">
-              <li class="step-item"><span class="step-num">1</span><div class="step-content"><div class="step-title">SEPARE O AGENTE DA FONTE</div><div class="step-text">Remova da área de exposição. Contaminação dimensional não se transmite por contato físico.</div></div></li>
-              <li class="step-item"><span class="step-num">2</span><div class="step-content"><div class="step-title">AVALIE OS SINTOMAS</div><div class="step-text">Ferimento físico: trate normalmente. Sintomas cognitivos (visões, vozes, confusão de tempo): isole o agente e notifique o Arquivo Médico.</div></div></li>
-              <li class="step-item"><span class="step-num">3</span><div class="step-content"><div class="step-title">NÃO DEIXE O AGENTE SOZINHO</div><div class="step-text">Agente com contaminação dimensional não deve ficar sem supervisão.</div></div></li>
-              <li class="step-item"><span class="step-num">4</span><div class="step-content"><div class="step-title">TRANSPORTE AO ARQUIVO MÉDICO</div><div class="step-text">Qualquer exposição direta a magia ativa exige avaliação antes do retorno ao serviço.</div></div></li>
-            </ol>
-            <div class="man-danger"><div class="man-danger-title">⚠ SINTOMAS DE CONTAMINAÇÃO</div><div class="man-danger-body">Reporte imediatamente: visões de lugares inexistentes, audição de vozes em língua desconhecida, alteração na percepção do tempo, incapacidade de distinguir realidade, marcas físicas sem causa aparente.</div></div>
-          </div>
-        </div>
+        <div class="op-section active" id="op-proc-alfa"><div class="manual-container"><div class="man-title">PROTOCOLO ALFA</div><div class="chap-body">Magia Ilegal Ativa</div></div></div>
+        <div class="op-section" id="op-proc-beta"><div class="manual-container"><div class="man-title">PROTOCOLO BETA</div><div class="chap-body">Anomalia Dimensional Detectada</div></div></div>
+        <div class="op-section" id="op-proc-gama"><div class="manual-container"><div class="man-title">PROTOCOLO GAMA</div><div class="chap-body">Criatura Dimensional Presente</div></div></div>
+        <div class="op-section" id="op-proc-delta"><div class="manual-container"><div class="man-title">PROTOCOLO DELTA</div><div class="chap-body">Agente Contaminado</div></div></div>
       </div>
     </div>
 
     <div class="page" id="page-manuais">
       <div class="page-inner">
         <div class="classif-banner restricted">Classificação: Uso Interno — Manuais de Campo</div>
-        <div class="page-header"><div class="page-header-left"><h2>Manuais de Campo</h2><p>Guias operacionais, manual arcano e bestiário dimensional</p></div><div class="page-badge">SQV-MAN-001/003</div></div>
+        <div class="page-header"><div class="page-header-left"><h2>Manuais de Campo</h2></div></div>
         <div class="op-tabs">
           <button class="op-tab-btn active" onclick="showOpTab('man-campo',this)">⚔️ Manual do Agente</button>
           <button class="op-tab-btn" onclick="showOpTab('man-arcano',this)">✨ Manual Arcano</button>
         </div>
-        <div class="op-section active" id="op-man-campo">
-          <div class="manual-container">
-            <div class="man-hdr"><div><div class="man-title">MANUAL DO AGENTE DE VÍNCULO</div><div class="man-sub">Edição Padrão — Nível III — Sínodo do Quinto Véu</div></div><div class="man-meta"><span>SQV-MAN-001</span><span>USO INTERNO</span></div></div>
-            <div class="chap"><div class="chap-title"><span class="chap-num">CAP. 1</span>QUEM VOCÊ É E O QUE VOCÊ REPRESENTA</div><div class="chap-body"><p>Como Agente de Vínculo, você representa o <strong>Sínodo do Quinto Véu</strong> em campo. Você <strong>não é um soldado</strong>. Não é um inquisidor. Não é um juiz. Você é um investigador com autoridade limitada, mandato temporário e responsabilidade de reportar — não de resolver sozinho.</p><div class="man-rule"><div class="man-rule-title">REGRA FUNDAMENTAL</div><div class="man-rule-body">Duvide de sua própria autoridade antes de agir. Se não tiver certeza, <strong>não faça</strong> — reporte ao supervisor e aguarde orientação.</div></div><p>Sua insígnia Nível III garante: acesso a instalações do Sínodo, interrogatório de civis (sem coerção), detenção temporária (máx. 24h). <em>Não garante o direito de executar, usar magia ou agir dentro de embaixadas estrangeiras.</em></p></div></div>
-            <div class="chap"><div class="chap-title"><span class="chap-num">CAP. 2</span>ANTES DE SAIR EM MISSÃO</div><div class="chap-body"><ol class="step-list"><li class="step-item"><span class="step-num">1</span><div class="step-content"><div class="step-title">RECEBA E LEIA A ORDEM DE MISSÃO COMPLETA</div><div class="step-text">Confirme com o supervisor qualquer ponto obscuro antes de partir.</div></div></li><li class="step-item"><span class="step-num">2</span><div class="step-content"><div class="step-title">VERIFIQUE O EQUIPAMENTO DO GRUPO</div><div class="step-text">Insígnias visíveis, documentos da missão, equipamento de contenção básico.</div></div></li><li class="step-item"><span class="step-num">3</span><div class="step-content"><div class="step-title">ESTABELEÇA PROTOCOLO INTERNO</div><div class="step-text">Quem lidera? Quem reporta? Qual o ponto de encontro em caso de separação?</div></div></li><li class="step-item"><span class="step-num">4</span><div class="step-content"><div class="step-title">INFORME ROTA E PRAZO ESPERADO</div><div class="step-text">O supervisor deve saber onde vocês estarão. Atraso superior a 4h ativa protocolo de busca.</div></div></li></ol></div></div>
-            <div class="chap"><div class="chap-title"><span class="chap-num">CAP. 3</span>CONDUTA EM CAMPO</div><div class="chap-body"><div class="man-rule"><div class="man-rule-title">IDENTIFICAÇÃO OBRIGATÓRIA</div><div class="man-rule-body">Ao abordar civis, <strong>sempre</strong> apresente sua insígnia, identifique-se como Agente de Vínculo e informe que a cooperação é voluntária — salvo ordem específica de detenção.</div></div><div class="man-danger"><div class="man-danger-title">⚠ PROIBIDO SEM AUTORIZAÇÃO</div><div class="man-danger-body">— Coagir fisicamente civis não resistentes<br>— Revelar informações classificadas da missão<br>— Usar ou manipular artefatos arcanos coletados<br>— Fazer acordos com suspeitos sem aprovação superior</div></div><div class="man-tip"><div class="man-tip-title">💡 CONSELHO OPERACIONAL</div><div class="man-tip-body">Civis respondem melhor à autoridade quando tratados com respeito. Um interrogatório bem conduzido produz informações mais confiáveis que um forçado.</div></div></div></div>
-            <div class="chap"><div class="chap-title"><span class="chap-num">CAP. 4</span>AO RETORNAR DA MISSÃO</div><div class="chap-body"><ol class="step-list"><li class="step-item"><span class="step-num">1</span><div class="step-content"><div class="step-title">ENTREGUE TODOS OS ARTEFATOS COLETADOS</div><div class="step-text">Nenhum artefato arcano pode permanecer em posse pessoal de agentes.</div></div></li><li class="step-item"><span class="step-num">2</span><div class="step-content"><div class="step-title">PREENCHA O RELATÓRIO PÓS-MISSÃO</div><div class="step-text">Prazo: 24 horas após término. Atraso resulta em advertência formal.</div></div></li><li class="step-item"><span class="step-num">3</span><div class="step-content"><div class="step-title">PASSE POR AVALIAÇÃO DE SAÚDE</div><div class="step-text">Se houve contato com magia ativa, avaliação pelo médico do Sínodo é obrigatória.</div></div></li><li class="step-item"><span class="step-num">4</span><div class="step-content"><div class="step-title">BRIEFING COM O SUPERVISOR</div><div class="step-text">Relato verbal, especialmente de pistas que demandam ação imediata.</div></div></li></ol></div></div>
-          </div>
-        </div>
-        <div class="op-section" id="op-man-arcano">
-          <div class="manual-container">
-            <div class="man-hdr"><div><div class="man-title">NOÇÕES FUNDAMENTAIS DA 5ª DIMENSÃO</div><div class="man-sub">Para agentes sem capacidade arcana — uso operacional exclusivo</div></div><div class="man-meta"><span>SQV-MAN-003</span><span>NÍVEL III</span></div></div>
-            <div class="chap"><div class="chap-title"><span class="chap-num">CAP. 1</span>O QUE É A 5ª DIMENSÃO</div><div class="chap-body"><p>O mundo tem três dimensões físicas e uma quarta — o tempo. Além disso, existe uma <strong>quinta</strong> — a dimensão da qual a magia é derivada. Ela <strong>coexiste com o nosso mundo</strong>, mas não é perceptível pela maioria das pessoas.</p><div class="man-rule"><div class="man-rule-title">ANALOGIA APROVADA PELO SÍNODO</div><div class="man-rule-body">Imagine um quarto com uma janela coberta. Você sente o vento pela fresta — a 5ª dimensão está sempre presente. Magos abrem a janela. O problema é o que pode entrar pela janela aberta.</div></div></div></div>
-            <div class="chap"><div class="chap-title"><span class="chap-num">CAP. 2</span>COMO IDENTIFICAR MAGIA ATIVA</div><div class="chap-body"><table style="width:100%;border-collapse:collapse;font-size:.84rem;color:rgba(26,18,8,.73);" class="dtbl"><thead><tr><th>Sinal</th><th>O Que Indica</th><th>Urgência</th></tr></thead><tbody><tr><td>Temperatura súbita inexplicável</td><td>Magia ativa próxima</td><td>Moderada</td></tr><tr style="background:rgba(80,60,20,.04)"><td>Sons com eco incorreto</td><td>Distorção dimensional ativa</td><td>Alta</td></tr><tr><td>Cheiro de metal queimado</td><td>Resíduo de feitiço recente</td><td>Baixa</td></tr><tr style="background:rgba(80,60,20,.04)"><td>Sombras em direção errada</td><td>Anomalia dimensional ativa</td><td><strong>Crítica</strong></td></tr><tr><td>Déjà vu intenso e repetido</td><td>Loop temporal parcial</td><td>Alta</td></tr><tr style="background:rgba(80,60,20,.04)"><td>Líquido escuro-roxo que pulsa</td><td>Resina Etérea — ilegal</td><td>Alta</td></tr><tr><td>Geometria impossível</td><td>Zona de realidade fraturada</td><td><strong>Crítica</strong></td></tr></tbody></table></div></div>
-            <div class="chap"><div class="chap-title"><span class="chap-num">CAP. 3</span>CLASSIFICAÇÃO DE AMEAÇAS</div><div class="chap-body"><table style="width:100%;border-collapse:collapse;font-size:.84rem;" class="dtbl"><thead><tr><th>Classificação</th><th>Descrição</th><th>Ação Recomendada</th></tr></thead><tbody><tr><td><strong>CLASSE V</strong></td><td>Resíduos mágicos, experimentos amadores falhos</td><td>Documentar, reportar, monitorar</td></tr><tr style="background:rgba(80,60,20,.04)"><td><strong>CLASSE IV</strong></td><td>Usuário amador ativo, sem controle</td><td>Deter, interrogar, encaminhar</td></tr><tr><td><strong>CLASSE III</strong></td><td>Usuário treinado, rede organizada</td><td>Conter, solicitar reforços</td></tr><tr style="background:rgba(80,60,20,.04)"><td><strong>CLASSE II</strong></td><td>Anomalia dimensional ativa, criatura presente</td><td>Isolar, evacuar, chamar Observatório</td></tr><tr><td><strong>CLASSE I</strong></td><td>Fissura em abertura, entidade maior</td><td>Recuar, notificar Nível I imediatamente</td></tr></tbody></table><p style="margin-top:9px;font-size:.86rem;">Agentes de Nível III operam sozinhos apenas em <strong>Classe V e IV</strong>. Classe III requer notificação. Classe II e I requerem evacuação imediata.</p></div></div>
-          </div>
-        </div>
+        <div class="op-section active" id="op-man-campo"><div class="manual-container"><div class="man-title">MANUAL DO AGENTE</div><div class="chap-body">Instruções em campo...</div></div></div>
+        <div class="op-section" id="op-man-arcano"><div class="manual-container"><div class="man-title">NOÇÕES DA 5ª DIMENSÃO</div><div class="chap-body">Instruções arcanas...</div></div></div>
       </div>
     </div>
 
@@ -648,11 +156,7 @@
       <div class="page-inner">
         <div class="classif-banner restricted">Classificação: Uso Interno — Departamento de Intendência</div>
         <div class="page-header">
-          <div class="page-header-left">
-            <h2>Equipamento e Insígnias</h2>
-            <p>Padrão oficial de vestimenta para Agentes de Vínculo e Investigadores do Véu.</p>
-          </div>
-          <div class="page-badge">Ref. INT-04</div>
+          <div class="page-header-left"><h2>Equipamento e Insígnias</h2><p>Padrão oficial de vestimenta para Agentes de Vínculo e Investigadores do Véu.</p></div>
         </div>
         <div class="uniform-container">
           <img src="insignias_uniforme_sinodo.svg" alt="Diagrama de Uniformes e Insígnias do Sínodo do Quinto Véu">
@@ -662,33 +166,27 @@
 
     <div class="page" id="page-lore">
       <div class="page-inner">
-        <div class="classif-banner confidential">Classificação: Confidencial — Acervo Histórico do Sínodo</div>
-        <div class="page-header"><div class="page-header-left"><h2>Missões Expedidas</h2><p>Tratados, registros históricos e pesquisas dimensionais</p></div><div class="page-badge">Acervo Interno</div></div>
+        <div class="classif-banner confidential">Acervo Histórico do Sínodo</div>
+        <div class="page-header"><div class="page-header-left"><h2>Missões Expedidas</h2></div></div>
         <div class="file-list">
-          <div class="file-item"><div class="file-icon"><span>DOCX</span></div><div class="file-info"><div class="file-name">Investigação de Problemas Portuários: Baixa Prioridade</div><div class="file-meta">Acesso Direto · Google Drive</div></div><div class="file-actions"><button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1sGdYz1Dk2ljBpNWNswGVc4SjSarz_VDb/edit?usp=drive_link','_blank')">Abrir no Drive</button></div></div>
+          <div class="file-item"><div class="file-icon"><span>DOCX</span></div><div class="file-info"><div class="file-name">Investigação de Problemas Portuários</div></div></div>
         </div>
       </div>
     </div>
 
     <div class="page" id="page-classified">
       <div class="page-inner">
-        <div class="classif-banner top-secret">Máximo Sigilo — Acesso Individual por Código de Segurança</div>
-        <div class="page-header"><div class="page-header-left"><h2>Arquivos Classificados</h2><p>Documentos de acesso restrito dos Arquivos Dimensionais do Sínodo</p></div><div class="page-badge">Nível ΔV — Autorizado</div></div>
+        <div class="classif-banner top-secret">Máximo Sigilo</div>
+        <div class="page-header"><div class="page-header-left"><h2>Arquivos Classificados</h2></div></div>
         <div class="docs-grid" id="docs-grid"></div>
       </div>
     </div>
 
     <div class="page" id="page-bestiary">
       <div class="page-inner">
-        <div class="classif-banner restricted">Bestiário Operacional — Sínodo do Quinto Véu · Uso de Campo</div>
-        <div class="page-header"><div class="page-header-left"><h2>Bestiário do Sínodo</h2><p>Criaturas catalogadas — comuns, incomuns e raras</p></div><div class="page-badge">20 Entradas</div></div>
-        <div class="bestiary-controls">
-          <input class="bestiary-search" type="text" placeholder="Buscar criatura..." oninput="filterBeasts(this.value)">
-          <button class="bestiary-filter active" onclick="setBeastFilter('all',this)">Todos</button>
-          <button class="bestiary-filter" onclick="setBeastFilter('comum',this)">Comuns</button>
-          <button class="bestiary-filter" onclick="setBeastFilter('incomum',this)">Incomuns</button>
-          <button class="bestiary-filter" onclick="setBeastFilter('raro',this)">Raros</button>
-        </div>
+        <div class="classif-banner restricted">Uso de Campo</div>
+        <div class="page-header"><div class="page-header-left"><h2>Bestiário do Sínodo</h2></div></div>
+        <div class="bestiary-controls"><input class="bestiary-search" type="text" placeholder="Buscar criatura..." oninput="filterBeasts(this.value)"></div>
         <div class="bestiary-grid" id="bestiary-grid"></div>
       </div>
     </div>
@@ -708,51 +206,9 @@
 
     <div class="page" id="page-requisition">
       <div class="page-inner">
-        <div class="classif-banner confidential">Classificação: Restrito — Sujeito a Aprovação Superior</div>
-        <div class="page-header"><div class="page-header-left"><h2>Requisição de Arquivos</h2><p>Solicitação formal de acesso a documentos dos Arquivos Dimensionais</p></div><div class="page-badge">Formulário D-9</div></div>
-        <div class="req-form">
-          <div class="form-row-2">
-            <div class="form-row"><label class="form-label">Agente Solicitante <span class="form-required">*</span></label><input class="form-input" type="text" placeholder="Nome do agente"></div>
-            <div class="form-row"><label class="form-label">Código do Grupo <span class="form-required">*</span></label><input class="form-input" type="text" value="47-B" readonly style="opacity:.7"></div>
-          </div>
-          <div class="form-row"><label class="form-label">Documento Requisitado <span class="form-required">*</span></label><input class="form-input" type="text" placeholder="Ex: Registros de Anomalia Dimensional — Aethryon, Ano 1043"></div>
-          <div class="form-row"><label class="form-label">Arquivo de Origem</label>
-            <select class="form-select">
-              <option value="">Selecione o arquivo de origem...</option>
-              <option>Arquivos Históricos — Pré-Vhal'Torin</option>
-              <option>Registros de Campo — Inquisidores</option>
-              <option>Pesquisa Dimensional — Observatório do Véu</option>
-              <option>Registros de Magia Ilegal — Custódios da Purificação</option>
-              <option>Acervo de Vhal'Zarak — Acesso Especial</option>
-              <option>Correspondências Internas do Conclave</option>
-              <option>Outros</option>
-            </select>
-          </div>
-          <div class="form-row"><label class="form-label">Nível de Classificação</label>
-            <div class="form-classify-grid">
-              <label class="classify-opt" onclick="selectClassify(this)"><input type="radio" name="classif"><div class="classify-opt-label">Uso Interno</div></label>
-              <label class="classify-opt" onclick="selectClassify(this)"><input type="radio" name="classif"><div class="classify-opt-label">Restrito</div></label>
-              <label class="classify-opt" onclick="selectClassify(this)"><input type="radio" name="classif"><div class="classify-opt-label">Confidencial</div></label>
-            </div>
-          </div>
-          <div class="form-row"><label class="form-label">Justificativa <span class="form-required">*</span></label><textarea class="form-textarea" placeholder="Descreva com clareza a razão pela qual o documento é necessário..."></textarea></div>
-          <div class="form-row"><label class="form-label">Missão Relacionada</label><input class="form-input" type="text" placeholder="Ex: Registro 22-F — Irregularidades no Mercado Livre"></div>
-          <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:7px;">
-            <button class="submit-btn" onclick="submitRequisition()">Enviar Requisição</button>
-            <span style="font-family:'IM Fell English',serif;font-size:14px;color:var(--text-dim);font-style:italic;">Sujeito à análise do Supervisor Varik</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="page" id="page-glossary">
-      <div class="page-inner">
-        <div class="classif-banner restricted">Acervo de Conhecimento — Sínodo do Quinto Véu</div>
-        <div class="page-header"><div class="page-header-left"><h2>Codex de Lore</h2><p>Terminologias, eventos e segredos arquivados</p></div><div class="page-badge">Arquivo SQV-COD-104</div></div>
-        <div class="bestiary-controls" style="margin-bottom: 30px;">
-          <input class="bestiary-search" type="text" placeholder="Pesquisar termo no códice..." oninput="filterGlossary(this.value)">
-        </div>
-        <div class="docs-grid" id="glossary-grid"></div>
+        <div class="classif-banner confidential">Restrito</div>
+        <div class="page-header"><div class="page-header-left"><h2>Requisição de Arquivos</h2></div></div>
+        <div class="req-form"><div class="form-row"><label class="form-label">Justificativa</label><textarea class="form-textarea"></textarea></div></div>
       </div>
     </div>
 
@@ -761,506 +217,74 @@
         <aside class="lore-sidebar">
           <div class="sidebar-section">
             <span class="sidebar-cat">Fundamentos</span>
-            <a class="sidebar-link active" onclick="showSection('home',this)"><span class="sl-icon">🏛</span> Introdução</a>
-            <a class="sidebar-link" onclick="showSection('cosmologia',this)"><span class="sl-icon">🌌</span> Cosmologia</a>
-            <a class="sidebar-link" onclick="showSection('magia',this)"><span class="sl-icon">✨</span> A Magia</a>
+            <a class="sidebar-link active" onclick="showSection('home',this)">Introdução</a>
+            <a class="sidebar-link" onclick="showSection('cosmologia',this)">Cosmologia</a>
+            <a class="sidebar-link" onclick="showSection('magia',this)">A Magia</a>
           </div>
-          <div class="sidebar-divider"></div>
           <div class="sidebar-section">
             <span class="sidebar-cat">História</span>
-            <a class="sidebar-link" onclick="showSection('historia',this)"><span class="sl-icon">📜</span> Linha do Tempo</a>
-            <a class="sidebar-link" onclick="showSection('tratado',this)"><span class="sl-icon">⚖️</span> Tratado de Vhal'Torin</a>
+            <a class="sidebar-link" onclick="showSection('historia',this)">Linha do Tempo</a>
+            <a class="sidebar-link" onclick="showSection('tratado',this)">Tratado de Vhal'Torin</a>
           </div>
-          <div class="sidebar-divider"></div>
           <div class="sidebar-section">
             <span class="sidebar-cat">O Mundo</span>
-            <a class="sidebar-link" onclick="showSection('reinos',this)"><span class="sl-icon">🏰</span> Os Reinos</a>
-            <a class="sidebar-link" onclick="showSection('faccoes',this)"><span class="sl-icon">⚔️</span> Facções</a>
-            <a class="sidebar-link" onclick="showSection('igreja',this)"><span class="sl-icon">⛪</span> A Igreja</a>
-            <a class="sidebar-link" onclick="showSection('monstros',this)"><span class="sl-icon">🐉</span> Monstros & Ameaças</a>
-            <a class="sidebar-link" onclick="showSection('locais',this)"><span class="sl-icon">🗺</span> Locais Notáveis</a>
+            <a class="sidebar-link" onclick="showSection('reinos',this)">Os Reinos</a>
+            <a class="sidebar-link" onclick="showSection('faccoes',this)">Facções</a>
+            <a class="sidebar-link" onclick="showSection('igreja',this)">A Igreja</a>
+            <a class="sidebar-link" onclick="showSection('monstros',this)">Monstros & Ameaças</a>
+            <a class="sidebar-link" onclick="showSection('locais',this)">Locais Notáveis</a>
           </div>
-          <div class="sidebar-divider"></div>
           <div class="sidebar-section">
             <span class="sidebar-cat">Restrito</span>
-            <a class="sidebar-link" onclick="showSection('profecia',this)"><span class="sl-icon">🔮</span> Profecias <span class="sl-lock">🔒</span></a>
-            <a class="sidebar-link" onclick="showSection('segredos',this)"><span class="sl-icon">🕯</span> Segredos do Sínodo <span class="sl-lock">🔒</span></a>
+            <a class="sidebar-link" onclick="showSection('profecia',this)">Profecias 🔒</a>
+            <a class="sidebar-link" onclick="showSection('segredos',this)">Segredos do Sínodo 🔒</a>
           </div>
         </aside>
 
         <main class="lore-main">
-          
-          <div class="lore-section active" id="sec-home">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Biblioteca · Introdução</div>
-              <h2 class="sec-title">Bem-vindo à Biblioteca do Quinto Véu</h2>
-              <p class="sec-sub">Tudo que o mundo tem direito de saber — e nada além disso.</p>
-            </div>
-            <div class="art-body">
-              <p>Esta biblioteca reúne o conhecimento aprovado pelo <strong>Sínodo do Quinto Véu</strong> para consulta de agentes, estudiosos e representantes de reinos signatários. Alguns trechos permanecem censurados — protegidos por códigos de acesso conferidos a quem obteve autorização formal.</p>
-            </div>
-            <div class="lore-quote">
-              <p>"O conhecimento é uma faca. Pode alimentar. Pode matar. A diferença não está na faca — está em quem a segura."</p>
-              <cite>— Magistratus Eldren Soval, Primeiro Diretor do Observatório do Véu</cite>
-            </div>
-            <div class="lore-grid">
-              <div class="lore-card" onclick="showSection('cosmologia',null)">
-                <div class="lc-icon">🌌</div>
-                <div class="lc-title">Cosmologia</div>
-                <div class="lc-desc">As sete dimensões, a natureza do mundo e o que existe além da realidade visível.</div>
-              </div>
-              <div class="lore-card" onclick="showSection('magia',null)">
-                <div class="lc-icon">✨</div>
-                <div class="lc-title">A Magia</div>
-                <div class="lc-desc">O que é, como funciona, por que é proibida e o que acontece com quem a usa.</div>
-              </div>
-              <div class="lore-card" onclick="showSection('historia',null)">
-                <div class="lc-icon">📜</div>
-                <div class="lc-title">História</div>
-                <div class="lc-desc">A Grande Guerra, o Tratado de Vhal'Torin e mil anos de ordem frágil.</div>
-              </div>
-              <div class="lore-card" onclick="showSection('reinos',null)">
-                <div class="lc-icon">🏰</div>
-                <div class="lc-title">Os Reinos</div>
-                <div class="lc-desc">As grandes potências, suas culturas e suas relações com a magia.</div>
-              </div>
-              <div class="lore-card" onclick="showSection('faccoes',null)">
-                <div class="lc-icon">⚔️</div>
-                <div class="lc-title">Facções</div>
-                <div class="lc-desc">O Sínodo, a Igreja, os Custódios e as forças que moldam o mundo.</div>
-              </div>
-              <div class="lore-card" onclick="showSection('locais',null)">
-                <div class="lc-icon">🗺</div>
-                <div class="lc-title">Locais</div>
-                <div class="lc-desc">De Porto Varion às ruínas de Aethryon e além da Grande Muralha.</div>
-              </div>
-            </div>
-            <div class="lore-warn">
-              <div class="lore-warn-title">⚠ Aviso ao Leitor</div>
-              <p>Alguns trechos desta biblioteca foram classificados pelo Conclave. Suas ausências são intencionais. Se você acredita ter direito a um acesso específico, contate seu Supervisor de Vínculo com justificativa formal.</p>
-            </div>
+          <div class="lore-section active" id="sec-home"><div class="sec-header"><h2 class="sec-title">Bem-vindo à Biblioteca do Quinto Véu</h2></div><div class="art-body"><p>Esta biblioteca reúne o conhecimento aprovado pelo Sínodo.</p></div></div>
+          <div class="lore-section" id="sec-cosmologia"><div class="sec-header"><h2 class="sec-title">As Sete Dimensões</h2></div><div class="art-body"><p>O mundo não é feito apenas do que os olhos veem.</p></div>
+            <div class="censored-block" id="cens-cosmol-1"><div class="art-label">Pesquisa Avançada</div><div class="art-title">A Consciência da 5ª Dimensão</div><div class="censored-text">A 5ª Dimensão pode não ser um fenómeno passivo.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-cosmol-1','observatorio','A Consciência da 5ª Dimensão')">Inserir Código</button></div></div>
           </div>
-
-          <div class="lore-section" id="sec-cosmologia">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Fundamentos · Cosmologia</div>
-              <h2 class="sec-title">As Sete Dimensões</h2>
-              <p class="sec-sub">A estrutura da realidade segundo a doutrina do Sínodo e a fé da Igreja da Sétima Ascensão.</p>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">Cosmologia Fundamental</div>
-              <div class="art-title">A Estrutura do Universo</div>
-              <div class="art-body">
-                <p>O mundo não é feito apenas do que os olhos veem. Tanto a ciência do Sínodo quanto a teologia da Igreja convergem num ponto: existem <strong>sete dimensões</strong>, cada uma com natureza e função distintas.</p>
-                <p>As três primeiras dimensões formam o <strong>espaço físico</strong> — altura, largura, profundidade. Tudo o que você pode tocar existe nelas. A <strong>quarta dimensão é o tempo</strong>: invisível, implacável, impossível de manipular por meios comuns.</p>
-              </div>
-            </div>
-            <table class="dim-table">
-              <thead>
-                <tr><th>Dimensão</th><th>Nome</th><th>Natureza</th><th>Acesso</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>1ª – 3ª</td><td>O Mundo Físico</td><td>Espaço, matéria, existência</td><td>Universal</td></tr>
-                <tr><td>4ª</td><td>O Tempo</td><td>Fluxo, causa e consequência</td><td>Passivo — ninguém controla</td></tr>
-                <tr><td>5ª</td><td>O Véu / A Magia</td><td>Plasticidade da realidade</td><td>Restrito — poucos nascem capazes</td></tr>
-                <tr><td>6ª</td><td>A Prisão</td><td>Confinamento do mal</td><td>Fechada — ninguém deveria entrar</td></tr>
-                <tr><td>7ª</td><td>O Plano Divino</td><td>Reino de Deus, destino dos justos</td><td>Pós-morte — para quem merece</td></tr>
-              </tbody>
-            </table>
-            <div class="lore-article">
-              <div class="art-label">A Quinta Dimensão</div>
-              <div class="art-title">O Véu — A Dimensão da Magia</div>
-              <div class="art-body">
-                <p>A <strong>5ª Dimensão</strong> — chamada popularmente de "o Véu" — coexiste com o mundo físico de forma invisível à maioria. Poucas pessoas nascem com a capacidade cognitiva de percebê-la. Ainda menos conseguem interagir com ela de forma consciente.</p>
-                <p>O Sínodo define magia como: <em>"a capacidade de interpretar as estruturas da 5ª Dimensão e aplicá-las ao plano físico."</em> Não é invocação de energia. É leitura e reescrita da realidade.</p>
-                <p>O problema é que a realidade não gosta de ser reescrita.</p>
-              </div>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">A Sexta e Sétima Dimensões</div>
-              <div class="art-title">O Que Existe Além do Véu</div>
-              <div class="art-body">
-                <p>A <strong>6ª Dimensão</strong> é, segundo a Igreja da Sétima Ascensão, uma prisão. Ali foi confinado um servo de Deus que, com inveja da perfeição divina, tentou tomar as demais dimensões para si. Sua queda causou a perturbação que conhecemos como a instabilidade do Véu.</p>
-                <p>A <strong>7ª Dimensão</strong> é o destino dos justos após a morte — o Plano Divino, onde Deus reside desde que criou todas as dimensões. A Igreja acredita que Deus não habita o mundo físico, mas observa através das dimensões.</p>
-              </div>
-            </div>
-            <div class="censored-block" id="cens-cosmol-1">
-              <div class="art-label">Pesquisa Avançada — Observatório do Véu</div>
-              <div class="art-title">A Consciência da 5ª Dimensão</div>
-              <div class="censored-text">Pesquisas avançadas do Observatório do Véu sugerem que a 5ª Dimensão pode não ser um fenômeno passivo. Há evidências crescentes de que ela responde à interação humana — não como um reflexo, mas como uma reação intencional. Magistratus Orin Vel documentou que em regiões de alto uso mágico, a dimensão parece recuar. Como se não quisesse ser encontrada. Alguns membros do Conclave acreditam que a 5ª Dimensão é consciente. Que tem objetivos. Que está esperando algo.</div>
-              <div class="censored-unlock">
-                <span class="cens-icon">🔒</span>
-                <span class="cens-hint">Pesquisa Dimensional Nível IV — Requer código</span>
-                <button class="cens-btn" onclick="unlockCensored('cens-cosmol-1','observatorio','A Consciência da 5ª Dimensão')">Inserir Código</button>
-              </div>
-            </div>
+          <div class="lore-section" id="sec-magia"><div class="sec-header"><h2 class="sec-title">A Magia e o Véu</h2></div><div class="art-body"><p>A magia é uma capacidade cognitiva.</p></div>
+            <div class="censored-block" id="cens-magia-1"><div class="art-label">Pesquisa Interna</div><div class="art-title">O Declínio dos Praticantes</div><div class="censored-text">O número de praticantes caiu 47% ao ano.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-magia-1','conclave1044','O Declínio dos Praticantes')">Inserir Código</button></div></div>
           </div>
-
-          <div class="lore-section" id="sec-magia">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Fundamentos · A Magia</div>
-              <h2 class="sec-title">A Magia e o Véu</h2>
-              <p class="sec-sub">O que é, quem pode usar, e por que o mundo teme tanto.</p>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">Natureza da Magia</div>
-              <div class="art-title">Como a Magia Funciona</div>
-              <div class="art-body">
-                <p>Magia não é um dom sobrenatural nem uma força mística. É uma <strong>capacidade cognitiva</strong> — a habilidade de perceber a estrutura da 5ª Dimensão e manipulá-la de forma intencional.</p>
-                <p>Apenas algumas pessoas nascem com esse desenvolvimento cerebral. A maioria nunca perceberá a 5ª Dimensão de forma alguma — da mesma forma que a maioria nunca distinguirá alturas musicais com precisão absoluta. É uma capacidade, não um poder.</p>
-                <p>Ter a capacidade não é suficiente. É necessário <strong>anos de estudo</strong> para aprender a interpretar o que se percebe — e mais anos ainda para aprender a não enlouquecer no processo.</p>
-              </div>
-            </div>
-            <div class="lore-info">
-              <div class="lore-info-title">ℹ Nota do Sínodo</div>
-              <p>A crença popular de que "magia enlouquece" é uma simplificação. <strong>Magia sem treinamento enlouquece</strong>. É como entregar bisturis a alguém que nunca estudou medicina — o problema não é o instrumento.</p>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">Consequências do Uso</div>
-              <div class="art-title">O Que Acontece Quando Alguém Usa Magia</div>
-              <div class="art-body">
-                <p>Cada uso da magia cria uma <strong>abertura temporária</strong> entre o mundo físico e a 5ª Dimensão. Usos pequenos e controlados deixam aberturas mínimas — que se fecham naturalmente.</p>
-                <p>Usos excessivos ou não controlados deixam aberturas que <strong>não se fecham sozinhas</strong>. Dessas aberturas vêm os monstros — criaturas da 5ª Dimensão que atravessam para o plano físico, onde não deveriam estar.</p>
-                <p>Em casos extremos, a abertura pode ser permanente. Isso é o que aconteceu com Aethryon. Isso é o que é Vhal'Zarak.</p>
-              </div>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">A Lei</div>
-              <div class="art-title">Por Que a Magia É Proibida</div>
-              <div class="art-body">
-                <p>Há mil anos, reinos inteiros foram destruídos por magos que não sabiam — ou não se importavam — com o que estavam abrindo. A <strong>Grande Guerra do Véu</strong> foi a maior catástrofe da história humana.</p>
-                <p>O <strong>Tratado de Vhal'Torin</strong> foi a resposta. Todos os reinos signatários concordaram: magia só pode ser praticada por membros autorizados do Sínodo do Quinto Véu. Qualquer uso fora dessa estrutura é crime — punível com morte em vários reinos.</p>
-                <p>Não é crueldade. É memória.</p>
-              </div>
-            </div>
-            <div class="censored-block" id="cens-magia-1">
-              <div class="art-label">Pesquisa Interna — Observatório do Véu</div>
-              <div class="art-title">O Declínio dos Praticantes</div>
-              <div class="censored-text">Nos últimos 42 anos, o número de pessoas nascidas com capacidade dimensional suficiente caiu 31%. Nos últimos oito anos, essa queda acelerou para 47% ao ano. Há quatro hipóteses em debate interno. Três são científicas. A quarta — que a própria 5ª Dimensão está se retraindo voluntariamente — não é mencionada em documentos públicos. Se for verdade, o Sínodo entrará em colapso operacional em menos de três décadas.</div>
-              <div class="censored-unlock">
-                <span class="cens-icon">🔒</span>
-                <span class="cens-hint">Memorando Interno do Conclave — Acesso Nível ΔV</span>
-                <button class="cens-btn" onclick="unlockCensored('cens-magia-1','conclave1044','O Declínio dos Praticantes')">Inserir Código</button>
-              </div>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">A Resina Etérea</div>
-              <div class="art-title">A Droga do Véu</div>
-              <div class="art-body">
-                <p>Nos mercados negros das grandes cidades circula uma substância conhecida como <strong>Resina Etérea</strong> — um líquido escuro que pulsa levemente, como se respirasse. Seu efeito: amplificação temporária da percepção dimensional em pessoas sem capacidade natural.</p>
-                <p>Para quem nunca "viu" a 5ª Dimensão, é uma experiência avassaladora. Sensação de contato com algo imenso. Cultos a crescem ao redor dela, chamando-a de "comunhão" ou "revelação".</p>
-                <p>O que ela realmente faz é <strong>forçar uma abertura</strong> que o usuário não tem capacidade de controlar — e cada uso corrói um pouco mais a barreira entre dimensões. Dependência psíquica em três usos. Colapso perceptual permanente em doses altas.</p>
-              </div>
-            </div>
+          <div class="lore-section" id="sec-historia"><div class="sec-header"><h2 class="sec-title">História do Mundo</h2></div>
+            <div class="censored-block" id="cens-hist-1"><div class="art-label">Arquivo Confidencial</div><div class="art-title">Os Sobreviventes de Aethryon</div><div class="censored-text">Não foi uma explosão. Foi um desdobramento.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-hist-1','aethryon','Testemunhos de Aethryon')">Inserir Código</button></div></div>
           </div>
-
-          <div class="lore-section" id="sec-historia">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Acervo Histórico</div>
-              <h2 class="sec-title">História do Mundo</h2>
-              <p class="sec-sub">Da Grande Guerra aos dias atuais — mil anos de ordem construída sobre cinzas.</p>
-            </div>
-            <div class="timeline">
-              <div class="tl-item"><div class="tl-date">~1000 A.V.</div><div class="tl-dot" style="background:var(--red-seal);"></div><div class="tl-content"><div class="tl-title">A Grande Guerra do Véu</div><div class="tl-text">Conflito devastador causado pelo uso desenfreado da magia por várias facções simultaneamente. Destruiu civilizações inteiras. Causou o colapso de regiões que nunca se recuperaram. O pior da guerra foi o uso deliberado da 5ª Dimensão como arma — abrindo fissuras permanentes no tecido da realidade.</div></div></div>
-              <div class="tl-item"><div class="tl-date">~997 A.V.</div><div class="tl-dot" style="background:var(--red-seal);"></div><div class="tl-content"><div class="tl-title">A Queda de Aethryon</div><div class="tl-text">Durante a Guerra, a cidade de Aethryon foi palco da maior ruptura dimensional já registrada. O uso extremo da 5ª Dimensão colapsou a realidade local. A cidade ainda existe — mas o tempo ali não funciona normalmente. Hoje é tomada pela natureza e pelo horror.</div></div></div>
-              <div class="tl-item"><div class="tl-date">Ano 0</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">O Tratado de Vhal'Torin</div><div class="tl-text">Assinado pelos reinos sobreviventes, o Tratado de Vhal'Torin estabeleceu o marco zero do calendário atual (P.V. — Pós-Vhal'Torin). Criou o Sínodo do Quinto Véu como autoridade reguladora internacional da magia. Proibiu o uso independente de magia em todos os territórios signatários.</div></div></div>
-              <div class="tl-item"><div class="tl-date">Ano 1–800</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Os Séculos de Reconstrução</div><div class="tl-text">Gradual recomposição política, económica e demográfica. Surgimento dos reinos modernos. Expansão da Igreja da Sétima Ascensão. Primeiras tensões entre o Sínodo e a Igreja sobre o futuro da 5ª Dimensão.</div></div></div>
-              <div class="tl-item"><div class="tl-date">Ano 800–1000</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">A Era Industrial e os Primeiros Sinais</div><div class="tl-text">Início da industrialização nas cidades mais desenvolvidas. Surgimento da Liga Mercante como potência económica. Primeiros registos do aumento sutil de criaturas dimensionais em regiões consideradas estáveis. O Sínodo monitoriza em silêncio.</div></div></div>
-              <div class="tl-item"><div class="tl-date">Ano 1041–1043</div><div class="tl-dot" style="background:#7a3a9a;"></div><div class="tl-content"><div class="tl-title">Operação Véu Costurado</div><div class="tl-text">Desarticulação do maior culto dimensional registado em Porto Varion — o Culto do Olho Aberto. 34 detenções, apreensão de 112 frascos de Resina Etérea. A entidade por trás do culto foi selada no Observatório do Véu. O tráfico de Resina não parou.</div></div></div>
-              <div class="tl-item"><div class="tl-date">Ano 1044</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">Os Dias Atuais</div><div class="tl-text">O mundo parece estável. Mas quem observa de perto vê os sinais: criaturas dimensionais aparecendo em lugares onde não deveriam; a muralha de Khar-Duran a ceder; o Sínodo fechando reuniões do Conclave sem avisar; cultos surgindo mais rápido do que são desmantelados.</div></div></div>
-            </div>
-            <div class="censored-block" id="cens-hist-1">
-              <div class="art-label">Testemunhos Históricos — Arquivo Confidencial</div>
-              <div class="art-title">O Que os Sobreviventes de Aethryon Viram</div>
-              <div class="censored-text">Testemunho de Merewyn Ash, sobrevivente: "Não foi uma explosão. Explosões têm início e fim. Isso foi um desdobramento. O ar abriu-se como um tecido rasgado de dentro para fora. E o que havia do outro lado não era escuridão. Era outra coisa. Coisa que olhava de volta." — Uma criança de 9 anos, única sobrevivente do distrito leste, nunca conseguiu distinguir memória de perceção ativa. Até ao fim da vida, ela "via" a sua rua sempre a arder. O Sínodo não publicou estes registos por razões que os investigadores chamam de "estabilidade social". Há sete testemunhos completos no Arquivo CD-007.</div>
-              <div class="censored-unlock">
-                <span class="cens-icon">🔒</span>
-                <span class="cens-hint">Arquivo Confidencial CD-007 — Código necessário</span>
-                <button class="cens-btn" onclick="unlockCensored('cens-hist-1','aethryon','Testemunhos de Aethryon')">Inserir Código</button>
-              </div>
-            </div>
+          <div class="lore-section" id="sec-tratado"><div class="sec-header"><h2 class="sec-title">O Tratado de Vhal'Torin</h2></div></div>
+          <div class="lore-section" id="sec-reinos"><div class="sec-header"><h2 class="sec-title">Os Reinos do Mundo</h2></div>
+            <div class="censored-block" id="cens-aurethia"><div class="art-label">Inteligência Interna</div><div class="art-title">Câmaras Brancas</div><div class="censored-text">Instalações subterrâneas em Aurethia.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-aurethia','aurethia43','As Câmaras Brancas')">Inserir Código</button></div></div>
+            <div class="censored-block" id="cens-elfo"><div class="art-label">Relatório Diplomático</div><div class="art-title">O Declínio Élfico</div><div class="censored-text">A implicação para praticantes humanos é óbvia.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-elfo','thalmyrion','Palavras de Arkhavel')">Inserir Código</button></div></div>
           </div>
-
-          <div class="lore-section" id="sec-tratado">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Documentos Históricos</div>
-              <h2 class="sec-title">O Tratado de Vhal'Torin</h2>
-              <p class="sec-sub">O acordo que mantém a paz — ou o que resta dela.</p>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">O Tratado</div>
-              <div class="art-title">O Que é Vhal'Torin</div>
-              <div class="art-body">
-                <p>O <strong>Tratado de Vhal'Torin</strong> é o documento mais importante da história moderna — assinado no Ano Zero pelos reinos sobreviventes da Grande Guerra, criou o Sínodo do Quinto Véu como autoridade reguladora da magia no mundo.</p>
-                <p>O seu nome vem do local onde foi assinado: a cidade de Vhal'Torin, então capital neutral — hoje sede do que viria a ser Porto Varion. O tratado estabeleceu três coisas fundamentais:</p>
-              </div>
-            </div>
-            <div class="lore-grid">
-              <div class="lore-card"><div class="lc-icon">⚖️</div><div class="lc-title">Proibição Universal</div><div class="lc-desc">Nenhum indivíduo pode praticar ou estudar magia sem autorização expressa do Sínodo.</div></div>
-              <div class="lore-card"><div class="lc-icon">🏛</div><div class="lc-title">O Sínodo</div><div class="lc-desc">Criação de um órgão internacional com representantes de todos os reinos signatários.</div></div>
-              <div class="lore-card"><div class="lc-icon">🤝</div><div class="lc-title">Neutralidade</div><div class="lc-desc">Porto Varion declarada território neutro. Nenhum reino pode exercer força militar dentro dela.</div></div>
-            </div>
-            <div class="lore-warn">
-              <div class="lore-warn-title">⚠ O Que o Tratado Não Resolve</div>
-              <p>Vhal'Torin proíbe a prática. Não elimina a capacidade. Crianças continuam a nascer com perceção dimensional. Famílias continuam a esconder os filhos. O Sínodo continua a caçá-los — para treinar, dizem oficialmente. O que acontece quando não são encontrados pelo Sínodo, mas por outros, é o que mantém os Inquisidores ocupados.</p>
-            </div>
+          <div class="lore-section" id="sec-faccoes"><div class="sec-header"><h2 class="sec-title">As Forças que Movem o Mundo</h2></div>
+            <div class="censored-block" id="cens-sinodo-secreto"><div class="art-label">Conclave Interno</div><div class="art-title">O Que o Sínodo Esconde</div><div class="censored-text">O Sínodo debate o declínio demográfico e experiências ilegais.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-sinodo-secreto','conclave1044','Segredos do Conclave')">Inserir Código</button></div></div>
           </div>
-
-          <div class="lore-section" id="sec-reinos">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Geopolítica</div>
-              <h2 class="sec-title">Os Reinos do Mundo</h2>
-              <p class="sec-sub">As grandes potências, as suas identidades e a sua relação com a magia.</p>
-            </div>
-            <div class="kingdom-entry">
-              <div class="ke-header"><div class="ke-icon">🏛</div><div><div class="ke-title">Império de Aurethia</div><div class="ke-sub">"O império que salvou o mundo… e agora apodrece por dentro."</div></div></div>
-              <div class="ke-body"><div class="art-body"><p>A maior potência humana do mundo. Centro político e cultural. Um dos fundadores do Tratado de Vhal'Torin e pilar do Sínodo. Na aparência, é o guardião da ordem. Na realidade, é onde a ordem vai para morrer lentamente.</p><p>O Imperador existe. O Senado governa. A corrupção administra. A elite de Aurethia há muito aprendeu que as regras foram feitas para os outros — especialmente as regras sobre magia.</p></div><div style="margin-top:10px;"><span class="ke-tag">Grande Potência</span><span class="ke-tag info">Signatário Fundador</span><span class="ke-tag danger">Corrupção Sistémica</span><span class="ke-tag">Sede do Sínodo</span></div></div>
-            </div>
-            <div class="censored-block" id="cens-aurethia">
-              <div class="art-label">Inteligência Interna — Máximo Sigilo</div>
-              <div class="art-title">O Segredo das Câmaras Brancas</div>
-              <div class="censored-text">Em pelo menos três propriedades nobres de Aurethia, foram identificadas instalações subterrâneas onde a elite conduz pesquisa arcana não autorizada em humanos com potencial dimensional não desenvolvido. Entre 40 e 70 indivíduos mantidos simultaneamente. A maioria são crianças entre 6 e 14 anos, raptadas das classes baixas. Taxa de sobrevivência: aproximadamente 12%. O Conclave sabe. Por sete votos a dois: não confrontar Aurethia neste momento. As experiências continuam enquanto este texto é lido.</div>
-              <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Documento AI-088 — Máximo Sigilo — Código necessário</span><button class="cens-btn" onclick="unlockCensored('cens-aurethia','aurethia43','As Câmaras Brancas de Aurethia')">Inserir Código</button></div>
-            </div>
-            <div class="kingdom-entry">
-              <div class="ke-header"><div class="ke-icon">⛪</div><div><div class="ke-title">Domínio Eclesiástico de Lux Aeterna</div><div class="ke-sub">"Onde a luz protege… e vigia."</div></div></div>
-              <div class="ke-body"><div class="art-body"><p>Território soberano da Igreja da Sétima Ascensão. Não é um império — é um Estado sagrado. Atua como guardião da humanidade, protetor contra a magia e árbitro moral do mundo.</p><p>É também, paradoxalmente, um dos lugares mais seguros para criaturas não-humanas. A Igreja protege todo ser senciente — independente de raça ou origem. Cidades inteiras de halflings e outras raças marginalizadas existem sob proteção eclesiástica.</p><p>Possuem um exército extraordinariamente disciplinado e motivado. Muito perigoso. Muito fervoroso.</p></div><div style="margin-top:10px;"><span class="ke-tag gold">Estado Teocrático</span><span class="ke-tag info">Refúgio para Marginalizados</span><span class="ke-tag">Inquisição Ativa</span><span class="ke-tag danger">Tensão com o Sínodo</span></div></div>
-            </div>
-            <div class="kingdom-entry">
-              <div class="ke-header"><div class="ke-icon">⚔️</div><div><div class="ke-title">Pacto de Khar-Duran</div><div class="ke-sub">"Nós não vencemos a guerra. Nós continuamos a lutar."</div></div></div>
-              <div class="ke-body"><div class="art-body"><p>Aliança humano-anã forjada no fogo da Grande Guerra. Khar-Duran existe num propósito único: manter a <strong>Grande Muralha de Duran-Khal</strong>, a barreira de 847 quilómetros que separa o mundo civilizado da zona corrompida de Vhal'Zarak.</p><p>Os outros reinos respeitam-nos universalmente. Os outros reinos não os ajudam o suficiente. O General Rath Durak estimou que sem recursos adicionais, a muralha tem entre 15 e 40 anos de vida útil.</p></div><div style="margin-top:10px;"><span class="ke-tag danger">Fronteira de Guerra</span><span class="ke-tag">Aliança Humano-Anã</span><span class="ke-tag gold">Guardiões do Mundo</span><span class="ke-tag danger">Recursos Escassos</span></div></div>
-            </div>
-            <div class="kingdom-entry">
-              <div class="ke-header"><div class="ke-icon">💰</div><div><div class="ke-title">Liga Mercante de Nova Vária</div><div class="ke-sub">"O futuro não pede permissão."</div></div></div>
-              <div class="ke-body"><div class="art-body"><p>Federação de cidades-estado criada como defesa contra as grandes potências. Governada oficialmente por um Conselho dos Nove — na prática, por quem tem mais dinheiro. A Liga possui a única rede ferroviária do mundo, tornando-se economicamente indispensável.</p><p>Segue o Tratado publicamente. Pesquisa magia secretamente. Porque o futuro é um ativo, e eles entendem de ativos.</p></div><div style="margin-top:10px;"><span class="ke-tag info">Potência Industrial</span><span class="ke-tag gold">Rede Ferroviária Exclusiva</span><span class="ke-tag danger">Pesquisa Secreta</span><span class="ke-tag">Todos Dependem Deles</span></div></div>
-            </div>
-            <div class="kingdom-entry">
-              <div class="ke-header"><div class="ke-icon">🌲</div><div><div class="ke-title">Thal'Myrion — O Reino Velado</div><div class="ke-sub">"Nós compreendemos o que vocês temem… e pagamos o preço por isso."</div></div></div>
-              <div class="ke-body"><div class="art-body"><p>O antigo reino élfico. Isolados por escolha, guardiões de conhecimento que ninguém mais possui sobre a 5ª Dimensão. O seu território é instável — a própria floresta é tocada pela Dimensão, e caminhos mudam.</p><p>Governados pelo Eterno Arkhavel, que se mantém vivo através de meios que o próprio Sínodo considera preocupantes. O povo élfico está em <strong>declínio</strong> — nascimentos raros, alterações físicas, infertilidade crescente. Eles sabem porquê. Não querem falar sobre isso.</p></div><div style="margin-top:10px;"><span class="ke-tag danger">Declínio Populacional</span><span class="ke-tag info">Conhecimento Antigo</span><span class="ke-tag">Isolados</span><span class="ke-tag gold">Guardiões do Véu</span></div></div>
-            </div>
-            <div class="censored-block" id="cens-elfo">
-              <div class="art-label">Relatório Diplomático — Restrito</div>
-              <div class="art-title">O Que Arkhavel Disse</div>
-              <div class="censored-text">Durante a única missão diplomática bem-sucedida a Thal'Myrion (Ano 1038), o Eterno Arkhavel concedeu uma audiência. As suas palavras foram: "Nós somos o que acontece quando se olha para a 5ª Dimensão por tempo demais. Ela olha-nos de volta. E o olhar muda o que observa." Em três dias de caminhada, a delegação encontrou seis elfos. Em quarenta e dois dias, viram cinco crianças. A implicação para praticantes humanos com um século de treino é óbvia. O Conclave não respondeu ao relatório.</div>
-              <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Relatório TH-011 — Missão Diplomática — Código necessário</span><button class="cens-btn" onclick="unlockCensored('cens-elfo','thalmyrion','As Palavras de Arkhavel')">Inserir Código</button></div>
-            </div>
-            <div class="kingdom-entry">
-              <div class="ke-header"><div class="ke-icon">💀</div><div><div class="ke-title">Reino de Valtheris — Em Guerra Civil</div><div class="ke-sub">"Aqui, a guerra não começou… ela nunca terminou."</div></div></div>
-              <div class="ke-body"><div class="art-body"><p>Antigo reino humano próspero, rico em recursos naturais, destruído pela morte do rei sem herdeiros. Hoje é um território em colapso, com quatro facções em guerra total: <strong>Legalistas</strong> (a velha ordem), <strong>Revolucionários</strong> (o povo), <strong>Sinodistas</strong> (agentes do Sínodo) e <strong>Igrejistas</strong> (liderados por um orc carismático, não sancionado oficialmente pela Igreja).</p><p>Todos os outros reinos querem Valtheris. Ninguém quer admitir que quer Valtheris.</p></div><div style="margin-top:10px;"><span class="ke-tag danger">Guerra Civil Total</span><span class="ke-tag gold">Rico em Recursos</span><span class="ke-tag danger">Magia Ilegal Ativa</span><span class="ke-tag info">4 Facções em Conflito</span></div></div>
-            </div>
+          <div class="lore-section" id="sec-igreja"><div class="sec-header"><h2 class="sec-title">A Igreja da Sétima Ascensão</h2></div>
+            <div class="censored-block" id="cens-profecia-igreja"><div class="art-label">Análise Teológica</div><div class="art-title">A Profecia do Selador</div><div class="censored-text">A Igreja suprimiu a Versão IV da profecia.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-profecia-igreja','selador7','As Versões da Profecia')">Inserir Código</button></div></div>
           </div>
-
-          <div class="lore-section" id="sec-faccoes">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Facções e Organizações</div>
-              <h2 class="sec-title">As Forças que Movem o Mundo</h2>
-              <p class="sec-sub">O Sínodo, a Igreja, a Inquisição e os que operam nas sombras.</p>
-            </div>
-            <div class="faction-cards">
-              <div class="fcard"><div class="fcard-header"><div class="fcard-name">Sínodo do Quinto Véu</div><div class="fcard-motto">"Sob o Tratado, o Véu permanece fechado."</div></div><div class="fcard-body"><div class="fcard-item">Autoridade global da magia — policia, regula e estuda</div><div class="fcard-item">Membros indicados por reinos signatários</div><div class="fcard-item">Correntes internas: Ortodoxos, Progressistas, Corruptos</div><div class="fcard-item">Opera através de Agentes de Vínculo e Inquisidores Arcanos</div><div class="fcard-item">Nem sempre confiável — possui segredos próprios</div></div></div>
-              <div class="fcard"><div class="fcard-header"><div class="fcard-name">Igreja da Sétima Ascensão</div><div class="fcard-motto">"A luz protege. A luz julga."</div></div><div class="fcard-body"><div class="fcard-item">Religião mais difundida do mundo conhecido</div><div class="fcard-item">Vê a magia como violação da ordem divina</div><div class="fcard-item">Quer selar a 5ª Dimensão permanentemente</div><div class="fcard-item">Protege criaturas sencientes, incluindo não-humanos</div><div class="fcard-item">Tensão constante com o Sínodo — colaboração forçada</div></div></div>
-              <div class="fcard"><div class="fcard-header"><div class="fcard-name">Custódios da Purificação</div><div class="fcard-motto">"O fogo purifica o que a lei não alcança."</div></div><div class="fcard-body"><div class="fcard-item">Braço inquisitorial da Igreja</div><div class="fcard-item">Caçam magia ilegal, julgam hereges</div><div class="fcard-item">Legados da Chama lideram no campo</div><div class="fcard-item">A maioria acredita genuinamente no que faz</div><div class="fcard-item">Alguns fanáticos. Alguns cruéis. Raramente injustos.</div></div></div>
-              <div class="fcard"><div class="fcard-header" style="background:#3a1a3a;"><div class="fcard-name" style="color:#c080d0;">Cultos da 5ª Dimensão</div><div class="fcard-motto" style="color:rgba(192,128,208,.5);">"Eles chamam de comunhão."</div></div><div class="fcard-body"><div class="fcard-item">Grupos que veneram entidades dimensionais como deuses</div><div class="fcard-item">Essas entidades não são deuses — são criaturas da 5ª Dimensão</div><div class="fcard-item">Usam e distribuem Resina Etérea como sacramento</div><div class="fcard-item">Surgem mais rápido do que são desmantelados</div><div class="fcard-item">Parecem coordenados entre si — sem liderança visível</div></div></div>
-            </div>
-            <div class="censored-block" id="cens-sinodo-secreto">
-              <div class="art-label">Conclave Interno — Máximo Sigilo</div>
-              <div class="art-title">O Que o Sínodo Esconde</div>
-              <div class="censored-text">O Conclave realizou sessão fechada em 1044 P.V. onde foram discutidos: o declínio de praticantes (classificado como informação reservada), a decisão de não confrontar Aurethia pelas experiências nas Câmaras Brancas (sete votos a dois), e o relatório sobre a possível consciência da 5ª Dimensão (suprimido por unanimidade). Os Agentes de Vínculo são informados de que o declínio é "flutuação demográfica natural". Eles não são informados das outras decisões.</div>
-              <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Ata do Conclave CE-002 — Código necessário</span><button class="cens-btn" onclick="unlockCensored('cens-sinodo-secreto','conclave1044','Os Segredos do Conclave')">Inserir Código</button></div>
-            </div>
+          <div class="lore-section" id="sec-monstros"><div class="sec-header"><h2 class="sec-title">Monstros e Criaturas do Véu</h2></div></div>
+          <div class="lore-section" id="sec-locais"><div class="sec-header"><h2 class="sec-title">Locais Notáveis</h2></div>
+            <div class="censored-block" id="cens-nexus"><div class="art-label">Expedição</div><div class="art-title">O Nexus Umbral</div><div class="censored-text">No centro de Vhal'Zarak há uma presença consciente.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-nexus','nexusumbral','O Nexus Umbral')">Inserir Código</button></div></div>
           </div>
-
-          <div class="lore-section" id="sec-igreja">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Religião e Fé</div>
-              <h2 class="sec-title">A Igreja da Sétima Ascensão</h2>
-              <p class="sec-sub">A fé que moldou o mundo — e quer mudar o que existe além dele.</p>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">Doutrina Central</div>
-              <div class="art-title">O Que a Igreja Acredita</div>
-              <div class="art-body">
-                <p>A Igreja da Sétima Ascensão ensina que existe um único Deus verdadeiro — o criador de todas as dimensões. Ele não habita o mundo físico, mas reside na <strong>7ª Dimensão</strong>, de onde criou tudo o que existe.</p>
-                <p>Após a morte, os justos ascendem à 7ª Dimensão. Os que praticaram o mal ficam presos na <strong>6ª Dimensão</strong> — a prisão, onde também está o Servo Caído, o ser que tentou roubar as dimensões para si e causou a perturbação original da magia no mundo.</p>
-                <p>A magia, portanto, não é uma habilidade humana natural. É um vazamento causado pela rutura que o Servo Caído provocou. Usá-la é tocar numa ferida aberta.</p>
-              </div>
-            </div>
-            <div class="lore-quote">
-              <p>"Virá aquele que, nascido sob o signo do Sétimo Véu, selará a passagem entre o mundo dos vivos e a dimensão proibida."</p>
-              <cite>— A Profecia do Selador, Texto Canónico da Igreja</cite>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">Hierarquia</div>
-              <div class="art-title">Estrutura da Igreja</div>
-              <div class="art-body">
-                <p>No topo está o <strong>Sumo Ascendente</strong> — líder espiritual e político do Domínio de Lux Aeterna. Abaixo dele, os <strong>Altos Prelados</strong> definem doutrina. Os <strong>Sacerdotes</strong> servem as congregações. Os <strong>Legados da Chama</strong> comandam a Inquisição no terreno.</p>
-                <p>Os <strong>Custódios da Purificação</strong> — a Inquisição — operam como braço executivo em todos os reinos onde a Igreja tem presença, independentemente da jurisdição do Sínodo.</p>
-              </div>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">Paradoxo Central</div>
-              <div class="art-title">A Igreja Estuda o Que Condena</div>
-              <div class="art-body">
-                <p>Há uma tensão doutrinária nunca completamente resolvida: a Igreja condena o uso da magia como violação divina, mas <strong>estuda a magia ativamente</strong> — para entender como selá-la, para reconhecer os seus efeitos, para caçar os que a usam.</p>
-                <p>Internamente, há dois campos: os <strong>Tradicionalistas</strong>, que querem eliminar toda a magia imediatamente, e os <strong>Reformistas</strong>, que argumentam que a magia poderia ser uma ferramenta divina se usada corretamente. Este debate existe há séculos. Não está próximo de resolução.</p>
-              </div>
-            </div>
-            <div class="censored-block" id="cens-profecia-igreja">
-              <div class="art-label">Análise Teológica — Confidencial</div>
-              <div class="art-title">As Quatro Versões da Profecia do Selador</div>
-              <div class="censored-text">O texto canónico é apenas uma de quatro versões conhecidas. A Versão II, do Manuscrito de Lux Aeterna, acrescenta: "...selará a passagem — não pelo poder, mas pela ausência dele. E o fechamento não será vitória. Será luto." A Versão III, fragmento de Aethryon: "...virá de fora das casas de saber... não reconhecido pelos guardiões..." A Versão IV, suprimida pela hierarquia: "O Selador não fechará o Quinto Véu porque é justo. Fechará porque não terá escolha. E quando o véu se fechar, aquilo que está do outro lado ficará connosco — porque já terá cruzado." A Igreja suprimiu a Versão IV. O Sínodo arquivou a análise comparativa como Confidencial.</div>
-              <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Documento IG-019 — Análise Teológica — Código necessário</span><button class="cens-btn" onclick="unlockCensored('cens-profecia-igreja','selador7','As Versões da Profecia')">Inserir Código</button></div>
-            </div>
+          <div class="lore-section" id="sec-profecia"><div class="sec-header"><h2 class="sec-title">Profecias e Textos Sagrados</h2></div>
+            <div class="censored-block" id="cens-profecia-full"><div class="art-label">Análise Comparativa</div><div class="art-title">As Versões Suprimidas</div><div class="censored-text">O Selador não é um herói. É um instrumento.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-profecia-full','selador7','Versões Suprimidas')">Inserir Código</button></div></div>
           </div>
-
-          <div class="lore-section" id="sec-monstros">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Ameaças Dimensionais</div>
-              <h2 class="sec-title">Monstros e Criaturas do Véu</h2>
-              <p class="sec-sub">De onde vêm, o que são e como reconhecê-los.</p>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">Origem</div>
-              <div class="art-title">Por Que Existem Monstros</div>
-              <div class="art-body">
-                <p>Os monstros não evoluíram no mundo físico. Eles <strong>atravessaram</strong> para cá. São criaturas nativas da 5ª Dimensão que chegaram ao plano físico através de fissuras abertas por uso excessivo ou ilegal de magia.</p>
-                <p>Uma vez no mundo físico, algumas criaturas adaptam-se e reproduzem-se. Outras mantêm características impossíveis — comportamentos que violam leis naturais, capacidades que não deveriam existir.</p>
-                <p>Nas regiões controladas, são raras — caçadas, afugentadas, mantidas afastadas. Nas regiões onde a magia ilegal circula, proliferam. Em Vhal'Zarak, são a norma.</p>
-              </div>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">Senciência</div>
-              <div class="art-title">Nem Todo Monstro é uma Besta</div>
-              <div class="art-body">
-                <p>Este é o ponto mais delicado da doutrina dimensional: <strong>algumas criaturas da 5ª Dimensão são sencientes</strong>. Pensam. Comunicam. Têm objetivos.</p>
-                <p>A Igreja protege-as — todo ser senciente é criação de Deus. O Sínodo estuda-as. Khar-Duran mata-as sem distinção, por necessidade. Isso cria conflitos permanentes entre as três instituições.</p>
-                <p>As criaturas que a população chama de "deuses menores" ou "espíritos" são entidades sencientes de alta capacidade dimensional — <em>não são deuses</em>. São poderosas, antigas, e frequentemente mentem sobre o que são.</p>
-              </div>
-            </div>
-            <div class="lore-warn">
-              <div class="lore-warn-title">⚠ Aviso Operacional</div>
-              <p>Se uma criatura dimensional afirmar ser um deus, oferecer poder ou conhecimento em troca de algo, ou clamar ter mensagens divinas — trate como Entidade Classe III ou superior. Não negocie. Documente. Reporte ao Observatório do Véu.</p>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">Criaturas Notáveis</div>
-              <div class="art-title">O Que Já Foi Documentado</div>
-              <div class="art-body">
-                <p>O <strong>Sussurrante</strong> — humanoide sem rosto que ataca cognitivamente, não fisicamente. Causa memórias falsas. Possivelmente senciente.</p>
-                <p>O <strong>Recordador</strong> — parece exatamente uma pessoa conhecida pelo observador. Extremamente difícil de identificar. Não projeta sombra corretamente. Não se lembra de eventos do dia anterior.</p>
-                <p>O <strong>Eco de Aethryon</strong> — formado por loop temporal residual da cidade destruída. Repete eternamente os últimos momentos da sua vida. Pode ter surgido de um sobrevivente em colapso perceptual total.</p>
-                <p>O <strong>Fragmento de Vardhal</strong> — o mais perigoso documentado. Um fragmento da entidade selada no Observatório do Véu. Lê memórias pelo contacto visual. Altamente inteligente. Não tente comunicação.</p>
-              </div>
-            </div>
+          <div class="lore-section" id="sec-segredos"><div class="sec-header"><h2 class="sec-title">Segredos do Sínodo</h2></div>
+            <div class="censored-block" id="cens-seg-1"><div class="art-label">Conclave</div><div class="art-title">A Decisão Sobre Aurethia</div><div class="censored-text">Por sete votos a dois, os experimentos continuam.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-seg-1','conclave1044','Decisão Aurethia')">Inserir Código</button></div></div>
+            <div class="censored-block" id="cens-seg-2"><div class="art-label">Observatório do Véu</div><div class="art-title">Vardhal</div><div class="censored-text">O Vidente Eterno está selado no Nível 3.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-seg-2','olhoaberto','Vardhal')">Inserir Código</button></div></div>
+            <div class="censored-block" id="cens-seg-3"><div class="art-label">Khar-Duran</div><div class="art-title">A Muralha</div><div class="censored-text">Estimativa de vida útil: 15 a 40 anos.</div><div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-seg-3','muralha44','O Prazo da Muralha')">Inserir Código</button></div></div>
           </div>
-
-          <div class="lore-section" id="sec-locais">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Geografia e Locais</div>
-              <h2 class="sec-title">Locais Notáveis do Mundo</h2>
-              <p class="sec-sub">Os lugares que definem a história — e alguns que a desfizeram.</p>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">A Cidade do Sínodo</div>
-              <div class="art-title">Porto Varion</div>
-              <div class="art-body">
-                <p>Cidade-estado independente, sede do Sínodo do Quinto Véu. Construída no local onde o Tratado de Vhal'Torin foi assinado há mil anos. Território neutro — nenhum reino pode exercer força militar dentro dos seus limites.</p>
-                <p>Porto Varion é o maior nó político e intelectual do mundo. Todos precisam dela. Ninguém confia nela. Os seus distritos vão do majestoso Alto Sínodo à sombria Baixa Varion, passando pelo misterioso <strong>Bairro do Véu</strong> — onde a realidade é levemente mais... flexível.</p>
-                <p>Há um detalhe que poucos conhecem: Porto Varion foi construída sobre um <strong>ponto de fragilidade dimensional</strong>. Isso torna as pesquisas mais eficazes. Também as torna mais perigosas.</p>
-              </div>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">A Ruína</div>
-              <div class="art-title">Aethryon — A Pompeia da Magia</div>
-              <div class="art-body">
-                <p>Há mil anos, Aethryon era uma das maiores cidades do mundo. Hoje é uma advertência.</p>
-                <p>Durante a Grande Guerra, magos no alto da sua torre maior romperam os limites da 5ª Dimensão de forma irrecuperável. A realidade colapsou. O tempo distorceu. A cidade foi <strong>congelada em ruína viva</strong> — não destruída, mas capturada num estado impossível.</p>
-                <p>Hoje, coberta de natureza, Aethryon ainda existe — e ainda acontece. Há áreas onde loops temporais repetem os momentos da batalha em ciclo eterno. Há criaturas que foram pessoas. Há lugares onde a gravidade mudou de opinião e nunca voltou atrás.</p>
-              </div>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">Além da Muralha</div>
-              <div class="art-title">Vhal'Zarak — A Cicatriz do Mundo</div>
-              <div class="art-body">
-                <p>Quando a Grande Guerra terminou, ficou uma ferida. Vhal'Zarak é o território além da Grande Muralha de Duran-Khal — o que restou do reino que tentou dominar completamente a 5ª Dimensão.</p>
-                <p>Ali, duas realidades coexistem em conflito permanente. As leis físicas não são confiáveis. O tempo é desonesto. Os monstros são a norma. E no centro de tudo, no <strong>Nexus Umbral</strong> — onde a rutura começou — há algo que nenhuma expedição foi capaz de descrever adequadamente.</p>
-                <p>A única expedição que chegou ao Nexus e retornou (de oito membros, três sobreviveram) produziu o documento mais perturbador dos arquivos do Sínodo.</p>
-              </div>
-            </div>
-            <div class="censored-block" id="cens-nexus">
-              <div class="art-label">Expedição ao Nexus Umbral — Máximo Sigilo</div>
-              <div class="art-title">O Que Há no Centro de Vhal'Zarak</div>
-              <div class="censored-text">Magister Aldric Yuno, sobrevivente: "No centro, havia algo. Não vou chamar de criatura porque isso implica forma, e forma implica limite. Havia... presença. Ela sabia que estávamos lá há muito tempo antes de chegarmos. E estava esperando. Não com paciência. Com certeza." Os cinco que não voltaram não foram atacados. Caminharam em direção ao centro. Um por um. Como se se tivessem lembrado de um compromisso esquecido. A recomendação do relatório é clara: "O perigo não é a morte. É a incorporação." O Conclave arquivou como Máximo Sigilo. Nenhuma expedição adicional foi autorizada. Isso não impediu tentativas não-oficiais.</div>
-              <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Relatório VZ-003 — Máximo Sigilo — Código necessário</span><button class="cens-btn" onclick="unlockCensored('cens-nexus','nexusumbral','O Nexus Umbral')">Inserir Código</button></div>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">A Barreira</div>
-              <div class="art-title">A Grande Muralha de Duran-Khal</div>
-              <div class="art-body">
-                <p>847 quilómetros de pedra, aço e determinação humano-anã. A Muralha de Duran-Khal é a única razão pela qual o mundo civilizado não está sob influência direta de Vhal'Zarak.</p>
-                <p>31% das secções apresentam comprometimento estrutural. 8% apresentam comprometimento <em>dimensional</em> — paredes onde a 5ª Dimensão começa a sangrar para o lado de cá. Aurethia atrasou pagamentos pelo quinto ano consecutivo. A Igreja enviou orações.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="lore-section" id="sec-profecia">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Restrito · Teologia e Profecia</div>
-              <h2 class="sec-title">Profecias e Textos Sagrados</h2>
-              <p class="sec-sub">O que foi prometido — e o que isso pode significar.</p>
-            </div>
-            <div class="lore-warn">
-              <div class="lore-warn-title">⚠ Aviso de Classificação</div>
-              <p>Esta secção contém análises de textos proféticos classificados. Trechos de maior sensibilidade permanecem protegidos por código de acesso. A interpretação não-autorizada de profecias religiosas constitui violação do Acordo de Cooperação entre o Sínodo e a Igreja.</p>
-            </div>
-            <div class="lore-article">
-              <div class="art-label">A Profecia Central</div>
-              <div class="art-title">O Selador do Quinto Véu</div>
-              <div class="art-body">
-                <p>A profecia mais importante da Igreja — e a mais debatida — fala de um indivíduo que virá selar a 5ª Dimensão, encerrando o vazamento que causa monstros, instabilidade e magia descontrolada.</p>
-                <p>Para a Igreja, isso seria a redenção do mundo — o cumprimento da promessa de Deus. Para parte do Sínodo, seria o fim da magia como a conhecemos — e o fim do próprio Sínodo.</p>
-                <p>O texto canónico diz: <em>"Virá aquele que, nascido sob o signo do Sétimo Véu, selará a passagem entre o mundo dos vivos e a dimensão proibida."</em></p>
-                <p>O que o texto canónico <strong>não</strong> diz é o que outras versões da profecia contêm.</p>
-              </div>
-            </div>
-            <div class="censored-block" id="cens-profecia-full">
-              <div class="art-label">Análise Comparativa — Documento IG-019</div>
-              <div class="art-title">As Versões Suprimidas da Profecia</div>
-              <div class="censored-text">Versão II — Manuscrito de Lux Aeterna: "...selará a passagem — não pelo poder, mas pela ausência dele. E o fechamento não será vitória. Será luto." // Versão III — Fragmento de Aethryon: "...virá de fora das casas de saber... [ilegível] ... não reconhecido pelos guardiões..." // Versão IV — Suprimida pela Igreja: "O Selador não fechará o Quinto Véu porque é justo. Fechará porque não terá escolha. E quando o véu se fechar, aquilo que está do outro lado ficará connosco — porque já terá cruzado." A Dra. Corin Vael concluiu: "As quatro versões podem todas ser verdadeiras. Se forem, o Selador não é um herói. É um instrumento. E instrumentos não escolhem os seus fins."</div>
-              <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Análise IG-019 — Confidencial — Código necessário</span><button class="cens-btn" onclick="unlockCensored('cens-profecia-full','selador7','As Versões Suprimidas')">Inserir Código</button></div>
-            </div>
-          </div>
-
-          <div class="lore-section" id="sec-segredos">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Máximo Sigilo · Acervo Interno</div>
-              <h2 class="sec-title">Segredos do Sínodo</h2>
-              <p class="sec-sub">O que o Conclave sabe e não diz.</p>
-            </div>
-            <div class="lore-warn">
-              <div class="lore-warn-title">⚠ Classificação Máxima</div>
-              <p>Esta secção é composta integralmente de trechos classificados. Todos os blocos abaixo requerem código de acesso individual. A tentativa de acesso não autorizado é registada.</p>
-            </div>
-            <div class="censored-block" id="cens-seg-1">
-              <div class="art-label">Conclave — Sessão Fechada 1044</div>
-              <div class="art-title">A Decisão Sobre Aurethia</div>
-              <div class="censored-text">Por sete votos a dois, o Conclave decidiu não confrontar Aurethia sobre as Câmaras Brancas. As experiências continuam. Os agentes de campo não serão informados. A justificativa: confrontar Aurethia agora poderia desestabilizar o Tratado de Vhal'Torin inteiro. A justificativa real: três dos sete que votaram a favor têm conexões financeiras com nobres de Aurethia documentadas pelo Departamento de Inteligência.</div>
-              <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Ata CE-002 — Máximo Sigilo</span><button class="cens-btn" onclick="unlockCensored('cens-seg-1','conclave1044','A Decisão Sobre Aurethia')">Inserir Código</button></div>
-            </div>
-            <div class="censored-block" id="cens-seg-2">
-              <div class="art-label">Observatório do Véu — Arquivo Interno</div>
-              <div class="art-title">Vardhal — O Que Está Selado Abaixo</div>
-              <div class="censored-text">A entidade Vardhal, o Vidente Eterno, foi capturada durante a Operação Véu Costurado (1041-1043). Está selada em contenção de Nível 3 no subsolo do Observatório do Véu. Não tente comunicação. Não tente negociação. Não informe a sua localização a membros da Igreja. Vardhal não é mais perigosa do que quando estava livre — mas está em melhor posição. O terceiro Guardião do Véu do subsolo não responde há 40 anos. Ninguém foi verificar.</div>
-              <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Arquivo RI-014 — Confidencial</span><button class="cens-btn" onclick="unlockCensored('cens-seg-2','olhoaberto','Vardhal — O Vidente Eterno')">Inserir Código</button></div>
-            </div>
-            <div class="censored-block" id="cens-seg-3">
-              <div class="art-label">Khar-Duran — Avaliação Militar</div>
-              <div class="art-title">Quanto Tempo Resta à Muralha</div>
-              <div class="censored-text">O General Rath Durak entregou avaliação formal ao Sínodo em 1044: sem recursos adicionais imediatos, a Muralha de Duran-Khal tem entre 15 e 40 anos. Com os repasses atuais, está mais próximo de 15. Quando cair, o Sínodo estima que Porto Varion seria classificada como Zona de Realidade Instável em cinco anos. O Conclave arquivou a avaliação como Restrito. Não foi comunicada aos reinos signatários. Não foi comunicada aos Agentes de Vínculo.</div>
-              <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Relatório KD-005 — Restrito</span><button class="cens-btn" onclick="unlockCensored('cens-seg-3','muralha44','O Prazo da Muralha')">Inserir Código</button></div>
-            </div>
-          </div>
-
         </main>
+      </div>
+    </div>
+
+    <div class="page" id="page-glossary">
+      <div class="page-inner">
+        <div class="classif-banner restricted">Acervo de Conhecimento</div>
+        <div class="page-header"><div class="page-header-left"><h2>Codex de Lore</h2></div></div>
+        <div class="bestiary-controls"><input class="bestiary-search" type="text" placeholder="Pesquisar termo no códice..." oninput="filterGlossary(this.value)"></div>
+        <div class="docs-grid" id="glossary-grid"></div>
       </div>
     </div>
 
