@@ -1155,97 +1155,15 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
       </div>
     </div>
 
-<div class="page" id="page-uniformes">
-  <div class="page-inner">
-    <div class="classif-banner restricted">Classificação: Uso Interno — Departamento de Intendência</div>
-    <div class="page-header">
-      <div class="page-header-left">
-        <h2>Equipamento e Insígnias</h2>
-        <p>Padrão oficial de vestimenta para Agentes de Vínculo e Investigadores do Véu.</p>
-      </div>
-      <div class="page-badge">Ref. INT-04</div>
-    </div>
-    <div class="uniform-container">
-      <img src="insignias_uniforme_sinodo.svg" alt="Diagrama de Uniformes e Insígnias do Sínodo do Quinto Véu">
-    </div>
-  </div>
-</div> ```
-
-### 2. Corrigindo as Facções (Evitando o segundo erro)
-No arquivo que você enviou, a parte das **Facções** (dentro da Biblioteca) também estava com tags abertas. Localize a `<div class="lore-section" id="sec-faccoes">` e garanta que o final dela esteja assim:
-
-```html
-    <div class="fcard">
-        <div class="fcard-header" style="background:#000;"><div class="fcard-name" style="color:var(--gold)">A Ordem dos Sem-Rosto</div><div class="fcard-motto">"Ninguém nos Vê, Todos nos Sentem."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Mito ou Realidade?: Suposta rede de espiões imunes a detecção mágica.</div>
-            <div class="fcard-item">Instrução do Sínodo: Tratar qualquer falha inexplicável de segurança como ação desta facção.</div>
-        </div>
-    </div>
-  </div> </div> ```
-
-### 3. Ajuste nos Links do Drive (Aba Missões)
-Para garantir que a aba de Missões (`page-lore`) não fique em branco, use este HTML simplificado e funcional:
-
-```html
-<div class="page" id="page-lore">
-  <div class="page-inner">
-    <div class="classif-banner confidential">Classificação: Confidencial — Acervo Histórico do Sínodo</div>
-    <div class="page-header">
-      <div class="page-header-left">
-        <h2>Missões Expedidas e Tratados</h2>
-        <p>Documentação diplomática e registros históricos.</p>
-      </div>
-    </div>
-    <div class="file-list">
-      <div class="file-item">
-        <div class="file-info"><div class="file-name">O Tratado de Vhal'Torin (Original)</div></div>
-        <button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1bRumBGBy_4b4qaUeQ84C6k4GAwg6P2Yb/edit', '_blank')">Abrir</button>
-      </div>
-      <div class="file-item">
-        <div class="file-info"><div class="file-name">Posicionamento: A Igreja da Sétima Ascensão</div></div>
-        <button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1M7uBpBceAy-bdpQTjBkQhKqkxKyqDwzk/edit?usp=drive_link', '_blank')">Abrir</button>
-      </div>
-    </div>
-  </div>
-</div>
-    
-    <div class="file-list">
-      <div class="file-item">
-        <div class="file-icon" style="background: var(--gold-dim);"><span>DOCX</span></div>
-        <div class="file-info">
-          <div class="file-name">O Tratado de Vhal'Torin (Original)</div>
-          <div class="file-meta">Documento Fundador · Registro Diplomático 00-A</div>
-        </div>
-        <div class="file-actions">
-          <button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1bRumBGBy_4b4qaUeQ84C6k4GAwg6P2Yb/edit', '_blank')">Abrir Documento</button>
-        </div>
-      </div>
-
-      <div class="file-item">
-        <div class="file-icon" style="background: #4a5d4a;"><span>DOCX</span></div>
-        <div class="file-info">
-          <div class="file-name">Posicionamento: A Igreja da Sétima Ascensão</div>
-          <div class="file-meta">Análise do Conclave · Relatório Secreto de Relações</div>
-        </div>
-        <div class="file-actions">
-          <button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1M7uBpBceAy-bdpQTjBkQhKqkxKyqDwzk/edit?usp=drive_link', '_blank')">Abrir Documento</button>
-        </div>
-      </div>
-
-      <div class="file-item">
-        <div class="file-icon"><span>DOCX</span></div>
-        <div class="file-info">
-          <div class="file-name">Investigação de Problemas Portuários: Baixa Prioridade</div>
-          <div class="file-meta">Acesso Direto · Relatório de Campo</div>
-        </div>
-        <div class="file-actions">
-          <button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1sGdYz1Dk2ljBpNWNswGVc4SjSarz_VDb/edit?usp=drive_link','_blank')">Abrir no Drive</button>
+    <div class="page" id="page-lore">
+      <div class="page-inner">
+        <div class="classif-banner confidential">Classificação: Confidencial — Acervo Histórico do Sínodo</div>
+        <div class="page-header"><div class="page-header-left"><h2>Missões Expedidas</h2><p>Tratados, registros históricos e pesquisas dimensionais</p></div><div class="page-badge">Acervo Interno</div></div>
+        <div class="file-list">
+          <div class="file-item"><div class="file-icon"><span>DOCX</span></div><div class="file-info"><div class="file-name">Investigação de Problemas Portuários: Baixa Prioridade</div><div class="file-meta">Acesso Direto · Google Drive</div></div><div class="file-actions"><button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1sGdYz1Dk2ljBpNWNswGVc4SjSarz_VDb/edit?usp=drive_link','_blank')">Abrir no Drive</button></div></div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
     <div class="page" id="page-classified">
       <div class="page-inner">
@@ -1283,21 +1201,22 @@ Para garantir que a aba de Missões (`page-lore`) não fique em branco, use este
       </div>
     </div>
 
-<div class="page" id="page-uniformes">
-  <div class="page-inner">
-    <div class="classif-banner restricted">Classificação: Uso Interno — Departamento de Intendência</div>
-    <div class="page-header">
-      <div class="page-header-left">
-        <h2>Equipamento e Insígnias</h2>
-        <p>Padrão oficial de vestimenta para Agentes de Vínculo e Investigadores do Véu.</p>
+    <div class="page" id="page-uniformes">
+      <div class="page-inner">
+        <div class="classif-banner restricted">Classificação: Uso Interno — Departamento de Intendência</div>
+        <div class="page-header">
+          <div class="page-header-left">
+            <h2>Equipamento e Insígnias</h2>
+            <p>Padrão oficial de vestimenta para Agentes de Vínculo e Investigadores do Véu.</p>
+          </div>
+          <div class="page-badge">Ref. INT-04</div>
+        </div>
+        <div class="uniform-container">
+          <img src="insignias_uniforme_sinodo.svg" alt="Diagrama de Uniformes e Insígnias do Sínodo do Quinto Véu">
+        </div>
       </div>
-      <div class="page-badge">Ref. INT-04</div>
     </div>
-    <div class="uniform-container">
-      <img src="insignias_uniforme_sinodo.svg" alt="Diagrama de Uniformes e Insígnias do Sínodo do Quinto Véu">
-    </div>
-  </div>
-</div>
+
 
 
     <div class="page" id="page-requisition">
@@ -1374,8 +1293,7 @@ Para garantir que a aba de Missões (`page-lore`) não fique em branco, use este
           <div class="sidebar-divider"></div>
           <div class="sidebar-section">
             <span class="sidebar-cat">O Mundo</span>
-            <a class="sidebar-link" id="link-reinos" onclick="tentarAcessoReinos(this)"><span class="sl-icon">🏰</span> Os Reinos <span class="sl-lock">🔒</span>
-</a>
+            <a class="sidebar-link" onclick="showSection('reinos',this)"><span class="sl-icon">🏰</span> Os Reinos</a>
             <a class="sidebar-link" onclick="showSection('faccoes',this)"><span class="sl-icon">⚔️</span> Facções</a>
             <a class="sidebar-link" onclick="showSection('igreja',this)"><span class="sl-icon">⛪</span> A Igreja</a>
             <a class="sidebar-link" onclick="showSection('monstros',this)"><span class="sl-icon">🐉</span> Monstros & Ameaças</a>
@@ -1607,42 +1525,49 @@ Para garantir que a aba de Missões (`page-lore`) não fique em branco, use este
             </div>
           </div>
 
-<div class="lore-section" id="sec-reinos">
-    <div id="reinos-bloqueio-total" style="padding: 60px 40px; text-align: center; border: 1px dashed var(--gold-dim); background: rgba(0,0,0,0.03); border-radius: 4px; margin-bottom: 20px;">
-        <div style="font-size: 50px; margin-bottom: 20px;">🔒</div>
-        <h2 style="font-family: 'Cinzel', serif; color: var(--ink); margin-bottom: 10px;">Arquivo Geopolítico Restrito</h2>
-        <p style="font-family: 'Crimson Text', serif; font-style: italic; color: var(--text-dim); margin-bottom: 25px; max-width: 500px; margin-left: auto; margin-right: auto;">
-            O acesso aos registros detalhados de Aurethia, Lux Aeterna e demais nações do Tratado requer autorização de Nível III ou superior.
-        </p>
-        <button class="cens-btn" style="padding: 12px 24px; font-size: 10px;" onclick="solicitarSenhaReinos()">Inserir Código de Autorização</button>
-    </div>
-
-    <div id="reinos-conteudo-real" style="display: none;">
-        <div class="sec-header">
-            <div class="sec-eyebrow">Geopolítica</div>
-            <h2 class="sec-title">Os Reinos do Mundo</h2>
-            <p class="sec-sub">As grandes potências e suas relações com o Sínodo.</p>
-        </div>
-
-        <div class="kingdom-entry">
-            <div class="ke-header"><div class="ke-icon">🏛</div><div><div class="ke-title">Império de Aurethia</div><div class="ke-sub">"O império que salvou o mundo… e agora apodrece por dentro."</div></div></div>
-            <div class="ke-body"><div class="art-body"><p>A maior potência humana do mundo. Centro político e cultural. Um dos fundadores do Tratado de Vhal'Torin e pilar do Sínodo.</p></div>
-            <div style="margin-top:10px;"><span class="ke-tag">Grande Potência</span><span class="ke-tag info">Signatário Fundador</span><span class="ke-tag danger">Corrupção Sistêmica</span></div></div>
-        </div>
-
-        <div class="kingdom-entry">
-            <div class="ke-header"><div class="ke-icon">⛪</div><div><div class="ke-title">Domínio Eclesiástico de Lux Aeterna</div><div class="ke-sub">"Onde a luz protege… e vigia."</div></div></div>
-            <div class="ke-body"><div class="art-body"><p>Território soberano da Igreja da Sétima Ascensão. Um Estado sagrado focado na proteção contra o mal dimensional.</p></div>
-            <div style="margin-top:10px;"><span class="ke-tag gold">Estado Teocrático</span><span class="ke-tag info">Inquisição Ativa</span></div></div>
-        </div>
-
-        <div class="kingdom-entry">
-            <div class="ke-header"><div class="ke-icon">⚔️</div><div><div class="ke-title">Pacto de Khar-Duran</div><div class="ke-sub">"Nós não vencemos a guerra. Nós continuamos lutando."</div></div></div>
-            <div class="ke-body"><div class="art-body"><p>Aliança humano-anã responsável por manter a Grande Muralha que separa o mundo da corrupção de Vhal'Zarak.</p></div>
-            <div style="margin-top:10px;"><span class="ke-tag danger">Fronteira de Guerra</span><span class="ke-tag gold">Guardiões do Mundo</span></div></div>
-        </div>
-    </div>
-</div>
+          <div class="lore-section" id="sec-reinos">
+            <div class="sec-header">
+              <div class="sec-eyebrow">Geopolítica</div>
+              <h2 class="sec-title">Os Reinos do Mundo</h2>
+              <p class="sec-sub">As grandes potências, suas identidades e sua relação com a magia.</p>
+            </div>
+            <div class="kingdom-entry">
+              <div class="ke-header"><div class="ke-icon">🏛</div><div><div class="ke-title">Império de Aurethia</div><div class="ke-sub">"O império que salvou o mundo… e agora apodrece por dentro."</div></div></div>
+              <div class="ke-body"><div class="art-body"><p>A maior potência humana do mundo. Centro político e cultural. Um dos fundadores do Tratado de Vhal'Torin e pilar do Sínodo. Na aparência, é o guardião da ordem. Na realidade, é onde a ordem vai para morrer lentamente.</p><p>O Imperador existe. O Senado governa. A corrupção administra. A elite de Aurethia há muito aprendeu que as regras foram feitas para os outros — especialmente as regras sobre magia.</p></div><div style="margin-top:10px;"><span class="ke-tag">Grande Potência</span><span class="ke-tag info">Signatário Fundador</span><span class="ke-tag danger">Corrupção Sistêmica</span><span class="ke-tag">Sede do Sínodo</span></div></div>
+            </div>
+            <div class="censored-block" id="cens-aurethia">
+              <div class="art-label">Inteligência Interna — Máximo Sigilo</div>
+              <div class="art-title">O Segredo das Câmaras Brancas</div>
+              <div class="censored-text">Em pelo menos três propriedades nobres de Aurethia, existem instalações subterrâneas onde a elite conduz pesquisa arcana não autorizada em humanos com potencial dimensional não desenvolvido. Entre 40 e 70 indivíduos mantidos simultaneamente. Maioria são crianças entre 6 e 14 anos, sequestradas das classes baixas. Taxa de sobrevivência: aproximadamente 12%. O Conclave sabe. Por sete votos a dois: não confrontar Aurethia neste momento. Os experimentos continuam enquanto este texto é lido.</div>
+              <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Documento AI-088 — Máximo Sigilo — Código necessário</span><button class="cens-btn" onclick="unlockCensored('cens-aurethia','aurethia43','As Câmaras Brancas de Aurethia')">Inserir Código</button></div>
+            </div>
+            <div class="kingdom-entry">
+              <div class="ke-header"><div class="ke-icon">⛪</div><div><div class="ke-title">Domínio Eclesiástico de Lux Aeterna</div><div class="ke-sub">"Onde a luz protege… e vigia."</div></div></div>
+              <div class="ke-body"><div class="art-body"><p>Território soberano da Igreja da Sétima Ascensão. Não é um império — é um Estado sagrado. Atua como guardião da humanidade, protetor contra a magia e árbitro moral do mundo.</p><p>É também, paradoxalmente, um dos lugares mais seguros para criaturas não-humanas. A Igreja protege todo ser senciente — independente de raça ou origem. Cidades inteiras de halflings e outras raças marginalizadas existem sob proteção eclesiástica.</p><p>Possuem um exército extraordinariamente disciplinado e motivado. Muito perigoso. Muito fervoroso.</p></div><div style="margin-top:10px;"><span class="ke-tag gold">Estado Teocrático</span><span class="ke-tag info">Refúgio para Marginalizados</span><span class="ke-tag">Inquisição Ativa</span><span class="ke-tag danger">Tensão com o Sínodo</span></div></div>
+            </div>
+            <div class="kingdom-entry">
+              <div class="ke-header"><div class="ke-icon">⚔️</div><div><div class="ke-title">Pacto de Khar-Duran</div><div class="ke-sub">"Nós não vencemos a guerra. Nós continuamos lutando."</div></div></div>
+              <div class="ke-body"><div class="art-body"><p>Aliança humano-anã forjada no fogo da Grande Guerra. Khar-Duran existe em um propósito único: manter a <strong>Grande Muralha de Duran-Khal</strong>, a barreira de 847 quilômetros que separa o mundo civilizado da zona corrompida de Vhal'Zarak.</p><p>Os outros reinos os respeitam universalmente. Os outros reinos não os ajudam o suficiente. O General Rath Durak estimou que sem recursos adicionais, a muralha tem entre 15 e 40 anos de vida útil.</p></div><div style="margin-top:10px;"><span class="ke-tag danger">Fronteira de Guerra</span><span class="ke-tag">Aliança Humano-Anã</span><span class="ke-tag gold">Guardiões do Mundo</span><span class="ke-tag danger">Recursos Escassos</span></div></div>
+            </div>
+            <div class="kingdom-entry">
+              <div class="ke-header"><div class="ke-icon">💰</div><div><div class="ke-title">Liga Mercante de Nova Vária</div><div class="ke-sub">"O futuro não pede permissão."</div></div></div>
+              <div class="ke-body"><div class="art-body"><p>Federação de cidades-estado criada como defesa contra as grandes potências. Governada oficialmente por um Conselho dos Nove — na prática, por quem tem mais dinheiro. A Liga possui a única rede ferroviária do mundo, tornando-se economicamente indispensável.</p><p>Segue o Tratado publicamente. Pesquisa magia secretamente. Porque o futuro é um ativo, e eles entendem de ativos.</p></div><div style="margin-top:10px;"><span class="ke-tag info">Potência Industrial</span><span class="ke-tag gold">Rede Ferroviária Exclusiva</span><span class="ke-tag danger">Pesquisa Secreta</span><span class="ke-tag">Todos Dependem Deles</span></div></div>
+            </div>
+            <div class="kingdom-entry">
+              <div class="ke-header"><div class="ke-icon">🌲</div><div><div class="ke-title">Thal'Myrion — O Reino Velado</div><div class="ke-sub">"Nós compreendemos o que vocês temem… e pagamos o preço por isso."</div></div></div>
+              <div class="ke-body"><div class="art-body"><p>O antigo reino élfico. Isolados por escolha, guardiões de conhecimento que ninguém mais possui sobre a 5ª Dimensão. Seu território é instável — a própria floresta é tocada pela Dimensão, e caminhos mudam.</p><p>Governados pelo Eterno Arkhavel, que se mantém vivo através de meios que o próprio Sínodo considera preocupantes. O povo élfico está em <strong>declínio</strong> — nascimentos raros, alterações físicas, infertilidade crescente. Eles sabem por quê. Não querem falar sobre isso.</p></div><div style="margin-top:10px;"><span class="ke-tag danger">Declínio Populacional</span><span class="ke-tag info">Conhecimento Antigo</span><span class="ke-tag">Isolados</span><span class="ke-tag gold">Guardiões do Véu</span></div></div>
+            </div>
+            <div class="censored-block" id="cens-elfo">
+              <div class="art-label">Relatório Diplomático — Restrito</div>
+              <div class="art-title">O Que Arkhavel Disse</div>
+              <div class="censored-text">Durante a única missão diplomática bem-sucedida a Thal'Myrion (Ano 1038), o Eterno Arkhavel concedeu uma audiência. Suas palavras foram: "Nós somos o que acontece quando se olha para a 5ª Dimensão por tempo demais. Ela nos olha de volta. E o olhar muda o que observa." Em três dias de caminhada, a delegação encontrou seis elfos. Em quarenta e dois dias, viram cinco crianças. A implicação para praticantes humanos com um século de treinamento é óbvia. O Conclave não respondeu ao relatório.</div>
+              <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Relatório TH-011 — Missão Diplomática — Código necessário</span><button class="cens-btn" onclick="unlockCensored('cens-elfo','thalmyrion','As Palavras de Arkhavel')">Inserir Código</button></div>
+            </div>
+            <div class="kingdom-entry">
+              <div class="ke-header"><div class="ke-icon">💀</div><div><div class="ke-title">Reino de Valtheris — Em Guerra Civil</div><div class="ke-sub">"Aqui, a guerra não começou… ela nunca terminou."</div></div></div>
+              <div class="ke-body"><div class="art-body"><p>Antigo reino humano próspero, rico em recursos naturais, destruído pela morte do rei sem herdeiros. Hoje é um território em colapso, com quatro facções em guerra total: <strong>Legalistas</strong> (a velha ordem), <strong>Revolucionários</strong> (o povo), <strong>Sinodistas</strong> (agentes do Sínodo) e <strong>Igrejistas</strong> (liderados por um orc carismático, não sancionado oficialmente pela Igreja).</p><p>Todos os outros reinos querem Valtheris. Ninguém quer admitir que quer Valtheris.</p></div><div style="margin-top:10px;"><span class="ke-tag danger">Guerra Civil Total</span><span class="ke-tag gold">Rico em Recursos</span><span class="ke-tag danger">Magia Ilegal Ativa</span><span class="ke-tag info">4 Facções em Conflito</span></div></div>
+            </div>
+          </div>
 
           <div class="lore-section" id="sec-faccoes">
             <div class="sec-header">
@@ -1650,123 +1575,11 @@ Para garantir que a aba de Missões (`page-lore`) não fique em branco, use este
               <h2 class="sec-title">As Forças que Movem o Mundo</h2>
               <p class="sec-sub">O Sínodo, a Igreja, a Inquisição e os que operam nas sombras.</p>
             </div>
-<div class="faction-cards">
-    <div class="fcard">
-        <div class="fcard-header"><div class="fcard-name">Sínodo do Quinto Véu</div><div class="fcard-motto">"A Última Linha entre a Ordem e o Caos."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Única autoridade legal para gestão da 5ª Dimensão.</div>
-            <div class="fcard-item">Protocolo: Preservar o Tratado de Vhal'Torin a qualquer custo.</div>
-            <div class="fcard-item">Status: Vigilante.</div>
-        </div>
-    </div>
-
-    <div class="fcard">
-        <div class="fcard-header" style="background:#4a5d4a;"><div class="fcard-name">Igreja da Sétima Ascensão</div><div class="fcard-motto">"Aliados Necessários, Dogmas Perigosos."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Visão do Sínodo: Úteis para conter o pânico civil, mas tecnicamente ignorantes sobre a ciência do Véu.</div>
-            <div class="fcard-item">Risco: Tendências fanáticas que podem levar ao fechamento de fontes arcanas vitais.</div>
-        </div>
-    </div>
-
-    <div class="fcard">
-        <div class="fcard-header" style="background:#631212;"><div class="fcard-name">Custódios da Purificação</div><div class="fcard-motto">"Braço Armado da Fé — Monitorar com Cuidado."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Visão do Sínodo: Frequentemente excedem sua autoridade jurisdicional.</div>
-            <div class="fcard-item">Instrução: Cooperar em campo, mas nunca entregar artefatos de Nível IV a eles.</div>
-        </div>
-    </div>
-
-    <div class="fcard">
-        <div class="fcard-header" style="background:#1a0a1a;"><div class="fcard-name" style="color:#c080d0;">Cultos Dimensionais (Geral)</div><div class="fcard-motto">"Patologias Sociais e Alvos de Extermínio."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Visão do Sínodo: Erros biológicos e cognitivos. Não são religiões, são infecções.</div>
-            <div class="fcard-item">Protocolo: Localizar, Isolar e Neutralizar.</div>
-        </div>
-    </div>
-
-    <div class="fcard">
-        <div class="fcard-header" style="background:#2c3e50;"><div class="fcard-name">A Liga Ferroviária</div><div class="fcard-motto">"O Motor da Civilização."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Interesse: Transporte de cargas sensíveis. Possuem tecnologia de trilhos anti-fase.</div>
-            <div class="fcard-item">Nota: Suspeitos de contrabando de componentes arcanos para os reinos do sul.</div>
-        </div>
-    </div>
-
-    <div class="fcard">
-        <div class="fcard-header" style="background:#1e3a2b;"><div class="fcard-name">Círculo de Cinzas (The Ash Circle)</div><div class="fcard-motto">"A Magia Pertence ao Povo."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Tipo: Grupo terrorista pró-magia. Buscam a revogação do Tratado.</div>
-            <div class="fcard-item">Risco: Extremamente alto. Usam "bombas de vácuo dimensional" em locais públicos.</div>
-        </div>
-    </div>
-
-    <div class="fcard">
-        <div class="fcard-header" style="background:#3d3d3d;"><div class="fcard-name">Os Escavadores de Aethryon</div><div class="fcard-motto">"Ladrões de Tumbas com Diploma."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Atividade: Arqueologia ilegal em zonas de exclusão.</div>
-            <div class="fcard-item">Aviso: Comercializam relíquias "sujas" que podem causar câncer dimensional em civis.</div>
-        </div>
-    </div>
-
-    <div class="fcard">
-        <div class="fcard-header" style="background:#000033;"><div class="fcard-name">Observatório do Véu (Setor Negro)</div><div class="fcard-motto">"O Olhar que não Pisca."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Função: Divisão secreta do próprio Sínodo para experimentos de bio-magia.</div>
-            <div class="fcard-item">Acesso: Apenas Nível ΔV. Agentes de Vínculo devem ignorar sua existência.</div>
-        </div>
-    </div>
-
-    <div class="fcard">
-        <div class="fcard-header" style="background:#3e2723;"><div class="fcard-name">Irmandade do Martelo de Ferro</div><div class="fcard-motto">"Anões Contra o Arcano."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Origem: Khar-Duran.</div>
-            <div class="fcard-item">Perfil: Radicais que acreditam que todos os magos deveriam ser marcados a ferro quente.</div>
-        </div>
-    </div>
-
-    <div class="fcard">
-        <div class="fcard-header" style="background:#f1c40f;"><div class="fcard-name" style="color:#000">Os Cambistas de Ouro Pálido</div><div class="fcard-motto">"O Preço da Eternidade."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Natureza: Agiotagem e venda de "seguros de alma" contra possessão dimensional.</div>
-            <div class="fcard-item">Status: Legal, mas sob investigação por lavagem de dinheiro de cultos.</div>
-        </div>
-    </div>
-
-    <div class="fcard">
-        <div class="fcard-header" style="background:#5d4037;"><div class="fcard-name">Sindicato da Resina</div><div class="fcard-motto">"Lucro no Sangue do Véu."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Crime: Principal cartel de distribuição de Resina Etérea em Porto Varion.</div>
-            <div class="fcard-item">Inteligência: Possuem informantes dentro da guarda portuária.</div>
-        </div>
-    </div>
-
-    <div class="fcard">
-        <div class="fcard-header" style="background:#4527a0;"><div class="fcard-name">Os Tecelões de Sonhos</div><div class="fcard-motto">"Surgidos do Outro Lado."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Entidades: Grupo de criaturas sencientes que buscam cidadania legal.</div>
-            <div class="fcard-item">Visão do Sínodo: Um pesadelo jurídico e diplomático. Evitar contato direto.</div>
-        </div>
-    </div>
-
-    <div class="fcard">
-        <div class="fcard-header" style="background:#2e7d32;"><div class="fcard-name">Sentinelas da Muralha</div><div class="fcard-motto">"Onde a Luz Termina."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Elite: Veteranos de Khar-Duran especializados em combate corpo a corpo contra aberrações.</div>
-            <div class="fcard-item">Relacionamento: Respeito mútuo, mas excessivamente brutais para zonas urbanas.</div>
-        </div>
-    </div>
-
-<div class="fcard">
-        <div class="fcard-header" style="background:#000;"><div class="fcard-name" style="color:var(--gold)">A Ordem dos Sem-Rosto</div><div class="fcard-motto">"Ninguém nos Vê, Todos nos Sentem."</div></div>
-        <div class="fcard-body">
-            <div class="fcard-item">Mito ou Realidade?: Suposta rede de espiões imunes a detecção mágica.</div>
-            <div class="fcard-item">Instrução do Sínodo: Tratar qualquer falha inexplicável de segurança como ação desta facção.</div>
-        </div>
-    </div>
-  </div>
-
-
-</div>"fcard"><div class="fcard-header" style="background:#3a1a3a;"><div class="fcard-name" style="color:#c080d0;">Cultos da 5ª Dimensão</div><div class="fcard-motto" style="color:rgba(192,128,208,.5);">"Eles chamam de comunhão."</div></div><div class="fcard-body"><div class="fcard-item">Grupos que veneram entidades dimensionais como deuses</div><div class="fcard-item">Essas entidades não são deuses — são criaturas da 5ª Dimensão</div><div class="fcard-item">Usam e distribuem Resina Etérea como sacramento</div><div class="fcard-item">Surgem mais rápido do que são desmantelados</div><div class="fcard-item">Parecem coordenados entre si — sem liderança visível</div></div></div>
+            <div class="faction-cards">
+              <div class="fcard"><div class="fcard-header"><div class="fcard-name">Sínodo do Quinto Véu</div><div class="fcard-motto">"Sob o Tratado, o Véu permanece fechado."</div></div><div class="fcard-body"><div class="fcard-item">Autoridade global da magia — policia, regula e estuda</div><div class="fcard-item">Membros indicados por reinos signatários</div><div class="fcard-item">Correntes internas: Ortodoxos, Progressistas, Corruptos</div><div class="fcard-item">Opera através de Agentes de Vínculo e Inquisidores Arcanos</div><div class="fcard-item">Nem sempre confiável — possui segredos próprios</div></div></div>
+              <div class="fcard"><div class="fcard-header"><div class="fcard-name">Igreja da Sétima Ascensão</div><div class="fcard-motto">"A luz protege. A luz julga."</div></div><div class="fcard-body"><div class="fcard-item">Religião mais difundida do mundo conhecido</div><div class="fcard-item">Vê a magia como violação da ordem divina</div><div class="fcard-item">Quer selar a 5ª Dimensão permanentemente</div><div class="fcard-item">Protege criaturas sencientes, incluindo não-humanos</div><div class="fcard-item">Tensão constante com o Sínodo — colaboração forçada</div></div></div>
+              <div class="fcard"><div class="fcard-header"><div class="fcard-name">Custódios da Purificação</div><div class="fcard-motto">"O fogo purifica o que a lei não alcança."</div></div><div class="fcard-body"><div class="fcard-item">Braço inquisitorial da Igreja</div><div class="fcard-item">Caçam magia ilegal, julgam hereges</div><div class="fcard-item">Legados da Chama lideram no campo</div><div class="fcard-item">Maioria acredita genuinamente no que faz</div><div class="fcard-item">Alguns fanáticos. Alguns cruéis. Raramente injustos.</div></div></div>
+              <div class="fcard"><div class="fcard-header" style="background:#3a1a3a;"><div class="fcard-name" style="color:#c080d0;">Cultos da 5ª Dimensão</div><div class="fcard-motto" style="color:rgba(192,128,208,.5);">"Eles chamam de comunhão."</div></div><div class="fcard-body"><div class="fcard-item">Grupos que veneram entidades dimensionais como deuses</div><div class="fcard-item">Essas entidades não são deuses — são criaturas da 5ª Dimensão</div><div class="fcard-item">Usam e distribuem Resina Etérea como sacramento</div><div class="fcard-item">Surgem mais rápido do que são desmantelados</div><div class="fcard-item">Parecem coordenados entre si — sem liderança visível</div></div></div>
             </div>
             <div class="censored-block" id="cens-sinodo-secreto">
               <div class="art-label">Conclave Interno — Máximo Sigilo</div>
@@ -1996,43 +1809,6 @@ Para garantir que a aba de Missões (`page-lore`) não fique em branco, use este
 <div class="toast" id="toast"></div>
 
 <script>
-
-// Variável global para controle de estado
-let reinosDesbloqueados = false;
-
-function tentarAcessoReinos(linkEl) {
-    // Abre a aba normalmente, mas o conteúdo interno decide o que mostrar
-    showSection('reinos', linkEl);
-}
-
-function solicitarSenhaReinos() {
-    // Configura os dados para o modal de senha já existente no seu código
-    pendingBlockId = 'BLOQUEIO_REINOS'; 
-    pendingPassword = 'aurethia1044'; // Defina sua senha aqui
-    
-    document.getElementById('pwd-modal-doc').textContent = "AUTORIZAÇÃO: ACERVO GEOPOLÍTICO";
-    document.getElementById('pwd-input').value = '';
-    document.getElementById('pwd-overlay').classList.add('open');
-    setTimeout(() => document.getElementById('pwd-input').focus(), 100);
-
-    // Sobrescreve temporariamente a função de confirmação do seu portal
-    const originalConfirm = window.confirmUnlock;
-    
-    window.confirmUnlock = function() {
-        const val = document.getElementById('pwd-input').value.trim().toLowerCase();
-        if (val === pendingPassword) {
-            reinosDesbloqueados = true;
-            document.getElementById('reinos-bloqueio-total').style.display = 'none';
-            document.getElementById('reinos-conteudo-real').style.display = 'block';
-            document.getElementById('link-reinos').querySelector('.sl-lock').textContent = '🔓';
-            closePwdModal();
-            showToast('✦ Acesso aos Reinos liberado ✦');
-            window.confirmUnlock = originalConfirm; // Restaura a função original
-        } else {
-            document.getElementById('pwd-modal-err').textContent = 'Código de segurança inválido.';
-        }
-    };
-}
 // ══════════════════════════════════════════
 // AUTH & GLOBAIS
 // ══════════════════════════════════════════
@@ -2088,20 +1864,14 @@ function forceNavigate(pageId) {
   });
 
   // 2. Executa a mudança de página usando a função original
-function showPage(id, tab) {
-    // Esconde todas as páginas e remove o brilho de todas as abas
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-    
-    // Mostra a página alvo
-    const targetPage = document.getElementById('page-' + id);
-    if(targetPage) {
-        targetPage.classList.add('active');
-        targetPage.scrollTop = 0; // Volta o scroll para o topo
-    }
-    
-    // Destaca a aba clicada
-    if(tab) tab.classList.add('active');
+  showPage(pageId, targetTab);
+}
+function showPage(id,tab){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  if(tab) tab.classList.add('active');
+  if(id==='map') initMap();
 }
 function gotoTab(idx){
   const tabs=document.querySelectorAll('.nav-tab');
@@ -2432,21 +2202,7 @@ function showSecretLore(item) {
   document.getElementById('reader-overlay').classList.add('open');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Renderiza os dados do Bestiário e Codex se as funções existirem
-    if(typeof renderBeasts === 'function') renderBeasts('all');
-    if(typeof renderGlossary === 'function') renderGlossary();
-    
-    // Inicializa a Biblioteca
-    const primeiraSecao = document.getElementById('sec-home');
-    if(primeiraSecao) primeiraSecao.classList.add('active');
-
-    console.log("Portal Sínodo v4: Sistemas Operacionais Ativos.");
+document.addEventListener('DOMContentLoaded', () => { 
+  if(document.getElementById('glossary-grid')) renderGlossary(); 
 });
-
-
 </script>
-</div> </div> <div class="toast" id="toast"></div>
-
-</body>
-</html>
