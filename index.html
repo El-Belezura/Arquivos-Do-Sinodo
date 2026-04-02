@@ -1293,7 +1293,7 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
           <div class="sidebar-divider"></div>
           <div class="sidebar-section">
             <span class="sidebar-cat">O Mundo</span>
-            <a class="sidebar-link" onclick="showSection('reinos',this)"><span class="sl-icon">🏰</span> Os Reinos</a>
+            <a class="sidebar-link" id="link-reinos" onclick="checkReinosLock(this)"><span class="sl-icon">🏰</span> Os Reinos <span class="sl-lock">🔒</span></a>
             <a class="sidebar-link" onclick="showSection('faccoes',this)"><span class="sl-icon">⚔️</span> Facções</a>
             <a class="sidebar-link" onclick="showSection('igreja',this)"><span class="sl-icon">⛪</span> A Igreja</a>
             <a class="sidebar-link" onclick="showSection('monstros',this)"><span class="sl-icon">🐉</span> Monstros & Ameaças</a>
@@ -1525,12 +1525,23 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
             </div>
           </div>
 
-          <div class="lore-section" id="sec-reinos">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Geopolítica</div>
-              <h2 class="sec-title">Os Reinos do Mundo</h2>
-              <p class="sec-sub">As grandes potências, suas identidades e sua relação com a magia.</p>
-            </div>
+<div class="lore-section" id="sec-reinos">
+    <div class="sec-header">
+        <div class="sec-eyebrow">Geopolítica</div>
+        <h2 class="sec-title">Os Reinos do Mundo</h2>
+        <p class="sec-sub">Acesso Restrito — Requer Autorização Nível III</p>
+    </div>
+
+    <div id="reinos-lock-screen" style="text-align: center; padding: 50px; background: rgba(0,0,0,0.05); border: 1px dashed var(--gold-dim);">
+        <span style="font-size: 3rem;">🔒</span>
+        <h3 style="font-family: 'Cinzel', serif; color: var(--ink); margin-top: 15px;">Arquivo Geopolítico Criptografado</h3>
+        <p style="font-family: 'Crimson Text', serif; font-style: italic; margin-bottom: 20px;">Este acervo contém informações sensíveis sobre a soberania dos reinos signatários.</p>
+        <button class="cens-btn" onclick="unlockReinos()">Inserir Código de Acesso</button>
+    </div>
+
+    <div id="reinos-content" style="display: none;">
+        </div>
+</div>
             <div class="kingdom-entry">
               <div class="ke-header"><div class="ke-icon">🏛</div><div><div class="ke-title">Império de Aurethia</div><div class="ke-sub">"O império que salvou o mundo… e agora apodrece por dentro."</div></div></div>
               <div class="ke-body"><div class="art-body"><p>A maior potência humana do mundo. Centro político e cultural. Um dos fundadores do Tratado de Vhal'Torin e pilar do Sínodo. Na aparência, é o guardião da ordem. Na realidade, é onde a ordem vai para morrer lentamente.</p><p>O Imperador existe. O Senado governa. A corrupção administra. A elite de Aurethia há muito aprendeu que as regras foram feitas para os outros — especialmente as regras sobre magia.</p></div><div style="margin-top:10px;"><span class="ke-tag">Grande Potência</span><span class="ke-tag info">Signatário Fundador</span><span class="ke-tag danger">Corrupção Sistêmica</span><span class="ke-tag">Sede do Sínodo</span></div></div>
@@ -1809,6 +1820,44 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
 <div class="toast" id="toast"></div>
 
 <script>
+
+  // Função para quando clicarem no link da lateral
+function checkReinosLock(linkEl) {
+    // Apenas mostra a seção (que estará com o cadeado visual)
+    showSection('reinos', linkEl);
+}
+
+// Abre o modal de senha específico para os Reinos
+function unlockReinos() {
+    pendingBlockId = 'reinos-unlock-process'; // ID temporário para identificação
+    pendingPassword = 'aurethia1044';        // DEFINA A SENHA AQUI
+    
+    document.getElementById('pwd-modal-doc').textContent = "Acervo Geopolítico: Os Reinos";
+    document.getElementById('pwd-input').value = '';
+    document.getElementById('pwd-modal-err').textContent = '';
+    document.getElementById('pwd-overlay').classList.add('open');
+    setTimeout(() => document.getElementById('pwd-input').focus(), 100);
+
+    // Sobrescrevemos a função de confirmar do modal apenas para este caso
+    window.handlePwdSubmit = function() {
+        const val = document.getElementById('pwd-input').value.trim().toLowerCase();
+        if (val === pendingPassword) {
+            document.getElementById('reinos-lock-screen').style.display = 'none';
+            document.getElementById('reinos-content').style.display = 'block';
+            document.getElementById('link-reinos').querySelector('.sl-lock').textContent = '🔓';
+            closePwdModal();
+            showToast('✦  Acesso aos Reinos Concedido  ✦');
+            
+            // Restaura a função original para não quebrar os outros documentos
+            window.handlePwdSubmit = originalHandlePwdSubmit;
+        } else {
+            document.getElementById('pwd-modal-err').textContent = 'Código inválido.';
+        }
+    };
+}
+
+// Guardar a função original para restaurar depois
+const originalHandlePwdSubmit = handlePwdSubmit;
 // ══════════════════════════════════════════
 // AUTH & GLOBAIS
 // ══════════════════════════════════════════
