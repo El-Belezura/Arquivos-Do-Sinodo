@@ -467,7 +467,7 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
 .dim-table tr:nth-child(even) td { background: rgba(197,163,85,.04); }
 .dim-table td:first-child { font-family: 'Cinzel', serif; font-size: 11px; color: var(--gold-dim); font-weight: 700; }
 
-.faction-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin: 16px 0; }
+. { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin: 16px 0; }
 .fcard { background: #fff; border: 1px solid var(--parch-dark); overflow: hidden; }
 .fcard-header { padding: 14px 16px 10px; background: var(--ink); }
 .fcard-name { font-family: 'Cinzel', serif; font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 2px; }
@@ -1159,11 +1159,53 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
       <div class="page-inner">
         <div class="classif-banner confidential">Classificação: Confidencial — Acervo Histórico do Sínodo</div>
         <div class="page-header"><div class="page-header-left"><h2>Missões Expedidas</h2><p>Tratados, registros históricos e pesquisas dimensionais</p></div><div class="page-badge">Acervo Interno</div></div>
-        <div class="file-list">
-          <div class="file-item"><div class="file-icon"><span>DOCX</span></div><div class="file-info"><div class="file-name">Investigação de Problemas Portuários: Baixa Prioridade</div><div class="file-meta">Acesso Direto · Google Drive</div></div><div class="file-actions"><button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1sGdYz1Dk2ljBpNWNswGVc4SjSarz_VDb/edit?usp=drive_link','_blank')">Abrir no Drive</button></div></div>
+<div class="page" id="page-lore">
+  <div class="page-inner">
+    <div class="classif-banner confidential">Classificação: Confidencial — Acervo Histórico do Sínodo</div>
+    <div class="page-header">
+      <div class="page-header-left">
+        <h2>Missões Expedidas e Tratados</h2>
+        <p>Documentação diplomática, registros históricos e comunicações inter-reinos.</p>
+      </div>
+      <div class="page-badge">Acervo Interno</div>
+    </div>
+    
+    <div class="file-list">
+      <div class="file-item">
+        <div class="file-icon" style="background: var(--gold-dim);"><span>DOCX</span></div>
+        <div class="file-info">
+          <div class="file-name">O Tratado de Vhal'Torin (Original)</div>
+          <div class="file-meta">Documento Fundador · Registro Diplomático 00-A</div>
+        </div>
+        <div class="file-actions">
+          <button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1bRumBGBy_4b4qaUeQ84C6k4GAwg6P2Yb/edit', '_blank')">Abrir Documento</button>
+        </div>
+      </div>
+
+      <div class="file-item">
+        <div class="file-icon" style="background: #4a5d4a;"><span>DOCX</span></div>
+        <div class="file-info">
+          <div class="file-name">Posicionamento: A Igreja da Sétima Ascensão</div>
+          <div class="file-meta">Análise do Conclave · Relatório Secreto de Relações</div>
+        </div>
+        <div class="file-actions">
+          <button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1M7uBpBceAy-bdpQTjBkQhKqkxKyqDwzk/edit?usp=drive_link', '_blank')">Abrir Documento</button>
+        </div>
+      </div>
+
+      <div class="file-item">
+        <div class="file-icon"><span>DOCX</span></div>
+        <div class="file-info">
+          <div class="file-name">Investigação de Problemas Portuários: Baixa Prioridade</div>
+          <div class="file-meta">Acesso Direto · Relatório de Campo</div>
+        </div>
+        <div class="file-actions">
+          <button class="file-btn" onclick="window.open('https://docs.google.com/document/d/1sGdYz1Dk2ljBpNWNswGVc4SjSarz_VDb/edit?usp=drive_link','_blank')">Abrir no Drive</button>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
     <div class="page" id="page-classified">
       <div class="page-inner">
@@ -1569,11 +1611,120 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
               <h2 class="sec-title">As Forças que Movem o Mundo</h2>
               <p class="sec-sub">O Sínodo, a Igreja, a Inquisição e os que operam nas sombras.</p>
             </div>
-            <div class="faction-cards">
-              <div class="fcard"><div class="fcard-header"><div class="fcard-name">Sínodo do Quinto Véu</div><div class="fcard-motto">"Sob o Tratado, o Véu permanece fechado."</div></div><div class="fcard-body"><div class="fcard-item">Autoridade global da magia — policia, regula e estuda</div><div class="fcard-item">Membros indicados por reinos signatários</div><div class="fcard-item">Correntes internas: Ortodoxos, Progressistas, Corruptos</div><div class="fcard-item">Opera através de Agentes de Vínculo e Inquisidores Arcanos</div><div class="fcard-item">Nem sempre confiável — possui segredos próprios</div></div></div>
-              <div class="fcard"><div class="fcard-header"><div class="fcard-name">Igreja da Sétima Ascensão</div><div class="fcard-motto">"A luz protege. A luz julga."</div></div><div class="fcard-body"><div class="fcard-item">Religião mais difundida do mundo conhecido</div><div class="fcard-item">Vê a magia como violação da ordem divina</div><div class="fcard-item">Quer selar a 5ª Dimensão permanentemente</div><div class="fcard-item">Protege criaturas sencientes, incluindo não-humanos</div><div class="fcard-item">Tensão constante com o Sínodo — colaboração forçada</div></div></div>
-              <div class="fcard"><div class="fcard-header"><div class="fcard-name">Custódios da Purificação</div><div class="fcard-motto">"O fogo purifica o que a lei não alcança."</div></div><div class="fcard-body"><div class="fcard-item">Braço inquisitorial da Igreja</div><div class="fcard-item">Caçam magia ilegal, julgam hereges</div><div class="fcard-item">Legados da Chama lideram no campo</div><div class="fcard-item">Maioria acredita genuinamente no que faz</div><div class="fcard-item">Alguns fanáticos. Alguns cruéis. Raramente injustos.</div></div></div>
-              <div class="fcard"><div class="fcard-header" style="background:#3a1a3a;"><div class="fcard-name" style="color:#c080d0;">Cultos da 5ª Dimensão</div><div class="fcard-motto" style="color:rgba(192,128,208,.5);">"Eles chamam de comunhão."</div></div><div class="fcard-body"><div class="fcard-item">Grupos que veneram entidades dimensionais como deuses</div><div class="fcard-item">Essas entidades não são deuses — são criaturas da 5ª Dimensão</div><div class="fcard-item">Usam e distribuem Resina Etérea como sacramento</div><div class="fcard-item">Surgem mais rápido do que são desmantelados</div><div class="fcard-item">Parecem coordenados entre si — sem liderança visível</div></div></div>
+<div class="faction-cards">
+    <div class="fcard">
+        <div class="fcard-header"><div class="fcard-name">Sínodo do Quinto Véu</div><div class="fcard-motto">"A Última Linha entre a Ordem e o Caos."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Única autoridade legal para gestão da 5ª Dimensão.</div>
+            <div class="fcard-item">Protocolo: Preservar o Tratado de Vhal'Torin a qualquer custo.</div>
+            <div class="fcard-item">Status: Vigilante.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#4a5d4a;"><div class="fcard-name">Igreja da Sétima Ascensão</div><div class="fcard-motto">"Aliados Necessários, Dogmas Perigosos."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Visão do Sínodo: Úteis para conter o pânico civil, mas tecnicamente ignorantes sobre a ciência do Véu.</div>
+            <div class="fcard-item">Risco: Tendências fanáticas que podem levar ao fechamento de fontes arcanas vitais.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#631212;"><div class="fcard-name">Custódios da Purificação</div><div class="fcard-motto">"Braço Armado da Fé — Monitorar com Cuidado."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Visão do Sínodo: Frequentemente excedem sua autoridade jurisdicional.</div>
+            <div class="fcard-item">Instrução: Cooperar em campo, mas nunca entregar artefatos de Nível IV a eles.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#1a0a1a;"><div class="fcard-name" style="color:#c080d0;">Cultos Dimensionais (Geral)</div><div class="fcard-motto">"Patologias Sociais e Alvos de Extermínio."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Visão do Sínodo: Erros biológicos e cognitivos. Não são religiões, são infecções.</div>
+            <div class="fcard-item">Protocolo: Localizar, Isolar e Neutralizar.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#2c3e50;"><div class="fcard-name">A Liga Ferroviária</div><div class="fcard-motto">"O Motor da Civilização."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Interesse: Transporte de cargas sensíveis. Possuem tecnologia de trilhos anti-fase.</div>
+            <div class="fcard-item">Nota: Suspeitos de contrabando de componentes arcanos para os reinos do sul.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#1e3a2b;"><div class="fcard-name">Círculo de Cinzas (The Ash Circle)</div><div class="fcard-motto">"A Magia Pertence ao Povo."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Tipo: Grupo terrorista pró-magia. Buscam a revogação do Tratado.</div>
+            <div class="fcard-item">Risco: Extremamente alto. Usam "bombas de vácuo dimensional" em locais públicos.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#3d3d3d;"><div class="fcard-name">Os Escavadores de Aethryon</div><div class="fcard-motto">"Ladrões de Tumbas com Diploma."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Atividade: Arqueologia ilegal em zonas de exclusão.</div>
+            <div class="fcard-item">Aviso: Comercializam relíquias "sujas" que podem causar câncer dimensional em civis.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#000033;"><div class="fcard-name">Observatório do Véu (Setor Negro)</div><div class="fcard-motto">"O Olhar que não Pisca."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Função: Divisão secreta do próprio Sínodo para experimentos de bio-magia.</div>
+            <div class="fcard-item">Acesso: Apenas Nível ΔV. Agentes de Vínculo devem ignorar sua existência.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#3e2723;"><div class="fcard-name">Irmandade do Martelo de Ferro</div><div class="fcard-motto">"Anões Contra o Arcano."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Origem: Khar-Duran.</div>
+            <div class="fcard-item">Perfil: Radicais que acreditam que todos os magos deveriam ser marcados a ferro quente.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#f1c40f;"><div class="fcard-name" style="color:#000">Os Cambistas de Ouro Pálido</div><div class="fcard-motto">"O Preço da Eternidade."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Natureza: Agiotagem e venda de "seguros de alma" contra possessão dimensional.</div>
+            <div class="fcard-item">Status: Legal, mas sob investigação por lavagem de dinheiro de cultos.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#5d4037;"><div class="fcard-name">Sindicato da Resina</div><div class="fcard-motto">"Lucro no Sangue do Véu."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Crime: Principal cartel de distribuição de Resina Etérea em Porto Varion.</div>
+            <div class="fcard-item">Inteligência: Possuem informantes dentro da guarda portuária.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#4527a0;"><div class="fcard-name">Os Tecelões de Sonhos</div><div class="fcard-motto">"Surgidos do Outro Lado."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Entidades: Grupo de criaturas sencientes que buscam cidadania legal.</div>
+            <div class="fcard-item">Visão do Sínodo: Um pesadelo jurídico e diplomático. Evitar contato direto.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#2e7d32;"><div class="fcard-name">Sentinelas da Muralha</div><div class="fcard-motto">"Onde a Luz Termina."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Elite: Veteranos de Khar-Duran especializados em combate corpo a corpo contra aberrações.</div>
+            <div class="fcard-item">Relacionamento: Respeito mútuo, mas excessivamente brutais para zonas urbanas.</div>
+        </div>
+    </div>
+
+    <div class="fcard">
+        <div class="fcard-header" style="background:#000;"><div class="fcard-name" style="color:var(--gold)">A Ordem dos Sem-Rosto</div><div class="fcard-motto">"Ninguém nos Vê, Todos nos Sentem."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Mito ou Realidade?: Suposta rede de espiões imunes a detecção mágica.</div>
+            <div class="fcard-item">Instrução do Sínodo: Tratar qualquer falha inexplicável de segurança como ação desta facção.</div>
+        </div>
+    </div>
+</div>"fcard"><div class="fcard-header" style="background:#3a1a3a;"><div class="fcard-name" style="color:#c080d0;">Cultos da 5ª Dimensão</div><div class="fcard-motto" style="color:rgba(192,128,208,.5);">"Eles chamam de comunhão."</div></div><div class="fcard-body"><div class="fcard-item">Grupos que veneram entidades dimensionais como deuses</div><div class="fcard-item">Essas entidades não são deuses — são criaturas da 5ª Dimensão</div><div class="fcard-item">Usam e distribuem Resina Etérea como sacramento</div><div class="fcard-item">Surgem mais rápido do que são desmantelados</div><div class="fcard-item">Parecem coordenados entre si — sem liderança visível</div></div></div>
             </div>
             <div class="censored-block" id="cens-sinodo-secreto">
               <div class="art-label">Conclave Interno — Máximo Sigilo</div>
