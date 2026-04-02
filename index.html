@@ -1278,299 +1278,26 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
 <div class="page" id="page-biblioteca">
   <div class="lore-wrapper">
     <aside class="lore-sidebar">
-      <div class="sidebar-section">
-        <span class="sidebar-cat">Fundamentos</span>
-        <a class="sidebar-link active" onclick="showSection('home', this)"><span class="sl-icon">🏛</span> Introdução</a>
-        <a class="sidebar-link" onclick="showSection('cosmologia', this)"><span class="sl-icon">🌌</span> Cosmologia</a>
-        <a class="sidebar-link" onclick="showSection('magia', this)"><span class="sl-icon">✨</span> A Magia</a>
-      </div>
-      <div class="sidebar-divider"></div>
-      <div class="sidebar-section">
-        <span class="sidebar-cat">História</span>
-        <a class="sidebar-link" onclick="showSection('historia', this)"><span class="sl-icon">📜</span> Linha do Tempo</a>
-        <a class="sidebar-link" onclick="showSection('tratado', this)"><span class="sl-icon">⚖️</span> Tratado de Vhal'Torin</a>
-      </div>
-      <div class="sidebar-divider"></div>
-      <div class="sidebar-section">
-        <span class="sidebar-cat">O Mundo</span>
-        <a class="sidebar-link" onclick="showSection('reinos', this)"><span class="sl-icon">🏰</span> Os Reinos</a>
-        <a class="sidebar-link" onclick="showSection('faccoes', this)"><span class="sl-icon">⚔️</span> Facções</a>
-        <a class="sidebar-link" onclick="showSection('igreja', this)"><span class="sl-icon">⛪</span> A Igreja</a>
-        <a class="sidebar-link" onclick="showSection('monstros', this)"><span class="sl-icon">🐉</span> Monstros & Ameaças</a>
-        <a class="sidebar-link" onclick="showSection('locais', this)"><span class="sl-icon">🗺</span> Locais Notáveis</a>
-      </div>
-    </aside>
-<main class="lore-main">
-  <div class="lore-section active" id="sec-home">
-    <div class="lore-article">
-      <div class="art-label">Diretivas Externas</div>
-      <div class="art-title">Documentação de Base</div>
-      <div class="art-body">
-        <p>Para consulta rápida dos fundamentos legais e religiosos, utilize os arquivos externos oficiais:</p>
-        <div style="display: flex; gap: 10px; margin-top: 15px;">
-            <a href="https://docs.google.com/document/d/1bRumBGBy_4b4qaUeQ84C6k4GAwg6P2Yb/edit" target="_blank" class="action-btn">📜 Ler Tratado de Vhal'Torin</a>
-            <a href="https://docs.google.com/document/d/1M7uBpBceAy-bdpQTjBkQhKqkxKyqDwzk/edit" target="_blank" class="action-btn">⛪ Ler Doutrina da Igreja</a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="art-body">
-      <p>Esta biblioteca reúne o conhecimento aprovado pelo <strong>Sínodo do Quinto Véu</strong> para consulta de agentes, estudiosos e representantes de reinos signatários. Alguns trechos permanecem censurados — protegidos por códigos de acesso conferidos a quem obteve autorização formal.</p>
-    </div>
-    
-    <div class="lore-quote">
-      <p>"O conhecimento é uma faca. Pode alimentar. Pode matar. A diferença não está na faca — está em quem a segura."</p>
-      <cite>— Magistratus Eldren Soval, Primeiro Diretor do Observatório do Véu</cite>
-    </div>
-
-    <div class="lore-grid">
-      <div class="lore-card" onclick="showSection('cosmologia',null)">
-        <div class="lc-icon">🌌</div>
-        <div class="lc-title">Cosmologia</div>
-        <div class="lc-desc">As sete dimensões, a natureza do mundo e o que existe além da realidade visível.</div>
-      </div>
-      <div class="lore-card" onclick="showSection('magia',null)">
-        <div class="lc-icon">✨</div>
-        <div class="lc-title">A Magia</div>
-        <div class="lc-desc">O que é, como funciona, por que é proibida e o que acontece com quem a usa.</div>
-      </div>
-      <div class="lore-card" onclick="showSection('historia',null)">
-        <div class="lc-icon">📜</div>
-        <div class="lc-title">História</div>
-        <div class="lc-desc">A Grande Guerra, o Tratado de Vhal'Torin e mil anos de ordem frágil.</div>
-      </div>
-      <div class="lore-card" onclick="showSection('reinos',null)">
-        <div class="lc-icon">🏰</div>
-        <div class="lc-title">Os Reinos</div>
-        <div class="lc-desc">As grandes potências, suas culturas e suas relações com a magia.</div>
-      </div>
-      <div class="lore-card" onclick="showSection('faccoes',null)">
-        <div class="lc-icon">⚔️</div>
-        <div class="lc-title">Facções</div>
-        <div class="lc-desc">O Sínodo, a Igreja, os Custódios e as forças que moldam o mundo.</div>
-      </div>
-      <div class="lore-card" onclick="showSection('locais',null)">
-        <div class="lc-icon">🗺</div>
-        <div class="lc-title">Locais</div>
-        <div class="lc-desc">De Porto Varion às ruínas de Aethryon e além da Grande Muralha.</div>
-      </div>
-    </div>
-
-    <div class="lore-warn">
-      <div class="lore-warn-title">⚠ Aviso ao Leitor</div>
-      <p>Alguns trechos desta biblioteca foram classificados pelo Conclave. Suas ausências são intencionais. Se você acredita ter direito a um acesso específico, contate seu Supervisor de Vínculo com justificativa formal.</p>
-    </div>
-  </div> <div class="lore-section" id="sec-cosmologia">
-    <div class="sec-header">
-      <div class="sec-eyebrow">Fundamentos · Cosmologia</div>
-      <h2 class="sec-title">As Sete Dimensões</h2>
-      <p class="sec-sub">A estrutura da realidade segundo a doutrina do Sínodo e a fé da Igreja da Sétima Ascensão.</p>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">Cosmologia Fundamental</div>
-      <div class="art-title">A Estrutura do Universo</div>
-      <div class="art-body">
-        <p>O mundo não é feito apenas do que os olhos veem. Tanto a ciência do Sínodo quanto a teologia da Igreja convergem num ponto: existem <strong>sete dimensões</strong>, cada uma com natureza e função distintas.</p>
-        <p>As três primeiras dimensões formam o <strong>espaço físico</strong> — altura, largura, profundidade. Tudo o que você pode tocar existe nelas. A <strong>quarta dimensão é o tempo</strong>: invisível, implacável, impossível de manipular por meios comuns.</p>
-      </div>
-    </div>
-    <table class="dim-table">
-      <thead>
-        <tr><th>Dimensão</th><th>Nome</th><th>Natureza</th><th>Acesso</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1ª – 3ª</td><td>O Mundo Físico</td><td>Espaço, matéria, existência</td><td>Universal</td></tr>
-        <tr><td>4ª</td><td>O Tempo</td><td>Fluxo, causa e consequência</td><td>Passivo — ninguém controla</td></tr>
-        <tr><td>5ª</td><td>O Véu / A Magia</td><td>Plasticidade da realidade</td><td>Restrito — poucos nascem capazes</td></tr>
-        <tr><td>6ª</td><td>A Prisão</td><td>Confinamento do mal</td><td>Fechada — ninguém deveria entrar</td></tr>
-        <tr><td>7ª</td><td>O Plano Divino</td><td>Reino de Deus, destino dos justos</td><td>Pós-morte — para quem merece</td></tr>
-      </tbody>
-    </table>
-    <div class="lore-article">
-      <div class="art-label">A Quinta Dimensão</div>
-      <div class="art-title">O Véu — A Dimensão da Magia</div>
-      <div class="art-body">
-        <p>A <strong>5ª Dimensão</strong> — chamada popularmente de "o Véu" — coexiste com o mundo físico de forma invisível à maioria. Poucas pessoas nascem com a capacidade cognitiva de percebê-la. Ainda menos conseguem interagir com ela de forma consciente.</p>
-        <p>O Sínodo define magia como: <em>"a capacidade de interpretar as estruturas da 5ª Dimensão e aplicá-las ao plano físico."</em> Não é invocação de energia. É leitura e reescrita da realidade.</p>
-        <p>O problema é que a realidade não gosta de ser reescrita.</p>
-      </div>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">A Sexta e Sétima Dimensões</div>
-      <div class="art-title">O Que Existe Além do Véu</div>
-      <div class="art-body">
-        <p>A <strong>6ª Dimensão</strong> é, segundo a Igreja da Sétima Ascensão, uma prisão. Ali foi confinado um servo de Deus que, com inveja da perfeição divina, tentou tomar as demais dimensões para si. Sua queda causou a perturbação que conhecemos como a instabilidade do Véu.</p>
-        <p>A <strong>7ª Dimensão</strong> é o destino dos justos após a morte — o Plano Divino, onde Deus reside desde que criou todas as dimensões. A Igreja acredita que Deus não habita o mundo físico, mas observa através das dimensões.</p>
-      </div>
-    </div>
-    <div class="censored-block" id="cens-cosmol-1">
-      <div class="art-label">Pesquisa Avançada — Observatório do Véu</div>
-      <div class="art-title">A Consciência da 5ª Dimensão</div>
-      <div class="censored-text">Pesquisas avançadas do Observatório do Véu sugerem que a 5ª Dimensão pode não ser um fenômeno passivo. Há evidências crescentes de que ela responde à interação humana — não como um reflexo, mas como uma reação intencional. Magistratus Orin Vel documentou que em regiões de alto uso mágico, a dimensão parece recuar. Como se não quisesse ser encontrada. Alguns membros do Conclave acreditam que a 5ª Dimensão é consciente. Que tem objetivos. Que está esperando algo.</div>
-      <div class="censored-unlock">
-        <span class="cens-icon">🔒</span>
-        <span class="cens-hint">Pesquisa Dimensional Nível IV — Requer código</span>
-        <button class="cens-btn" onclick="unlockCensored('cens-cosmol-1','observatorio','A Consciência da 5ª Dimensão')">Inserir Código</button>
-      </div>
-    </div>
+  <div class="sidebar-section">
+    <span class="sidebar-cat">Fundamentos</span>
+    <a class="sidebar-link active" onclick="showSection('home', this)"><span class="sl-icon">🏛</span> Introdução</a>
+    <a class="sidebar-link" onclick="showSection('cosmologia', this)"><span class="sl-icon">🌌</span> Cosmologia</a>
+    <a class="sidebar-link" onclick="showSection('magia', this)"><span class="sl-icon">✨</span> A Magia</a>
   </div>
-
-  <div class="lore-section" id="sec-magia">
-    <div class="sec-header">
-      <div class="sec-eyebrow">Fundamentos · A Magia</div>
-      <h2 class="sec-title">A Magia e o Véu</h2>
-      <p class="sec-sub">O que é, quem pode usar, e por que o mundo teme tanto.</p>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">Natureza da Magia</div>
-      <div class="art-title">Como a Magia Funciona</div>
-      <div class="art-body">
-        <p>Magia não é um dom sobrenatural nem uma força mística. É uma <strong>capacidade cognitiva</strong> — a habilidade de perceber a estrutura da 5ª Dimensão e manipulá-la de forma intencional.</p>
-        <p>Apenas algumas pessoas nascem com esse desenvolvimento cerebral. A maioria nunca perceberá a 5ª Dimensão de forma alguma — da mesma forma que a maioria nunca distinguirá alturas musicais com precisão absoluta. É uma capacidade, não um poder.</p>
-        <p>Ter a capacidade não é suficiente. É necessário <strong>anos de estudo</strong> para aprender a interpretar o que se percebe — e mais anos ainda para aprender a não enlouquecer no processo.</p>
-      </div>
-    </div>
-    <div class="lore-info">
-      <div class="lore-info-title">ℹ Nota do Sínodo</div>
-      <p>A crença popular de que "magia enlouquece" é uma simplificação. <strong>Magia sem treinamento enlouquece</strong>. É como entregar bisturis a alguém que nunca estudou medicina — o problema não é o instrumento.</p>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">Consequências do Uso</div>
-      <div class="art-title">O Que Acontece Quando Alguém Usa Magia</div>
-      <div class="art-body">
-        <p>Cada uso da magia cria uma <strong>abertura temporária</strong> entre o mundo físico e a 5ª Dimensão. Usos pequenos e controlados deixam aberturas mínimas — que se fecham naturalmente.</p>
-        <p>Usos excessivos ou não controlados deixam aberturas que <strong>não se fecham sozinhas</strong>. Dessas aberturas vêm os monstros — criaturas da 5ª Dimensão que atravessam para o plano físico, onde não deveriam estar.</p>
-        <p>Em casos extremos, a abertura pode ser permanente. Isso é o que aconteceu com Aethryon. Isso é o que é Vhal'Zarak.</p>
-      </div>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">A Lei</div>
-      <div class="art-title">Por Que a Magia É Proibida</div>
-      <div class="art-body">
-        <p>Há mil anos, reinos inteiros foram destruídos por magos que não sabiam — ou não se importavam — com o que estavam abrindo. A <strong>Grande Guerra do Véu</strong> foi a maior catástrofe da história humana.</p>
-        <p>O <strong>Tratado de Vhal'Torin</strong> foi a resposta. Todos os reinos signatários concordaram: magia só pode ser praticada por membros autorizados do Sínodo do Quinto Véu. Qualquer uso fora dessa estrutura é crime — punível com morte em vários reinos.</p>
-        <p>Não é crueldade. É memória.</p>
-      </div>
-    </div>
-    <div class="censored-block" id="cens-magia-1">
-      <div class="art-label">Pesquisa Interna — Observatório do Véu</div>
-      <div class="art-title">O Declínio dos Praticantes</div>
-      <div class="censored-text">Nos últimos 42 anos, o número de pessoas nascidas com capacidade dimensional suficiente caiu 31%. Nos últimos oito anos, essa queda acelerou para 47% ao ano. Há quatro hipóteses em debate interno. Três são científicas. A quarta — que a própria 5ª Dimensão está se retraindo voluntariamente — não é mencionada em documentos públicos. Se for verdade, o Sínodo entrará em colapso operacional em menos de três décadas.</div>
-      <div class="censored-unlock">
-        <span class="cens-icon">🔒</span>
-        <span class="cens-hint">Memorando Interno do Conclave — Acesso Nível ΔV</span>
-        <button class="cens-btn" onclick="unlockCensored('cens-magia-1','conclave1044','O Declínio dos Praticantes')">Inserir Código</button>
-      </div>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">A Resina Etérea</div>
-      <div class="art-title">A Droga do Véu</div>
-      <div class="art-body">
-        <p>Nos mercados negros das grandes cidades circula uma substância conhecida como <strong>Resina Etérea</strong> — um líquido escuro que pulsa levemente, como se respirasse. Seu efeito: amplificação temporária da percepção dimensional em pessoas sem capacidade natural.</p>
-        <p>Para quem nunca "viu" a 5ª Dimensão, é uma experiência avassaladora. Sensação de contato com algo imenso. Cultos a crescem ao redor dela, chamando-a de "comunhão" ou "revelação".</p>
-        <p>O que ela realmente faz é <strong>forçar uma abertura</strong> que o usuário não tem capacidade de controlar — e cada uso corrói um pouco mais a barreira entre dimensões. Dependência psíquica em três usos. Colapso perceptual permanente em doses altas.</p>
-      </div>
-    </div>
+  <div class="sidebar-divider"></div>
+  <div class="sidebar-section">
+    <span class="sidebar-cat">Justiça & Ordem</span>
+    <a class="sidebar-link" onclick="showSection('procurados', this)"><span class="sl-icon">⚖️</span> Mural de Recompensas</a>
+    <a class="sidebar-link" onclick="showSection('faccoes', this)"><span class="sl-icon">⚔️</span> Facções do Mundo</a>
   </div>
-
-  <div class="lore-section" id="sec-historia">
-    <div class="sec-header">
-      <div class="sec-eyebrow">Acervo Histórico</div>
-      <h2 class="sec-title">História do Mundo</h2>
-      <p class="sec-sub">Da Grande Guerra aos dias atuais — mil anos de ordem construída sobre cinzas.</p>
-    </div>
-    <div class="timeline">
-      <div class="tl-item"><div class="tl-date">~1000 A.V.</div><div class="tl-dot" style="background:var(--red-seal);"></div><div class="tl-content"><div class="tl-title">A Grande Guerra do Véu</div><div class="tl-text">Conflito devastador causado pelo uso desenfreado da magia por várias facções simultaneamente. Destruiu civilizações inteiras. O pior da guerra foi o uso deliberado da 5ª Dimensão como arma — abrindo fissuras permanentes no tecido da realidade.</div></div></div>
-      <div class="tl-item"><div class="tl-date">~997 A.V.</div><div class="tl-dot" style="background:var(--red-seal);"></div><div class="tl-content"><div class="tl-title">A Queda de Aethryon</div><div class="tl-text">Durante a Guerra, a cidade de Aethryon foi palco da maior ruptura dimensional já registrada. O uso extremo da 5ª Dimensão colapsou a realidade local. A cidade ainda existe — mas o tempo ali não funciona normalmente. Hoje é tomada pela natureza e pelo horror.</div></div></div>
-      <div class="tl-item"><div class="tl-date">Ano 0</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">O Tratado de Vhal'Torin</div><div class="tl-text">Assinado pelos reinos sobreviventes, o Tratado de Vhal'Torin estabeleceu o marco zero do calendário atual (P.V. — Pós-Vhal'Torin). Criou o Sínodo do Quinto Véu como autoridade reguladora internacional da magia.</div></div></div>
-      <div class="tl-item"><div class="tl-date">Ano 150</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Construção da Muralha de Duran-Khal</div><div class="tl-text">Finalização da grande barreira de aço e pedra para conter as emanações residuais de Vhal'Zarak.</div></div></div>
-      <div class="tl-item"><div class="tl-date">Ano 412</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">O Cisma das Cinzas</div><div class="tl-text">Primeira grande ruptura teológica entre a Igreja da Sétima Ascensão e os pesquisadores do Sínodo sobre a "purificação" de artefatos arcanos.</div></div></div>
-      <div class="tl-item"><div class="tl-date">Ano 812</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Ascensão da Liga Mercante</div><div class="tl-text">A Liga Mercante de Ferro torna-se a principal potência econômica, financiando a reconstrução dos portos e a logística de Porto Varion sob supervisão do Sínodo.</div></div></div>
-      <div class="tl-item"><div class="tl-date">Ano 1041</div><div class="tl-dot" style="background:#7a3a9a;"></div><div class="tl-content"><div class="tl-title">Operação Véu Costurado</div><div class="tl-text">Desarticulação do maior culto dimensional registrado em Porto Varion — o Culto do Olho Aberto. 34 detenções e apreensão massiva de Resina Etérea.</div></div></div>
-      <div class="tl-item"><div class="tl-date">Ano 1044</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">Os Dias Atuais</div><div class="tl-text">O mundo parece estável, mas a muralha de Khar-Duran cede e cultos surgem mais rápido do que podem ser desmantelados.</div></div></div>
-    </div>
-    <div class="censored-block" id="cens-hist-1">
-      <div class="art-label">Testemunhos Históricos — Arquivo Confidencial</div>
-      <div class="art-title">O Que os Sobreviventes de Aethryon Viram</div>
-      <div class="censored-text">Testemunho de Merewyn Ash, sobrevivente: "Não foi uma explosão. Explosões têm início e fim. Isso foi um desdobramento. O ar se abriu como um tecido rasgado de dentro para fora. E o que havia do outro lado não era escuridão. Era outra coisa. Coisa que olhava de volta." — Uma criança de 9 anos, única sobrevivente do distrito leste, nunca conseguiu distinguir memória de percepção ativa. Até o fim da vida, ela "via" sua rua sempre ardendo. O Sínodo não publicou esses registros por razões que os pesquisadores chamam de "estabilidade social". Há sete testemunhos completos no Arquivo CD-007.</div>
-      <div class="censored-unlock">
-        <span class="cens-icon">🔒</span>
-        <span class="cens-hint">Arquivo Confidencial CD-007 — Código necessário</span>
-        <button class="cens-btn" onclick="unlockCensored('cens-hist-1','aethryon','Testemunhos de Aethryon')">Inserir Código</button>
-      </div>
-    </div>
+  <div class="sidebar-divider"></div>
+  <div class="sidebar-section">
+    <span class="sidebar-cat">O Mundo</span>
+    <a class="sidebar-link" onclick="showSection('historia', this)"><span class="sl-icon">📜</span> Linha do Tempo</a>
+    <a class="sidebar-link" onclick="showSection('reinos', this)"><span class="sl-icon">🏰</span> Os Reinos</a>
+    <a class="sidebar-link" onclick="showSection('locais', this)"><span class="sl-icon">🗺</span> Locais Notáveis</a>
   </div>
-
-  <div class="lore-section" id="sec-tratado">
-    <div class="sec-header">
-      <div class="sec-eyebrow">Documentos Históricos</div>
-      <h2 class="sec-title">O Tratado de Vhal'Torin</h2>
-      <p class="sec-sub">O acordo que mantém a paz — ou o que resta dela.</p>
-    </div>
-    <div class="lore-article">
-      <div class="art-label">O Tratado</div>
-      <div class="art-title">O Que é Vhal'Torin</div>
-      <div class="art-body">
-        <p>O <strong>Tratado de Vhal'Torin</strong> é o documento mais importante da história moderna — assinado no Ano Zero pelos reinos sobreviventes da Grande Guerra, ele criou o Sínodo do Quinto Véu como autoridade reguladora da magia no mundo.</p>
-        <p>Seu nome vem do local onde foi assinado: a cidade de Vhal'Torin, então capital neutral — hoje sede do que viria a ser Porto Varion. O tratado estabeleceu três coisas fundamentais:</p>
-      </div>
-    </div>
-    <div class="lore-grid">
-      <div class="lore-card"><div class="lc-icon">⚖️</div><div class="lc-title">Proibição Universal</div><div class="lc-desc">Nenhum indivíduo pode praticar ou estudar magia sem autorização expressa do Sínodo.</div></div>
-      <div class="lore-card"><div class="lc-icon">🏛</div><div class="lc-title">O Sínodo</div><div class="lc-desc">Criação de um órgão internacional com representantes de todos os reinos signatários.</div></div>
-      <div class="lore-card"><div class="lc-icon">🤝</div><div class="lc-title">Neutralidade</div><div class="lc-desc">Porto Varion declarada território neutro. Nenhum reino pode exercer força militar dentro dela.</div></div>
-    </div>
-    <div class="lore-warn">
-      <div class="lore-warn-title">⚠ O Que o Tratado Não Resolve</div>
-      <p>Vhal'Torin proíbe a prática. Não elimina a capacidade. Crianças continuam nascendo com percepção dimensional. Famílias continuam escondendo filhos. O Sínodo continua caçando-os — para treinar, dizem oficialmente. O que acontece quando não são encontrados pelo Sínodo, mas por outros, é o que mantém os Inquisidores ocupados.</p>
-    </div>
-  </div>
-
-  <div class="lore-section" id="sec-reinos">
-    <div class="sec-header">
-      <div class="sec-eyebrow">Aviso de Segurança · Nível IV</div>
-      <h2 class="sec-title">Acesso Bloqueado</h2>
-      <p class="sec-sub">Dados Geopolíticos Restritos.</p>
-    </div>
-    <div class="lore-warn" style="text-align: center; padding: 40px; border: 2px dashed var(--parch-dark);">
-      <div style="font-size: 40px; margin-bottom: 20px;">🔒</div>
-      <div class="lore-warn-title" style="color: var(--red-seal); font-weight: bold; font-size: 1.2rem;">ACESSO NEGADO</div>
-      <p style="margin-top: 15px; color: var(--text-body);">As informações sobre as fronteiras dos Reinos foram movidas para o servidor de Segurança Máxima do Sínodo.</p>
-      <p style="font-style: italic; color: var(--text-dim);">Requer autorização de Supervisor ou Inquisidor de Nível II para visualização.</p>
-    </div>
-  </div>
-
-  <div class="lore-section" id="sec-faccoes">
-    <div class="sec-header">
-      <div class="sec-eyebrow">Monitorização Ativa · Divisão de Inteligência</div>
-      <h2 class="sec-title">Facções sob Vigilância</h2>
-      <p class="sec-sub">Relatórios de ameaça e influência atualizados pelo Sínodo.</p>
-    </div>
-    <div class="doc-ibox"><strong>DIRETRIZ OPERACIONAL:</strong> Todo o contacto com membros das facções abaixo deve ser reportado via formulário SQV-FORM-004.</div>
-    <div class="faction-cards">
-      <div class="fcard">
-        <div class="fcard-header"><div class="fcard-name">Sínodo do Quinto Véu</div></div>
-        <div class="fcard-body">
-          <div class="fcard-item">Autoridade global — policia, regula e estuda a magia.</div>
-          <div class="fcard-item"><strong>Status:</strong> Administrador do Sistema</div>
-        </div>
-      </div>
-      <div class="fcard">
-        <div class="fcard-header" style="background: #1a0d2e;"><div class="fcard-name" style="color: #9d4edd;">Tecelões do Vazio</div></div>
-        <div class="fcard-body">
-          <div class="fcard-item">Grupo radical que procura expandir as fissuras dimensionais.</div>
-          <div class="fcard-item"><strong>Status:</strong> Ameaça Prioritária</div>
-        </div>
-      </div>
-      <div class="fcard">
-        <div class="fcard-header" style="background: #2e1a0d;"><div class="fcard-name" style="color: #d4a373;">Liga dos Mercadores de Ferro</div></div>
-        <div class="fcard-body">
-          <div class="fcard-item">Sindicato que lucra com o contrabando de artefatos arcanos.</div>
-          <div class="fcard-item"><strong>Status:</strong> Vigilância Económica</div>
-        </div>
-      </div>
-    </div>
-  </div>
+</aside>
 
 <main class="lore-main">
   <div class="lore-section active" id="sec-home">
@@ -1703,6 +1430,61 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
     <div class="lore-article"><div class="art-title">Vhal'Zarak</div><p>A cicatriz dimensional além da muralha.</p></div>
   </div>
 </main>
+
+<div class="lore-section" id="sec-procurados">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Departamento de Execução do Sínodo</div>
+    <h2 class="sec-title">Mural de Recompensas</h2>
+    <p class="sec-sub">Alvos ativos por crimes contra a Estabilidade Dimensional e o Tratado.</p>
+  </div>
+
+  <div class="wanted-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px;">
+    <div class="wanted-card" style="background: #fdf8eb; border: 4px double #8b1a1a; padding: 15px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); position: relative;">
+      <div style="background: #ddd; width: 100%; height: 200px; margin-bottom: 15px; border: 1px solid #000; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <span style="color: #666; font-family: 'Special Elite';">SEM RETRATO DISPONÍVEL</span>
+      </div>
+      <h3 style="font-family: 'Cinzel'; color: #8b1a1a; text-align: center; font-size: 1.4rem;">Vaelen, o Estilhaçado</h3>
+      <div style="font-family: 'Special Elite'; font-size: 0.9rem; margin-top: 10px;">
+        <p><strong>Idade:</strong> Desconhecida (~35 aparente)</p>
+        <p><strong>Crime:</strong> Tráfico de Resina Etérea e Rompimento Proposital de Pequenos Véus.</p>
+        <p><strong>Periculosidade:</strong> <span style="color: red;">CRÍTICA (Nível V)</span></p>
+        <p style="margin-top: 10px; font-size: 1.1rem; text-align: center; border-top: 1px solid #8b1a1a; padding-top: 5px;"><strong>RECOMPENSA: 5.000 Coroas</strong></p>
+      </div>
+    </div>
+    
+    </div>
+</div>
+
+<div class="lore-section" id="sec-faccoes">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Inteligência Operacional</div>
+    <h2 class="sec-title">Organizações e Facções</h2>
+    <p class="sec-sub">Grupos de influência, guildas mercantes e cultos proibidos.</p>
+  </div>
+
+  <div class="faction-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+    <div class="fcard"><strong>1. O Conclave de Prata:</strong> Os juízes supremos do Sínodo.</div>
+    <div class="fcard"><strong>2. Os Custódios de Duran-Khal:</strong> Engenheiros e guardas da Grande Muralha.</div>
+    <div class="fcard"><strong>3. A Liga Mercante de Ferro:</strong> Controlam o comércio portuário em Varion.</div>
+    
+    <div class="fcard"><strong>4. O Observatório do Véu:</strong> Cientistas focados na 5ª dimensão.</div>
+    <div class="fcard"><strong>5. Os Olhos de Orin:</strong> Espiões infiltrados em reinos signatários.</div>
+    <div class="fcard"><strong>6. A Ordem dos Bibliotecários:</strong> Protetores dos tomos originais de Vhal'Torin.</div>
+
+    <div class="fcard" style="border-left: 4px solid #8b1a1a;"><strong>7. Os Tecelões do Vazio:</strong> Culto que busca colapsar as dimensões.</div>
+    <div class="fcard" style="border-left: 4px solid #8b1a1a;"><strong>8. O Sindicato da Resina:</strong> Distribuidores da droga etérea.</div>
+    <div class="fcard" style="border-left: 4px solid #8b1a1a;"><strong>9. Os Catadores de Aethryon:</strong> Saqueadores de ruínas amaldiçoadas.</div>
+
+    <div class="fcard"><strong>10. A Guarda Imperial de Aurethia:</strong> Protegem os interesses do Sol Eterno.</div>
+    <div class="fcard"><strong>11. Os Filhos de Vhal'Zarak:</strong> Sobreviventes mutantes das terras além da muralha.</div>
+    <div class="fcard"><strong>12. O Conselho Portuário:</strong> Nobres que governam a zona administrativa de Varion.</div>
+
+    <div class="fcard"><strong>13. Os Quebradores de Selos:</strong> Anarquistas mágicos.</div>
+    <div class="fcard"><strong>14. A Irmandade do Aço Frio:</strong> Mercenários especializados em caçar magos.</div>
+    <div class="fcard"><strong>15. Os Visionários de Rivian:</strong> Seguidores de Nasquer que buscam a "Sétima Ascensão" via ciência.</div>
+  </div>
+</div>
+    
   <script>
 // ══════════════════════════════════════════
 // AUTH & GLOBAIS
