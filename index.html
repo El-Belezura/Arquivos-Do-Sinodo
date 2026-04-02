@@ -1258,23 +1258,6 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
       </div>
     </div>
 
-    <div class="page" id="page-glossary">
-      <div class="page-inner">
-        <div class="classif-banner restricted">Acervo de Conhecimento — Sínodo do Quinto Véu</div>
-        <div class="page-header">
-          <div class="page-header-left">
-            <h2>Codex de Lore</h2>
-            <p>Terminologias, eventos e segredos arquivados</p>
-          </div>
-          <div class="page-badge">Arquivo SQV-COD-104</div>
-        </div>
-        <div class="bestiary-controls" style="margin-bottom: 30px;">
-          <input class="bestiary-search" type="text" placeholder="Pesquisar termo no códice..." oninput="filterGlossary(this.value)">
-        </div>
-        <div class="docs-grid" id="glossary-grid"></div>
-      </div>
-    </div>
-
 <div class="page" id="page-biblioteca">
   <div class="lore-wrapper">
     <aside class="lore-sidebar">
@@ -1292,7 +1275,7 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
       </div>
       <div class="sidebar-divider"></div>
       <div class="sidebar-section">
-        <span class="sidebar-cat">Registros</span>
+        <span class="sidebar-cat">Registros Expandidos</span>
         <a class="sidebar-link" onclick="showSection('historia', this)"><span class="sl-icon">📜</span> Linha do Tempo</a>
         <a class="sidebar-link" onclick="showSection('bibliografia', this)"><span class="sl-icon">📚</span> Bibliografia</a>
       </div>
@@ -1305,293 +1288,88 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
           <h2 class="sec-title">Acervo de Porto Varion</h2>
           <p class="sec-sub">Terminal de consulta para Agentes de Vínculo e Inquisidores.</p>
         </div>
+        <div class="art-body">
+          <p>Esta biblioteca reúne o conhecimento aprovado pelo <strong>Sínodo do Quinto Véu</strong> para consulta de agentes, estudiosos e representantes de reinos signatários. Alguns trechos permanecem censurados — protegidos por códigos de acesso conferidos a quem obteve autorização formal.</p>
+        </div>
+        <div class="lore-quote">
+          <p>"O conhecimento é uma faca. Pode alimentar. Pode matar. A diferença não está na faca — está em quem a segura."</p>
+          <cite>— Magistratus Eldren Soval, Primeiro Diretor do Observatório do Véu</cite>
+        </div>
         <div class="lore-grid">
           <div class="lore-card" onclick="showSection('procurados', null)">
             <div class="lc-icon">⚖️</div><div class="lc-title">Mural de Recompensas</div><div class="lc-desc">Alvos prioritários para estabilidade dimensional.</div>
           </div>
-          <div class="lore-card" onclick="showSection('bibliografia', null)">
-            <div class="lc-icon">📚</div><div class="lc-title">Bibliografia</div><div class="lc-desc">Tratados e grimórios autorizados para estudo.</div>
+          <div class="lore-card" onclick="showSection('faccoes', null)">
+            <div class="lc-icon">⚔️</div><div class="lc-title">Facções</div><div class="lc-desc">Organizações de influência e ameaça no Sínodo.</div>
           </div>
         </div>
       </div>
 
       <div class="lore-section" id="sec-cosmologia">
-        <div class="sec-header"><h2 class="sec-title">As Sete Dimensões</h2></div>
+        <div class="sec-header">
+          <div class="sec-eyebrow">Fundamentos · Cosmologia</div>
+          <h2 class="sec-title">As Sete Dimensões</h2>
+          <p class="sec-sub">A estrutura da realidade segundo a doutrina do Sínodo.</p>
+        </div>
+        <div class="lore-article">
+          <div class="art-body">
+            <p>O mundo não é feito apenas do que os olhos veem. Existem <strong>sete dimensões</strong>, cada uma com natureza e função distintas. As três primeiras formam o espaço físico. A quarta dimensão é o tempo.</p>
+          </div>
+        </div>
         <table class="dim-table">
-          <thead><tr><th>Plano</th><th>Nome</th><th>Natureza</th></tr></thead>
+          <thead><tr><th>Dimensão</th><th>Nome</th><th>Natureza</th><th>Acesso</th></tr></thead>
           <tbody>
-            <tr><td>1-3</td><td>Físico</td><td>Matéria e existência biológica.</td></tr>
-            <tr><td>4ª</td><td>Tempo</td><td>Fluxo linear de eventos.</td></tr>
-            <tr><td>5ª</td><td>Véu</td><td>Fonte da Magia e plasticidade.</td></tr>
-            <tr><td>6ª</td><td>Prisão</td><td>Confinamento do Servo Caído.</td></tr>
-            <tr><td>7ª</td><td>Divino</td><td>Reino da Sétima Ascensão.</td></tr>
+            <tr><td>1ª – 3ª</td><td>Mundo Físico</td><td>Espaço, matéria, existência</td><td>Universal</td></tr>
+            <tr><td>4ª</td><td>O Tempo</td><td>Fluxo, causa e consequência</td><td>Passivo</td></tr>
+            <tr><td>5ª</td><td>O Véu / A Magia</td><td>Plasticidade da realidade</td><td>Restrito</td></tr>
+            <tr><td>6ª</td><td>A Prisão</td><td>Confinamento do Servo Caído</td><td>Fechada</td></tr>
+            <tr><td>7ª</td><td>Plano Divino</td><td>Reino da Sétima Ascensão</td><td>Pós-morte</td></tr>
           </tbody>
         </table>
-      </div>
-
-      <div class="lore-section" id="sec-procurados">
-        <div class="sec-header">
-          <h2 class="sec-title">Mural de Recompensas</h2>
-          <p class="sec-sub">Ordens de Captura Ativas — Vivos ou Mortos.</p>
-        </div>
-        <div class="wanted-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; padding: 15px;">
-          
-          <div class="wanted-poster" style="background:#e8dec0; border:2px solid #5a3a22; padding:10px; box-shadow: 5px 5px 15px rgba(0,0,0,0.5); transform: rotate(-1deg);">
-            <div style="border: 1px solid #5a3a22; padding: 10px; background: #f4ecd8;">
-              <div style="text-align:center; font-family:'Cinzel'; font-weight:bold; color:#8b1a1a; font-size:1.4rem; border-bottom:2px solid #8b1a1a; margin-bottom:10px;">PROCURADO</div>
-              <div style="width:100%; height:200px; background:#bbb; border:1px solid #5a3a22; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-family:'Special Elite'; color:#444;">FOTO DO ALVO</div>
-              <div style="font-family:'Special Elite'; color:#2a2010; line-height:1.4;">
-                <p><strong>NOME:</strong> Vaelen, o Ruptura</p>
-                <p><strong>IDADE:</strong> 34 Anos</p>
-                <p><strong>CRIME:</strong> Colapso deliberado do Véu em Zona Civil.</p>
-                <p><strong>PERIGO:</strong> <span style="background:#8b1a1a; color:white; padding:2px 5px;">MÁXIMO</span></p>
-                <div style="text-align:center; margin-top:15px; font-size:1.2rem; font-weight:bold; border:2px dashed #8b1a1a; padding:5px;">RECOMPENSA: 15.000G</div>
-              </div>
-            </div>
-          </div>
-
-          </div>
-      </div>
-
-      <div class="lore-section" id="sec-faccoes">
-        <div class="sec-header"><h2 class="sec-title">Organizações de Influência</h2></div>
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; padding:15px;">
-          
-          <div class="faction-box" style="background:rgba(197,163,85,0.05); border-left:5px solid var(--gold); padding:15px; border-radius:0 10px 10px 0;">
-            <h4 style="font-family:'Cinzel'; color:var(--gold); margin-bottom:8px;">1. Sínodo do Quinto Véu</h4>
-            <p style="font-size:0.9rem; color:var(--text-dim);">A autoridade máxima global. Regulam a magia e garantem o cumprimento do Tratado de Vhal'Torin.</p>
-          </div>
-
-          <div class="faction-box" style="background:rgba(139,26,26,0.05); border-left:5px solid #8b1a1a; padding:15px; border-radius:0 10px 10px 0;">
-            <h4 style="font-family:'Cinzel'; color:#8b1a1a; margin-bottom:8px;">2. Tecelões do Vazio</h4>
-            <p style="font-size:0.9rem; color:var(--text-dim);">Culto extremista que acredita que o mundo físico é uma prisão que deve ser destruída para libertar a essência.</p>
-          </div>
-
-          </div>
-      </div>
-
-      <div class="lore-section" id="sec-historia">
-        <div class="sec-header"><h2 class="sec-title">Cronologia de Vhal'Torin</h2></div>
-        <div class="timeline">
-          <div class="tl-item"><div class="tl-date">~1000 A.V.</div><div class="tl-dot" style="background:#8b1a1a;"></div><div class="tl-content"><div class="tl-title">A Grande Guerra</div><div class="tl-text">Uso de magia como arma de cerco destrói o Reino de Aethryon.</div></div></div>
-          <div class="tl-item"><div class="tl-date">Ano 0</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">O Tratado</div><div class="tl-text">O Sínodo é fundado em Porto Varion. Proibição universal da magia livre.</div></div></div>
-          <div class="tl-item"><div class="tl-date">Ano 150</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">A Muralha de Duran-Khal</div><div class="tl-text">Finalizada a barreira contra as aberrações do Norte.</div></div></div>
-          <div class="tl-item"><div class="tl-date">Ano 412</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">O Cisma das Cinzas</div><div class="tl-text">Ruptura teológica entre os primeiros Inquisidores e o Sínodo.</div></div></div>
-          <div class="tl-item"><div class="tl-date">Ano 812</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">A Liga Mercante de Ferro</div><div class="tl-text">Fundação do sindicato que hoje controla 90% do comércio marítimo.</div></div></div>
-          <div class="tl-item"><div class="tl-date">Ano 1038</div><div class="tl-dot" style="background:#7a3a9a;"></div><div class="tl-content"><div class="tl-title">Descoberta da Resina Etérea</div><div class="tl-text">Primeiros casos de dependência química de essência mágica em Porto Varion.</div></div></div>
-          <div class="tl-item"><div class="tl-date">Ano 1041</div><div class="tl-dot" style="background:#8b1a1a;"></div><div class="tl-content"><div class="tl-title">Operação Véu Costurado</div><div class="tl-text">Expurgo massivo contra o Culto do Olho Aberto.</div></div></div>
-          <div class="tl-item"><div class="tl-date">Ano 1044</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">Os Dias Atuais</div><div class="tl-text">O Véu apresenta instabilidade recorde. Rumores de um novo "Selador".</div></div></div>
-        </div>
-      </div>
-
-      <div class="lore-section" id="sec-bibliografia">
-        <div class="sec-header">
-          <h2 class="sec-title">Bibliografia Recomendada</h2>
-          <p class="sec-sub">Obras clássicas e tratados científicos autorizados pelo Conclave.</p>
-        </div>
-        <div class="lore-article">
-          <div class="art-body">
-            <ul style="list-style:none; padding:0;">
-              <li style="margin-bottom:20px; border-bottom:1px solid var(--border); padding-bottom:10px;">
-                <strong style="color:var(--gold);">"O Tecido Invisível"</strong> — <em>Magistratus Orin Vel</em><br>
-                <small>Estudo fundamental sobre a percepção da 5ª dimensão por não-praticantes.</small>
-              </li>
-              <li style="margin-bottom:20px; border-bottom:1px solid var(--border); padding-bottom:10px;">
-                <strong style="color:var(--gold);">"Cicatrizes de Vhal'Torin"</strong> — <em>Historiador Eldric</em><br>
-                <small>Crônica detalhada sobre os erros táticos que levaram ao colapso de Aethryon.</small>
-              </li>
-              <li style="margin-bottom:20px; border-bottom:1px solid var(--border); padding-bottom:10px;">
-                <strong style="color:var(--gold);">"Codex de Rivian Nasquer"</strong> — <em>Anônimo</em><br>
-                <small>Obra controversa que discute a "ciência da alma" e a 7ª dimensão. (Acesso Restrito).</small>
-              </li>
-              <li style="margin-bottom:20px; border-bottom:1px solid var(--border); padding-bottom:10px;">
-                <strong style="color:var(--gold);">"Doutrina da Sétima Ascensão"</strong> — <em>Arquivos da Igreja</em><br>
-                <small>Base teológica sobre a prisão do Servo Caído na 6ª dimensão.</small>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </main>
-  </div>
-</div>
-    </aside>
-
-    <main class="lore-main">
-      <div class="lore-section active" id="sec-home">
-        <div class="sec-header">
-          <div class="sec-eyebrow">Diretivas do Sínodo</div>
-          <h2 class="sec-title">Portal de Informação Interna</h2>
-          <p class="sec-sub">Bem-vindo ao acervo central de Porto Varion.</p>
-        </div>
-        <div class="art-body">
-          <p>Este terminal provê acesso aos registros históricos, científicos e criminais sob jurisdição do <strong>Sínodo do Quinto Véu</strong>. O uso desta informação para fins de heresia arcana é punível conforme o Tratado de Vhal'Torin.</p>
-        </div>
-        <div class="lore-grid">
-          <div class="lore-card" onclick="showSection('procurados', null)">
-            <div class="lc-icon">⚖️</div><div class="lc-title">Mural de Recompensas</div><div class="lc-desc">Alvos prioritários para execução ou captura.</div>
-          </div>
-          <div class="lore-card" onclick="showSection('cosmologia', null)">
-            <div class="lc-icon">🌌</div><div class="lc-title">Estudos do Véu</div><div class="lc-desc">A estrutura das sete dimensões e a magia.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lore-section" id="sec-cosmologia">
-        <div class="sec-header">
-          <h2 class="sec-title">As Sete Dimensões</h2>
-          <p class="sec-sub">A natureza da realidade visível e invisível.</p>
-        </div>
-        <div class="lore-article">
-          <div class="art-body">
-            <p>O Sínodo cataloga a existência em sete camadas sobrepostas. A ruptura de qualquer uma delas pode levar ao colapso da 3ª dimensão (a nossa).</p>
-            <table class="dim-table">
-              <thead><tr><th>Plano</th><th>Nome</th><th>Função</th></tr></thead>
-              <tbody>
-                <tr><td>1-3</td><td>Físico</td><td>Matéria e vida biológica.</td></tr>
-                <tr><td>4ª</td><td>Tempo</td><td>Fluxo linear de eventos.</td></tr>
-                <tr><td>5ª</td><td>Véu</td><td>Fonte da Magia e plasticidade.</td></tr>
-                <tr><td>6ª</td><td>Prisão</td><td>Confinamento do Servo Caído.</td></tr>
-                <tr><td>7ª</td><td>Divino</td><td>Reino da Sétima Ascensão.</td></tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="censored-block" id="cens-cosmol-1">
+          <div class="art-label">Pesquisa Avançada — Observatório do Véu</div>
+          <div class="art-title">A Consciência da 5ª Dimensão</div>
+          <div class="censored-text">Há evidências crescentes de que a 5ª Dimensão responde à interação humana — não como um reflexo, mas como uma reação intencional. Alguns membros do Conclave acreditam que ela é consciente. Que tem objetivos. Que está esperando algo.</div>
+          <div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-cosmol-1','observatorio','Consciência Dimensional')">Inserir Código</button></div>
         </div>
       </div>
 
       <div class="lore-section" id="sec-magia">
         <div class="sec-header">
-          <h2 class="sec-title">A Natureza da Magia</h2>
-          <p class="sec-sub">Manipulação cognitiva da 5ª Dimensão.</p>
+          <h2 class="sec-title">A Natureza do Véu</h2>
+          <p class="sec-sub">O que é, como funciona e por que é proibida.</p>
         </div>
         <div class="lore-article">
           <div class="art-body">
-            <p>Magia não é um dom, é uma <strong>anomalia cerebral</strong> que permite "enxergar" e puxar fios do Véu para a realidade física. </p>
-            <div class="lore-warn"><div class="lore-warn-title">⚠ RISCO DE FRATURA</div><p>Todo uso de magia deixa uma cicatriz no Véu. O acúmulo de cicatrizes gera fissuras, por onde entram as entidades dimensionais.</p></div>
+            <p>Magia é uma <strong>capacidade cognitiva</strong> — a habilidade de perceber a estrutura da 5ª Dimensão e manipulá-la. Ter a capacidade não é suficiente; é necessário anos de estudo para não enlouquecer.</p>
+            <p>Cada uso da magia cria uma abertura temporária. Usos excessivos deixam aberturas que não se fecham sozinhas. Dessas aberturas vêm os monstros.</p>
+            <div class="lore-info">
+              <div class="lore-info-title">ℹ A Resina Etérea</div>
+              <p>Substância ilegal que amplifica a percepção dimensional. Altamente viciante, corrói a barreira entre as dimensões a cada dose.</p>
+            </div>
           </div>
+        </div>
+        <div class="censored-block" id="cens-magia-1">
+          <div class="art-label">Memorando Interno do Conclave</div>
+          <div class="art-title">O Declínio dos Praticantes</div>
+          <div class="censored-text">O número de pessoas nascidas com capacidade dimensional caiu 47% nos últimos oito anos. Se a 5ª Dimensão está se retraindo voluntariamente, o Sínodo colapsará em três décadas.</div>
+          <div class="censored-unlock"><span class="cens-icon">🔒</span><button class="cens-btn" onclick="unlockCensored('cens-magia-1','conclave1044','Declínio Arcano')">Inserir Código</button></div>
         </div>
       </div>
 
       <div class="lore-section" id="sec-procurados">
-        <div class="sec-header"><h2 class="sec-title">Mural de Recompensas</h2><p class="sec-sub">Alvos ativos: Vivos ou Mortos.</p></div>
-        <div class="wanted-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; padding: 10px;">
-          
-          <div class="wanted-card" style="background:#f4ecd8; border:4px double #8b1a1a; padding:15px; color:#2a2010; position:relative;">
-            <div style="width:100%; height:180px; background:#ccc; border:1px solid #000; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-family:'Special Elite';">RETRATO FALADO</div>
-            <h3 style="font-family:'Cinzel'; color:#8b1a1a; text-align:center;">Vaelen, o Ruptura</h3>
-            <div style="font-family:'Special Elite'; font-size:0.85rem; border-top:1px solid #8b1a1a; padding-top:8px;">
-              <p><strong>Idade:</strong> 34 | <strong>Perigo:</strong> <span style="color:red">CRÍTICO</span></p>
-              <p><strong>Crime:</strong> Terrorismo arcano e colapso de véu.</p>
-              <p style="text-align:center; font-size:1.1rem; margin-top:10px;"><strong>RECOMPENSA: 15.000G</strong></p>
-            </div>
-          </div>
-
-          <div class="wanted-card" style="background:#f4ecd8; border:4px double #8b1a1a; padding:15px; color:#2a2010;">
-            <div style="width:100%; height:180px; background:#ccc; border:1px solid #000; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-family:'Special Elite';">RETRATO FALADO</div>
-            <h3 style="font-family:'Cinzel'; color:#8b1a1a; text-align:center;">Silas de Aethryon</h3>
-            <div style="font-family:'Special Elite'; font-size:0.85rem; border-top:1px solid #8b1a1a; padding-top:8px;">
-              <p><strong>Idade:</strong> Desconhecida | <strong>Perigo:</strong> <span style="color:red">ALTO</span></p>
-              <p><strong>Crime:</strong> Saque de relíquias de Nível IV.</p>
-              <p style="text-align:center; font-size:1.1rem; margin-top:10px;"><strong>RECOMPENSA: 8.000G</strong></p>
-            </div>
-          </div>
-          </div>
-      </div>
-
-      <div class="lore-section" id="sec-faccoes">
-        <div class="sec-header"><h2 class="sec-title">Facções e Organizações</h2></div>
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; padding:10px;">
-          <div class="fcard"><strong>1. Sínodo do Quinto Véu:</strong> Governo global e reguladores da magia.</div>
-          <div class="fcard"><strong>2. Tecelões do Vazio:</strong> Culto extremista que busca "libertar" a 6ª dimensão.</div>
-          <div class="fcard"><strong>3. Liga Mercante de Ferro:</strong> Controladores do porto e da economia de Varion.</div>
-          <div class="fcard"><strong>4. Observatório do Véu:</strong> O braço científico que estuda anomalias.</div>
-          <div class="fcard"><strong>5. Custódios de Duran-Khal:</strong> Guerreiros-engenheiros da Grande Muralha.</div>
-          <div class="fcard"><strong>6. Inquisição Imperial:</strong> Ex-membros da igreja que caçam heréticos mágicos.</div>
-          <div class="fcard"><strong>7. Sindicato da Resina:</strong> Cartel que trafica a droga feita de essência etérea.</div>
-          <div class="fcard"><strong>8. Filhos de Vhal'Zarak:</strong> Sobreviventes mutados pelas terras do caos.</div>
-          <div class="fcard"><strong>9. Ordem dos Bibliotecários:</strong> Guardiões de tomos proibidos de antes da guerra.</div>
-          <div class="fcard"><strong>10. Olhos de Orin:</strong> A rede de espionagem e assassinato do Conclave.</div>
-          <div class="fcard"><strong>11. Academia de Aurethia:</strong> Nobres que buscam a supremacia mágica.</div>
-          <div class="fcard"><strong>12. Irmandade do Aço Frio:</strong> Mercenários anti-magia equipados com antimateria.</div>
-          <div class="fcard"><strong>13. Saqueadores de Ruínas:</strong> Exploradores ilegais de cidades mortas.</div>
-          <div class="fcard"><strong>14. Conselho dos Sete:</strong> Os líderes anônimos que controlam a política.</div>
-          <div class="fcard"><strong>15. Os Anarquistas de Rivian:</strong> Grupo que prega que a magia deve ser livre.</div>
-        </div>
-      </div>
-
-      <div class="lore-section" id="sec-historia">
-        <div class="sec-header"><h2 class="sec-title">Cronologia do Mundo</h2></div>
-        <div class="timeline">
-          <div class="tl-item"><div class="tl-date">~1000 A.V.</div><div class="tl-dot" style="background:#8b1a1a;"></div><div class="tl-content"><div class="tl-title">A Grande Guerra</div><div class="tl-text">Fim da era dos Deuses e colapso das nações arcanas.</div></div></div>
-          <div class="tl-item"><div class="tl-date">Ano 0</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">Tratado de Vhal'Torin</div><div class="tl-text">Fundação do Sínodo e paz vigiada.</div></div></div>
-          <div class="tl-item"><div class="tl-date">Ano 812</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Ascensão da Liga</div><div class="tl-text">Porto Varion torna-se o centro comercial do mundo.</div></div></div>
-          <div class="tl-item"><div class="tl-date">Ano 1041</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Operação Véu Costurado</div><div class="tl-text">O maior expurgo de cultistas da história recente.</div></div></div>
-        </div>
-      </div>
-
-      <div class="lore-section" id="sec-reinos">
-        <div class="sec-header"><h2 class="sec-title">Os Reinos Signatários</h2></div>
-        <div class="kingdom-entry">
-          <div class="ke-header"><div class="ke-icon">🏰</div><div><div class="ke-title">Aurethia</div><div class="ke-sub">O Império do Sol</div></div></div>
-          <div class="ke-body"><p>Aliado instável que mantém experimentos secretos com o Véu.</p></div>
-        </div>
-        <div class="kingdom-entry">
-          <div class="ke-header"><div class="ke-icon">⚒️</div><div><div class="ke-title">Khar-Duran</div><div class="ke-sub">Fortaleza do Norte</div></div></div>
-          <div class="ke-body"><p>Nação militar que protege a muralha contra as hordas abissais.</p></div>
-        </div>
-      </div>
-
-      <div class="lore-section" id="sec-locais">
-        <div class="sec-header"><h2 class="sec-title">Pontos de Interesse</h2></div>
-        <div class="lore-article"><div class="art-title">A Ruína de Aethryon</div><div class="art-body"><p>Uma cidade congelada no tempo, onde a gravidade não existe.</p></div></div>
-        <div class="lore-article"><div class="art-title">O Nexus de Varion</div><div class="art-body"><p>O subsolo do porto, onde o Véu é mais fino e perigoso.</p></div></div>
-      </div>
-
-    </main>
-  </div>
-</div>
-    </aside>
-
-    <main class="lore-main">
-      <div class="lore-section active" id="sec-home">
-        <div class="sec-header">
-          <div class="sec-eyebrow">Acervo Central</div>
-          <h2 class="sec-title">Biblioteca de Porto Varion</h2>
-          <p class="sec-sub">Conhecimento autorizado pelo Sínodo do Quinto Véu.</p>
-        </div>
-        <div class="lore-grid">
-          <div class="lore-card" onclick="showSection('procurados', null)">
-            <div class="lc-icon">⚖️</div>
-            <div class="lc-title">Mural de Recompensas</div>
-            <div class="lc-desc">Criminosos e ameaças à estabilidade dimensional.</div>
-          </div>
-          <div class="lore-card" onclick="showSection('faccoes', null)">
-            <div class="lc-icon">⚔️</div>
-            <div class="lc-title">Facções</div>
-            <div class="lc-desc">As 15 maiores potências e cultos do mundo.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lore-section" id="sec-cosmologia"> <h2 class="sec-title">Cosmologia</h2> <p>Conteúdo das 7 dimensões...</p> </div>
-      <div class="lore-section" id="sec-magia"> <h2 class="sec-title">A Magia</h2> <p>Estudo sobre o uso do Véu...</p> </div>
-
-      <div class="lore-section" id="sec-procurados">
-        <div class="sec-header">
-          <h2 class="sec-title">Mural de Recompensas</h2>
-          <p class="sec-sub">Vivos ou Mortos. Recompensas pagas em Coroas de Ouro do Sínodo.</p>
-        </div>
-        <div class="wanted-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; padding: 10px;">
-          
-          <div class="wanted-card" style="background: #f4ecd8; border: 5px double #8b1a1a; padding: 15px; color: #2a2010; text-align: center;">
-            <div style="width: 100%; height: 180px; background: #ccc; border: 1px solid #000; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; font-family: 'Special Elite';">FOTO AQUI</div>
-            <h3 style="font-family: 'Cinzel'; margin: 5px 0;">Vaelen, o Ruptura</h3>
-            <div style="font-family: 'Special Elite'; font-size: 0.85rem; text-align: left; border-top: 1px solid #8b1a1a; padding-top: 10px;">
-              <p><strong>Idade:</strong> 34 anos</p>
-              <p><strong>Crime:</strong> Colapso de Véu em vilarejo civil.</p>
-              <p><strong>Perigo:</strong> <span style="color:red">EXTREMO</span></p>
-              <p style="font-size: 1.1rem; margin-top: 10px; text-align: center;"><strong>RECOMPENSA: 10.000 G</strong></p>
+        <div class="sec-header"><h2 class="sec-title">Mural de Recompensas</h2><p class="sec-sub">Alvos Ativos sob a Jurisdição do Sínodo.</p></div>
+        <div class="wanted-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 15px;">
+          <div class="wanted-poster" style="background:#e8dec0; border:2px solid #5a3a22; padding:10px; box-shadow: 5px 5px 15px rgba(0,0,0,0.3);">
+            <div style="border: 1px solid #5a3a22; padding: 10px; background: #f4ecd8; text-align:center;">
+              <div style="font-family:'Cinzel'; font-weight:bold; color:#8b1a1a; font-size:1.4rem; border-bottom:2px solid #8b1a1a; margin-bottom:10px;">PROCURADO</div>
+              <div style="width:100%; height:180px; background:#bbb; border:1px solid #5a3a22; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-family:'Special Elite';">RETRATO</div>
+              <div style="font-family:'Special Elite'; text-align:left; font-size:0.85rem;">
+                <p><strong>NOME:</strong> Vaelen, o Ruptura</p>
+                <p><strong>CRIME:</strong> Colapso deliberado do Véu.</p>
+                <p><strong>PERIGO:</strong> <span style="background:#8b1a1a; color:white; padding:0 5px;">MÁXIMO</span></p>
+                <div style="margin-top:10px; font-weight:bold; border:1px dashed #8b1a1a; text-align:center; font-size:1rem;">15.000 G</div>
+              </div>
             </div>
           </div>
           </div>
@@ -1599,215 +1377,56 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
 
       <div class="lore-section" id="sec-faccoes">
         <div class="sec-header"><h2 class="sec-title">Facções do Mundo</h2></div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 10px;">
-          <div class="fcard"><strong>1. Sínodo do Quinto Véu:</strong> Reguladores mundiais da magia.</div>
-          <div class="fcard"><strong>2. Tecelões do Vazio:</strong> Cultistas que buscam o fim das dimensões.</div>
-          <div class="fcard"><strong>3. Liga Mercante de Ferro:</strong> Detentores do monopólio portuário.</div>
-          <div class="fcard"><strong>4. Observatório do Véu:</strong> Cientistas e videntes de Porto Varion.</div>
-          <div class="fcard"><strong>5. Custódios de Duran-Khal:</strong> Guardiões da Grande Muralha.</div>
-          <div class="fcard"><strong>6. Inquisição de Lux Aeterna:</strong> Braço armado da fé (antiga igreja).</div>
-          <div class="fcard"><strong>7. Sindicato da Resina:</strong> Mafiosos do tráfico de pó etéreo.</div>
-          <div class="fcard"><strong>8. Ordem dos Bibliotecários:</strong> Protetores de segredos proibidos.</div>
-          <div class="fcard"><strong>9. Filhos de Vhal'Zarak:</strong> Sobreviventes mutantes do Ermo.</div>
-          <div class="fcard"><strong>10. Academia Aurethiana:</strong> Nobres que buscam a "Magia Pura".</div>
-          <div class="fcard"><strong>11. Os Olhos de Orin:</strong> Rede de espionagem dimensional.</div>
-          <div class="fcard"><strong>12. Irmandade do Aço Frio:</strong> Caçadores de magos renegados.</div>
-          <div class="fcard"><strong>13. Conselho dos Sete:</strong> Os governantes ocultos de Varion.</div>
-          <div class="fcard"><strong>14. Saqueadores de Aethryon:</strong> Exploradores de ruínas temporais.</div>
-          <div class="fcard"><strong>15. O Conclave das Sombras:</strong> Grupo anarquista contra o Tratado.</div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; padding:15px;">
+          <div style="background:rgba(197,163,85,0.1); border-left:4px solid var(--gold); padding:12px;">
+            <h4 style="font-family:'Cinzel';">1. Sínodo do Quinto Véu</h4>
+            <p style="font-size:0.85rem;">Autoridade máxima e reguladora do Tratado de Vhal'Torin.</p>
+          </div>
+          <div style="background:rgba(139,26,26,0.1); border-left:4px solid #8b1a1a; padding:12px;">
+            <h4 style="font-family:'Cinzel';">2. Tecelões do Vazio</h4>
+            <p style="font-size:0.85rem;">Culto radical que busca o colapso das dimensões.</p>
+          </div>
+          <div class="fcard"><strong>3. Liga Mercante de Ferro:</strong> Monopólio portuário.</div>
+          <div class="fcard"><strong>4. Observatório do Véu:</strong> Cientistas da 5ª dimensão.</div>
+          <div class="fcard"><strong>5. Custódios de Duran-Khal:</strong> Guardiões da Muralha.</div>
+          <div class="fcard"><strong>6. Inquisição Imperial:</strong> Caçadores de heréticos mágicos.</div>
+          <div class="fcard"><strong>7. Sindicato da Resina:</strong> Cartel do tráfico etéreo.</div>
+          <div class="fcard"><strong>8. Filhos de Vhal'Zarak:</strong> Mutantes das terras do caos.</div>
+          <div class="fcard"><strong>9. Ordem dos Bibliotecários:</strong> Protetores de tomos proibidos.</div>
+          <div class="fcard"><strong>10. Olhos de Orin:</strong> Rede de espionagem do Conclave.</div>
+          <div class="fcard"><strong>11. Academia de Aurethia:</strong> Nobres de supremacia mágica.</div>
+          <div class="fcard"><strong>12. Irmandade do Aço Frio:</strong> Mercenários anti-magia.</div>
+          <div class="fcard"><strong>13. Saqueadores de Ruínas:</strong> Exploradores de cidades mortas.</div>
+          <div class="fcard"><strong>14. Conselho dos Sete:</strong> Líderes políticos anônimos.</div>
+          <div class="fcard"><strong>15. Os Anarquistas de Rivian:</strong> Grupo de liberação mágica.</div>
         </div>
       </div>
 
+      <div class="lore-section" id="sec-historia">
+        <div class="sec-header"><h2 class="sec-title">Cronologia de Vhal'Torin</h2></div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-date">~1000 A.V.</div><div class="tl-dot" style="background:#8b1a1a;"></div><div class="tl-content"><div class="tl-title">A Grande Guerra</div><div class="tl-text">Uso de magia de cerco destrói Aethryon.</div></div></div>
+          <div class="tl-item"><div class="tl-date">Ano 0</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">O Tratado</div><div class="tl-text">Fundação do Sínodo e paz vigiada.</div></div></div>
+          <div class="tl-item"><div class="tl-date">Ano 150</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Muralha de Duran-Khal</div><div class="tl-text">Barreira física e dimensional finalizada no norte.</div></div></div>
+          <div class="tl-item"><div class="tl-date">Ano 812</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Liga Mercante</div><div class="tl-text">Controle econômico total de Porto Varion.</div></div></div>
+          <div class="tl-item"><div class="tl-date">Ano 1041</div><div class="tl-dot" style="background:#7a3a9a;"></div><div class="tl-content"><div class="tl-title">Operação Véu Costurado</div><div class="tl-text">Expurgo do Culto do Olho Aberto.</div></div></div>
+          <div class="tl-item"><div class="tl-date">Ano 1044</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">Presente</div><div class="tl-text">Instabilidade recorde no Véu e rumores do Selador.</div></div></div>
+        </div>
+      </div>
+
+      <div class="lore-section" id="sec-bibliografia">
+        <div class="sec-header"><h2 class="sec-title">Bibliografia Recomendada</h2></div>
+        <div class="art-body">
+          <ul style="list-style:none; padding:0;">
+            <li style="margin-bottom:15px; border-bottom:1px solid #ddd;"><strong>"O Tecido Invisível"</strong> — <em>Magistratus Orin Vel</em></li>
+            <li style="margin-bottom:15px; border-bottom:1px solid #ddd;"><strong>"Cicatrizes de Vhal'Torin"</strong> — <em>Historiador Eldric</em></li>
+            <li style="margin-bottom:15px; border-bottom:1px solid #ddd;"><strong>"Codex de Rivian Nasquer"</strong> — <em>Anônimo (Acesso Restrito)</em></li>
+          </ul>
+        </div>
+      </div>
     </main>
   </div>
 </div>
-
-<main class="lore-main">
-  <div class="lore-section active" id="sec-home">
-    <div class="lore-article">
-      <div class="art-label">Diretivas Externas</div>
-      <div class="art-title">Documentação de Base</div>
-      <div class="art-body">
-        <p>Para consulta rápida dos fundamentos legais e religiosos, utilize os arquivos externos oficiais:</p>
-        <div style="display: flex; gap: 10px; margin-top: 15px;">
-          <a href="https://docs.google.com/document/d/1bRumBGBy_4b4qaUeQ84C6k4GAwg6P2Yb/edit" target="_blank" class="action-btn">📜 Ler Tratado de Vhal'Torin</a>
-          <a href="https://docs.google.com/document/d/1M7uBpBceAy-bdpQTjBkQhKqkxKyqDwzk/edit" target="_blank" class="action-btn">⛪ Ler Doutrina da Igreja</a>
-        </div>
-      </div>
-    </div>
-    <div class="art-body">
-      <p>Esta biblioteca reúne o conhecimento aprovado pelo <strong>Sínodo do Quinto Véu</strong> para consulta de agentes, estudiosos e representantes de reinos signatários. Alguns trechos permanecem censurados — protegidos por códigos de acesso conferidos a quem obteve autorização formal.</p>
-    </div>
-    <div class="lore-quote">
-      <p>"O conhecimento é uma faca. Pode alimentar. Pode matar. A diferença não está na faca — está em quem a segura."</p>
-      <cite>— Magistratus Eldren Soval, Primeiro Diretor do Observatório do Véu</cite>
-    </div>
-
-    <div class="lore-grid">
-      <div class="lore-card" onclick="showSection('cosmologia',null)">
-        <div class="lc-icon">🌌</div>
-        <div class="lc-title">Cosmologia</div>
-        <div class="lc-desc">As sete dimensões, a natureza do mundo e o que existe além da realidade visível.</div>
-      </div>
-      <div class="lore-card" onclick="showSection('magia',null)">
-        <div class="lc-icon">✨</div>
-        <div class="lc-title">A Magia</div>
-        <div class="lc-desc">O que é, como funciona, por que é proibida e o que acontece com quem a usa.</div>
-      </div>
-      <div class="lore-card" onclick="showSection('historia',null)">
-        <div class="lc-icon">📜</div>
-        <div class="lc-title">História</div>
-        <div class="lc-desc">A Grande Guerra, o Tratado de Vhal'Torin e mil anos de ordem frágil.</div>
-      </div>
-      <div class="lore-card" onclick="showSection('reinos',null)">
-        <div class="lc-icon">🏰</div>
-        <div class="lc-title">Os Reinos</div>
-        <div class="lc-desc">As grandes potências, suas culturas e suas relações com a magia.</div>
-      </div>
-      <div class="lore-card" onclick="showSection('faccoes',null)">
-        <div class="lc-icon">⚔️</div>
-        <div class="lc-title">Facções</div>
-        <div class="lc-desc">O Sínodo, a Igreja, os Custódios e as forças que moldam o mundo.</div>
-      </div>
-      <div class="lore-card" onclick="showSection('locais',null)">
-        <div class="lc-icon">🗺</div>
-        <div class="lc-title">Locais</div>
-        <div class="lc-desc">De Porto Varion às ruínas de Aethryon e além da Grande Muralha.</div>
-      </div>
-    </div>
-
-    <div class="lore-warn">
-      <div class="lore-warn-title">⚠ Aviso ao Leitor</div>
-      <p>Alguns trechos desta biblioteca foram classificados pelo Conclave. Suas ausências são intencionais. Se você acredita ter direito a um acesso específico, contate seu Supervisor de Vínculo com justificativa formal.</p>
-    </div>
-  </div> <div class="lore-section" id="sec-cosmologia">
-    <div class="sec-header">
-      <div class="sec-eyebrow">Fundamentos · Cosmologia</div>
-      <h2 class="sec-title">As Sete Dimensões</h2>
-      <p class="sec-sub">A estrutura da realidade segundo a doutrina do Sínodo e a fé da Igreja.</p>
-    </div>
-    <div class="lore-article">
-      <div class="art-body">
-        <p>Tanto a ciência do Sínodo quanto a teologia da Igreja convergem: existem <strong>sete dimensões</strong> distintas.</p>
-      </div>
-    </div>
-    <table class="dim-table">
-      <thead>
-        <tr><th>Dimensão</th><th>Nome</th><th>Natureza</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1ª – 3ª</td><td>Mundo Físico</td><td>Matéria e existência</td></tr>
-        <tr><td>4ª</td><td>O Tempo</td><td>Fluxo de causa e consequência</td></tr>
-        <tr><td>5ª</td><td>O Véu / A Magia</td><td>Plasticidade da realidade</td></tr>
-        <tr><td>6ª</td><td>A Prisão</td><td>Confinamento do mal</td></tr>
-        <tr><td>7ª</td><td>O Plano Divino</td><td>Reino da Sétima Ascensão</td></tr>
-      </tbody>
-    </table>
-    <div class="censored-block" id="cens-cosmol-1">
-      <div class="art-label">Pesquisa Avançada — Observatório do Véu</div>
-      <div class="art-title">A Consciência da 5ª Dimensão</div>
-      <div class="censored-text">Há evidências crescentes de que a 5ª Dimensão responde à interação humana com intenção. Alguns membros do Conclave acreditam que ela é consciente e está esperando algo.</div>
-      <div class="censored-unlock">
-        <span class="cens-icon">🔒</span>
-        <button class="cens-btn" onclick="unlockCensored('cens-cosmol-1','observatorio','Consciência Dimensional')">Inserir Código</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="lore-section" id="sec-historia">
-    <div class="sec-header">
-      <div class="sec-eyebrow">Acervo Histórico</div>
-      <h2 class="sec-title">História do Mundo</h2>
-      <p class="sec-sub">Da Grande Guerra aos dias atuais.</p>
-    </div>
-    <div class="timeline">
-      <div class="tl-item"><div class="tl-date">~1000 A.V.</div><div class="tl-dot" style="background:var(--red-seal);"></div><div class="tl-content"><div class="tl-title">A Grande Guerra do Véu</div><div class="tl-text">Uso deliberado da 5ª Dimensão como arma, destruindo civilizações inteiras.</div></div></div>
-      <div class="tl-item"><div class="tl-date">~997 A.V.</div><div class="tl-dot" style="background:var(--red-seal);"></div><div class="tl-content"><div class="tl-title">A Queda de Aethryon</div><div class="tl-text">Ruptura dimensional extrema que congelou a cidade em um estado de ruína viva.</div></div></div>
-      <div class="tl-item"><div class="tl-date">Ano 0</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">O Tratado de Vhal'Torin</div><div class="tl-text">Criação do Sínodo e marco zero do calendário atual.</div></div></div>
-      <div class="tl-item"><div class="tl-date">Ano 150</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Muralha de Duran-Khal</div><div class="tl-text">Finalização da barreira para conter as aberrações de Vhal'Zarak.</div></div></div>
-      <div class="tl-item"><div class="tl-date">Ano 812</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Ascensão da Liga Mercante</div><div class="tl-text">Financiamento da reconstrução portuária e logística global.</div></div></div>
-      <div class="tl-item"><div class="tl-date">Ano 1041</div><div class="tl-dot" style="background:#7a3a9a;"></div><div class="tl-content"><div class="tl-title">Operação Véu Costurado</div><div class="tl-text">Desarticulação do Culto do Olho Aberto em Porto Varion.</div></div></div>
-      <div class="tl-item"><div class="tl-date">Ano 1044</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-title">Os Dias Atuais</div><div class="tl-text">Instabilidade na Muralha e ressurgimento de cultos proibidos.</div></div></div>
-    </div>
-  </div>
-
-  <div class="lore-section" id="sec-magia">
-    <div class="sec-header"><h2>A Magia e o Véu</h2></div>
-    <p>Magia é uma capacidade cognitiva de interpretar a 5ª Dimensão. O uso sem treino causa aberturas que não se fecham.</p>
-  </div>
-
-  <div class="lore-section" id="sec-reinos">
-    <div class="sec-header"><h2 class="sec-title">Acesso Bloqueado</h2></div>
-    <div class="lore-warn">🔒 ACESSO NEGADO. Requer autorização de Supervisor Nível II.</div>
-  </div>
-
-  <div class="lore-section" id="sec-faccoes">
-    <div class="faction-cards">
-      <div class="fcard"><div class="fcard-header">Sínodo do Quinto Véu</div></div>
-      <div class="fcard"><div class="fcard-header" style="background:#1a0d2e;">Tecelões do Vazio</div></div>
-    </div>
-  </div>
-
-  <div class="lore-section" id="sec-locais">
-    <div class="lore-article"><div class="art-title">Porto Varion</div><p>Sede do Sínodo e território neutro.</p></div>
-    <div class="lore-article"><div class="art-title">Vhal'Zarak</div><p>A cicatriz dimensional além da muralha.</p></div>
-  </div>
-</main>
-
-<div class="lore-section" id="sec-procurados">
-  <div class="sec-header">
-    <div class="sec-eyebrow">Departamento de Execução do Sínodo</div>
-    <h2 class="sec-title">Mural de Recompensas</h2>
-    <p class="sec-sub">Alvos ativos por crimes contra a Estabilidade Dimensional e o Tratado.</p>
-  </div>
-
-  <div class="wanted-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px;">
-    <div class="wanted-card" style="background: #fdf8eb; border: 4px double #8b1a1a; padding: 15px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); position: relative;">
-      <div style="background: #ddd; width: 100%; height: 200px; margin-bottom: 15px; border: 1px solid #000; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-        <span style="color: #666; font-family: 'Special Elite';">SEM RETRATO DISPONÍVEL</span>
-      </div>
-      <h3 style="font-family: 'Cinzel'; color: #8b1a1a; text-align: center; font-size: 1.4rem;">Vaelen, o Estilhaçado</h3>
-      <div style="font-family: 'Special Elite'; font-size: 0.9rem; margin-top: 10px;">
-        <p><strong>Idade:</strong> Desconhecida (~35 aparente)</p>
-        <p><strong>Crime:</strong> Tráfico de Resina Etérea e Rompimento Proposital de Pequenos Véus.</p>
-        <p><strong>Periculosidade:</strong> <span style="color: red;">CRÍTICA (Nível V)</span></p>
-        <p style="margin-top: 10px; font-size: 1.1rem; text-align: center; border-top: 1px solid #8b1a1a; padding-top: 5px;"><strong>RECOMPENSA: 5.000 Coroas</strong></p>
-      </div>
-    </div>
-    
-    </div>
-</div>
-
-<div class="lore-section" id="sec-faccoes">
-  <div class="sec-header">
-    <div class="sec-eyebrow">Inteligência Operacional</div>
-    <h2 class="sec-title">Organizações e Facções</h2>
-    <p class="sec-sub">Grupos de influência, guildas mercantes e cultos proibidos.</p>
-  </div>
-
-  <div class="faction-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-    <div class="fcard"><strong>1. O Conclave de Prata:</strong> Os juízes supremos do Sínodo.</div>
-    <div class="fcard"><strong>2. Os Custódios de Duran-Khal:</strong> Engenheiros e guardas da Grande Muralha.</div>
-    <div class="fcard"><strong>3. A Liga Mercante de Ferro:</strong> Controlam o comércio portuário em Varion.</div>
-    
-    <div class="fcard"><strong>4. O Observatório do Véu:</strong> Cientistas focados na 5ª dimensão.</div>
-    <div class="fcard"><strong>5. Os Olhos de Orin:</strong> Espiões infiltrados em reinos signatários.</div>
-    <div class="fcard"><strong>6. A Ordem dos Bibliotecários:</strong> Protetores dos tomos originais de Vhal'Torin.</div>
-
-    <div class="fcard" style="border-left: 4px solid #8b1a1a;"><strong>7. Os Tecelões do Vazio:</strong> Culto que busca colapsar as dimensões.</div>
-    <div class="fcard" style="border-left: 4px solid #8b1a1a;"><strong>8. O Sindicato da Resina:</strong> Distribuidores da droga etérea.</div>
-    <div class="fcard" style="border-left: 4px solid #8b1a1a;"><strong>9. Os Catadores de Aethryon:</strong> Saqueadores de ruínas amaldiçoadas.</div>
-
-    <div class="fcard"><strong>10. A Guarda Imperial de Aurethia:</strong> Protegem os interesses do Sol Eterno.</div>
-    <div class="fcard"><strong>11. Os Filhos de Vhal'Zarak:</strong> Sobreviventes mutantes das terras além da muralha.</div>
-    <div class="fcard"><strong>12. O Conselho Portuário:</strong> Nobres que governam a zona administrativa de Varion.</div>
-
-    <div class="fcard"><strong>13. Os Quebradores de Selos:</strong> Anarquistas mágicos.</div>
-    <div class="fcard"><strong>14. A Irmandade do Aço Frio:</strong> Mercenários especializados em caçar magos.</div>
-    <div class="fcard"><strong>15. Os Visionários de Rivian:</strong> Seguidores de Nasquer que buscam a "Sétima Ascensão" via ciência.</div>
-  </div>
-</div>
-    
   <script>
 // ══════════════════════════════════════════
 // AUTH & GLOBAIS
