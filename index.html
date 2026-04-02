@@ -2088,14 +2088,20 @@ function forceNavigate(pageId) {
   });
 
   // 2. Executa a mudança de página usando a função original
-  showPage(pageId, targetTab);
-}
-function showPage(id,tab){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById('page-'+id).classList.add('active');
-  if(tab) tab.classList.add('active');
-  if(id==='map') initMap();
+function showPage(id, tab) {
+    // Esconde todas as páginas e remove o brilho de todas as abas
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    
+    // Mostra a página alvo
+    const targetPage = document.getElementById('page-' + id);
+    if(targetPage) {
+        targetPage.classList.add('active');
+        targetPage.scrollTop = 0; // Volta o scroll para o topo
+    }
+    
+    // Destaca a aba clicada
+    if(tab) tab.classList.add('active');
 }
 function gotoTab(idx){
   const tabs=document.querySelectorAll('.nav-tab');
@@ -2426,38 +2432,21 @@ function showSecretLore(item) {
   document.getElementById('reader-overlay').classList.add('open');
 }
 
-document.addEventListener('DOMContentLoaded', () => { 
-  if(document.getElementById('glossary-grid')) renderGlossary(); 
-});
-
-
-// Inicialização unificada ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
-    // Renderiza os dados iniciais
+    // Renderiza os dados do Bestiário e Codex se as funções existirem
     if(typeof renderBeasts === 'function') renderBeasts('all');
     if(typeof renderGlossary === 'function') renderGlossary();
     
-    // Garante que a primeira seção da biblioteca apareça
+    // Inicializa a Biblioteca
     const primeiraSecao = document.getElementById('sec-home');
     if(primeiraSecao) primeiraSecao.classList.add('active');
+
+    console.log("Portal Sínodo v4: Sistemas Operacionais Ativos.");
 });
 
-// Correção na função showPage para garantir renderização
-function showPage(id, tab) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-    
-    const targetPage = document.getElementById('page-' + id);
-    if(targetPage) {
-        targetPage.classList.add('active');
-    }
-    
-    if(tab) tab.classList.add('active');
-    
-    // Gatilhos específicos por aba
-    if(id === 'map') initMap();
-    if(id === 'bestiary') renderBeasts(currentBeastFilter);
-    if(id === 'glossary') renderGlossary();
-}
-  
+
 </script>
+</div> </div> <div class="toast" id="toast"></div>
+
+</body>
+</html>
