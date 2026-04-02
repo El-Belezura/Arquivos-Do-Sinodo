@@ -1293,7 +1293,8 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
           <div class="sidebar-divider"></div>
           <div class="sidebar-section">
             <span class="sidebar-cat">O Mundo</span>
-            <a class="sidebar-link" id="link-reinos" onclick="checkReinosLock(this)"><span class="sl-icon">🏰</span> Os Reinos <span class="sl-lock">🔒</span></a>
+            <a class="sidebar-link" id="link-reinos" onclick="tentarAcessoReinos(this)"><span class="sl-icon">🏰</span> Os Reinos <span class="sl-lock">🔒</span>
+</a>
             <a class="sidebar-link" onclick="showSection('faccoes',this)"><span class="sl-icon">⚔️</span> Facções</a>
             <a class="sidebar-link" onclick="showSection('igreja',this)"><span class="sl-icon">⛪</span> A Igreja</a>
             <a class="sidebar-link" onclick="showSection('monstros',this)"><span class="sl-icon">🐉</span> Monstros & Ameaças</a>
@@ -1526,20 +1527,21 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
           </div>
 
 <div class="lore-section" id="sec-reinos">
-    <div class="sec-header">
-        <div class="sec-eyebrow">Geopolítica</div>
-        <h2 class="sec-title">Os Reinos do Mundo</h2>
-        <p class="sec-sub">Acesso Restrito — Requer Autorização Nível III</p>
+    <div id="reinos-bloqueio-total" style="padding: 40px; text-align: center; border: 1px dashed var(--gold-dim); background: rgba(0,0,0,0.03);">
+        <div style="font-size: 40px; margin-bottom: 20px;">🔒</div>
+        <h2 style="font-family: 'Cinzel', serif; color: var(--ink);">Arquivo Geopolítico Restrito</h2>
+        <p style="font-family: 'Crimson Text', serif; font-style: italic; color: var(--text-dim); margin-bottom: 24px;">
+            O acesso aos registros de Aurethia, Lux Aeterna e demais reinos requer criptografia Nível III.
+        </p>
+        <button class="cens-btn" onclick="solicitarSenhaReinos()">Desbloquear Seção</button>
     </div>
 
-    <div id="reinos-lock-screen" style="text-align: center; padding: 50px; background: rgba(0,0,0,0.05); border: 1px dashed var(--gold-dim);">
-        <span style="font-size: 3rem;">🔒</span>
-        <h3 style="font-family: 'Cinzel', serif; color: var(--ink); margin-top: 15px;">Arquivo Geopolítico Criptografado</h3>
-        <p style="font-family: 'Crimson Text', serif; font-style: italic; margin-bottom: 20px;">Este acervo contém informações sensíveis sobre a soberania dos reinos signatários.</p>
-        <button class="cens-btn" onclick="unlockReinos()">Inserir Código de Acesso</button>
-    </div>
-
-    <div id="reinos-content" style="display: none;">
+    <div id="reinos-conteudo-real" style="display: none;">
+        <div class="sec-header">
+            <div class="sec-eyebrow">Geopolítica</div>
+            <h2 class="sec-title">Os Reinos do Mundo</h2>
+            <p class="sec-sub">As grandes potências e suas relações com a magia.</p>
+        </div>
         </div>
 </div>
             <div class="kingdom-entry">
@@ -1821,43 +1823,42 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
 
 <script>
 
-  // Função para quando clicarem no link da lateral
-function checkReinosLock(linkEl) {
-    // Apenas mostra a seção (que estará com o cadeado visual)
+// Variável global para controle de estado
+let reinosDesbloqueados = false;
+
+function tentarAcessoReinos(linkEl) {
+    // Abre a aba normalmente, mas o conteúdo interno decide o que mostrar
     showSection('reinos', linkEl);
 }
 
-// Abre o modal de senha específico para os Reinos
-function unlockReinos() {
-    pendingBlockId = 'reinos-unlock-process'; // ID temporário para identificação
-    pendingPassword = 'aurethia1044';        // DEFINA A SENHA AQUI
+function solicitarSenhaReinos() {
+    // Configura os dados para o modal de senha já existente no seu código
+    pendingBlockId = 'BLOQUEIO_REINOS'; 
+    pendingPassword = 'aurethia1044'; // Defina sua senha aqui
     
-    document.getElementById('pwd-modal-doc').textContent = "Acervo Geopolítico: Os Reinos";
+    document.getElementById('pwd-modal-doc').textContent = "AUTORIZAÇÃO: ACERVO GEOPOLÍTICO";
     document.getElementById('pwd-input').value = '';
-    document.getElementById('pwd-modal-err').textContent = '';
     document.getElementById('pwd-overlay').classList.add('open');
     setTimeout(() => document.getElementById('pwd-input').focus(), 100);
 
-    // Sobrescrevemos a função de confirmar do modal apenas para este caso
-    window.handlePwdSubmit = function() {
+    // Sobrescreve temporariamente a função de confirmação do seu portal
+    const originalConfirm = window.confirmUnlock;
+    
+    window.confirmUnlock = function() {
         const val = document.getElementById('pwd-input').value.trim().toLowerCase();
         if (val === pendingPassword) {
-            document.getElementById('reinos-lock-screen').style.display = 'none';
-            document.getElementById('reinos-content').style.display = 'block';
+            reinosDesbloqueados = true;
+            document.getElementById('reinos-bloqueio-total').style.display = 'none';
+            document.getElementById('reinos-conteudo-real').style.display = 'block';
             document.getElementById('link-reinos').querySelector('.sl-lock').textContent = '🔓';
             closePwdModal();
-            showToast('✦  Acesso aos Reinos Concedido  ✦');
-            
-            // Restaura a função original para não quebrar os outros documentos
-            window.handlePwdSubmit = originalHandlePwdSubmit;
+            showToast('✦ Acesso aos Reinos liberado ✦');
+            window.confirmUnlock = originalConfirm; // Restaura a função original
         } else {
-            document.getElementById('pwd-modal-err').textContent = 'Código inválido.';
+            document.getElementById('pwd-modal-err').textContent = 'Código de segurança inválido.';
         }
     };
 }
-
-// Guardar a função original para restaurar depois
-const originalHandlePwdSubmit = handlePwdSubmit;
 // ══════════════════════════════════════════
 // AUTH & GLOBAIS
 // ══════════════════════════════════════════
