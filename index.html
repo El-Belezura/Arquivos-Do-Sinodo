@@ -1277,35 +1277,29 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
 
     <div class="page" id="page-biblioteca">
       <div class="lore-wrapper">
-        <aside class="lore-sidebar">
-          <div class="sidebar-section">
-            <span class="sidebar-cat">Fundamentos</span>
-            <a class="sidebar-link active" onclick="showSection('home',this)"><span class="sl-icon">🏛</span> Introdução</a>
-            <a class="sidebar-link" onclick="showSection('cosmologia',this)"><span class="sl-icon">🌌</span> Cosmologia</a>
-            <a class="sidebar-link" onclick="showSection('magia',this)"><span class="sl-icon">✨</span> A Magia</a>
-          </div>
-          <div class="sidebar-divider"></div>
-          <div class="sidebar-section">
-            <span class="sidebar-cat">História</span>
-            <a class="sidebar-link" onclick="showSection('historia',this)"><span class="sl-icon">📜</span> Linha do Tempo</a>
-            <a class="sidebar-link" onclick="showSection('tratado',this)"><span class="sl-icon">⚖️</span> Tratado de Vhal'Torin</a>
-          </div>
-          <div class="sidebar-divider"></div>
-          <div class="sidebar-section">
-            <span class="sidebar-cat">O Mundo</span>
-            <a class="sidebar-link" onclick="showSection('reinos',this)"><span class="sl-icon">🏰</span> Os Reinos</a>
-            <a class="sidebar-link" onclick="showSection('faccoes',this)"><span class="sl-icon">⚔️</span> Facções</a>
-            <a class="sidebar-link" onclick="showSection('igreja',this)"><span class="sl-icon">⛪</span> A Igreja</a>
-            <a class="sidebar-link" onclick="showSection('monstros',this)"><span class="sl-icon">🐉</span> Monstros & Ameaças</a>
-            <a class="sidebar-link" onclick="showSection('locais',this)"><span class="sl-icon">🗺</span> Locais Notáveis</a>
-          </div>
-          <div class="sidebar-divider"></div>
-          <div class="sidebar-section">
-            <span class="sidebar-cat">Restrito</span>
-            <a class="sidebar-link" onclick="showSection('profecia',this)"><span class="sl-icon">🔮</span> Profecias <span class="sl-lock">🔒</span></a>
-            <a class="sidebar-link" onclick="showSection('segredos',this)"><span class="sl-icon">🕯</span> Segredos do Sínodo <span class="sl-lock">🔒</span></a>
-          </div>
-        </aside>
+<aside class="lore-sidebar">
+  <div class="sidebar-section">
+    <span class="sidebar-cat">Fundamentos</span>
+    <a class="sidebar-link active" onclick="showSection('home', this)"><span class="sl-icon">🏛</span> Introdução</a>
+    <a class="sidebar-link" onclick="showSection('cosmologia', this)"><span class="sl-icon">🌌</span> Cosmologia</a>
+    <a class="sidebar-link" onclick="showSection('magia', this)"><span class="sl-icon">✨</span> A Magia</a>
+  </div>
+  <div class="sidebar-divider"></div>
+  <div class="sidebar-section">
+    <span class="sidebar-cat">História</span>
+    <a class="sidebar-link" onclick="showSection('historia', this)"><span class="sl-icon">📜</span> Linha do Tempo</a>
+    <a class="sidebar-link" onclick="showSection('tratado', this)"><span class="sl-icon">⚖️</span> Tratado de Vhal'Torin</a>
+  </div>
+  <div class="sidebar-divider"></div>
+  <div class="sidebar-section">
+    <span class="sidebar-cat">O Mundo</span>
+    <a class="sidebar-link" onclick="showSection('reinos', this)"><span class="sl-icon">🏰</span> Os Reinos</a>
+    <a class="sidebar-link" onclick="showSection('faccoes', this)"><span class="sl-icon">⚔️</span> Facções</a>
+    <a class="sidebar-link" onclick="showSection('igreja', this)"><span class="sl-icon">⛪</span> A Igreja</a>
+    <a class="sidebar-link" onclick="showSection('monstros', this)"><span class="sl-icon">🐉</span> Monstros & Ameaças</a>
+    <a class="sidebar-link" onclick="showSection('locais', this)"><span class="sl-icon">🗺</span> Locais Notáveis</a>
+  </div>
+</aside>
 
         <main class="lore-main">
           
@@ -1536,11 +1530,11 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
     <h2 class="sec-title">Acesso Bloqueado</h2>
     <p class="sec-sub">Dados Geopolíticos Restritos.</p>
   </div>
-  <div class="lore-warn" style="text-align: center; padding: 40px;">
+  <div class="lore-warn" style="text-align: center; padding: 40px; border: 2px dashed var(--parch-dark);">
     <div style="font-size: 40px; margin-bottom: 20px;">🔒</div>
-    <div class="lore-warn-title">ACESSO NEGADO</div>
-    <p>As informações sobre as fronteiras dos Reinos foram movidas para o servidor de Segurança Máxima do Sínodo. 
-    <br>Requer autorização de Supervisor ou Inquisidor de Nível II para visualização.</p>
+    <div class="lore-warn-title" style="color: var(--red-seal); font-weight: bold; font-size: 1.2rem;">ACESSO NEGADO</div>
+    <p style="margin-top: 15px; color: var(--text-body);">As informações sobre as fronteiras dos Reinos foram movidas para o servidor de Segurança Máxima do Sínodo.</p>
+    <p style="font-style: italic; color: var(--text-dim);">Requer autorização de Supervisor ou Inquisidor de Nível II para visualização.</p>
   </div>
 </div>
             <div class="kingdom-entry">
@@ -1591,15 +1585,29 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
   <div class="doc-ibox"><strong>DIRETRIZ OPERACIONAL:</strong> Todo o contacto com membros das facções abaixo deve ser reportado via formulário SQV-FORM-004.</div>
 
   <div class="faction-cards">
-    <div class="fcard"><div class="fcard-header"><div class="fcard-name">Sínodo do Quinto Véu</div><div class="fcard-motto">"Sob o Tratado, o Véu permanece fechado."</div></div><div class="fcard-body"><div class="fcard-item">Autoridade global — policia, regula e estuda a magia.</div><div class="fcard-item">Status: **Administrador do Sistema**</div></div></div>
+    <div class="fcard">
+      <div class="fcard-header"><div class="fcard-name">Sínodo do Quinto Véu</div></div>
+      <div class="fcard-body">
+        <div class="fcard-item">Autoridade global — policia, regula e estuda a magia.</div>
+        <div class="fcard-item"><strong>Status:</strong> Administrador do Sistema</div>
+      </div>
+    </div>
     
-    <div class="fcard"><div class="fcard-header"><div class="fcard-name">Igreja da Sétima Ascensão</div><div class="fcard-motto">"A luz protege. A luz julga."</div></div><div class="fcard-body"><div class="fcard-item">Vê a magia como violação divina. Quer selar o Véu.</div><div class="fcard-item">Status: **Colaboração Tensa**</div></div></div>
+    <div class="fcard">
+      <div class="fcard-header" style="background: #1a0d2e;"><div class="fcard-name" style="color: #9d4edd;">Tecelões do Vazio</div></div>
+      <div class="fcard-body">
+        <div class="fcard-item">Grupo radical que procura expandir as fissuras dimensionais.</div>
+        <div class="fcard-item"><strong>Status:</strong> Ameaça Prioritária</div>
+      </div>
+    </div>
 
-    <div class="fcard"><div class="fcard-header" style="background: #1a0d2e;"><div class="fcard-name" style="color: #9d4edd;">Tecelões do Vazio</div><div class="fcard-motto">"A realidade é uma tapeçaria pronta a ser desfeita."</div></div><div class="fcard-body"><div class="fcard-item">Grupo radical que procura expandir as fissuras dimensionais.</div><div class="fcard-item">Uso intensivo de Resina Etérea em rituais.</div><div class="fcard-item">Status: **Ameaça Prioritária**</div></div></div>
-
-    <div class="fcard"><div class="fcard-header" style="background: #2e1a0d;"><div class="fcard-name" style="color: #d4a373;">Liga dos Mercadores de Ferro</div><div class="fcard-motto">"Onde há caos, há lucro."</div></div><div class="fcard-body"><div class="fcard-item">Sindicato que lucra com o contrabando de artefatos arcanos.</div><div class="fcard-item">Operam principalmente nos portos de Valtheris.</div><div class="fcard-item">Status: **Vigilância Económica**</div></div></div>
-
-    <div class="fcard"><div class="fcard-header" style="background: #0d2e1a;"><div class="fcard-name" style="color: #74c69d;">Observadores Mudos</div><div class="fcard-motto">"Apenas olhamos. Nunca interferimos."</div></div><div class="fcard-body"><div class="fcard-item">Sociedade secreta de estudiosos que documentam anomalias.</div><div class="fcard-item">Suspeitos de possuírem mapas pré-Guerra do Véu.</div><div class="fcard-item">Status: **Neutralidade Suspeita**</div></div></div>
+    <div class="fcard">
+      <div class="fcard-header" style="background: #2e1a0d;"><div class="fcard-name" style="color: #d4a373;">Liga dos Mercadores de Ferro</div></div>
+      <div class="fcard-body">
+        <div class="fcard-item">Sindicato que lucra com o contrabando de artefatos arcanos.</div>
+        <div class="fcard-item"><strong>Status:</strong> Vigilância Económica</div>
+      </div>
+    </div>
   </div>
 </div>
 
