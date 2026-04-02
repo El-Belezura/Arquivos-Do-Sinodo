@@ -18,25 +18,6 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--ink-deep);color:var(--text-body);overflow:hidden;}
 
-.external-links-container .btn-primary {
-    background: var(--ink);
-    color: var(--gold-pale);
-    border: 1px solid var(--gold-dim);
-    padding: 12px;
-    font-family: 'Cinzel', serif;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.9rem;
-}
-
-.external-links-container .btn-primary:hover {
-    background: var(--gold-dim);
-    color: var(--ink-deep);
-    box-shadow: 0 0 15px rgba(197, 163, 85, 0.3);
-    transform: translateY(-2px);
-}
-
 /* ─── LOGIN ─── */
 #login-screen{position:fixed;inset:0;z-index:100;background:var(--ink-deep);display:flex;align-items:center;justify-content:center;flex-direction:column;}
 .login-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none;opacity:.06;}
@@ -1183,19 +1164,7 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
         </div>
       </div>
     </div>
-<div class="external-links-container" style="margin-top: 20px; display: grid; gap: 15px;">
-    <h3 class="cinzel-gold" style="font-size: 1.2rem;">Documentação Externa</h3>
-    
-    <a href="https://docs.google.com/document/d/1bRumBGBy_4b4qaUeQ84C6k4GAwg6P2Yb/edit" 
-       target="_blank" class="btn-primary" style="text-decoration: none; text-align: center; display: block;">
-       📜 ACESSAR TRATADO DE VHAL'TORIN
-    </a>
 
-    <a href="https://docs.google.com/document/d/1M7uBpBceAy-bdpQTjBkQhKqkxKyqDwzk/edit" 
-       target="_blank" class="btn-primary" style="text-decoration: none; text-align: center; display: block;">
-       ⛪ ACESSAR DOUTRINA DA IGREJA
-    </a>
-</div>
     <div class="page" id="page-classified">
       <div class="page-inner">
         <div class="classif-banner top-secret">Máximo Sigilo — Acesso Individual por Código de Segurança</div>
@@ -1340,12 +1309,17 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
 
         <main class="lore-main">
           
-          <div class="lore-section active" id="sec-home">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Biblioteca · Introdução</div>
-              <h2 class="sec-title">Bem-vindo à Biblioteca do Quinto Véu</h2>
-              <p class="sec-sub">Tudo que o mundo tem direito de saber — e nada além disso.</p>
-            </div>
+<div class="lore-article">
+  <div class="art-label">Diretivas Externas</div>
+  <div class="art-title">Documentação de Base</div>
+  <div class="art-body">
+    <p>Para consulta rápida dos fundamentos legais e religiosos, utilize os arquivos externos oficiais:</p>
+    <div style="display: flex; gap: 10px; margin-top: 15px;">
+        <a href="https://docs.google.com/document/d/1bRumBGBy_4b4qaUeQ84C6k4GAwg6P2Yb/edit" target="_blank" class="action-btn">📜 Ler Tratado de Vhal'Torin</a>
+        <a href="https://docs.google.com/document/d/1M7uBpBceAy-bdpQTjBkQhKqkxKyqDwzk/edit" target="_blank" class="action-btn">⛪ Ler Doutrina da Igreja</a>
+    </div>
+  </div>
+</div>
             <div class="art-body">
               <p>Esta biblioteca reúne o conhecimento aprovado pelo <strong>Sínodo do Quinto Véu</strong> para consulta de agentes, estudiosos e representantes de reinos signatários. Alguns trechos permanecem censurados — protegidos por códigos de acesso conferidos a quem obteve autorização formal.</p>
             </div>
@@ -1556,12 +1530,19 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
             </div>
           </div>
 
-          <div class="lore-section" id="sec-reinos">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Geopolítica</div>
-              <h2 class="sec-title">Os Reinos do Mundo</h2>
-              <p class="sec-sub">As grandes potências, suas identidades e sua relação com a magia.</p>
-            </div>
+<div class="lore-section" id="sec-reinos">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Aviso de Segurança · Nível IV</div>
+    <h2 class="sec-title">Acesso Bloqueado</h2>
+    <p class="sec-sub">Dados Geopolíticos Restritos.</p>
+  </div>
+  <div class="lore-warn" style="text-align: center; padding: 40px;">
+    <div style="font-size: 40px; margin-bottom: 20px;">🔒</div>
+    <div class="lore-warn-title">ACESSO NEGADO</div>
+    <p>As informações sobre as fronteiras dos Reinos foram movidas para o servidor de Segurança Máxima do Sínodo. 
+    <br>Requer autorização de Supervisor ou Inquisidor de Nível II para visualização.</p>
+  </div>
+</div>
             <div class="kingdom-entry">
               <div class="ke-header"><div class="ke-icon">🏛</div><div><div class="ke-title">Império de Aurethia</div><div class="ke-sub">"O império que salvou o mundo… e agora apodrece por dentro."</div></div></div>
               <div class="ke-body"><div class="art-body"><p>A maior potência humana do mundo. Centro político e cultural. Um dos fundadores do Tratado de Vhal'Torin e pilar do Sínodo. Na aparência, é o guardião da ordem. Na realidade, é onde a ordem vai para morrer lentamente.</p><p>O Imperador existe. O Senado governa. A corrupção administra. A elite de Aurethia há muito aprendeu que as regras foram feitas para os outros — especialmente as regras sobre magia.</p></div><div style="margin-top:10px;"><span class="ke-tag">Grande Potência</span><span class="ke-tag info">Signatário Fundador</span><span class="ke-tag danger">Corrupção Sistêmica</span><span class="ke-tag">Sede do Sínodo</span></div></div>
@@ -1600,25 +1581,27 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
             </div>
           </div>
 
-          <div class="lore-section" id="sec-faccoes">
-            <div class="sec-header">
-              <div class="sec-eyebrow">Facções e Organizações</div>
-              <h2 class="sec-title">As Forças que Movem o Mundo</h2>
-              <p class="sec-sub">O Sínodo, a Igreja, a Inquisição e os que operam nas sombras.</p>
-            </div>
-            <div class="faction-cards">
-              <div class="fcard"><div class="fcard-header"><div class="fcard-name">Sínodo do Quinto Véu</div><div class="fcard-motto">"Sob o Tratado, o Véu permanece fechado."</div></div><div class="fcard-body"><div class="fcard-item">Autoridade global da magia — policia, regula e estuda</div><div class="fcard-item">Membros indicados por reinos signatários</div><div class="fcard-item">Correntes internas: Ortodoxos, Progressistas, Corruptos</div><div class="fcard-item">Opera através de Agentes de Vínculo e Inquisidores Arcanos</div><div class="fcard-item">Nem sempre confiável — possui segredos próprios</div></div></div>
-              <div class="fcard"><div class="fcard-header"><div class="fcard-name">Igreja da Sétima Ascensão</div><div class="fcard-motto">"A luz protege. A luz julga."</div></div><div class="fcard-body"><div class="fcard-item">Religião mais difundida do mundo conhecido</div><div class="fcard-item">Vê a magia como violação da ordem divina</div><div class="fcard-item">Quer selar a 5ª Dimensão permanentemente</div><div class="fcard-item">Protege criaturas sencientes, incluindo não-humanos</div><div class="fcard-item">Tensão constante com o Sínodo — colaboração forçada</div></div></div>
-              <div class="fcard"><div class="fcard-header"><div class="fcard-name">Custódios da Purificação</div><div class="fcard-motto">"O fogo purifica o que a lei não alcança."</div></div><div class="fcard-body"><div class="fcard-item">Braço inquisitorial da Igreja</div><div class="fcard-item">Caçam magia ilegal, julgam hereges</div><div class="fcard-item">Legados da Chama lideram no campo</div><div class="fcard-item">Maioria acredita genuinamente no que faz</div><div class="fcard-item">Alguns fanáticos. Alguns cruéis. Raramente injustos.</div></div></div>
-              <div class="fcard"><div class="fcard-header" style="background:#3a1a3a;"><div class="fcard-name" style="color:#c080d0;">Cultos da 5ª Dimensão</div><div class="fcard-motto" style="color:rgba(192,128,208,.5);">"Eles chamam de comunhão."</div></div><div class="fcard-body"><div class="fcard-item">Grupos que veneram entidades dimensionais como deuses</div><div class="fcard-item">Essas entidades não são deuses — são criaturas da 5ª Dimensão</div><div class="fcard-item">Usam e distribuem Resina Etérea como sacramento</div><div class="fcard-item">Surgem mais rápido do que são desmantelados</div><div class="fcard-item">Parecem coordenados entre si — sem liderança visível</div></div></div>
-            </div>
-            <div class="censored-block" id="cens-sinodo-secreto">
-              <div class="art-label">Conclave Interno — Máximo Sigilo</div>
-              <div class="art-title">O Que o Sínodo Esconde</div>
-              <div class="censored-text">O Conclave realizou sessão fechada em 1044 P.V. onde foram discutidos: o declínio de praticantes (classificado como informação reservada), a decisão de não confrontar Aurethia pelos experimentos nas Câmaras Brancas (sete votos a dois), e o relatório sobre a possível consciência da 5ª Dimensão (suprimido por unanimidade). Os Agentes de Vínculo são informados que o declínio é "flutuação demográfica natural". Eles não são informados das outras decisões.</div>
-              <div class="censored-unlock"><span class="cens-icon">🔒</span><span class="cens-hint">Ata do Conclave CE-002 — Código necessário</span><button class="cens-btn" onclick="unlockCensored('cens-sinodo-secreto','conclave1044','Os Segredos do Conclave')">Inserir Código</button></div>
-            </div>
-          </div>
+<div class="lore-section" id="sec-faccoes">
+  <div class="sec-header">
+    <div class="sec-eyebrow">Monitorização Ativa · Divisão de Inteligência</div>
+    <h2 class="sec-title">Facções sob Vigilância</h2>
+    <p class="sec-sub">Relatórios de ameaça e influência atualizados pelo Sínodo.</p>
+  </div>
+  
+  <div class="doc-ibox"><strong>DIRETRIZ OPERACIONAL:</strong> Todo o contacto com membros das facções abaixo deve ser reportado via formulário SQV-FORM-004.</div>
+
+  <div class="faction-cards">
+    <div class="fcard"><div class="fcard-header"><div class="fcard-name">Sínodo do Quinto Véu</div><div class="fcard-motto">"Sob o Tratado, o Véu permanece fechado."</div></div><div class="fcard-body"><div class="fcard-item">Autoridade global — policia, regula e estuda a magia.</div><div class="fcard-item">Status: **Administrador do Sistema**</div></div></div>
+    
+    <div class="fcard"><div class="fcard-header"><div class="fcard-name">Igreja da Sétima Ascensão</div><div class="fcard-motto">"A luz protege. A luz julga."</div></div><div class="fcard-body"><div class="fcard-item">Vê a magia como violação divina. Quer selar o Véu.</div><div class="fcard-item">Status: **Colaboração Tensa**</div></div></div>
+
+    <div class="fcard"><div class="fcard-header" style="background: #1a0d2e;"><div class="fcard-name" style="color: #9d4edd;">Tecelões do Vazio</div><div class="fcard-motto">"A realidade é uma tapeçaria pronta a ser desfeita."</div></div><div class="fcard-body"><div class="fcard-item">Grupo radical que procura expandir as fissuras dimensionais.</div><div class="fcard-item">Uso intensivo de Resina Etérea em rituais.</div><div class="fcard-item">Status: **Ameaça Prioritária**</div></div></div>
+
+    <div class="fcard"><div class="fcard-header" style="background: #2e1a0d;"><div class="fcard-name" style="color: #d4a373;">Liga dos Mercadores de Ferro</div><div class="fcard-motto">"Onde há caos, há lucro."</div></div><div class="fcard-body"><div class="fcard-item">Sindicato que lucra com o contrabando de artefatos arcanos.</div><div class="fcard-item">Operam principalmente nos portos de Valtheris.</div><div class="fcard-item">Status: **Vigilância Económica**</div></div></div>
+
+    <div class="fcard"><div class="fcard-header" style="background: #0d2e1a;"><div class="fcard-name" style="color: #74c69d;">Observadores Mudos</div><div class="fcard-motto">"Apenas olhamos. Nunca interferimos."</div></div><div class="fcard-body"><div class="fcard-item">Sociedade secreta de estudiosos que documentam anomalias.</div><div class="fcard-item">Suspeitos de possuírem mapas pré-Guerra do Véu.</div><div class="fcard-item">Status: **Neutralidade Suspeita**</div></div></div>
+  </div>
+</div>
 
           <div class="lore-section" id="sec-igreja">
             <div class="sec-header">
