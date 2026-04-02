@@ -1155,13 +1155,46 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
       </div>
     </div>
 
+<div class="page" id="page-uniformes">
+  <div class="page-inner">
+    <div class="classif-banner restricted">Classificação: Uso Interno — Departamento de Intendência</div>
+    <div class="page-header">
+      <div class="page-header-left">
+        <h2>Equipamento e Insígnias</h2>
+        <p>Padrão oficial de vestimenta para Agentes de Vínculo e Investigadores do Véu.</p>
+      </div>
+      <div class="page-badge">Ref. INT-04</div>
+    </div>
+    <div class="uniform-container">
+      <img src="insignias_uniforme_sinodo.svg" alt="Diagrama de Uniformes e Insígnias do Sínodo do Quinto Véu">
+    </div>
+  </div>
+</div> ```
+
+### 2. Corrigindo as Facções (Evitando o segundo erro)
+No arquivo que você enviou, a parte das **Facções** (dentro da Biblioteca) também estava com tags abertas. Localize a `<div class="lore-section" id="sec-faccoes">` e garanta que o final dela esteja assim:
+
+```html
+    <div class="fcard">
+        <div class="fcard-header" style="background:#000;"><div class="fcard-name" style="color:var(--gold)">A Ordem dos Sem-Rosto</div><div class="fcard-motto">"Ninguém nos Vê, Todos nos Sentem."</div></div>
+        <div class="fcard-body">
+            <div class="fcard-item">Mito ou Realidade?: Suposta rede de espiões imunes a detecção mágica.</div>
+            <div class="fcard-item">Instrução do Sínodo: Tratar qualquer falha inexplicável de segurança como ação desta facção.</div>
+        </div>
+    </div>
+  </div> </div> ```
+
+### 3. Ajuste nos Links do Drive (Aba Missões)
+Para garantir que a aba de Missões (`page-lore`) não fique em branco, use este HTML simplificado e funcional:
+
+```html
 <div class="page" id="page-lore">
   <div class="page-inner">
     <div class="classif-banner confidential">Classificação: Confidencial — Acervo Histórico do Sínodo</div>
     <div class="page-header">
       <div class="page-header-left">
         <h2>Missões Expedidas e Tratados</h2>
-        <p>Documentação diplomática e registos históricos.</p>
+        <p>Documentação diplomática e registros históricos.</p>
       </div>
     </div>
     <div class="file-list">
@@ -1250,22 +1283,21 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
       </div>
     </div>
 
-    <div class="page" id="page-uniformes">
-      <div class="page-inner">
-        <div class="classif-banner restricted">Classificação: Uso Interno — Departamento de Intendência</div>
-        <div class="page-header">
-          <div class="page-header-left">
-            <h2>Equipamento e Insígnias</h2>
-            <p>Padrão oficial de vestimenta para Agentes de Vínculo e Investigadores do Véu.</p>
-          </div>
-          <div class="page-badge">Ref. INT-04</div>
-        </div>
-        <div class="uniform-container">
-          <img src="insignias_uniforme_sinodo.svg" alt="Diagrama de Uniformes e Insígnias do Sínodo do Quinto Véu">
-        </div>
+<div class="page" id="page-uniformes">
+  <div class="page-inner">
+    <div class="classif-banner restricted">Classificação: Uso Interno — Departamento de Intendência</div>
+    <div class="page-header">
+      <div class="page-header-left">
+        <h2>Equipamento e Insígnias</h2>
+        <p>Padrão oficial de vestimenta para Agentes de Vínculo e Investigadores do Véu.</p>
       </div>
+      <div class="page-badge">Ref. INT-04</div>
     </div>
-
+    <div class="uniform-container">
+      <img src="insignias_uniforme_sinodo.svg" alt="Diagrama de Uniformes e Insígnias do Sínodo do Quinto Véu">
+    </div>
+  </div>
+</div>
 
 
     <div class="page" id="page-requisition">
@@ -1724,13 +1756,16 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
         </div>
     </div>
 
-    <div class="fcard">
+<div class="fcard">
         <div class="fcard-header" style="background:#000;"><div class="fcard-name" style="color:var(--gold)">A Ordem dos Sem-Rosto</div><div class="fcard-motto">"Ninguém nos Vê, Todos nos Sentem."</div></div>
         <div class="fcard-body">
             <div class="fcard-item">Mito ou Realidade?: Suposta rede de espiões imunes a detecção mágica.</div>
             <div class="fcard-item">Instrução do Sínodo: Tratar qualquer falha inexplicável de segurança como ação desta facção.</div>
         </div>
     </div>
+  </div>
+
+
 </div>"fcard"><div class="fcard-header" style="background:#3a1a3a;"><div class="fcard-name" style="color:#c080d0;">Cultos da 5ª Dimensão</div><div class="fcard-motto" style="color:rgba(192,128,208,.5);">"Eles chamam de comunhão."</div></div><div class="fcard-body"><div class="fcard-item">Grupos que veneram entidades dimensionais como deuses</div><div class="fcard-item">Essas entidades não são deuses — são criaturas da 5ª Dimensão</div><div class="fcard-item">Usam e distribuem Resina Etérea como sacramento</div><div class="fcard-item">Surgem mais rápido do que são desmantelados</div><div class="fcard-item">Parecem coordenados entre si — sem liderança visível</div></div></div>
             </div>
             <div class="censored-block" id="cens-sinodo-secreto">
