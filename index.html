@@ -18,6 +18,25 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--ink-deep);color:var(--text-body);overflow:hidden;}
 
+.external-links-container .btn-primary {
+    background: var(--ink);
+    color: var(--gold-pale);
+    border: 1px solid var(--gold-dim);
+    padding: 12px;
+    font-family: 'Cinzel', serif;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.external-links-container .btn-primary:hover {
+    background: var(--gold-dim);
+    color: var(--ink-deep);
+    box-shadow: 0 0 15px rgba(197, 163, 85, 0.3);
+    transform: translateY(-2px);
+}
+
 /* ─── LOGIN ─── */
 #login-screen{position:fixed;inset:0;z-index:100;background:var(--ink-deep);display:flex;align-items:center;justify-content:center;flex-direction:column;}
 .login-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none;opacity:.06;}
@@ -1164,7 +1183,19 @@ html,body{height:100%;font-family:'Crimson Text',Georgia,serif;background:var(--
         </div>
       </div>
     </div>
+<div class="external-links-container" style="margin-top: 20px; display: grid; gap: 15px;">
+    <h3 class="cinzel-gold" style="font-size: 1.2rem;">Documentação Externa</h3>
+    
+    <a href="https://docs.google.com/document/d/1bRumBGBy_4b4qaUeQ84C6k4GAwg6P2Yb/edit" 
+       target="_blank" class="btn-primary" style="text-decoration: none; text-align: center; display: block;">
+       📜 ACESSAR TRATADO DE VHAL'TORIN
+    </a>
 
+    <a href="https://docs.google.com/document/d/1M7uBpBceAy-bdpQTjBkQhKqkxKyqDwzk/edit" 
+       target="_blank" class="btn-primary" style="text-decoration: none; text-align: center; display: block;">
+       ⛪ ACESSAR DOUTRINA DA IGREJA
+    </a>
+</div>
     <div class="page" id="page-classified">
       <div class="page-inner">
         <div class="classif-banner top-secret">Máximo Sigilo — Acesso Individual por Código de Segurança</div>
