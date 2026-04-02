@@ -20,7 +20,6 @@ function tryLogin(){
     setTimeout(()=>e.textContent='',3000);
   }
 }
-
 function logout(){
   document.getElementById('app').classList.remove('visible');
   const ls=document.getElementById('login-screen');
@@ -48,12 +47,10 @@ function showPage(id,tab){
   if(tab) tab.classList.add('active');
   if(id==='map') initMap();
 }
-
 function gotoTab(idx){
   const tabs=document.querySelectorAll('.nav-tab');
   if(tabs[idx]) tabs[idx].click();
 }
-
 function showOpTab(id,btn){
   const sec=document.getElementById('op-'+id);
   if(!sec) return;
@@ -65,7 +62,6 @@ function showOpTab(id,btn){
   sec.classList.add('active');
   if(btn) btn.classList.add('active');
 }
-
 function showSection(id, linkEl) {
   document.querySelectorAll('.lore-section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.sidebar-link, .tb-link').forEach(l => l.classList.remove('active'));
@@ -125,7 +121,7 @@ async function exportPDF(docId, filename){
   el.style.width='820px'; el.style.maxWidth='820px'; el.style.margin='0'; el.style.borderRadius='0';
   await new Promise(r=>setTimeout(r,120));
   try {
-    const canvas=await html2canvas(el,{ scale:2, useCORS:true, logging:false, backgroundColor:'#f0e6c0', width:820, windowWidth:900 });
+    const canvas=await html2canvas(el,{ scale:2, useCORS:true, logging:false, backgroundColor:'#f0e6c0', width:820, windowWidth:900, onclone:(clonedDoc)=>{ clonedDoc.querySelectorAll('.stamp').forEach(s=>s.style.opacity='0.3'); } });
     const { jsPDF }=window.jspdf;
     const imgData=canvas.toDataURL('image/jpeg',0.95);
     const pdfW=210; const ratio=canvas.height/canvas.width; const pdfH=pdfW*ratio;
@@ -153,22 +149,18 @@ async function exportPDF(docId, filename){
 }
 
 // ══════════════════════════════════════════
-// INICIALIZAÇÃO E RENDERS DE DADOS
+// INICIALIZAÇÃO DE DADOS
 // ══════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => { 
-  // Carrega Documentos Classificados
-  const gridDocs=document.getElementById('docs-grid');
-  if(gridDocs && typeof DOCS !== 'undefined'){
-    gridDocs.innerHTML='';
+  if(document.getElementById('docs-grid')){
+    const grid=document.getElementById('docs-grid');grid.innerHTML='';
     DOCS.forEach(doc=>{
       const card=document.createElement('div');card.className='doc-card';
       card.innerHTML=`<div class="doc-card-header"><div class="doc-classif-tag ${doc.classif}">${doc.classifLabel}</div><div class="doc-number">${doc.number}</div><div class="doc-title">${doc.title}</div><div class="doc-subtitle">${doc.subtitle}</div></div><div class="doc-card-body"><p class="doc-desc">${doc.desc}</p><div class="doc-meta-row"><div class="doc-meta">Origem: <span>${doc.origin}</span></div><div class="doc-meta">Data: <span>${doc.date}</span></div></div><div class="doc-locked-bar"><span class="doc-lock-icon">🔒</span><span class="doc-lock-hint">Acesso protegido por código</span><button class="doc-access-btn" onclick="openDocPwd('${doc.id}')">Acessar</button></div></div>`;
-      gridDocs.appendChild(card);
+      grid.appendChild(card);
     });
   }
-  // Carrega Bestiário
   if(document.getElementById('bestiary-grid')) renderBeasts(); 
-  // Carrega Codex
   if(document.getElementById('glossary-grid')) renderGlossary(); 
 });
 
@@ -180,7 +172,9 @@ function handlePwdSubmit() {
   }
 }
 
-// SENHAS DOCUMENTOS CLASSIFICADOS
+// ══════════════════════════════════════════
+// SENHAS DOCUMENTOS
+// ══════════════════════════════════════════
 function openDocPwd(id){
   const doc=DOCS.find(d=>d.id===id); currentDocId=id; pendingBlockId=null; window.isGlossaryPwd = false;
   document.getElementById('pwd-modal-doc').textContent=doc.title;
@@ -189,21 +183,18 @@ function openDocPwd(id){
   document.getElementById('pwd-overlay').classList.add('open');
   setTimeout(()=>document.getElementById('pwd-input').focus(),100);
 }
-
 function confirmDocPwd(){
   const doc=DOCS.find(d=>d.id===currentDocId);
   const val=document.getElementById('pwd-input').value.trim().toLowerCase();
   if(val===doc.password){ closePwdModal(); openDocReader(doc); }
   else{ document.getElementById('pwd-modal-err').textContent='Código incorreto. Acesso negado.'; document.getElementById('pwd-input').value=''; setTimeout(()=>document.getElementById('pwd-modal-err').textContent='',3000); }
 }
-
 function openDocReader(doc){
   const reader=document.getElementById('doc-reader');
   reader.innerHTML=`<div class="doc-reader-header"><div><div class="doc-reader-classif ${doc.classif}">${doc.classifLabel.toUpperCase()} — ${doc.number}</div><div class="doc-reader-title">${doc.title}</div><div class="doc-reader-number">${doc.subtitle}</div></div><button class="doc-reader-close" onclick="closeReader()">✕ Fechar</button></div><div class="doc-reader-body" style="position:relative;"><div class="doc-watermark">${doc.classifLabel.toUpperCase()}</div>${doc.content}</div>`;
   document.getElementById('reader-overlay').classList.add('open');
   reader.scrollTop=0;
 }
-
 function closePwdModal(){
   document.getElementById('pwd-overlay').classList.remove('open');
   currentDocId=null; pendingBlockId=null; pendingPassword=null;
@@ -211,7 +202,9 @@ function closePwdModal(){
 function closeReader(){document.getElementById('reader-overlay').classList.remove('open');}
 function closeReaderOnBg(e){if(e.target===document.getElementById('reader-overlay'))closeReader();}
 
-// SENHAS TEXTOS CENSURADOS (LORE)
+// ══════════════════════════════════════════
+// SENHAS LORE CENSURADA
+// ══════════════════════════════════════════
 function unlockCensored(blockId, password, title) {
   pendingBlockId = blockId; pendingPassword = password; currentDocId = null; window.isGlossaryPwd = false;
   document.getElementById('pwd-modal-doc').textContent = title;
@@ -220,7 +213,6 @@ function unlockCensored(blockId, password, title) {
   document.getElementById('pwd-overlay').classList.add('open');
   setTimeout(() => document.getElementById('pwd-input').focus(), 100);
 }
-
 function confirmUnlock() {
   const val = document.getElementById('pwd-input').value.trim().toLowerCase();
   if (val === pendingPassword) {
@@ -234,7 +226,9 @@ function confirmUnlock() {
   }
 }
 
-// RENDERIZAÇÃO BESTIÁRIO
+// ══════════════════════════════════════════
+// BESTIÁRIO
+// ══════════════════════════════════════════
 let currentBeastFilter='all';
 function renderBeasts(filter='all',search=''){
   const grid=document.getElementById('bestiary-grid'); if(!grid) return;
@@ -255,7 +249,9 @@ function setBeastFilter(f,btn){
 }
 function filterBeasts(v){renderBeasts(currentBeastFilter,v);}
 
-// RENDERIZAÇÃO CODEX GLOSSÁRIO
+// ══════════════════════════════════════════
+// GLOSSÁRIO
+// ══════════════════════════════════════════
 function renderGlossary(filter = '') {
   const grid = document.getElementById('glossary-grid');
   if (!grid) return;
